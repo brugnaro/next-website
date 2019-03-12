@@ -131,6 +131,31 @@ img {
 }
 
 /*---------------------------------
+* 00. Addcional styles
+-----------------------------------*/
+
+.order-last img {
+  box-shadow: 0 6px 12px 0 rgba(178, 178, 178, .13);
+  border-radius: 5px
+}
+
+.large span {
+  color: #FFDA5F
+}
+
+.flag img {
+  width: 20px;
+  cursor: pointer;
+  margin: 5px 0px 0px 0px
+}
+
+.flag button {
+  background: transparent;
+  border: none;
+  padding: 0px;
+}
+
+/*---------------------------------
 * 01. Loading
 -----------------------------------*/
 
@@ -944,10 +969,6 @@ img {
   text-decoration: underline
 }
 
-.home-right-inner {
-  width: 50vw !important
-}
-
 .section-title p {
   width: 100%
 }
@@ -970,7 +991,6 @@ img {
 }
 
 .home-banner-01 p {
-  width: 600px;
   max-width: 100%;
   font-weight: 400;
   font-size: 15px;
@@ -1008,12 +1028,6 @@ img {
   }
 }
 
-@media(max-width: 767px) {
-  .home-banner-01 h1 {
-    font-size: 28px;
-  }
-}
-
 .home-banner-02 {
   overflow: hidden;
   position: relative;
@@ -1044,6 +1058,10 @@ img {
   line-height: 28px;
 }
 
+.home-right-inner {
+  padding: 0 0 0 14px
+}
+
 @media(max-width: 767px) {
   .home-banner-02 h1 {
     font-size: 26px;
@@ -1051,6 +1069,12 @@ img {
   }
   .home-banner-02 p {
     padding: 0 0 20px;
+  }
+  .home-banner-01 h1 {
+    font-size: 28px;
+  }
+  .section-title {
+    width: 94vw
   }
 }
 

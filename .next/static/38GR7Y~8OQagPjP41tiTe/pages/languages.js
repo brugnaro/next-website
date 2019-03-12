@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[7],{"cg/I":function(n,w,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/languages",function(){var n=o("mVil");return{page:n.default||n}}])}},[["cg/I",1,0]]]);
