@@ -5,8 +5,11 @@
     "now-build": "next build"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "i18next": "^15.0.6",
     "next": "^8.0.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.7.0",
+    "react-i18next": "^10.3.1"
   }
 }
