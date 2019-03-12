@@ -1,13 +1,8 @@
 import Link from 'next/link';
 import NextHead from 'next/head';
-import { useTranslation } from 'react-i18next';
-import './i18n';
 
-export default () => {
-
-  const { t, i18n } = useTranslation();
-
-  return <div>
+export default () =>
+  <div>
     <NextHead>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,9 +40,9 @@ export default () => {
       <meta name="theme-color" content="#ffffff" />
     </NextHead>
 
-    <div id="loading">
+    {/* <div id="loading">
       <div className="load-circle"><span className="one"></span></div>
-    </div>
+    </div> */}
 
     <header>
       <nav className="navbar header-nav fixed-top navbar-expand-lg header-nav-light">
@@ -273,7 +268,7 @@ export default () => {
       <section className="section section-effect left p-40px-b">
         <div className="container">
           <div className="row align-items-center">
-            
+
             <div className="col-md-6 sm-m-30px-t order-last order-md-first">
               <img src="static/img/features/email-verification-service-feature-2.png" title="" alt="" />
             </div>
@@ -313,4 +308,3 @@ export default () => {
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-92603538-1"></script>
 
   </div>
-};

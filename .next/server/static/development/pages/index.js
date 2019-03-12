@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -438,334 +438,6 @@ function _typeof(obj) {
   } else {
     module.exports = _typeof = function _typeof(obj) {
       return obj && typeof _Symbol === "function" && obj.constructor === _Symbol && obj !== _Symbol.prototype ? "symbol" : _typeof2(obj);
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _arrayWithHoles(arr) {
-  if (Array.isArray(arr)) return arr;
-}
-
-module.exports = _arrayWithHoles;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
-/*!***************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
-  \***************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    Object.defineProperty(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-module.exports = _defineProperty;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireDefault(obj) {
-  return obj && obj.__esModule ? obj : {
-    default: obj
-  };
-}
-
-module.exports = _interopRequireDefault;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _interopRequireWildcard(obj) {
-  if (obj && obj.__esModule) {
-    return obj;
-  } else {
-    var newObj = {};
-
-    if (obj != null) {
-      for (var key in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, key)) {
-          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
-
-          if (desc.get || desc.set) {
-            Object.defineProperty(newObj, key, desc);
-          } else {
-            newObj[key] = obj[key];
-          }
-        }
-      }
-    }
-
-    newObj.default = obj;
-    return newObj;
-  }
-}
-
-module.exports = _interopRequireWildcard;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _iterableToArrayLimit(arr, i) {
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _e = undefined;
-
-  try {
-    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
-    try {
-      if (!_n && _i["return"] != null) _i["return"]();
-    } finally {
-      if (_d) throw _e;
-    }
-  }
-
-  return _arr;
-}
-
-module.exports = _iterableToArrayLimit;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/nonIterableRest.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
-  \****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _nonIterableRest() {
-  throw new TypeError("Invalid attempt to destructure non-iterable instance");
-}
-
-module.exports = _nonIterableRest;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/objectSpread.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectSpread.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var defineProperty = __webpack_require__(/*! ./defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
-
-function _objectSpread(target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i] != null ? arguments[i] : {};
-    var ownKeys = Object.keys(source);
-
-    if (typeof Object.getOwnPropertySymbols === 'function') {
-      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
-        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
-      }));
-    }
-
-    ownKeys.forEach(function (key) {
-      defineProperty(target, key, source[key]);
-    });
-  }
-
-  return target;
-}
-
-module.exports = _objectSpread;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
-  \************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
-
-function _objectWithoutProperties(source, excluded) {
-  if (source == null) return {};
-  var target = objectWithoutPropertiesLoose(source, excluded);
-  var key, i;
-
-  if (Object.getOwnPropertySymbols) {
-    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
-
-    for (i = 0; i < sourceSymbolKeys.length; i++) {
-      key = sourceSymbolKeys[i];
-      if (excluded.indexOf(key) >= 0) continue;
-      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
-      target[key] = source[key];
-    }
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutProperties;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
-/*!*****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
-  \*****************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-module.exports = _objectWithoutPropertiesLoose;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/slicedToArray.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
-  \**************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js");
-
-var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
-
-var nonIterableRest = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime/helpers/nonIterableRest.js");
-
-function _slicedToArray(arr, i) {
-  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
-}
-
-module.exports = _slicedToArray;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
-  \*******************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
-
-function _typeof(obj) {
-  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return _typeof2(obj);
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
     };
   }
 
@@ -1399,951 +1071,6 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ }),
 
-/***/ "./node_modules/react-i18next/dist/commonjs/I18nextProvider.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/I18nextProvider.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.I18nextProvider = I18nextProvider;
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
-
-function I18nextProvider(_ref) {
-  var i18n = _ref.i18n,
-      children = _ref.children;
-  (0, _context.usedI18nextProvider)(true);
-  return _react.default.createElement(_context.I18nContext.Provider, {
-    value: {
-      i18n: i18n
-    }
-  }, children);
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/Trans.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/Trans.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.nodesToString = nodesToString;
-exports.Trans = Trans;
-
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
-
-var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js"));
-
-var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
-
-var _htmlParseStringify = _interopRequireDefault(__webpack_require__(/*! html-parse-stringify2 */ "html-parse-stringify2"));
-
-var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
-
-var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-i18next/dist/commonjs/utils.js");
-
-function hasChildren(node) {
-  return node && (node.children || node.props && node.props.children);
-}
-
-function getChildren(node) {
-  return node && node.children ? node.children : node.props && node.props.children;
-}
-
-function nodesToString(mem, children, index, i18nOptions) {
-  if (!children) return '';
-  if (Object.prototype.toString.call(children) !== '[object Array]') children = [children];
-  var keepArray = i18nOptions.transKeepBasicHtmlNodesFor && i18nOptions.transKeepBasicHtmlNodesFor || [];
-  children.forEach(function (child, i) {
-    // const isElement = React.isValidElement(child);
-    // const elementKey = `${index !== 0 ? index + '-' : ''}${i}:${typeof child.type === 'function' ? child.type.name : child.type || 'var'}`;
-    var elementKey = "".concat(i);
-
-    if (typeof child === 'string') {
-      mem = "".concat(mem).concat(child);
-    } else if (hasChildren(child)) {
-      var elementTag = keepArray.indexOf(child.type) > -1 && Object.keys(child.props).length === 1 && typeof hasChildren(child) === 'string' ? child.type : elementKey;
-      mem = "".concat(mem, "<").concat(elementTag, ">").concat(nodesToString('', getChildren(child), i + 1, i18nOptions), "</").concat(elementTag, ">");
-    } else if (_react.default.isValidElement(child)) {
-      if (keepArray.indexOf(child.type) > -1 && Object.keys(child.props).length === 0) {
-        mem = "".concat(mem, "<").concat(child.type, "/>");
-      } else {
-        mem = "".concat(mem, "<").concat(elementKey, "></").concat(elementKey, ">");
-      }
-    } else if ((0, _typeof2.default)(child) === 'object') {
-      var clone = (0, _objectSpread2.default)({}, child);
-      var format = clone.format;
-      delete clone.format;
-      var keys = Object.keys(clone);
-
-      if (format && keys.length === 1) {
-        mem = "".concat(mem, "{{").concat(keys[0], ", ").concat(format, "}}");
-      } else if (keys.length === 1) {
-        mem = "".concat(mem, "{{").concat(keys[0], "}}");
-      } else {
-        // not a valid interpolation object (can only contain one value plus format)
-        (0, _utils.warn)("react-i18next: the passed in object contained more than one variable - the object should look like {{ value, format }} where format is optional.", child);
-      }
-    } else {
-      (0, _utils.warn)("Trans: the passed in value is invalid - seems you passed in a variable like {number} - please pass in variables for interpolation as full objects like {{number}}.", child);
-    }
-  });
-  return mem;
-}
-
-function renderNodes(children, targetString, i18n, i18nOptions) {
-  if (targetString === '') return [];
-  if (!children) return [targetString]; // v2 -> interpolates upfront no need for "some <0>{{var}}</0>"" -> will be just "some {{var}}" in translation file
-
-  var data = {};
-
-  function getData(childs) {
-    if (Object.prototype.toString.call(childs) !== '[object Array]') childs = [childs];
-    childs.forEach(function (child) {
-      if (typeof child === 'string') return;
-      if (hasChildren(child)) getData(getChildren(child));else if ((0, _typeof2.default)(child) === 'object' && !_react.default.isValidElement(child)) Object.assign(data, child);
-    });
-  }
-
-  getData(children);
-  targetString = i18n.services.interpolator.interpolate(targetString, data, i18n.language); // parse ast from string with additional wrapper tag
-  // -> avoids issues in parser removing prepending text nodes
-
-  var ast = _htmlParseStringify.default.parse("<0>".concat(targetString, "</0>"));
-
-  function mapAST(reactNodes, astNodes) {
-    if (Object.prototype.toString.call(reactNodes) !== '[object Array]') reactNodes = [reactNodes];
-    if (Object.prototype.toString.call(astNodes) !== '[object Array]') astNodes = [astNodes];
-    return astNodes.reduce(function (mem, node, i) {
-      if (node.type === 'tag') {
-        var child = reactNodes[parseInt(node.name, 10)] || {};
-
-        var isElement = _react.default.isValidElement(child);
-
-        if (typeof child === 'string') {
-          mem.push(child);
-        } else if (hasChildren(child)) {
-          var inner = mapAST(getChildren(child), node.children);
-          if (child.dummy) child.children = inner; // needed on preact!
-
-          mem.push(_react.default.cloneElement(child, (0, _objectSpread2.default)({}, child.props, {
-            key: i
-          }), inner));
-        } else if (isNaN(node.name) && i18nOptions.transSupportBasicHtmlNodes) {
-          if (node.voidElement) {
-            mem.push(_react.default.createElement(node.name, {
-              key: "".concat(node.name, "-").concat(i)
-            }));
-          } else {
-            var _inner = mapAST(reactNodes
-            /* wrong but we need something */
-            , node.children);
-
-            mem.push(_react.default.createElement(node.name, {
-              key: "".concat(node.name, "-").concat(i)
-            }, _inner));
-          }
-        } else if ((0, _typeof2.default)(child) === 'object' && !isElement) {
-          var content = node.children[0] ? node.children[0].content : null; // v1
-          // as interpolation was done already we just have a regular content node
-          // in the translation AST while having an object in reactNodes
-          // -> push the content no need to interpolate again
-
-          if (content) mem.push(content);
-        } else {
-          mem.push(child);
-        }
-      } else if (node.type === 'text') {
-        mem.push(node.content);
-      }
-
-      return mem;
-    }, []);
-  } // call mapAST with having react nodes nested into additional node like
-  // we did for the string ast from translation
-  // return the children of that extra node to get expected result
-
-
-  var result = mapAST([{
-    dummy: true,
-    children: children
-  }], ast);
-  return getChildren(result[0]);
-}
-
-function Trans(_ref) {
-  var children = _ref.children,
-      count = _ref.count,
-      parent = _ref.parent,
-      i18nKey = _ref.i18nKey,
-      tOptions = _ref.tOptions,
-      values = _ref.values,
-      defaults = _ref.defaults,
-      components = _ref.components,
-      ns = _ref.ns,
-      i18nFromProps = _ref.i18n,
-      tFromProps = _ref.t,
-      additionalProps = (0, _objectWithoutProperties2.default)(_ref, ["children", "count", "parent", "i18nKey", "tOptions", "values", "defaults", "components", "ns", "i18n", "t"]);
-
-  var _ref2 = (0, _context.getHasUsedI18nextProvider)() ? (0, _react.useContext)(_context.I18nContext) : {},
-      i18nFromContext = _ref2.i18n;
-
-  var i18n = i18nFromProps || i18nFromContext || (0, _context.getI18n)();
-
-  if (!i18n) {
-    (0, _utils.warnOnce)('You will need pass in an i18next instance by using i18nextReactModule');
-    return children;
-  }
-
-  var t = tFromProps || i18n.t.bind(i18n);
-  var reactI18nextOptions = i18n.options && i18n.options.react || {};
-  var useAsParent = parent !== undefined ? parent : reactI18nextOptions.defaultTransParent;
-  var defaultValue = defaults || nodesToString('', children, 0, reactI18nextOptions) || reactI18nextOptions.transEmptyNodeValue;
-  var hashTransKey = reactI18nextOptions.hashTransKey;
-  var key = i18nKey || (hashTransKey ? hashTransKey(defaultValue) : defaultValue);
-  var interpolationOverride = values ? {} : {
-    interpolation: {
-      prefix: '#$?',
-      suffix: '?$#'
-    }
-  };
-  var translation = key ? t(key, (0, _objectSpread2.default)({}, tOptions, values, interpolationOverride, {
-    defaultValue: defaultValue,
-    count: count,
-    ns: ns
-  })) : defaultValue;
-  if (!useAsParent) return renderNodes(components || children, translation, i18n, reactI18nextOptions);
-  return _react.default.createElement(useAsParent, additionalProps, renderNodes(components || children, translation, i18n, reactI18nextOptions));
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/Translation.js":
-/*!*****************************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/Translation.js ***!
-  \*****************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Translation = Translation;
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _useTranslation3 = __webpack_require__(/*! ./useTranslation */ "./node_modules/react-i18next/dist/commonjs/useTranslation.js");
-
-function Translation(props) {
-  var ns = props.ns,
-      children = props.children,
-      options = (0, _objectWithoutProperties2.default)(props, ["ns", "children"]);
-
-  var _useTranslation = (0, _useTranslation3.useTranslation)(ns, options),
-      _useTranslation2 = (0, _slicedToArray2.default)(_useTranslation, 3),
-      t = _useTranslation2[0],
-      i18n = _useTranslation2[1],
-      ready = _useTranslation2[2];
-
-  return children(t, {
-    i18n: i18n,
-    lng: i18n.language
-  }, ready);
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/context.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/context.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.usedI18nextProvider = usedI18nextProvider;
-exports.getHasUsedI18nextProvider = getHasUsedI18nextProvider;
-exports.setDefaults = setDefaults;
-exports.getDefaults = getDefaults;
-exports.setI18n = setI18n;
-exports.getI18n = getI18n;
-exports.composeInitialProps = composeInitialProps;
-exports.getInitialProps = getInitialProps;
-exports.initReactI18next = exports.ReportNamespaces = exports.I18nContext = void 0;
-
-var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
-
-var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var defaultOptions = {
-  bindI18n: 'languageChanged',
-  bindI18nStore: '',
-  transEmptyNodeValue: '',
-  transSupportBasicHtmlNodes: true,
-  transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'p'],
-  useSuspense: true
-};
-var i18nInstance;
-var hasUsedI18nextProvider;
-
-var I18nContext = _react.default.createContext();
-
-exports.I18nContext = I18nContext;
-
-function usedI18nextProvider(used) {
-  hasUsedI18nextProvider = used;
-}
-
-function getHasUsedI18nextProvider() {
-  return hasUsedI18nextProvider;
-}
-
-function setDefaults() {
-  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  defaultOptions = (0, _objectSpread2.default)({}, defaultOptions, options);
-}
-
-function getDefaults() {
-  return defaultOptions;
-}
-
-var ReportNamespaces =
-/*#__PURE__*/
-function () {
-  function ReportNamespaces() {
-    (0, _classCallCheck2.default)(this, ReportNamespaces);
-    this.usedNamespaces = {};
-  }
-
-  (0, _createClass2.default)(ReportNamespaces, [{
-    key: "addUsedNamespaces",
-    value: function addUsedNamespaces(namespaces) {
-      var _this = this;
-
-      namespaces.forEach(function (ns) {
-        if (!_this.usedNamespaces[ns]) _this.usedNamespaces[ns] = true;
-      });
-    }
-  }, {
-    key: "getUsedNamespaces",
-    value: function getUsedNamespaces() {
-      return Object.keys(this.usedNamespaces);
-    }
-  }]);
-  return ReportNamespaces;
-}();
-
-exports.ReportNamespaces = ReportNamespaces;
-
-function setI18n(instance) {
-  i18nInstance = instance;
-}
-
-function getI18n() {
-  return i18nInstance;
-}
-
-var initReactI18next = {
-  type: '3rdParty',
-  init: function init(instance) {
-    setDefaults(instance.options.react);
-    setI18n(instance);
-  }
-};
-exports.initReactI18next = initReactI18next;
-
-function composeInitialProps(ForComponent) {
-  return function (ctx) {
-    return new Promise(function (resolve) {
-      var i18nInitialProps = getInitialProps();
-
-      if (ForComponent.getInitialProps) {
-        ForComponent.getInitialProps(ctx).then(function (componentsInitialProps) {
-          resolve((0, _objectSpread2.default)({}, componentsInitialProps, i18nInitialProps));
-        });
-      } else {
-        resolve(i18nInitialProps);
-      }
-    });
-  }; // Avoid async for now - so we do not need to pull in regenerator
-  // return async ctx => {
-  //   const componentsInitialProps = ForComponent.getInitialProps
-  //     ? await ForComponent.getInitialProps(ctx)
-  //     : {};
-  //   const i18nInitialProps = getInitialProps();
-  //   return {
-  //     ...componentsInitialProps,
-  //     ...i18nInitialProps,
-  //   };
-  // };
-}
-
-function getInitialProps() {
-  var i18n = getI18n();
-  var namespaces = i18n.reportNamespaces ? i18n.reportNamespaces.getUsedNamespaces() : [];
-  var ret = {};
-  var initialI18nStore = {};
-  i18n.languages.forEach(function (l) {
-    initialI18nStore[l] = {};
-    namespaces.forEach(function (ns) {
-      initialI18nStore[l][ns] = i18n.getResourceBundle(l, ns) || {};
-    });
-  });
-  ret.initialI18nStore = initialI18nStore;
-  ret.initialLanguage = i18n.language;
-  return ret;
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/index.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/index.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-Object.defineProperty(exports, "Trans", {
-  enumerable: true,
-  get: function get() {
-    return _Trans.Trans;
-  }
-});
-Object.defineProperty(exports, "useTranslation", {
-  enumerable: true,
-  get: function get() {
-    return _useTranslation.useTranslation;
-  }
-});
-Object.defineProperty(exports, "withTranslation", {
-  enumerable: true,
-  get: function get() {
-    return _withTranslation.withTranslation;
-  }
-});
-Object.defineProperty(exports, "Translation", {
-  enumerable: true,
-  get: function get() {
-    return _Translation.Translation;
-  }
-});
-Object.defineProperty(exports, "I18nextProvider", {
-  enumerable: true,
-  get: function get() {
-    return _I18nextProvider.I18nextProvider;
-  }
-});
-Object.defineProperty(exports, "withSSR", {
-  enumerable: true,
-  get: function get() {
-    return _withSSR.withSSR;
-  }
-});
-Object.defineProperty(exports, "useSSR", {
-  enumerable: true,
-  get: function get() {
-    return _useSSR.useSSR;
-  }
-});
-Object.defineProperty(exports, "initReactI18next", {
-  enumerable: true,
-  get: function get() {
-    return _context.initReactI18next;
-  }
-});
-Object.defineProperty(exports, "setDefaults", {
-  enumerable: true,
-  get: function get() {
-    return _context.setDefaults;
-  }
-});
-Object.defineProperty(exports, "getDefaults", {
-  enumerable: true,
-  get: function get() {
-    return _context.getDefaults;
-  }
-});
-Object.defineProperty(exports, "setI18n", {
-  enumerable: true,
-  get: function get() {
-    return _context.setI18n;
-  }
-});
-Object.defineProperty(exports, "getI18n", {
-  enumerable: true,
-  get: function get() {
-    return _context.getI18n;
-  }
-});
-Object.defineProperty(exports, "composeInitialProps", {
-  enumerable: true,
-  get: function get() {
-    return _context.composeInitialProps;
-  }
-});
-Object.defineProperty(exports, "getInitialProps", {
-  enumerable: true,
-  get: function get() {
-    return _context.getInitialProps;
-  }
-});
-
-var _Trans = __webpack_require__(/*! ./Trans */ "./node_modules/react-i18next/dist/commonjs/Trans.js");
-
-var _useTranslation = __webpack_require__(/*! ./useTranslation */ "./node_modules/react-i18next/dist/commonjs/useTranslation.js");
-
-var _withTranslation = __webpack_require__(/*! ./withTranslation */ "./node_modules/react-i18next/dist/commonjs/withTranslation.js");
-
-var _Translation = __webpack_require__(/*! ./Translation */ "./node_modules/react-i18next/dist/commonjs/Translation.js");
-
-var _I18nextProvider = __webpack_require__(/*! ./I18nextProvider */ "./node_modules/react-i18next/dist/commonjs/I18nextProvider.js");
-
-var _withSSR = __webpack_require__(/*! ./withSSR */ "./node_modules/react-i18next/dist/commonjs/withSSR.js");
-
-var _useSSR = __webpack_require__(/*! ./useSSR */ "./node_modules/react-i18next/dist/commonjs/useSSR.js");
-
-var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/useSSR.js":
-/*!************************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/useSSR.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.useSSR = useSSR;
-
-var _react = __webpack_require__(/*! react */ "react");
-
-var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
-
-function useSSR(initialI18nStore, initialLanguage) {
-  var props = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-  var i18nFromProps = props.i18n;
-
-  var _ref = (0, _context.getHasUsedI18nextProvider)() ? (0, _react.useContext)(_context.I18nContext) : {},
-      i18nFromContext = _ref.i18n;
-
-  var i18n = i18nFromProps || i18nFromContext || (0, _context.getI18n)(); // nextjs / SSR: getting data from next.js or other ssr stack
-
-  if (initialI18nStore && !i18n.initializedStoreOnce) {
-    i18n.services.resourceStore.data = initialI18nStore;
-    i18n.initializedStoreOnce = true;
-  }
-
-  if (initialLanguage && !i18n.initializedLanguageOnce) {
-    i18n.changeLanguage(initialLanguage);
-    i18n.initializedLanguageOnce = true;
-  }
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/useTranslation.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/useTranslation.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.useTranslation = useTranslation;
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
-
-var _react = __webpack_require__(/*! react */ "react");
-
-var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
-
-var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-i18next/dist/commonjs/utils.js");
-
-function useTranslation(ns) {
-  var props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
-  // assert we have the needed i18nInstance
-  var i18nFromProps = props.i18n;
-
-  var _ref = (0, _context.getHasUsedI18nextProvider)() ? (0, _react.useContext)(_context.I18nContext) : {},
-      i18nFromContext = _ref.i18n;
-
-  var i18n = i18nFromProps || i18nFromContext || (0, _context.getI18n)();
-  if (i18n && !i18n.reportNamespaces) i18n.reportNamespaces = new _context.ReportNamespaces();
-
-  if (!i18n) {
-    (0, _utils.warnOnce)('You will need pass in an i18next instance by using i18nextReactModule');
-    var retNotReady = [function (k) {
-      return k;
-    }, {}, true];
-
-    retNotReady.t = function (k) {
-      return k;
-    };
-
-    retNotReady.i18n = {};
-    retNotReady.ready = true;
-    return retNotReady;
-  }
-
-  var i18nOptions = (0, _objectSpread2.default)({}, (0, _context.getDefaults)(), i18n.options.react); // prepare having a namespace
-
-  var namespaces = ns || i18n.options && i18n.options.defaultNS;
-  namespaces = typeof namespaces === 'string' ? [namespaces] : namespaces || ['translation']; // report namespaces as used
-
-  if (i18n.reportNamespaces.addUsedNamespaces) i18n.reportNamespaces.addUsedNamespaces(namespaces); // are we ready? yes if all namespaces in first language are loaded already (either with data or empty objedt on failed load)
-
-  var ready = (i18n.isInitialized || i18n.initializedStoreOnce) && namespaces.every(function (n) {
-    return (0, _utils.hasLoadedNamespace)(n, i18n);
-  }); // set states
-
-  var _useState = (0, _react.useState)({
-    t: i18n.getFixedT(null, namespaces[0])
-  }),
-      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
-      t = _useState2[0],
-      setT = _useState2[1]; // seems we can't have functions as value -> wrap it in obj
-
-
-  function resetT() {
-    setT({
-      t: i18n.getFixedT(null, namespaces[0])
-    });
-  }
-
-  (0, _react.useEffect)(function () {
-    var bindI18n = i18nOptions.bindI18n,
-        bindI18nStore = i18nOptions.bindI18nStore; // bind events to trigger change, like languageChanged
-
-    if (bindI18n && i18n) i18n.on(bindI18n, resetT);
-    if (bindI18nStore && i18n) i18n.store.on(bindI18nStore, resetT); // unbinding
-
-    return function () {
-      if (bindI18n && i18n) bindI18n.split(' ').forEach(function (e) {
-        return i18n.off(e, resetT);
-      });
-      if (bindI18nStore && i18n) bindI18nStore.split(' ').forEach(function (e) {
-        return i18n.store.off(e, resetT);
-      });
-    };
-  });
-  var ret = [t.t, i18n, ready];
-  ret.t = t.t;
-  ret.i18n = i18n;
-  ret.ready = ready; // return hook stuff if ready
-
-  if (ready) return ret; // not yet loaded namespaces -> load them -> and return if useSuspense option set false
-
-  var _props$useSuspense = props.useSuspense,
-      useSuspense = _props$useSuspense === void 0 ? i18nOptions.useSuspense : _props$useSuspense;
-
-  if (!ready && !useSuspense) {
-    (0, _utils.loadNamespaces)(i18n, namespaces, function () {
-      resetT();
-    });
-    return ret;
-  } // not yet loaded namespaces -> load them -> and trigger suspense
-
-
-  throw new Promise(function (resolve) {
-    (0, _utils.loadNamespaces)(i18n, namespaces, function () {
-      resetT();
-      resolve();
-    });
-  });
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/utils.js":
-/*!***********************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/utils.js ***!
-  \***********************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.warn = warn;
-exports.warnOnce = warnOnce;
-exports.loadNamespaces = loadNamespaces;
-exports.hasLoadedNamespace = hasLoadedNamespace;
-
-function warn() {
-  if (console && console.warn) {
-    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
-
-    if (typeof args[0] === 'string') args[0] = "react-i18next:: ".concat(args[0]);
-    console.warn.apply(console, args);
-  }
-}
-
-var alreadyWarned = {};
-
-function warnOnce() {
-  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
-    args[_key2] = arguments[_key2];
-  }
-
-  if (typeof args[0] === 'string' && alreadyWarned[args[0]]) return;
-  if (typeof args[0] === 'string') alreadyWarned[args[0]] = new Date();
-  warn.apply(void 0, args);
-} // not needed right now
-//
-// export function deprecated(...args) {
-//   if (process && process.env && (!process.env.NODE_ENV || process.env.NODE_ENV === 'development')) {
-//     if (typeof args[0] === 'string') args[0] = `deprecation warning -> ${args[0]}`;
-//     warnOnce(...args);
-//   }
-// }
-
-
-function loadNamespaces(i18n, ns, cb) {
-  i18n.loadNamespaces(ns, function () {
-    // delay ready if not yet initialized i18n instance
-    if (i18n.isInitialized) {
-      cb();
-    } else {
-      var initialized = function initialized() {
-        // due to emitter removing issue in i18next we need to delay remove
-        setImmediate(function () {
-          i18n.off('initialized', initialized);
-        });
-        cb();
-      };
-
-      i18n.on('initialized', initialized);
-    }
-  });
-}
-
-function hasLoadedNamespace(ns, i18n) {
-  if (!i18n.languages || !i18n.languages.length) {
-    warnOnce('i18n.languages were undefined or empty', i18n.languages);
-    return true;
-  }
-
-  var lng = i18n.languages[0];
-  var fallbackLng = i18n.options ? i18n.options.fallbackLng : false;
-  var lastLng = i18n.languages[i18n.languages.length - 1]; // we're in cimode so this shall pass
-
-  if (lng.toLowerCase() === 'cimode') return true;
-
-  var loadNotPending = function loadNotPending(l, n) {
-    var loadState = i18n.services.backendConnector.state["".concat(l, "|").concat(n)];
-    return loadState === -1 || loadState === 2;
-  }; // loaded -> SUCCESS
-
-
-  if (i18n.hasResourceBundle(lng, ns)) return true; // were not loading at all -> SEMI SUCCESS
-
-  if (!i18n.services.backendConnector.backend) return true; // failed loading ns - but at least fallback is not pending -> SEMI SUCCESS
-
-  if (loadNotPending(lng, ns) && (!fallbackLng || loadNotPending(lastLng, ns))) return true;
-  return false;
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/withSSR.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/withSSR.js ***!
-  \*************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.withSSR = withSSR;
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
-
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _useSSR = __webpack_require__(/*! ./useSSR */ "./node_modules/react-i18next/dist/commonjs/useSSR.js");
-
-var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
-
-function withSSR() {
-  return function Extend(WrappedComponent) {
-    function I18nextWithSSR(_ref) {
-      var initialI18nStore = _ref.initialI18nStore,
-          initialLanguage = _ref.initialLanguage,
-          rest = (0, _objectWithoutProperties2.default)(_ref, ["initialI18nStore", "initialLanguage"]);
-      (0, _useSSR.useSSR)(initialI18nStore, initialLanguage);
-      return _react.default.createElement(WrappedComponent, (0, _objectSpread2.default)({}, rest));
-    }
-
-    I18nextWithSSR.getInitialProps = (0, _context.composeInitialProps)(WrappedComponent);
-    return I18nextWithSSR;
-  };
-}
-
-/***/ }),
-
-/***/ "./node_modules/react-i18next/dist/commonjs/withTranslation.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/react-i18next/dist/commonjs/withTranslation.js ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.withTranslation = withTranslation;
-
-var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
-
-var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
-
-var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
-
-var _useTranslation3 = __webpack_require__(/*! ./useTranslation */ "./node_modules/react-i18next/dist/commonjs/useTranslation.js");
-
-function withTranslation(ns) {
-  return function Extend(WrappedComponent) {
-    function I18nextWithTranslation(props) {
-      var _useTranslation = (0, _useTranslation3.useTranslation)(ns, props),
-          _useTranslation2 = (0, _slicedToArray2.default)(_useTranslation, 3),
-          t = _useTranslation2[0],
-          i18n = _useTranslation2[1],
-          ready = _useTranslation2[2];
-
-      return _react.default.createElement(WrappedComponent, (0, _objectSpread2.default)({}, props, {
-        t: t,
-        i18n: i18n,
-        tReady: ready
-      }));
-    }
-
-    return I18nextWithTranslation;
-  };
-}
-
-/***/ }),
-
-/***/ "./pages/i18n.js":
-/*!***********************!*\
-  !*** ./pages/i18n.js ***!
-  \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var i18next__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! i18next */ "i18next");
-/* harmony import */ var i18next__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(i18next__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/commonjs/index.js");
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_i18next__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages */ "./pages/languages/index.js");
-
-
-
-var resources = {
-  en: {
-    translation: _languages__WEBPACK_IMPORTED_MODULE_2__["en"]
-  },
-  pt: {
-    translation: _languages__WEBPACK_IMPORTED_MODULE_2__["pt"]
-  }
-};
-i18next__WEBPACK_IMPORTED_MODULE_0___default.a.use(react_i18next__WEBPACK_IMPORTED_MODULE_1__["initReactI18next"]).init({
-  resources: resources,
-  lng: 'en',
-  keySeparator: false,
-  interpolation: {
-    escapeValue: false
-  }
-});
-/* harmony default export */ __webpack_exports__["default"] = (i18next__WEBPACK_IMPORTED_MODULE_0___default.a);
-
-/***/ }),
-
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -2359,37 +1086,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next-server/head */ "next-server/head");
 /* harmony import */ var next_server_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_server_head__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/commonjs/index.js");
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_i18next__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./i18n */ "./pages/i18n.js");
 var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
 
 
 
-
-
 /* harmony default export */ __webpack_exports__["default"] = (function () {
-  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_3__["useTranslation"])(),
-      t = _useTranslation.t,
-      i18n = _useTranslation.i18n;
-
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 5
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
     charset: "utf-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 7
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -2397,7 +1115,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     content: "IE=edge",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 8
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -2405,7 +1123,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     content: "width=device-width, initial-scale=1, shrink-to-fit=no",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 9
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -2413,13 +1131,13 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     content: "10,000+ users in 130+ countries trust TheChecker for their real-time email verification and email list cleaning services. Try it FREE today!",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 10
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 12
     },
     __self: this
   }, "#1 Email Verification & List Cleaning Service | TheChecker Email Verifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2427,7 +1145,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 14
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2435,7 +1153,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 15
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2443,7 +1161,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 16
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2451,7 +1169,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 17
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2459,7 +1177,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 18
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2467,7 +1185,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     rel: "stylesheet",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 19
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2476,7 +1194,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     id: "color_theme",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 20
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2485,7 +1203,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-57x57.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 22
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2494,7 +1212,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-60x60.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 23
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2503,7 +1221,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-72x72.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 24
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2512,7 +1230,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-76x76.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 25
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2521,7 +1239,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-114x114.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 26
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2530,7 +1248,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-120x120.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 27
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2539,7 +1257,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-144x144.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 28
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2548,7 +1266,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-152x152.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 29
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2557,7 +1275,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/apple-icon-180x180.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 30
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2567,7 +1285,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/android-icon-192x192.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 31
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2577,7 +1295,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/favicon-32x32.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 32
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2587,7 +1305,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/favicon-96x96.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 33
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2597,7 +1315,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/favicon-16x16.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 34
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("link", {
@@ -2605,7 +1323,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "../static/favicon/manifest.json",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 36
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -2613,7 +1331,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     content: "#ffffff",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 38
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -2621,7 +1339,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     content: "../static/favicon/ms-icon-144x144.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 39
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
@@ -2629,69 +1347,48 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     content: "#ffffff",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 40
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    id: "loading",
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "load-circle",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "one",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar header-nav fixed-top navbar-expand-lg header-nav-light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "navbar-brand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/email-verification-service-logo-thechecker.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 54
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -2704,25 +1401,25 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     "aria-label": "Toggle navigation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 59
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 60
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 61
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -2730,27 +1427,27 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     id: "navbar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 64
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "navbar-nav ml-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 65
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 66
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "#home",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -2758,10 +1455,31 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     href: "index.html#why",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 68
     },
     __self: this
   }, "Why TheChecker"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "nav-link",
+    href: "index.html#features",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, "Features"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
@@ -2776,13 +1494,13 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    href: "index.html#features",
+    href: "integrations.html",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
     },
     __self: this
-  }, "Features"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Integrations"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 81
@@ -2797,13 +1515,12 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    href: "integrations.html",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 83
     },
     __self: this
-  }, "Integrations"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Reviews"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 86
@@ -2818,12 +1535,13 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
+    href: "pricing.html",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 88
     },
     __self: this
-  }, "Reviews"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Pricing"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 91
@@ -2838,31 +1556,10 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    href: "pricing.html",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: this
-  }, "Pricing"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "nav-link",
     href: "javascript:;",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 93
     },
     __self: this
   }, "Resources")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -2872,24 +1569,44 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 96
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-angle-down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 96
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 99
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 100
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "about.html",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 101
+    },
+    __self: this
+  }, "Blog"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
@@ -2903,13 +1620,13 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "about.html",
+    href: "price.html",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 106
     },
     __self: this
-  }, "Blog"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Price"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 109
@@ -2923,13 +1640,13 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "price.html",
+    href: "faq.html",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 111
     },
     __self: this
-  }, "Price"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Faq's"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 114
@@ -2943,33 +1660,34 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "faq.html",
+    href: "contatus.html",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 116
     },
     __self: this
-  }, "Faq's"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Contact us"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 121
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 122
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "contatus.html",
+    className: "nav-link",
+    href: "#contatus",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 123
     },
     __self: this
-  }, "Contact us"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 126
@@ -2983,38 +1701,17 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "nav-link",
-    href: "#contatus",
+    className: "nav-btn nav-link",
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 128
     },
     __self: this
-  }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 131
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 132
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "nav-btn nav-link",
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 133
-    },
-    __self: this
   }, "Try For Free")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 140
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -3022,85 +1719,85 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     className: "home-banner-01",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 142
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 149
+      lineNumber: 144
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row full-screen align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 145
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 146
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home-text-center p-50px-r md-p-0px-r",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 147
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 153
+      lineNumber: 148
     },
     __self: this
   }, "The most cost-effective email verification service"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 149
     },
     __self: this
   }, "Get rid of email bounces and bad email addresses with our proven high-quality yet affordable ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 149
     },
     __self: this
   }, "email verification"), " and ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 149
     },
     __self: this
   }, "email list cleaning"), " solutions that improve your data quality and email marketing ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 150
     },
     __self: this
   }, "Trusted and rated ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 150
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("strong", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 150
     },
     __self: this
   }, "4.8"), "/5 based on ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
+      lineNumber: 150
     },
     __self: this
   }, "200+ reviews"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -3108,7 +1805,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     className: "m-btn m-btn-theme2nd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 151
     },
     __self: this
   }, "Try For Free"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -3117,21 +1814,21 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     "data-text": "Free Trial",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 152
     },
     __self: this
   }, "Learn More"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12 col-lg-6 col-xl-6 home-right m-50px-t md-m-0px-t",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 155
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home-right-inner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 156
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -3140,56 +1837,77 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 157
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 160
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12 col-lg-12 col-xl-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 161
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "section-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 167
+      lineNumber: 162
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 163
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 163
     },
     __self: this
   }, "Trusted by 1,000's"), " of smart teams in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 163
     },
     __self: this
   }, "130+ countries")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 166
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-4 col-md-4 col-lg-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 167
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "customers",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-plesk.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 169
+    },
+    __self: this
+  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-4 col-md-4 col-lg-2",
     __source: {
       fileName: _jsxFileName,
@@ -3204,7 +1922,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-plesk.png",
+    src: "static/img/customers/email-verification-service-thechecker-customers-spendesk.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 174
@@ -3225,7 +1943,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-spendesk.png",
+    src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 179
@@ -3246,7 +1964,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
+    src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 184
@@ -3267,7 +1985,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
+    src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 189
@@ -3288,31 +2006,10 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 194
-    },
-    __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-4 col-md-4 col-lg-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 197
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "customers",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 198
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-sage.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 194
     },
     __self: this
   })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -3320,272 +2017,272 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 203
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 210
+      lineNumber: 205
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 211
+      lineNumber: 206
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 212
+      lineNumber: 207
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "section-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 208
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 214
+      lineNumber: 209
     },
     __self: this
   }, "Why To Use Email Verification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 210
     },
     __self: this
   }, "Based on the last ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 210
     },
     __self: this
   }, "100 million emails"), " we verified in 2018, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 210
     },
     __self: this
   }, "23,51% would bounce"), ".", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 210
     },
     __self: this
   }), "Have you used an email list cleaning service recently?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 215
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 216
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 217
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 218
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-shield",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 219
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 221
     },
     __self: this
   }, "Protect Sender Reputation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 222
     },
     __self: this
   }, "1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 231
+      lineNumber: 226
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 232
+      lineNumber: 227
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 228
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-check",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 229
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236
+      lineNumber: 231
     },
     __self: this
   }, "Avoid Blockages by ESPs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 232
     },
     __self: this
   }, "A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 236
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 237
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 238
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-bar-chart",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 239
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246
+      lineNumber: 241
     },
     __self: this
   }, "Increase Campaigns ROI"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 242
     },
     __self: this
   }, "Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section section-effect right p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255
+      lineNumber: 250
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256
+      lineNumber: 251
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
+      lineNumber: 252
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
+      lineNumber: 253
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box-02",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 254
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 255
     },
     __self: this
   }, "In-forms real-time email validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 261
+      lineNumber: 256
     },
     __self: this
   }, "Get rid of the bad emails before they enter your list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 257
     },
     __self: this
   }, "Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263
+      lineNumber: 258
     },
     __self: this
   }, "Install to verify email address online ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 263
+      lineNumber: 258
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t real-email",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 261
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -3594,35 +2291,35 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267
+      lineNumber: 262
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section section-effect left p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273
+      lineNumber: 268
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274
+      lineNumber: 269
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 270
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t order-last order-md-first",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 272
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -3631,118 +2328,118 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 278
+      lineNumber: 273
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 281
+      lineNumber: 276
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box-02",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282
+      lineNumber: 277
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283
+      lineNumber: 278
     },
     __self: this
   }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284
+      lineNumber: 279
     },
     __self: this
   }, "Connect with your favorite email marketing tool"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285
+      lineNumber: 280
     },
     __self: this
   }, "TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286
+      lineNumber: 281
     },
     __self: this
   }, "Explore all integrations ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286
+      lineNumber: 281
     },
     __self: this
   })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/js/jquery-3.2.1.min.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300
+      lineNumber: 295
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/js/jquery-migrate-3.0.0.min.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 296
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/plugin/bootstrap/js/popper.min.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 303
+      lineNumber: 298
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/plugin/bootstrap/js/bootstrap.min.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 299
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/plugin/owl-carousel/js/owl.carousel.min.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 300
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/plugin/magnific/jquery.magnific-popup.min.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 301
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/js/custom.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 303
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/js/data-layer.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 305
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
     src: "../static/js/crisp-website.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311
+      lineNumber: 306
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
@@ -3751,7 +2448,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     src: "https://cdn.heapanalytics.com/js/heap-564543941.js",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 312
+      lineNumber: 307
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
@@ -3759,7 +2456,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     src: "https://www.googletagmanager.com/gtag/js?id=UA-92603538-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 313
+      lineNumber: 308
     },
     __self: this
   }));
@@ -3767,49 +2464,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
 
 /***/ }),
 
-/***/ "./pages/languages/en.json":
-/*!*********************************!*\
-  !*** ./pages/languages/en.json ***!
-  \*********************************/
-/*! exports provided: welcome, other, default */
-/***/ (function(module) {
-
-module.exports = {"welcome":"welcome more one test","other":"Other test"};
-
-/***/ }),
-
-/***/ "./pages/languages/index.js":
-/*!**********************************!*\
-  !*** ./pages/languages/index.js ***!
-  \**********************************/
-/*! exports provided: en, pt */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ "./pages/languages/en.json");
-var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ "./pages/languages/en.json", 1);
-/* harmony reexport (default from named exports) */ __webpack_require__.d(__webpack_exports__, "en", function() { return _en_json__WEBPACK_IMPORTED_MODULE_0__; });
-/* harmony import */ var _pt_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pt.json */ "./pages/languages/pt.json");
-var _pt_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./pt.json */ "./pages/languages/pt.json", 1);
-/* harmony reexport (default from named exports) */ __webpack_require__.d(__webpack_exports__, "pt", function() { return _pt_json__WEBPACK_IMPORTED_MODULE_1__; });
-
-
-
-/***/ }),
-
-/***/ "./pages/languages/pt.json":
-/*!*********************************!*\
-  !*** ./pages/languages/pt.json ***!
-  \*********************************/
-/*! exports provided: welcome, other, default */
-/***/ (function(module) {
-
-module.exports = {"welcome":"Seja bem vindo mais um test","other":"Outro teste"};
-
-/***/ }),
-
-/***/ 3:
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -3917,28 +2572,6 @@ module.exports = require("core-js/library/fn/symbol");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "html-parse-stringify2":
-/*!****************************************!*\
-  !*** external "html-parse-stringify2" ***!
-  \****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("html-parse-stringify2");
-
-/***/ }),
-
-/***/ "i18next":
-/*!**************************!*\
-  !*** external "i18next" ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("i18next");
 
 /***/ }),
 
