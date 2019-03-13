@@ -50,23 +50,23 @@ export default class Header extends Component {
                 <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
                 <ul className="sub-menu">
                   <li>
-                    <Link href='/'>
+                    <Link href='/blog'>
                       <a>Blog</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href='/'>
+                    <Link href='/prices'>
                       <a>Price</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href='/'>
+                    <Link href='/faqs'>
                       <a>Faq's</a>
                     </Link>
                   </li>
                   <li>
-                    <Link href='/'>
-                      <a>Contact us</a>
+                    <Link href='/contactus'>
+                      <a>{this.props.contactus}</a>
                     </Link>
                   </li>
                 </ul>

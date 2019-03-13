@@ -7,6 +7,7 @@ const pricing = () => {
 
   return <div>
     <Header
+      contactus={t('contactus')}
       en={() => i18n.changeLanguage('en')}
       pt={() => i18n.changeLanguage('pt')}
       integrations={t('integrations')}

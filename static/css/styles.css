@@ -152,7 +152,15 @@ img {
 .flag button {
   background: transparent;
   border: none;
-  padding: 0px;
+  padding: 0px
+}
+
+.contact-section {
+  background-image: url(../../static/img/1600x1000.jpg)
+}
+
+.img-our-team {
+  background-image: url(../../static/img/550x500.jpg)
 }
 
 /*---------------------------------

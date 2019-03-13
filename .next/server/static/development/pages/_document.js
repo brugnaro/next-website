@@ -1367,7 +1367,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
+        href: "/blog",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 53
@@ -1386,7 +1386,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
+        href: "/prices",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 58
@@ -1405,7 +1405,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
+        href: "/faqs",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 63
@@ -1424,7 +1424,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/",
+        href: "/contactus",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 68
@@ -1436,7 +1436,7 @@ function (_Component) {
           lineNumber: 69
         },
         __self: this
-      }, "Contact us"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+      }, this.props.contactus))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 74
