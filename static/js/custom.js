@@ -141,6 +141,11 @@ Template Name   : AppWay
     });
   }
 
+  WAY.UpdateTitle = function(){
+    var pathname = windows.location.pathname;
+    var head = document.getElementsByTagName("head");
+  }
+
   WAY.LightboxGallery = function () {
     $('.portfolio-col').magnificPopup({
       delegate: '.lightbox-gallery',
@@ -211,6 +216,7 @@ Template Name   : AppWay
       WAY.Counter(),
       WAY.ProgressBar(),
       WAY.HeaderSticky();
+      WAY.UpdateTitle;
   });
 
   $(window).on("scroll", function () {

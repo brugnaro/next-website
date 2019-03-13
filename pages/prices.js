@@ -7,6 +7,7 @@ const prices = () => {
   const { t, i18n } = useTranslation();
 
   return <div>
+    <title>Prices | TheChecker</title>
     <Header
       contactus={t('contactus')}
       en={() => i18n.changeLanguage('en')}

@@ -719,14 +719,14 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        charset: "utf-8",
+        charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 6
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        "http-equiv": "X-UA-Compatible",
+        httpEquiv: "X-UA-Compatible",
         content: "IE=edge",
         __source: {
           fileName: _jsxFileName,
@@ -749,18 +749,12 @@ function (_Component) {
           lineNumber: 9
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("title", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, this.props.title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         href: "static/plugin/font-awesome/css/fontawesome-all.min.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 11
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -768,7 +762,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 12
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -776,7 +770,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 14
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -784,7 +778,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 15
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -792,7 +786,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 16
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -800,7 +794,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 18
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -809,13 +803,31 @@ function (_Component) {
         id: "color_theme",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 19
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
         sizes: "57x57",
-        href: "../static/favicon/apple-icon-57x57.png",
+        href: "static/favicon/apple-icon-57x57.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "60x60",
+        href: "static/favicon/apple-icon-60x60.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "72x72",
+        href: "static/favicon/apple-icon-72x72.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
@@ -823,8 +835,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "60x60",
-        href: "../static/favicon/apple-icon-60x60.png",
+        sizes: "76x76",
+        href: "static/favicon/apple-icon-76x76.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24
@@ -832,8 +844,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "72x72",
-        href: "../static/favicon/apple-icon-72x72.png",
+        sizes: "114x114",
+        href: "static/favicon/apple-icon-114x114.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
@@ -841,8 +853,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "76x76",
-        href: "../static/favicon/apple-icon-76x76.png",
+        sizes: "120x120",
+        href: "static/favicon/apple-icon-120x120.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26
@@ -850,8 +862,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "114x114",
-        href: "../static/favicon/apple-icon-114x114.png",
+        sizes: "144x144",
+        href: "static/favicon/apple-icon-144x144.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
@@ -859,8 +871,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "120x120",
-        href: "../static/favicon/apple-icon-120x120.png",
+        sizes: "152x152",
+        href: "static/favicon/apple-icon-152x152.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 28
@@ -868,26 +880,28 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "144x144",
-        href: "../static/favicon/apple-icon-144x144.png",
+        sizes: "180x180",
+        href: "static/favicon/apple-icon-180x180.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "apple-touch-icon",
-        sizes: "152x152",
-        href: "../static/favicon/apple-icon-152x152.png",
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        href: "static/favicon/android-icon-192x192.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "apple-touch-icon",
-        sizes: "180x180",
-        href: "../static/favicon/apple-icon-180x180.png",
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "static/favicon/favicon-32x32.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31
@@ -896,8 +910,8 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "icon",
         type: "image/png",
-        sizes: "192x192",
-        href: "../static/favicon/android-icon-192x192.png",
+        sizes: "96x96",
+        href: "static/favicon/favicon-96x96.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 32
@@ -906,39 +920,19 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "icon",
         type: "image/png",
-        sizes: "32x32",
-        href: "../static/favicon/favicon-32x32.png",
+        sizes: "16x16",
+        href: "static/favicon/favicon-16x16.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "96x96",
-        href: "../static/favicon/favicon-96x96.png",
+        rel: "manifest",
+        href: "static/favicon/manifest.json",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: "../static/favicon/favicon-16x16.png",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "manifest",
-        href: "../static/favicon/manifest.json",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
@@ -946,15 +940,15 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
         name: "msapplication-TileImage",
-        content: "../static/favicon/ms-icon-144x144.png",
+        content: "static/favicon/ms-icon-144x144.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
@@ -962,7 +956,7 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 37
         },
         __self: this
       }));
@@ -16352,7 +16346,13 @@ var faqs = function faqs() {
       lineNumber: 9
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Header"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Faq | TheChecker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Header"], {
     contactus: t('contactus'),
     en: function en() {
       return i18n.changeLanguage('en');
@@ -16364,101 +16364,101 @@ var faqs = function faqs() {
     pricing: t('pricing'),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 11
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section page-title-section theme-after bg-fixed bg-center-center bg-cover contact-section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "page-title text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     },
     __self: this
   }, "FAQ's")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
     className: "breadcrumb justify-content-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 25
     },
     __self: this
   }, "Home"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 26
     },
     __self: this
   }, "FAQ's")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section gray-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-10",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16466,14 +16466,14 @@ var faqs = function faqs() {
     id: "accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16481,7 +16481,7 @@ var faqs = function faqs() {
     id: "faqa-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -16492,14 +16492,14 @@ var faqs = function faqs() {
     "data-aria-controls": "faqc-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "no theme-g-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, "1"), " How can I install/upgrade Dummy Content?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16509,33 +16509,33 @@ var faqs = function faqs() {
     "data-parent": "#accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 45
     },
     __self: this
   }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16543,7 +16543,7 @@ var faqs = function faqs() {
     id: "faqa-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -16554,14 +16554,14 @@ var faqs = function faqs() {
     "data-aria-controls": "faqc-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "no theme-g-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }, "2"), " Dummy Content won't install...")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16571,33 +16571,33 @@ var faqs = function faqs() {
     "data-parent": "#accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 59
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
     },
     __self: this
   }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16605,7 +16605,7 @@ var faqs = function faqs() {
     id: "faqa-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 68
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -16616,14 +16616,14 @@ var faqs = function faqs() {
     "data-aria-controls": "faqc-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 69
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "no theme-g-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
   }, "3"), " How can I uninstall Dummy Content?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16633,33 +16633,33 @@ var faqs = function faqs() {
     "data-parent": "#accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 76
+      lineNumber: 77
     },
     __self: this
   }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 83
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16667,7 +16667,7 @@ var faqs = function faqs() {
     id: "faqa-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -16678,14 +16678,14 @@ var faqs = function faqs() {
     "data-aria-controls": "faqc-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "no theme-g-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 86
     },
     __self: this
   }, "4"), " What are the minimum requirements?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16695,33 +16695,33 @@ var faqs = function faqs() {
     "data-parent": "#accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 91
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 93
     },
     __self: this
   }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 98
+      lineNumber: 99
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16729,7 +16729,7 @@ var faqs = function faqs() {
     id: "faqa-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 100
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -16740,14 +16740,14 @@ var faqs = function faqs() {
     "data-aria-controls": "faqc-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 101
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "no theme-g-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 102
     },
     __self: this
   }, "5"), " Where can I download earlier versions?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16757,33 +16757,33 @@ var faqs = function faqs() {
     "data-parent": "#accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 105
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 106
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 107
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 109
     },
     __self: this
   }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 115
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16791,7 +16791,7 @@ var faqs = function faqs() {
     id: "faqa-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 116
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -16802,14 +16802,14 @@ var faqs = function faqs() {
     "data-aria-controls": "faqc-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 117
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "no theme-g-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 118
     },
     __self: this
   }, "6"), " How can I downgrade to an earlier version of Dummy Content?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16819,33 +16819,33 @@ var faqs = function faqs() {
     "data-parent": "#accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 121
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 122
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 123
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 125
     },
     __self: this
   }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16853,7 +16853,7 @@ var faqs = function faqs() {
     id: "faqa-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 132
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
@@ -16864,14 +16864,14 @@ var faqs = function faqs() {
     "data-aria-controls": "faqc-8",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "no theme-g-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
   }, "7"), " How can I upgrade from Joomla 2.5 to Joomla 3?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -16881,26 +16881,26 @@ var faqs = function faqs() {
     "data-parent": "#accordion",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 137
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "faq-body",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 138
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 139
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")))))))))));
@@ -16987,7 +16987,7 @@ module.exports = {"contactus":"Contato","themost":"O serviço de verificação d
 
 /***/ }),
 
-/***/ 3:
+/***/ 7:
 /*!***********************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ffaqs&absolutePagePath=%2Fhome%2Fmarcos%2FDocumentos%2Fnext-website%2Fpages%2Ffaqs.js ***!
   \***********************************************************************************************************************************/
@@ -17010,5 +17010,5 @@ module.exports = dll_effd29c912beebc303a1;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[7,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=faqs.js.map

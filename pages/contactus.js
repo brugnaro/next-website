@@ -7,6 +7,7 @@ const contactus = () => {
   const { t, i18n } = useTranslation();
 
   return <div>
+    <title>Contact us | TheChecker</title>
     <Header
       contactus={t('contactus')}
       en={() => i18n.changeLanguage('en')}

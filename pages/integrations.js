@@ -6,6 +6,7 @@ const integrations = () => {
   const { t, i18n } = useTranslation();
 
   return <div>
+    <title>Integrations With Email Marketing Tools | TheChecker</title>
     <Header
       contactus={t('contactus')}
       en={() => i18n.changeLanguage('en')}

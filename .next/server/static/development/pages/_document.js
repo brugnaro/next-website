@@ -812,14 +812,14 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        charset: "utf-8",
+        charSet: "utf-8",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 6
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        "http-equiv": "X-UA-Compatible",
+        httpEquiv: "X-UA-Compatible",
         content: "IE=edge",
         __source: {
           fileName: _jsxFileName,
@@ -842,18 +842,12 @@ function (_Component) {
           lineNumber: 9
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("title", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, this.props.title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         href: "static/plugin/font-awesome/css/fontawesome-all.min.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 11
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -861,7 +855,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 12
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -869,7 +863,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 14
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -877,7 +871,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 15
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -885,7 +879,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 16
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -893,7 +887,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 18
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -902,13 +896,31 @@ function (_Component) {
         id: "color_theme",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 19
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
         sizes: "57x57",
-        href: "../static/favicon/apple-icon-57x57.png",
+        href: "static/favicon/apple-icon-57x57.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "60x60",
+        href: "static/favicon/apple-icon-60x60.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "72x72",
+        href: "static/favicon/apple-icon-72x72.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
@@ -916,8 +928,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "60x60",
-        href: "../static/favicon/apple-icon-60x60.png",
+        sizes: "76x76",
+        href: "static/favicon/apple-icon-76x76.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 24
@@ -925,8 +937,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "72x72",
-        href: "../static/favicon/apple-icon-72x72.png",
+        sizes: "114x114",
+        href: "static/favicon/apple-icon-114x114.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
@@ -934,8 +946,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "76x76",
-        href: "../static/favicon/apple-icon-76x76.png",
+        sizes: "120x120",
+        href: "static/favicon/apple-icon-120x120.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26
@@ -943,8 +955,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "114x114",
-        href: "../static/favicon/apple-icon-114x114.png",
+        sizes: "144x144",
+        href: "static/favicon/apple-icon-144x144.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 27
@@ -952,8 +964,8 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "120x120",
-        href: "../static/favicon/apple-icon-120x120.png",
+        sizes: "152x152",
+        href: "static/favicon/apple-icon-152x152.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 28
@@ -961,26 +973,28 @@ function (_Component) {
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "apple-touch-icon",
-        sizes: "144x144",
-        href: "../static/favicon/apple-icon-144x144.png",
+        sizes: "180x180",
+        href: "static/favicon/apple-icon-180x180.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 29
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "apple-touch-icon",
-        sizes: "152x152",
-        href: "../static/favicon/apple-icon-152x152.png",
+        rel: "icon",
+        type: "image/png",
+        sizes: "192x192",
+        href: "static/favicon/android-icon-192x192.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "apple-touch-icon",
-        sizes: "180x180",
-        href: "../static/favicon/apple-icon-180x180.png",
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "static/favicon/favicon-32x32.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31
@@ -989,8 +1003,8 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "icon",
         type: "image/png",
-        sizes: "192x192",
-        href: "../static/favicon/android-icon-192x192.png",
+        sizes: "96x96",
+        href: "static/favicon/favicon-96x96.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 32
@@ -999,39 +1013,19 @@ function (_Component) {
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         rel: "icon",
         type: "image/png",
-        sizes: "32x32",
-        href: "../static/favicon/favicon-32x32.png",
+        sizes: "16x16",
+        href: "static/favicon/favicon-16x16.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "96x96",
-        href: "../static/favicon/favicon-96x96.png",
+        rel: "manifest",
+        href: "static/favicon/manifest.json",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "icon",
-        type: "image/png",
-        sizes: "16x16",
-        href: "../static/favicon/favicon-16x16.png",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        rel: "manifest",
-        href: "../static/favicon/manifest.json",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
@@ -1039,15 +1033,15 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
         name: "msapplication-TileImage",
-        content: "../static/favicon/ms-icon-144x144.png",
+        content: "static/favicon/ms-icon-144x144.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
@@ -1055,7 +1049,7 @@ function (_Component) {
         content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 37
         },
         __self: this
       }));
@@ -4381,7 +4375,6 @@ function (_Document) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_7__["Head"], {
-        title: "#1 Email Verification & List Cleaning Service | TheChecker Email Verifier",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 7
