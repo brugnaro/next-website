@@ -1,40 +1,35 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_0aa2af2a3a99747d4baa.js"
+  ],
   "pages": {
-    "/i18n": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.33b1fdc6840d92ad1ab0.js",
-      "static/runtime/main-e67cdc3b437eb066241f.js"
-    ],
-    "/index": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.33b1fdc6840d92ad1ab0.js",
-      "static/runtime/main-e67cdc3b437eb066241f.js"
-    ],
-    "/integrations": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.33b1fdc6840d92ad1ab0.js",
-      "static/runtime/main-e67cdc3b437eb066241f.js"
-    ],
-    "/languages": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.33b1fdc6840d92ad1ab0.js",
-      "static/runtime/main-e67cdc3b437eb066241f.js"
-    ],
     "/_app": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.33b1fdc6840d92ad1ab0.js",
-      "static/runtime/main-e67cdc3b437eb066241f.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.33b1fdc6840d92ad1ab0.js",
-      "static/runtime/main-e67cdc3b437eb066241f.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/integrations": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/pricing": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/": [
-      "static/runtime/webpack-f0c6edbea5b547edc23f.js",
-      "static/chunks/commons.33b1fdc6840d92ad1ab0.js",
-      "static/runtime/main-e67cdc3b437eb066241f.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ]
   }
 }

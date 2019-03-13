@@ -30,7 +30,7 @@ export default class Header extends Component {
               </li>
               <li>
                 <Link href='/integrations'>
-                  <a className="nav-link">Integrations</a>
+                  <a className="nav-link">{this.props.integrations}</a>
                 </Link>
               </li>
               <li>
@@ -39,8 +39,8 @@ export default class Header extends Component {
                 </Link>
               </li>
               <li>
-                <Link href='/#home'>
-                  <a className="nav-link" href="pricing.html">Pricing</a>
+                <Link href='/pricing'>
+                  <a className="nav-link" href="pricing.html">{this.props.pricing}</a>
                 </Link>
               </li>
               <li>

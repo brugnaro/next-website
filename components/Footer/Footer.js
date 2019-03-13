@@ -9,10 +9,10 @@ const Footer = () =>
               TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI.
                 </p><br />+1 (888) 964-2250
               <ul className="social-icons">
-              <li><a className="facebook" href="https://www.facebook.com/thecheckerco/"><i className="fab fa-facebook-f"></i></a></li>
-              <li><a className="twitter" href="https://twitter.com/thecheckerco"><i className="fab fa-twitter"></i></a></li>
-              <li><a className="linkedin" href="https://www.linkedin.com/company/thechecker.co/"><i className="fab fa-linkedin-in"></i></a></li>
-              <li><a className="github" href="https://github.com/thecheckerco"><i className="fab fa-github"></i></a></li>
+              <li><a className="facebook" target='blank' href="https://www.facebook.com/thecheckerco/"><i className="fab fa-facebook-f"></i></a></li>
+              <li><a className="twitter" target='blank' href="https://twitter.com/thecheckerco"><i className="fab fa-twitter"></i></a></li>
+              <li><a className="linkedin" target='blank' href="https://www.linkedin.com/company/thechecker.co/"><i className="fab fa-linkedin-in"></i></a></li>
+              <li><a className="github" target='blank' href="https://github.com/thecheckerco"><i className="fab fa-github"></i></a></li>
             </ul>
           </div>
           <div className="col-6 col-md-6 col-lg-2 sm-m-15px-tb">
@@ -69,5 +69,5 @@ const Footer = () =>
       </div>
     </section>
   </footer>;
-  
+
 export default Footer;
