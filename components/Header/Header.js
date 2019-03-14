@@ -82,14 +82,17 @@ export default class Header extends Component {
                 </Link>
               </li>
               <li className='flag'>
-                <button onClick={this.props.en}>
-                  <img src='static/img/united-kingdom.png' />
-                </button>
-              </li>
-              <li className='flag'>
-                <button onClick={this.props.pt}>
-                  <img src='static/img/brazil.png' />
-                </button>
+                <img src='static/img/global.png' />
+                <a className="nav-link" href="javascript:;">{this.props.activelang}</a>
+                <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
+                <ul className="sub-menu">
+                  <li>
+                    <button onClick={this.props.toggleLanguage}>
+                      <img src='static/img/global.png' />
+                      <a>{this.props.lang}</a>
+                    </button>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>

@@ -4,14 +4,14 @@ import './i18n';
 
 export default () => {
   const { t, i18n } = useTranslation();
-
   return <div>
     <title>#1 Email Verification & List Cleaning Service | TheChecker Email Verifier</title>
     <Header
       contactus={t('contactus')}
-      en={() => i18n.changeLanguage('en')}
-      pt={() => i18n.changeLanguage('pt')}
+      toggleLanguage={i18n.language === 'en' ? () => i18n.changeLanguage('pt') : () => i18n.changeLanguage('en') }
       integrations={t('integrations')}
+      activelang={i18n.language === 'en' ? 'EN' : 'PT'}
+      lang={i18n.language === 'en' ? 'PT' : 'EN'}
       pricing={t('pricing')}
     />
     <main>
@@ -19,7 +19,7 @@ export default () => {
         <div className="container">
           <div className="row full-screen align-items-center">
             <div className="col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t">
-              <div className="home-text-center p-50px-r md-p-0px-r">
+              <div className="home-text-center p-50px-r md-p-0px-r stars">
                 <h1 className="font-alt">{t('themost')}</h1>
                 <p>
                   Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>

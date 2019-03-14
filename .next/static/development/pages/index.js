@@ -1385,42 +1385,72 @@ function (_Component) {
           lineNumber: 84
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        onClick: this.props.en,
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: "static/img/global.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 85
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: "static/img/united-kingdom.png",
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        className: "nav-link",
+        href: "javascript:;",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 86
         },
         __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "flag",
+      }, this.props.activelang), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+        className: "sub-menu-toggle",
+        "data-toggle": "dropdown",
+        "aria-haspopup": "true",
+        "aria-expanded": "false",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        className: "ti-angle-down",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+        className: "sub-menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 89
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        onClick: this.props.pt,
+        onClick: this.props.toggleLanguage,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 90
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: "static/img/brazil.png",
+        src: "static/img/global.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 91
         },
         __self: this
-      }))))))));
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }, this.props.lang))))))))));
     }
   }]);
 
@@ -16375,28 +16405,29 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 7
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 8
     },
     __self: this
   }, "#1 Email Verification & List Cleaning Service | TheChecker Email Verifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Header"], {
     contactus: t('contactus'),
-    en: function en() {
+    toggleLanguage: i18n.language === 'en' ? function () {
+      return i18n.changeLanguage('pt');
+    } : function () {
       return i18n.changeLanguage('en');
     },
-    pt: function pt() {
-      return i18n.changeLanguage('pt');
-    },
     integrations: t('integrations'),
+    activelang: i18n.language === 'en' ? 'EN' : 'PT',
+    lang: i18n.language === 'en' ? 'PT' : 'EN',
     pricing: t('pricing'),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
@@ -16435,7 +16466,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "home-text-center p-50px-r md-p-0px-r",
+    className: "home-text-center p-50px-r md-p-0px-r stars",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
@@ -19279,10 +19310,10 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
 /*!*********************************!*\
   !*** ./pages/languages/en.json ***!
   \*********************************/
-/*! exports provided: contactus, themost, integrations, pricing, default */
+/*! exports provided: contactus, lang, themost, integrations, pricing, default */
 /***/ (function(module) {
 
-module.exports = {"contactus":"Contact us","themost":"The most cost-effective email verification service","integrations":"Integrations","pricing":"Pricing"};
+module.exports = {"contactus":"Contact us","lang":"EN","themost":"The most cost-effective email verification service","integrations":"Integrations","pricing":"Pricing"};
 
 /***/ }),
 
@@ -19310,10 +19341,10 @@ var _pt_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_req
 /*!*********************************!*\
   !*** ./pages/languages/pt.json ***!
   \*********************************/
-/*! exports provided: contactus, themost, integrations, pricing, default */
+/*! exports provided: contactus, lang, themost, integrations, pricing, default */
 /***/ (function(module) {
 
-module.exports = {"contactus":"Contato","themost":"O serviço de verificação de e-mail mais econômico","integrations":"Integrações","pricing":"Preços"};
+module.exports = {"contactus":"Contato","lang":"PT","themost":"O serviço de verificação de e-mail mais econômico","integrations":"Integrações","pricing":"Preços"};
 
 /***/ }),
 

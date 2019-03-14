@@ -1478,42 +1478,72 @@ function (_Component) {
           lineNumber: 84
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        onClick: this.props.en,
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        src: "static/img/global.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 85
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: "static/img/united-kingdom.png",
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        className: "nav-link",
+        href: "javascript:;",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 86
         },
         __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "flag",
+      }, this.props.activelang), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+        className: "sub-menu-toggle",
+        "data-toggle": "dropdown",
+        "aria-haspopup": "true",
+        "aria-expanded": "false",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
+        className: "ti-angle-down",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+        className: "sub-menu",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 89
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        onClick: this.props.pt,
+        onClick: this.props.toggleLanguage,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 90
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: "static/img/brazil.png",
+        src: "static/img/global.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 91
         },
         __self: this
-      }))))))));
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 92
+        },
+        __self: this
+      }, this.props.lang))))))))));
     }
   }]);
 

@@ -9,9 +9,10 @@ const integrations = () => {
     <title>Integrations With Email Marketing Tools | TheChecker</title>
     <Header
       contactus={t('contactus')}
-      en={() => i18n.changeLanguage('en')}
-      pt={() => i18n.changeLanguage('pt')}
+      toggleLanguage={i18n.language === 'en' ? () => i18n.changeLanguage('pt') : () => i18n.changeLanguage('en') }
       integrations={t('integrations')}
+      activelang={i18n.language === 'en' ? 'EN' : 'PT'}
+      lang={i18n.language === 'en' ? 'PT' : 'EN'}
       pricing={t('pricing')}
     />
     <main>
