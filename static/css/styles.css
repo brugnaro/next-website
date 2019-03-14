@@ -194,6 +194,23 @@ a:not([href]):not([tabindex]) {
   color: #7f7c9b
 }
 
+.header-nav .navbar-nav>li .sub-menu li>a {
+  font-size: 13px;
+}
+
+.mega-menu-title {
+  color: #000;
+  font-weight: bold
+}
+
+.mega-menu-link span {
+  cursor: pointer
+}
+
+.mega-menu-link a {
+  color: #7f7c9b
+}
+
 /*---------------------------------
 * 01. Loading
 -----------------------------------*/
@@ -640,6 +657,10 @@ a:not([href]):not([tabindex]) {
     -o-transition: ease all 0.3s;
     transition: ease all 0.3s;
     text-align: right
+  }
+  .mega-menu {
+    width: 30vw !important;
+    text-align: left !important
   }
   .header-nav .navbar-nav>li .sub-menu-toggle {
     color: #fff;

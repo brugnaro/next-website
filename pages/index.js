@@ -44,12 +44,12 @@ export default () => {
               <div className="row">
                 <div className="col-4 col-md-4 col-lg-2">
                   <div className="customers">
-                    <img src="static/img/customers/email-verification-service-thechecker-customers-plesk.png" />
+                    <img src="static/img/customers/asics.png" />
                   </div>
                 </div>
                 <div className="col-4 col-md-4 col-lg-2">
                   <div className="customers">
-                    <img src="static/img/customers/email-verification-service-thechecker-customers-spendesk.png" />
+                    <img src="static/img/customers/century.png" />
                   </div>
                 </div>
                 <div className="col-4 col-md-4 col-lg-2">
@@ -220,7 +220,7 @@ export default () => {
                   <div className="testimonial-col">
                     <i className="ti-quote-left"></i>
                     <div className="say">
-                      <img src="static/img/testimonials/leadlovers.png" />
+                      <img src="static/img/customers/asics.png" />
                       <p>Here at LeadLovers we’re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.</p>
                     </div>
                     <div className="user">
@@ -237,7 +237,7 @@ export default () => {
                   <div className="testimonial-col">
                     <i className="ti-quote-left"></i>
                     <div className="say">
-                      <img src="static/img/testimonials/actualsales.png" />
+                      <img src="static/img/customers/century.png" />
                       <p>An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.</p>
                     </div>
                     <div className="user">

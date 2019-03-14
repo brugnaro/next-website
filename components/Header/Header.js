@@ -43,12 +43,15 @@ export default class Header extends Component {
                   <a className="nav-link" href="pricing.html">{this.props.pricing}</a>
                 </Link>
               </li>
-              <li>
+
+              {/* <li>
                 <Link href='/'>
                   <a className="nav-link" href="javascript:;">Resources</a>
                 </Link>
                 <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
+
                 <ul className="sub-menu">
+                  
                   <li>
                     <Link href='https://blog.thechecker.co'>
                       <a target='blank'>Blog</a>
@@ -69,8 +72,95 @@ export default class Header extends Component {
                       <a>{this.props.contactus}</a>
                     </Link>
                   </li>
+
                 </ul>
+
+              </li> */}
+
+              <li className="nav-item dropdown">
+
+                <a className="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+                <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
+
+                <div className="sub-menu mega-menu" aria-labelledby="navbarDropdown">
+
+                  <div className="container">
+
+                    <div className="row">
+
+                      <div className="col-md-4">
+
+                        <ul className="nav flex-column">
+                          <li>
+                            <span className="mega-menu-title">Solutions</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">Digital Agency</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">E-commerce</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">Sales Resp.</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">SaaS Platform</span>
+                          </li>
+                        </ul>
+
+                      </div>
+
+                      <div className="col-md-4">
+                        <ul className="nav flex-column">
+                          <li>
+                            <span className="mega-menu-title">About</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">
+                              <Link href="/faqs">
+                                <a>FAQ</a>
+                              </Link>
+                            </span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">Affiliates</span>
+                          </li>
+                          <li className="mega-menu-link">
+                            <span className="nav-link mega-menu-link">
+                              <Link href="https://blog.thechecker.co">
+                                <a className="nav-link" target="blank">Blog</a>
+                              </Link>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div className="col-md-4">
+                        <ul className="nav flex-column">
+                          <li>
+                            <span className="mega-menu-title">Developers</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">API</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">Widget</span>
+                          </li>
+                          <li>
+                            <span className="nav-link mega-menu-link">Server status</span>
+                          </li>
+                        </ul>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
               </li>
+
+
               <li>
                 <Link href='/'>
                   <a className="nav-link">Login</a>
