@@ -1049,7 +1049,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/#home",
+        href: "/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9
@@ -1223,7 +1223,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/#home",
+        href: "/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
@@ -1268,13 +1268,14 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/blog",
+        href: "https://blog.thechecker.co",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 53
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        target: "blank",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 54
@@ -17026,7 +17027,7 @@ module.exports = {"contactus":"Contato","themost":"O serviço de verificação d
 
 /***/ }),
 
-/***/ 8:
+/***/ 5:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fcontactus&absolutePagePath=%2Fhome%2Fmarcos%2FDocumentos%2Fnext-website%2Fpages%2Fcontactus.js ***!
   \*********************************************************************************************************************************************/
@@ -17049,5 +17050,5 @@ module.exports = dll_effd29c912beebc303a1;
 
 /***/ })
 
-},[[8,"static/runtime/webpack.js"]]]));;
+},[[5,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=contactus.js.map

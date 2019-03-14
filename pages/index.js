@@ -187,35 +187,36 @@ export default () => {
           </div>
         </div>
       </section>
-
-      <section className="section testimonial-section">
-
+      <section id="carousel" className="section">
         <div className="container">
-
           <div className="row justify-content-center m-60px-b md-m-40px-b">
             <div className="col-md-10 col-lg-8 col-xl-7">
               <div className="section-title text-center">
                 <label>Testimonial</label>
                 <h2 className="theme-after-bg">What Our Customers Say?</h2>
-                <div className="title-border"><span className="lg"></span><span className="md"></span><span className="sm"></span></div>
+                <div className="title-border">
+                  <span className="lg"></span>
+                  <span className="md"></span>
+                  <span className="sm"></span>
+                </div>
                 <p>World-class teams in 130+ countries choose TheChecker.</p>
               </div>
             </div>
           </div>
-
-          <div className="row justify-content-center">
-
-            <div className="col-md-12">
-
-              <div id="client-slider-single" className="owl-carousel">
-
+          <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
+            <ul className="carousel-indicators">
+              <li data-target="#carousel1" data-slide-to="0" className="active"></li>
+              <li data-target="#carousel1" data-slide-to="1"></li>
+              <li data-target="#carousel1" data-slide-to="2"></li>
+            </ul>
+            <div className="carousel-inner">
+              <div className="carousel-item active text-center">
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
                     <img src="static/img/testimonials/leadlovers.png" />
                     <p>Here at LeadLovers we’re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.</p>
                   </div>
-
                   <div className="user">
                     <div className="img">
                       <img src="https://f6s-public.s3.amazonaws.com/profiles/1860904_original.jpg" alt="" title="" />
@@ -225,9 +226,7 @@ export default () => {
                       <label>CTO</label>
                     </div>
                   </div>
-
                 </div>
-
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
@@ -244,7 +243,8 @@ export default () => {
                     </div>
                   </div>
                 </div>
-
+              </div>
+              <div className="carousel-item">
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
@@ -261,7 +261,6 @@ export default () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
@@ -278,7 +277,8 @@ export default () => {
                     </div>
                   </div>
                 </div>
-
+              </div>
+              <div className="carousel-item">
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
@@ -295,7 +295,6 @@ export default () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
@@ -312,7 +311,8 @@ export default () => {
                     </div>
                   </div>
                 </div>
-
+              </div>
+              <div className="carousel-item">
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
@@ -329,7 +329,6 @@ export default () => {
                     </div>
                   </div>
                 </div>
-
                 <div className="testimonial-col">
                   <i className="ti-quote-left"></i>
                   <div className="say">
@@ -346,17 +345,15 @@ export default () => {
                     </div>
                   </div>
                 </div>
-
               </div>
-
             </div>
-
+            <div className="owl-dots">
+              <a className="left slide-control" href="#carousel1" role="button" data-slide="prev"><i className="fa fa-chevron-left"></i></a>
+              <a className="right slide-control" href="#carousel1" role="button" data-slide="next"><i className="fa fa-chevron-right"></i></a>
+            </div>
           </div>
-
         </div>
-
       </section>
-
       <section id="features" className="section">
         <div className="container">
           <div className="row justify-content-center m-45px-b md-m-25px-b">
@@ -609,6 +606,6 @@ export default () => {
         </div>
       </section>
     </main>
-  </div>
+  </div >
 };
 

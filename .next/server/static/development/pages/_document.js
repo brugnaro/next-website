@@ -1142,7 +1142,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/#home",
+        href: "/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 9
@@ -1316,7 +1316,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/#home",
+        href: "/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
@@ -1361,13 +1361,14 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
-        href: "/blog",
+        href: "https://blog.thechecker.co",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 53
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        target: "blank",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 54

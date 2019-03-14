@@ -6,7 +6,7 @@ export default class Header extends Component {
     return <header>
       <nav className="navbar header-nav fixed-top navbar-expand-lg header-nav-light">
         <div className="container">
-          <Link href='/#home'>
+          <Link href='/'>
             <a className="navbar-brand">
               <img src="static/img/email-verification-service-logo-thechecker.png" />
             </a>
@@ -44,14 +44,14 @@ export default class Header extends Component {
                 </Link>
               </li>
               <li>
-                <Link href='/#home'>
+                <Link href='/'>
                   <a className="nav-link" href="javascript:;">Resources</a>
                 </Link>
                 <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
                 <ul className="sub-menu">
                   <li>
-                    <Link href='/blog'>
-                      <a>Blog</a>
+                    <Link href='https://blog.thechecker.co'>
+                      <a target='blank'>Blog</a>
                     </Link>
                   </li>
                   <li>

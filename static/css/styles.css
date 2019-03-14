@@ -135,7 +135,6 @@ img {
 -----------------------------------*/
 
 .order-last img {
-  box-shadow: 0 6px 12px 0 rgba(178, 178, 178, .13);
   border-radius: 5px
 }
 
@@ -161,6 +160,27 @@ img {
 
 .img-our-team {
   background-image: url(../../static/img/550x500.jpg)
+}
+
+.carousel-item.active {
+  display: flex;
+  align-items: flex-start
+}
+
+.testimonial-col {
+  width: 495px;
+}
+
+.say img {
+  width: 200px
+}
+
+.owl-dots a {
+  padding: 0 10px 0 49px
+}
+
+.testimonial-col .say {
+  text-align: left
 }
 
 /*---------------------------------
@@ -1183,7 +1203,8 @@ img {
 
 .real-email {
   box-shadow: 0 6px 12px 0 rgba(178, 178, 178, .13);
-  border-radius: 5px
+  border-radius: 5px;
+  background: #FFF
 }
 
 .feature-box-02 {
