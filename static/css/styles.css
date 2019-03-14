@@ -166,13 +166,8 @@ img {
   background-image: url(../../static/img/550x500.jpg)
 }
 
-.carousel-item.active {
-  display: flex;
-  align-items: flex-start
-}
-
 .testimonial-col {
-  width: 495px;
+  width: 35vw;
 }
 
 .say img {
@@ -180,7 +175,7 @@ img {
 }
 
 .owl-dots a {
-  padding: 0 10px 0 49px
+  padding: 0 7% 0 10%
 }
 
 .testimonial-col .say {
@@ -189,6 +184,14 @@ img {
 
 .stars span {
   color: #FFDA5F
+}
+
+.ti-angle-down:before {
+  color: #36E8A0
+}
+
+a:not([href]):not([tabindex]) {
+  color: #7f7c9b
 }
 
 /*---------------------------------
@@ -326,6 +329,9 @@ img {
 @media (max-width: 767px) {
   .section-title h2 {
     font-size: 25px;
+  }
+  .testimonial-col {
+    width: 77vw;
   }
 }
 
@@ -619,7 +625,7 @@ img {
   .header-nav .navbar-nav>li .sub-menu {
     background: #fff;
     margin: 0;
-    padding: 5px;
+    padding: 10px;
     width: auto;
     position: absolute;
     left: 0;
@@ -633,6 +639,7 @@ img {
     -moz-transition: ease all 0.3s;
     -o-transition: ease all 0.3s;
     transition: ease all 0.3s;
+    text-align: right
   }
   .header-nav .navbar-nav>li .sub-menu-toggle {
     color: #fff;
@@ -3088,6 +3095,9 @@ img {
 }
 
 @media (max-width: 1200px) {
+  .owl-dots a {
+    padding: 0 17% 0 10%
+  }
   /*Margin All*/
   .lg-m-0px {
     margin: 0;
@@ -8708,6 +8718,12 @@ img {
 @media(min-width: 2560px) {
   .home-right-inner {
     width: 27vw !important;
+  }
+  .testimonial-col {
+    width: 19vw;
+  }
+  .owl-dots a {
+    padding: 0 11% 0 10%;
   }
 }
 

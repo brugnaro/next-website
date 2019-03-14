@@ -87,9 +87,13 @@ export default class Header extends Component {
                 <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
                 <ul className="sub-menu">
                   <li>
-                    <button onClick={this.props.toggleLanguage}>
-                      <img src='static/img/global.png' />
-                      <a>{this.props.lang}</a>
+                    <button onClick={this.props.en}>
+                      <a>English</a>
+                    </button>
+                  </li>
+                  <li>
+                    <button onClick={this.props.pt}>
+                      <a>Português</a>
                     </button>
                   </li>
                 </ul>

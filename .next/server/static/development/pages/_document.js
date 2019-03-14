@@ -1524,26 +1524,38 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
-        onClick: this.props.toggleLanguage,
+        onClick: this.props.en,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 90
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        src: "static/img/global.png",
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 91
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+      }, "English"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 94
         },
         __self: this
-      }, this.props.lang))))))))));
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        onClick: this.props.pt,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96
+        },
+        __self: this
+      }, "Portugu\xEAs"))))))))));
     }
   }]);
 
