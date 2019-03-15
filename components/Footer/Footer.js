@@ -37,7 +37,7 @@ const Footer = () =>
               <li><a href="#">TC Guarantee</a></li>
             </ul>
           </div>
-          <div className="col-md-6 col-lg-2 sm-m-15px-tb">
+          <div className="col-6 col-md-6 col-lg-2 sm-m-15px-tb">
             <h4 className="font-alt">Solutions</h4>
             <ul className="fot-link">
               <li><a href="#">Enterprise</a></li>
@@ -47,7 +47,7 @@ const Footer = () =>
               <li><a href="#">SaaS Platforms</a></li>
             </ul>
           </div>
-          <div className="col-md-6 col-lg-2 sm-m-15px-tb">
+          <div className="col-6 col-md-6 col-lg-2 sm-m-15px-tb">
             <h4 className="font-alt">Compare</h4>
             <ul className="fot-link">
               <li><a href="#">TC vs. Neverbounce</a></li>

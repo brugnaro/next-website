@@ -42,20 +42,13 @@ const Header = (props) => {
                 <a className="nav-link" href="pricing.html">{props.pricing}</a>
               </Link>
             </li>
-
             <li className="nav-item dropdown">
-
               <a className="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
               <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
-
               <div className="sub-menu mega-menu" aria-labelledby="navbarDropdown">
-
                 <div className="container">
-
                   <div className="row">
-
                     <div className="col-md-4">
-
                       <ul className="nav flex-column">
                         <li>
                           <span className="mega-menu-title">Solutions</span>
@@ -73,9 +66,7 @@ const Header = (props) => {
                           <span className="nav-link mega-menu-link">SaaS Platform</span>
                         </li>
                       </ul>
-
                     </div>
-
                     <div className="col-md-4">
                       <ul className="nav flex-column">
                         <li>
@@ -100,7 +91,6 @@ const Header = (props) => {
                         </li>
                       </ul>
                     </div>
-
                     <div className="col-md-4">
                       <ul className="nav flex-column">
                         <li>
@@ -117,16 +107,10 @@ const Header = (props) => {
                         </li>
                       </ul>
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
-
             </li>
-
-
             <li>
               <Link href='/'>
                 <a className="nav-link">Login</a>

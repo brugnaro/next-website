@@ -35,7 +35,7 @@ const index = (props) => {
               <div className="home-text-center p-50px-r md-p-0px-r stars">
                 <h1 className="font-alt" params={props.lang}>{t('themost')}</h1>
                 <p>
-                  <Link route={`integrations`}><a>Test</a></Link>Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>
+                  Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>
                   and<b> email list cleaning</b> solutions that improve your data quality and email marketing ROI.
                 </p>
                 <p>Trusted and rated <span>✮✮✮✮✮ </span> <b>4.8</b>/5 based on <a href="#reviews">200+ reviews</a>.</p>
@@ -48,41 +48,49 @@ const index = (props) => {
                 <img src="static/img/email-verification-service-thechecker-screen.png" title="" alt="" />
               </div>
             </div>
-            <div className="row">
-              <div className="col-md-12 col-lg-12 col-xl-12">
-                <div className="section-title">
-                  <p><u>Trusted by 1,000's</u> of smart teams in <u>130+ countries</u></p>
-                </div>
-              </div>
-              <div className="row">
-                <div className="col-4 col-md-4 col-lg-2">
-                  <div className="customers">
-                    <img src="static/img/customers/asics.png" />
+            <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
+              <ul className="carousel-indicators">
+                <li data-target="#carousel1" data-slide-to="0" className="active"></li>
+                <li data-target="#carousel1" data-slide-to="1"></li>
+                <li data-target="#carousel1" data-slide-to="2"></li>
+              </ul>
+              <div className="carousel-inner">
+                <div className="carousel-item active text-center">
+                  <div className="row">
+                    <div className="testimonial-col-md-auto customers-carousel">
+                      <div className="say">
+                        <img src="static/img/customers/asics.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial-col-md-auto customers-carousel">
+                      <div className="say">
+                        <img src="static/img/customers/century.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial-col-md-auto customers-carousel">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-glint.png" />
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <div className="col-4 col-md-4 col-lg-2">
-                  <div className="customers">
-                    <img src="static/img/customers/century.png" />
-                  </div>
-                </div>
-                <div className="col-4 col-md-4 col-lg-2">
-                  <div className="customers">
-                    <img src="static/img/customers/email-verification-service-thechecker-customers-glint.png" />
-                  </div>
-                </div>
-                <div className="col-4 col-md-4 col-lg-2">
-                  <div className="customers">
-                    <img src="static/img/customers/email-verification-service-thechecker-customers-ebanx.png" />
-                  </div>
-                </div>
-                <div className="col-4 col-md-4 col-lg-2">
-                  <div className="customers">
-                    <img src="static/img/customers/email-verification-service-thechecker-customers-wework.png" />
-                  </div>
-                </div>
-                <div className="col-4 col-md-4 col-lg-2">
-                  <div className="customers">
-                    <img src="static/img/customers/email-verification-service-thechecker-customers-sage.png" />
+                <div className="carousel-item">
+                  <div className="row text-center">
+                    <div className="testimonial-col-md-auto customers-carousel">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-ebanx.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial-col-md-auto customers-carousel">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-wework.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial-col-md-auto customers-carousel">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-sage.png" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

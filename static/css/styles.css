@@ -211,6 +211,13 @@ a:not([href]):not([tabindex]) {
   color: #7f7c9b
 }
 
+.customers-carousel {
+  padding: 0px !important;
+  width: 16vw !important;
+  /* border: none !important */
+  margin: 0 0 0 10vw !important;
+}
+
 /*---------------------------------
 * 01. Loading
 -----------------------------------*/
@@ -349,6 +356,10 @@ a:not([href]):not([tabindex]) {
   }
   .testimonial-col {
     width: 77vw;
+  }
+  .customers-carousel {
+    width: 87vw !important;
+    padding: 0 0 0 17px !important
   }
 }
 
@@ -8745,6 +8756,10 @@ a:not([href]):not([tabindex]) {
   }
   .owl-dots a {
     padding: 0 11% 0 10%;
+  }
+  .customers-carousel {
+    width: 14vw !important;
+    margin: 0px 0 0 31px !important;
   }
 }
 

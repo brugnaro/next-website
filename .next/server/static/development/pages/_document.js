@@ -532,7 +532,7 @@ var Footer = function Footer() {
     },
     __self: this
   }, "TC Guarantee")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-2 sm-m-15px-tb",
+    className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
@@ -618,7 +618,7 @@ var Footer = function Footer() {
     },
     __self: this
   }, "SaaS Platforms")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-2 sm-m-15px-tb",
+    className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 50
@@ -1289,7 +1289,7 @@ var Header = function Header(props) {
     className: "nav-item dropdown",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 45
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1302,7 +1302,7 @@ var Header = function Header(props) {
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: this
   }, "Resources"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1312,14 +1312,14 @@ var Header = function Header(props) {
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-angle-down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 47
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1327,187 +1327,187 @@ var Header = function Header(props) {
     "aria-labelledby": "navbarDropdown",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 49
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav flex-column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "mega-menu-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 54
     },
     __self: this
   }, "Solutions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 57
     },
     __self: this
   }, "Digital Agency")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 60
     },
     __self: this
   }, "E-commerce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 62
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 63
     },
     __self: this
   }, "Sales Resp.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 65
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 66
     },
     __self: this
   }, "SaaS Platform")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 70
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav flex-column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 72
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "mega-menu-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 73
     },
     __self: this
   }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 75
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 76
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/faqs",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 77
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 78
     },
     __self: this
   }, "FAQ")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 82
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 83
     },
     __self: this
   }, "Affiliates")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 85
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 86
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "https://blog.thechecker.co",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 87
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1515,127 +1515,127 @@ var Header = function Header(props) {
     target: "blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 88
     },
     __self: this
   }, "Blog")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 94
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav flex-column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 95
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 96
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "mega-menu-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 97
     },
     __self: this
   }, "Developers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 99
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 110
+      lineNumber: 100
     },
     __self: this
   }, "API")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 103
     },
     __self: this
   }, "Widget")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 105
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 106
     },
     __self: this
   }, "Server status")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 114
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 115
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 116
     },
     __self: this
   }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 119
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 136
+      lineNumber: 120
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-btn nav-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 121
     },
     __self: this
   }, "Try For Free"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "flag",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 124
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/global.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 125
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1643,7 +1643,7 @@ var Header = function Header(props) {
     href: "javascript:;",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 142
+      lineNumber: 126
     },
     __self: this
   }, props.activelang), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1653,59 +1653,59 @@ var Header = function Header(props) {
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 127
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-angle-down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 143
+      lineNumber: 127
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 144
+      lineNumber: 128
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 129
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.en,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 130
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 147
+      lineNumber: 131
     },
     __self: this
   }, "English"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
+      lineNumber: 134
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.pt,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 151
+      lineNumber: 135
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 152
+      lineNumber: 136
     },
     __self: this
   }, "Portugu\xEAs"))))))))));
