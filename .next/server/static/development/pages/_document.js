@@ -1744,19 +1744,23 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-svg */ "react-svg");
+/* harmony import */ var react_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_svg__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/home/marcos/Documentos/next-website/components/Icon/Icon.js";
-
 
 // import Global from '../../static/img/icons/global.svg'
 // import Accuracy from '../../static/img/icons/99-accuracy.svg'
-var Icon = function Icon(props) {
-  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+
+
+var Icon = function Icon() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    src: "../../static/img/icons/99-accuracy.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: this
-  }, "icon"); // const icon = {
+  }); // const icon = {
   //   global: <Global style={{ fill: props.fill, width: props.size }} />,
   //   accuracy: <Accuracy style={{ fill: props.fill, width: props.size }} />
   // };
@@ -4880,6 +4884,17 @@ module.exports = require("react");
 /***/ (function(module, exports) {
 
 module.exports = require("react-is");
+
+/***/ }),
+
+/***/ "react-svg":
+/*!****************************!*\
+  !*** external "react-svg" ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-svg");
 
 /***/ }),
 

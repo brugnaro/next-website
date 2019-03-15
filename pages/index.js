@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { useTranslation, getInitialProps } from 'react-i18next';
-import { Header } from '../components';
+import { Header, Icon } from '../components';
 import './i18n';
 import { Link } from '../routes';
 
@@ -28,6 +28,7 @@ const index = (props) => {
       pricing={t('pricing')}
     />
     <main>
+      <Icon/>
       <section id="home" className="home-banner-01">
         <div className="container">
           <div className="row full-screen align-items-center">

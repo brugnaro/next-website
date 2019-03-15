@@ -1651,19 +1651,22 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-svg */ "./node_modules/react-svg/es/react-svg.js");
 var _jsxFileName = "/home/marcos/Documentos/next-website/components/Icon/Icon.js";
-
 
 // import Global from '../../static/img/icons/global.svg'
 // import Accuracy from '../../static/img/icons/99-accuracy.svg'
-var Icon = function Icon(props) {
-  react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+
+
+var Icon = function Icon() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    src: "../../static/img/icons/99-accuracy.svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 7
     },
     __self: this
-  }, "icon"); // const icon = {
+  }); // const icon = {
   //   global: <Global style={{ fill: props.fill, width: props.size }} />,
   //   accuracy: <Accuracy style={{ fill: props.fill, width: props.size }} />
   // };
@@ -2830,6 +2833,35 @@ module.exports = _defineProperty;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime/helpers/extends.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/extends.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _extends() {
+  module.exports = _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+module.exports = _extends;
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/getPrototypeOf.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/getPrototypeOf.js ***!
@@ -2873,6 +2905,23 @@ function _inherits(subClass, superClass) {
 }
 
 module.exports = _inherits;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/inheritsLoose.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/inheritsLoose.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  subClass.__proto__ = superClass;
+}
+
+module.exports = _inheritsLoose;
 
 /***/ }),
 
@@ -3157,6 +3206,361 @@ function _typeof(obj) {
 }
 
 module.exports = _typeof;
+
+/***/ }),
+
+/***/ "./node_modules/@tanem/svg-injector/dist/svg-injector.esm.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@tanem/svg-injector/dist/svg-injector.esm.js ***!
+  \*******************************************************************/
+/*! exports provided: SVGInjector, EvalScripts */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SVGInjector", function() { return SVGInjector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "EvalScripts", function() { return EvalScripts; });
+var cloneSvg = function cloneSvg(sourceSvg) {
+  return sourceSvg.cloneNode(true);
+};
+
+var isLocal = function isLocal() {
+  return window.location.protocol === 'file:';
+};
+
+var svgCache = new Map();
+
+var requestQueue = {};
+var queueRequest = function queueRequest(url, callback) {
+  requestQueue[url] = requestQueue[url] || [];
+  requestQueue[url].push(callback);
+};
+var processRequestQueue = function processRequestQueue(url) {
+  var _loop_1 = function _loop_1(i, len) {
+    setTimeout(function () {
+      if (Array.isArray(requestQueue[url])) {
+        var cacheValue = svgCache.get(url);
+        var callback = requestQueue[url][i];
+
+        if (cacheValue instanceof SVGSVGElement || cacheValue instanceof HTMLElement) {
+          callback(null, cloneSvg(cacheValue));
+        }
+
+        if (cacheValue instanceof Error) {
+          callback(cacheValue);
+        }
+
+        if (i === requestQueue[url].length - 1) {
+          delete requestQueue[url];
+        }
+      }
+    }, 0);
+  };
+
+  for (var i = 0, len = requestQueue[url].length; i < len; i++) {
+    _loop_1(i, len);
+  }
+};
+
+var loadSvg = function loadSvg(url, callback) {
+  if (svgCache.has(url)) {
+    var cacheValue = svgCache.get(url);
+
+    if (cacheValue instanceof SVGSVGElement || cacheValue instanceof HTMLElement) {
+      callback(null, cloneSvg(cacheValue));
+      return;
+    }
+
+    if (cacheValue instanceof Error) {
+      callback(cacheValue);
+      return;
+    }
+
+    queueRequest(url, callback);
+    return;
+  }
+
+  svgCache.set(url, undefined);
+  queueRequest(url, callback);
+  var httpRequest = new XMLHttpRequest();
+
+  httpRequest.onreadystatechange = function () {
+    try {
+      if (httpRequest.readyState === 4) {
+        if (httpRequest.status === 404 || httpRequest.responseXML === null) {
+          throw new Error(isLocal() ? 'Note: SVG injection ajax calls do not work locally without adjusting security setting in your browser. Or consider using a local webserver.' : 'Unable to load SVG file: ' + url);
+        }
+
+        if (httpRequest.status === 200 || isLocal() && httpRequest.status === 0) {
+          if (httpRequest.responseXML instanceof Document) {
+            if (httpRequest.responseXML.documentElement) {
+              svgCache.set(url, httpRequest.responseXML.documentElement);
+            }
+          }
+
+          processRequestQueue(url);
+        } else {
+          throw new Error('There was a problem injecting the SVG: ' + httpRequest.status + ' ' + httpRequest.statusText);
+        }
+      }
+    } catch (error) {
+      svgCache.set(url, error);
+      processRequestQueue(url);
+    }
+  };
+
+  httpRequest.open('GET', url);
+
+  if (httpRequest.overrideMimeType) {
+    httpRequest.overrideMimeType('text/xml');
+  }
+
+  httpRequest.send();
+};
+
+var idCounter = 0;
+
+var uniqueId = function uniqueId() {
+  return ++idCounter;
+};
+
+var injectedElements = [];
+var ranScripts = {};
+var svgNamespace = 'http://www.w3.org/2000/svg';
+var xlinkNamespace = 'http://www.w3.org/1999/xlink';
+
+var injectElement = function injectElement(el, callback, _a) {
+  var evalScripts = _a.evalScripts,
+      renumerateIRIElements = _a.renumerateIRIElements;
+  var imgUrl = el.getAttribute('data-src') || el.getAttribute('src');
+
+  if (!imgUrl || !/\.svg/i.test(imgUrl)) {
+    callback(new Error('Attempted to inject a file with a non-svg extension: ' + imgUrl));
+    return;
+  }
+
+  if (injectedElements.indexOf(el) !== -1) {
+    injectedElements.splice(injectedElements.indexOf(el), 1);
+    el = null;
+    return;
+  }
+
+  injectedElements.push(el);
+  el.setAttribute('src', '');
+  loadSvg(imgUrl, function (error, svg) {
+    if (!svg) {
+      injectedElements.splice(injectedElements.indexOf(el), 1);
+      el = null;
+      callback(error);
+      return;
+    }
+
+    var imgId = el.getAttribute('id');
+
+    if (imgId) {
+      svg.setAttribute('id', imgId);
+    }
+
+    var imgTitle = el.getAttribute('title');
+
+    if (imgTitle) {
+      svg.setAttribute('title', imgTitle);
+    }
+
+    var imgWidth = el.getAttribute('width');
+
+    if (imgWidth) {
+      svg.setAttribute('width', imgWidth);
+    }
+
+    var imgHeight = el.getAttribute('height');
+
+    if (imgHeight) {
+      svg.setAttribute('height', imgHeight);
+    }
+
+    var mergedClasses = Array.from(new Set((svg.getAttribute('class') || '').split(' ').concat(['injected-svg'], (el.getAttribute('class') || '').split(' ')))).join(' ').trim();
+    svg.setAttribute('class', mergedClasses);
+    var imgStyle = el.getAttribute('style');
+
+    if (imgStyle) {
+      svg.setAttribute('style', imgStyle);
+    }
+
+    svg.setAttribute('data-src', imgUrl);
+    var imgData = [].filter.call(el.attributes, function (at) {
+      return /^data-\w[\w-]*$/.test(at.name);
+    });
+    Array.prototype.forEach.call(imgData, function (dataAttr) {
+      if (dataAttr.name && dataAttr.value) {
+        svg.setAttribute(dataAttr.name, dataAttr.value);
+      }
+    });
+
+    if (renumerateIRIElements) {
+      var iriElementsAndProperties_1 = {
+        clipPath: ['clip-path'],
+        'color-profile': ['color-profile'],
+        cursor: ['cursor'],
+        filter: ['filter'],
+        linearGradient: ['fill', 'stroke'],
+        marker: ['marker', 'marker-start', 'marker-mid', 'marker-end'],
+        mask: ['mask'],
+        path: [],
+        pattern: ['fill', 'stroke'],
+        radialGradient: ['fill', 'stroke']
+      };
+      var element_1;
+      var elements_1;
+      var properties_1;
+      var currentId_1;
+      var newId_1;
+      Object.keys(iriElementsAndProperties_1).forEach(function (key) {
+        element_1 = key;
+        properties_1 = iriElementsAndProperties_1[key];
+        elements_1 = svg.querySelectorAll(element_1 + '[id]');
+
+        var _loop_1 = function _loop_1(a, elementsLen) {
+          currentId_1 = elements_1[a].id;
+          newId_1 = currentId_1 + '-' + uniqueId();
+          var referencingElements;
+          Array.prototype.forEach.call(properties_1, function (property) {
+            referencingElements = svg.querySelectorAll('[' + property + '*="' + currentId_1 + '"]');
+
+            for (var b = 0, referencingElementLen = referencingElements.length; b < referencingElementLen; b++) {
+              var attrValue = referencingElements[b].getAttribute(property);
+
+              if (attrValue && !attrValue.match(new RegExp('url\\(#' + currentId_1 + '\\)'))) {
+                continue;
+              }
+
+              referencingElements[b].setAttribute(property, 'url(#' + newId_1 + ')');
+            }
+          });
+          var allLinks = svg.querySelectorAll('[*|href]');
+          var links = [];
+
+          for (var c = 0, allLinksLen = allLinks.length; c < allLinksLen; c++) {
+            var href = allLinks[c].getAttributeNS(xlinkNamespace, 'href');
+
+            if (href && href.toString() === '#' + elements_1[a].id) {
+              links.push(allLinks[c]);
+            }
+          }
+
+          for (var d = 0, linksLen = links.length; d < linksLen; d++) {
+            links[d].setAttributeNS(xlinkNamespace, 'href', '#' + newId_1);
+          }
+
+          elements_1[a].id = newId_1;
+        };
+
+        for (var a = 0, elementsLen = elements_1.length; a < elementsLen; a++) {
+          _loop_1(a, elementsLen);
+        }
+      });
+    }
+
+    svg.removeAttribute('xmlns:a');
+    var scripts = svg.querySelectorAll('script');
+    var scriptsToEval = [];
+    var script;
+    var scriptType;
+
+    for (var i = 0, scriptsLen = scripts.length; i < scriptsLen; i++) {
+      scriptType = scripts[i].getAttribute('type');
+
+      if (!scriptType || scriptType === 'application/ecmascript' || scriptType === 'application/javascript' || scriptType === 'text/javascript') {
+        script = scripts[i].innerText || scripts[i].textContent;
+
+        if (script) {
+          scriptsToEval.push(script);
+        }
+
+        svg.removeChild(scripts[i]);
+      }
+    }
+
+    if (scriptsToEval.length > 0 && (evalScripts === 'always' || evalScripts === 'once' && !ranScripts[imgUrl])) {
+      for (var l = 0, scriptsToEvalLen = scriptsToEval.length; l < scriptsToEvalLen; l++) {
+        new Function(scriptsToEval[l])(window);
+      }
+
+      ranScripts[imgUrl] = true;
+    }
+
+    var styleTags = svg.querySelectorAll('style');
+    Array.prototype.forEach.call(styleTags, function (styleTag) {
+      styleTag.textContent += '';
+    });
+    svg.setAttribute('xmlns', svgNamespace);
+    svg.setAttribute('xmlns:xlink', xlinkNamespace);
+
+    if (el.parentNode) {
+      el.parentNode.replaceChild(svg, el);
+    }
+
+    injectedElements.splice(injectedElements.indexOf(el), 1);
+    el = null;
+    callback(null, svg);
+  });
+};
+
+var EvalScripts;
+
+(function (EvalScripts) {
+  EvalScripts["Always"] = "always";
+  EvalScripts["Once"] = "once";
+  EvalScripts["Never"] = "never";
+})(EvalScripts || (EvalScripts = {}));
+
+var SVGInjector = function SVGInjector(elements, _a) {
+  var _b = _a === void 0 ? {} : _a,
+      _c = _b.done,
+      done = _c === void 0 ? function () {
+    return undefined;
+  } : _c,
+      _d = _b.each,
+      each = _d === void 0 ? function () {
+    return undefined;
+  } : _d,
+      _e = _b.evalScripts,
+      evalScripts = _e === void 0 ? EvalScripts.Never : _e,
+      _f = _b.renumerateIRIElements,
+      renumerateIRIElements = _f === void 0 ? true : _f;
+
+  if (elements && 'length' in elements) {
+    var elementsLoaded_1 = 0;
+
+    for (var i = 0, j = elements.length; i < j; i++) {
+      injectElement(elements[i], function (error, svg) {
+        each(error, svg);
+
+        if (elements && 'length' in elements && elements.length === ++elementsLoaded_1) {
+          done(elementsLoaded_1);
+        }
+      }, {
+        evalScripts: evalScripts,
+        renumerateIRIElements: renumerateIRIElements
+      });
+    }
+  } else if (elements) {
+    injectElement(elements, function (error, svg) {
+      each(error, svg);
+      done(1);
+      elements = null;
+    }, {
+      evalScripts: evalScripts,
+      renumerateIRIElements: renumerateIRIElements
+    });
+  } else {
+    done(0);
+  }
+};
+
+
+//# sourceMappingURL=svg-injector.esm.js.map
+
 
 /***/ }),
 
@@ -11299,7 +11703,7 @@ var url_1 = __webpack_require__(/*! url */ "./node_modules/url/url.js");
 
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/next/node_modules/prop-types/index.js"));
 
 var router_1 = __importStar(__webpack_require__(/*! next/router */ "./node_modules/next/router.js"));
 
@@ -11710,7 +12114,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var react_1 = __importStar(__webpack_require__(/*! react */ "./node_modules/react/index.js"));
 
-var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js"));
+var prop_types_1 = __importDefault(__webpack_require__(/*! prop-types */ "./node_modules/next/node_modules/prop-types/index.js"));
 
 var hoist_non_react_statics_1 = __importDefault(__webpack_require__(/*! hoist-non-react-statics */ "./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js"));
 
@@ -11759,6 +12163,735 @@ exports.default = withRouter;
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/next/dist/client/link.js")
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/prop-types/checkPropTypes.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/next/node_modules/prop-types/checkPropTypes.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var printWarning = function() {};
+
+if (true) {
+  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+  var loggedTypeFailures = {};
+
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+/**
+ * Assert that the values match with the type specs.
+ * Error messages are memorized and will only be shown once.
+ *
+ * @param {object} typeSpecs Map of name to a ReactPropType
+ * @param {object} values Runtime values that need to be type-checked
+ * @param {string} location e.g. "prop", "context", "child context"
+ * @param {string} componentName Name of the component for error messages.
+ * @param {?Function} getStack Returns the component stack.
+ * @private
+ */
+function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
+  if (true) {
+    for (var typeSpecName in typeSpecs) {
+      if (typeSpecs.hasOwnProperty(typeSpecName)) {
+        var error;
+        // Prop type validation may throw. In case they do, we don't want to
+        // fail the render phase where it didn't fail before. So we log it.
+        // After these have been cleaned up, we'll let them throw.
+        try {
+          // This is intentionally an invariant that gets caught. It's the same
+          // behavior as without this statement except with a better message.
+          if (typeof typeSpecs[typeSpecName] !== 'function') {
+            var err = Error(
+              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
+              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
+            );
+            err.name = 'Invariant Violation';
+            throw err;
+          }
+          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
+        } catch (ex) {
+          error = ex;
+        }
+        if (error && !(error instanceof Error)) {
+          printWarning(
+            (componentName || 'React class') + ': type specification of ' +
+            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
+            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
+            'You may have forgotten to pass an argument to the type checker ' +
+            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
+            'shape all require an argument).'
+          )
+
+        }
+        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
+          // Only monitor this failure once because there tends to be a lot of the
+          // same error.
+          loggedTypeFailures[error.message] = true;
+
+          var stack = getStack ? getStack() : '';
+
+          printWarning(
+            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
+          );
+        }
+      }
+    }
+  }
+}
+
+module.exports = checkPropTypes;
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/prop-types/factoryWithTypeCheckers.js":
+/*!******************************************************************************!*\
+  !*** ./node_modules/next/node_modules/prop-types/factoryWithTypeCheckers.js ***!
+  \******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
+
+var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js");
+var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/next/node_modules/prop-types/checkPropTypes.js");
+
+var printWarning = function() {};
+
+if (true) {
+  printWarning = function(text) {
+    var message = 'Warning: ' + text;
+    if (typeof console !== 'undefined') {
+      console.error(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+function emptyFunctionThatReturnsNull() {
+  return null;
+}
+
+module.exports = function(isValidElement, throwOnDirectAccess) {
+  /* global Symbol */
+  var ITERATOR_SYMBOL = typeof Symbol === 'function' && Symbol.iterator;
+  var FAUX_ITERATOR_SYMBOL = '@@iterator'; // Before Symbol spec.
+
+  /**
+   * Returns the iterator method function contained on the iterable object.
+   *
+   * Be sure to invoke the function with the iterable as context:
+   *
+   *     var iteratorFn = getIteratorFn(myIterable);
+   *     if (iteratorFn) {
+   *       var iterator = iteratorFn.call(myIterable);
+   *       ...
+   *     }
+   *
+   * @param {?object} maybeIterable
+   * @return {?function}
+   */
+  function getIteratorFn(maybeIterable) {
+    var iteratorFn = maybeIterable && (ITERATOR_SYMBOL && maybeIterable[ITERATOR_SYMBOL] || maybeIterable[FAUX_ITERATOR_SYMBOL]);
+    if (typeof iteratorFn === 'function') {
+      return iteratorFn;
+    }
+  }
+
+  /**
+   * Collection of methods that allow declaration and validation of props that are
+   * supplied to React components. Example usage:
+   *
+   *   var Props = require('ReactPropTypes');
+   *   var MyArticle = React.createClass({
+   *     propTypes: {
+   *       // An optional string prop named "description".
+   *       description: Props.string,
+   *
+   *       // A required enum prop named "category".
+   *       category: Props.oneOf(['News','Photos']).isRequired,
+   *
+   *       // A prop named "dialog" that requires an instance of Dialog.
+   *       dialog: Props.instanceOf(Dialog).isRequired
+   *     },
+   *     render: function() { ... }
+   *   });
+   *
+   * A more formal specification of how these methods are used:
+   *
+   *   type := array|bool|func|object|number|string|oneOf([...])|instanceOf(...)
+   *   decl := ReactPropTypes.{type}(.isRequired)?
+   *
+   * Each and every declaration produces a function with the same signature. This
+   * allows the creation of custom validation functions. For example:
+   *
+   *  var MyLink = React.createClass({
+   *    propTypes: {
+   *      // An optional string or URI prop named "href".
+   *      href: function(props, propName, componentName) {
+   *        var propValue = props[propName];
+   *        if (propValue != null && typeof propValue !== 'string' &&
+   *            !(propValue instanceof URI)) {
+   *          return new Error(
+   *            'Expected a string or an URI for ' + propName + ' in ' +
+   *            componentName
+   *          );
+   *        }
+   *      }
+   *    },
+   *    render: function() {...}
+   *  });
+   *
+   * @internal
+   */
+
+  var ANONYMOUS = '<<anonymous>>';
+
+  // Important!
+  // Keep this list in sync with production version in `./factoryWithThrowingShims.js`.
+  var ReactPropTypes = {
+    array: createPrimitiveTypeChecker('array'),
+    bool: createPrimitiveTypeChecker('boolean'),
+    func: createPrimitiveTypeChecker('function'),
+    number: createPrimitiveTypeChecker('number'),
+    object: createPrimitiveTypeChecker('object'),
+    string: createPrimitiveTypeChecker('string'),
+    symbol: createPrimitiveTypeChecker('symbol'),
+
+    any: createAnyTypeChecker(),
+    arrayOf: createArrayOfTypeChecker,
+    element: createElementTypeChecker(),
+    instanceOf: createInstanceTypeChecker,
+    node: createNodeChecker(),
+    objectOf: createObjectOfTypeChecker,
+    oneOf: createEnumTypeChecker,
+    oneOfType: createUnionTypeChecker,
+    shape: createShapeTypeChecker,
+    exact: createStrictShapeTypeChecker,
+  };
+
+  /**
+   * inlined Object.is polyfill to avoid requiring consumers ship their own
+   * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+   */
+  /*eslint-disable no-self-compare*/
+  function is(x, y) {
+    // SameValue algorithm
+    if (x === y) {
+      // Steps 1-5, 7-10
+      // Steps 6.b-6.e: +0 != -0
+      return x !== 0 || 1 / x === 1 / y;
+    } else {
+      // Step 6.a: NaN == NaN
+      return x !== x && y !== y;
+    }
+  }
+  /*eslint-enable no-self-compare*/
+
+  /**
+   * We use an Error-like object for backward compatibility as people may call
+   * PropTypes directly and inspect their output. However, we don't use real
+   * Errors anymore. We don't inspect their stack anyway, and creating them
+   * is prohibitively expensive if they are created too often, such as what
+   * happens in oneOfType() for any type before the one that matched.
+   */
+  function PropTypeError(message) {
+    this.message = message;
+    this.stack = '';
+  }
+  // Make `instanceof Error` still work for returned errors.
+  PropTypeError.prototype = Error.prototype;
+
+  function createChainableTypeChecker(validate) {
+    if (true) {
+      var manualPropTypeCallCache = {};
+      var manualPropTypeWarningCount = 0;
+    }
+    function checkType(isRequired, props, propName, componentName, location, propFullName, secret) {
+      componentName = componentName || ANONYMOUS;
+      propFullName = propFullName || propName;
+
+      if (secret !== ReactPropTypesSecret) {
+        if (throwOnDirectAccess) {
+          // New behavior only for users of `prop-types` package
+          var err = new Error(
+            'Calling PropTypes validators directly is not supported by the `prop-types` package. ' +
+            'Use `PropTypes.checkPropTypes()` to call them. ' +
+            'Read more at http://fb.me/use-check-prop-types'
+          );
+          err.name = 'Invariant Violation';
+          throw err;
+        } else if ( true && typeof console !== 'undefined') {
+          // Old behavior for people using React.PropTypes
+          var cacheKey = componentName + ':' + propName;
+          if (
+            !manualPropTypeCallCache[cacheKey] &&
+            // Avoid spamming the console because they are often not actionable except for lib authors
+            manualPropTypeWarningCount < 3
+          ) {
+            printWarning(
+              'You are manually calling a React.PropTypes validation ' +
+              'function for the `' + propFullName + '` prop on `' + componentName  + '`. This is deprecated ' +
+              'and will throw in the standalone `prop-types` package. ' +
+              'You may be seeing this warning due to a third-party PropTypes ' +
+              'library. See https://fb.me/react-warning-dont-call-proptypes ' + 'for details.'
+            );
+            manualPropTypeCallCache[cacheKey] = true;
+            manualPropTypeWarningCount++;
+          }
+        }
+      }
+      if (props[propName] == null) {
+        if (isRequired) {
+          if (props[propName] === null) {
+            return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required ' + ('in `' + componentName + '`, but its value is `null`.'));
+          }
+          return new PropTypeError('The ' + location + ' `' + propFullName + '` is marked as required in ' + ('`' + componentName + '`, but its value is `undefined`.'));
+        }
+        return null;
+      } else {
+        return validate(props, propName, componentName, location, propFullName);
+      }
+    }
+
+    var chainedCheckType = checkType.bind(null, false);
+    chainedCheckType.isRequired = checkType.bind(null, true);
+
+    return chainedCheckType;
+  }
+
+  function createPrimitiveTypeChecker(expectedType) {
+    function validate(props, propName, componentName, location, propFullName, secret) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== expectedType) {
+        // `propValue` being instance of, say, date/regexp, pass the 'object'
+        // check, but we can offer a more precise error message here rather than
+        // 'of type `object`'.
+        var preciseType = getPreciseType(propValue);
+
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + preciseType + '` supplied to `' + componentName + '`, expected ') + ('`' + expectedType + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createAnyTypeChecker() {
+    return createChainableTypeChecker(emptyFunctionThatReturnsNull);
+  }
+
+  function createArrayOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside arrayOf.');
+      }
+      var propValue = props[propName];
+      if (!Array.isArray(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an array.'));
+      }
+      for (var i = 0; i < propValue.length; i++) {
+        var error = typeChecker(propValue, i, componentName, location, propFullName + '[' + i + ']', ReactPropTypesSecret);
+        if (error instanceof Error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createElementTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!isValidElement(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createInstanceTypeChecker(expectedClass) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!(props[propName] instanceof expectedClass)) {
+        var expectedClassName = expectedClass.name || ANONYMOUS;
+        var actualClassName = getClassName(props[propName]);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + actualClassName + '` supplied to `' + componentName + '`, expected ') + ('instance of `' + expectedClassName + '`.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createEnumTypeChecker(expectedValues) {
+    if (!Array.isArray(expectedValues)) {
+       true ? printWarning('Invalid argument supplied to oneOf, expected an instance of array.') : undefined;
+      return emptyFunctionThatReturnsNull;
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      for (var i = 0; i < expectedValues.length; i++) {
+        if (is(propValue, expectedValues[i])) {
+          return null;
+        }
+      }
+
+      var valuesString = JSON.stringify(expectedValues);
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createObjectOfTypeChecker(typeChecker) {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (typeof typeChecker !== 'function') {
+        return new PropTypeError('Property `' + propFullName + '` of component `' + componentName + '` has invalid PropType notation inside objectOf.');
+      }
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
+      }
+      for (var key in propValue) {
+        if (propValue.hasOwnProperty(key)) {
+          var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+          if (error instanceof Error) {
+            return error;
+          }
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createUnionTypeChecker(arrayOfTypeCheckers) {
+    if (!Array.isArray(arrayOfTypeCheckers)) {
+       true ? printWarning('Invalid argument supplied to oneOfType, expected an instance of array.') : undefined;
+      return emptyFunctionThatReturnsNull;
+    }
+
+    for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+      var checker = arrayOfTypeCheckers[i];
+      if (typeof checker !== 'function') {
+        printWarning(
+          'Invalid argument supplied to oneOfType. Expected an array of check functions, but ' +
+          'received ' + getPostfixForTypeWarning(checker) + ' at index ' + i + '.'
+        );
+        return emptyFunctionThatReturnsNull;
+      }
+    }
+
+    function validate(props, propName, componentName, location, propFullName) {
+      for (var i = 0; i < arrayOfTypeCheckers.length; i++) {
+        var checker = arrayOfTypeCheckers[i];
+        if (checker(props, propName, componentName, location, propFullName, ReactPropTypesSecret) == null) {
+          return null;
+        }
+      }
+
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`.'));
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createNodeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      if (!isNode(props[propName])) {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` supplied to ' + ('`' + componentName + '`, expected a ReactNode.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      for (var key in shapeTypes) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          continue;
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
+  function createStrictShapeTypeChecker(shapeTypes) {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      var propType = getPropType(propValue);
+      if (propType !== 'object') {
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
+      }
+      // We need to check all keys in case some are required but missing from
+      // props.
+      var allKeys = assign({}, props[propName], shapeTypes);
+      for (var key in allKeys) {
+        var checker = shapeTypes[key];
+        if (!checker) {
+          return new PropTypeError(
+            'Invalid ' + location + ' `' + propFullName + '` key `' + key + '` supplied to `' + componentName + '`.' +
+            '\nBad object: ' + JSON.stringify(props[propName], null, '  ') +
+            '\nValid keys: ' +  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+          );
+        }
+        var error = checker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
+        if (error) {
+          return error;
+        }
+      }
+      return null;
+    }
+
+    return createChainableTypeChecker(validate);
+  }
+
+  function isNode(propValue) {
+    switch (typeof propValue) {
+      case 'number':
+      case 'string':
+      case 'undefined':
+        return true;
+      case 'boolean':
+        return !propValue;
+      case 'object':
+        if (Array.isArray(propValue)) {
+          return propValue.every(isNode);
+        }
+        if (propValue === null || isValidElement(propValue)) {
+          return true;
+        }
+
+        var iteratorFn = getIteratorFn(propValue);
+        if (iteratorFn) {
+          var iterator = iteratorFn.call(propValue);
+          var step;
+          if (iteratorFn !== propValue.entries) {
+            while (!(step = iterator.next()).done) {
+              if (!isNode(step.value)) {
+                return false;
+              }
+            }
+          } else {
+            // Iterator will provide entry [k,v] tuples rather than values.
+            while (!(step = iterator.next()).done) {
+              var entry = step.value;
+              if (entry) {
+                if (!isNode(entry[1])) {
+                  return false;
+                }
+              }
+            }
+          }
+        } else {
+          return false;
+        }
+
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  function isSymbol(propType, propValue) {
+    // Native Symbol.
+    if (propType === 'symbol') {
+      return true;
+    }
+
+    // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
+    if (propValue['@@toStringTag'] === 'Symbol') {
+      return true;
+    }
+
+    // Fallback for non-spec compliant Symbols which are polyfilled.
+    if (typeof Symbol === 'function' && propValue instanceof Symbol) {
+      return true;
+    }
+
+    return false;
+  }
+
+  // Equivalent of `typeof` but with special handling for array and regexp.
+  function getPropType(propValue) {
+    var propType = typeof propValue;
+    if (Array.isArray(propValue)) {
+      return 'array';
+    }
+    if (propValue instanceof RegExp) {
+      // Old webkits (at least until Android 4.0) return 'function' rather than
+      // 'object' for typeof a RegExp. We'll normalize this here so that /bla/
+      // passes PropTypes.object.
+      return 'object';
+    }
+    if (isSymbol(propType, propValue)) {
+      return 'symbol';
+    }
+    return propType;
+  }
+
+  // This handles more types than `getPropType`. Only used for error messages.
+  // See `createPrimitiveTypeChecker`.
+  function getPreciseType(propValue) {
+    if (typeof propValue === 'undefined' || propValue === null) {
+      return '' + propValue;
+    }
+    var propType = getPropType(propValue);
+    if (propType === 'object') {
+      if (propValue instanceof Date) {
+        return 'date';
+      } else if (propValue instanceof RegExp) {
+        return 'regexp';
+      }
+    }
+    return propType;
+  }
+
+  // Returns a string that is postfixed to a warning about an invalid type.
+  // For example, "undefined" or "of type array"
+  function getPostfixForTypeWarning(value) {
+    var type = getPreciseType(value);
+    switch (type) {
+      case 'array':
+      case 'object':
+        return 'an ' + type;
+      case 'boolean':
+      case 'date':
+      case 'regexp':
+        return 'a ' + type;
+      default:
+        return type;
+    }
+  }
+
+  // Returns class name of the object, if any.
+  function getClassName(propValue) {
+    if (!propValue.constructor || !propValue.constructor.name) {
+      return ANONYMOUS;
+    }
+    return propValue.constructor.name;
+  }
+
+  ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.PropTypes = ReactPropTypes;
+
+  return ReactPropTypes;
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/prop-types/index.js":
+/*!************************************************************!*\
+  !*** ./node_modules/next/node_modules/prop-types/index.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+if (true) {
+  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
+    Symbol.for &&
+    Symbol.for('react.element')) ||
+    0xeac7;
+
+  var isValidElement = function(object) {
+    return typeof object === 'object' &&
+      object !== null &&
+      object.$$typeof === REACT_ELEMENT_TYPE;
+  };
+
+  // By explicitly using `prop-types` you are opting into new development behavior.
+  // http://fb.me/prop-types-in-prod
+  var throwOnDirectAccess = true;
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "./node_modules/next/node_modules/prop-types/factoryWithTypeCheckers.js")(isValidElement, throwOnDirectAccess);
+} else {}
+
+
+/***/ }),
+
+/***/ "./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/next/node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
+  \*******************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Copyright (c) 2013-present, Facebook, Inc.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
+
+module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
@@ -12308,12 +13441,12 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ "./node_modules/object-assign/index.js":
 /*!***************************************************************************************************!*\
-  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_effd29c912beebc303a1 ***!
+  !*** delegated ./node_modules/object-assign/index.js from dll-reference dll_e42e0f91c9ae4e3e094d ***!
   \***************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_effd29c912beebc303a1 */ "dll-reference dll_effd29c912beebc303a1"))("./node_modules/object-assign/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e42e0f91c9ae4e3e094d */ "dll-reference dll_e42e0f91c9ae4e3e094d"))("./node_modules/object-assign/index.js");
 
 /***/ }),
 
@@ -13360,105 +14493,13 @@ module.exports = exports['default'];
 /***/ }),
 
 /***/ "./node_modules/prop-types/checkPropTypes.js":
-/*!***************************************************!*\
-  !*** ./node_modules/prop-types/checkPropTypes.js ***!
-  \***************************************************/
+/*!*********************************************************************************************************!*\
+  !*** delegated ./node_modules/prop-types/checkPropTypes.js from dll-reference dll_e42e0f91c9ae4e3e094d ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var printWarning = function() {};
-
-if (true) {
-  var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
-  var loggedTypeFailures = {};
-
-  printWarning = function(text) {
-    var message = 'Warning: ' + text;
-    if (typeof console !== 'undefined') {
-      console.error(message);
-    }
-    try {
-      // --- Welcome to debugging React ---
-      // This error was thrown as a convenience so that you can use this stack
-      // to find the callsite that caused this warning to fire.
-      throw new Error(message);
-    } catch (x) {}
-  };
-}
-
-/**
- * Assert that the values match with the type specs.
- * Error messages are memorized and will only be shown once.
- *
- * @param {object} typeSpecs Map of name to a ReactPropType
- * @param {object} values Runtime values that need to be type-checked
- * @param {string} location e.g. "prop", "context", "child context"
- * @param {string} componentName Name of the component for error messages.
- * @param {?Function} getStack Returns the component stack.
- * @private
- */
-function checkPropTypes(typeSpecs, values, location, componentName, getStack) {
-  if (true) {
-    for (var typeSpecName in typeSpecs) {
-      if (typeSpecs.hasOwnProperty(typeSpecName)) {
-        var error;
-        // Prop type validation may throw. In case they do, we don't want to
-        // fail the render phase where it didn't fail before. So we log it.
-        // After these have been cleaned up, we'll let them throw.
-        try {
-          // This is intentionally an invariant that gets caught. It's the same
-          // behavior as without this statement except with a better message.
-          if (typeof typeSpecs[typeSpecName] !== 'function') {
-            var err = Error(
-              (componentName || 'React class') + ': ' + location + ' type `' + typeSpecName + '` is invalid; ' +
-              'it must be a function, usually from the `prop-types` package, but received `' + typeof typeSpecs[typeSpecName] + '`.'
-            );
-            err.name = 'Invariant Violation';
-            throw err;
-          }
-          error = typeSpecs[typeSpecName](values, typeSpecName, componentName, location, null, ReactPropTypesSecret);
-        } catch (ex) {
-          error = ex;
-        }
-        if (error && !(error instanceof Error)) {
-          printWarning(
-            (componentName || 'React class') + ': type specification of ' +
-            location + ' `' + typeSpecName + '` is invalid; the type checker ' +
-            'function must return `null` or an `Error` but returned a ' + typeof error + '. ' +
-            'You may have forgotten to pass an argument to the type checker ' +
-            'creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and ' +
-            'shape all require an argument).'
-          )
-
-        }
-        if (error instanceof Error && !(error.message in loggedTypeFailures)) {
-          // Only monitor this failure once because there tends to be a lot of the
-          // same error.
-          loggedTypeFailures[error.message] = true;
-
-          var stack = getStack ? getStack() : '';
-
-          printWarning(
-            'Failed ' + location + ' type: ' + error.message + (stack != null ? stack : '')
-          );
-        }
-      }
-    }
-  }
-}
-
-module.exports = checkPropTypes;
-
+module.exports = (__webpack_require__(/*! dll-reference dll_e42e0f91c9ae4e3e094d */ "dll-reference dll_e42e0f91c9ae4e3e094d"))("./node_modules/prop-types/checkPropTypes.js");
 
 /***/ }),
 
@@ -13479,11 +14520,13 @@ module.exports = checkPropTypes;
 
 
 
+var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
 var assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
 
 var ReactPropTypesSecret = __webpack_require__(/*! ./lib/ReactPropTypesSecret */ "./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 var checkPropTypes = __webpack_require__(/*! ./checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
 
+var has = Function.call.bind(Object.prototype.hasOwnProperty);
 var printWarning = function() {};
 
 if (true) {
@@ -13594,6 +14637,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     any: createAnyTypeChecker(),
     arrayOf: createArrayOfTypeChecker,
     element: createElementTypeChecker(),
+    elementType: createElementTypeTypeChecker(),
     instanceOf: createInstanceTypeChecker,
     node: createNodeChecker(),
     objectOf: createObjectOfTypeChecker,
@@ -13747,6 +14791,18 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
     return createChainableTypeChecker(validate);
   }
 
+  function createElementTypeTypeChecker() {
+    function validate(props, propName, componentName, location, propFullName) {
+      var propValue = props[propName];
+      if (!ReactIs.isValidElementType(propValue)) {
+        var propType = getPropType(propValue);
+        return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected a single ReactElement type.'));
+      }
+      return null;
+    }
+    return createChainableTypeChecker(validate);
+  }
+
   function createInstanceTypeChecker(expectedClass) {
     function validate(props, propName, componentName, location, propFullName) {
       if (!(props[propName] instanceof expectedClass)) {
@@ -13761,7 +14817,16 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 
   function createEnumTypeChecker(expectedValues) {
     if (!Array.isArray(expectedValues)) {
-       true ? printWarning('Invalid argument supplied to oneOf, expected an instance of array.') : undefined;
+      if (true) {
+        if (arguments.length > 1) {
+          printWarning(
+            'Invalid arguments supplied to oneOf, expected an array, got ' + arguments.length + ' arguments. ' +
+            'A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).'
+          );
+        } else {
+          printWarning('Invalid argument supplied to oneOf, expected an array.');
+        }
+      }
       return emptyFunctionThatReturnsNull;
     }
 
@@ -13773,8 +14838,14 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         }
       }
 
-      var valuesString = JSON.stringify(expectedValues);
-      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + propValue + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
+      var valuesString = JSON.stringify(expectedValues, function replacer(key, value) {
+        var type = getPreciseType(value);
+        if (type === 'symbol') {
+          return String(value);
+        }
+        return value;
+      });
+      return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of value `' + String(propValue) + '` ' + ('supplied to `' + componentName + '`, expected one of ' + valuesString + '.'));
     }
     return createChainableTypeChecker(validate);
   }
@@ -13790,7 +14861,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type ' + ('`' + propType + '` supplied to `' + componentName + '`, expected an object.'));
       }
       for (var key in propValue) {
-        if (propValue.hasOwnProperty(key)) {
+        if (has(propValue, key)) {
           var error = typeChecker(propValue, key, componentName, location, propFullName + '.' + key, ReactPropTypesSecret);
           if (error instanceof Error) {
             return error;
@@ -13947,6 +15018,11 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       return true;
     }
 
+    // falsy value can't be a Symbol
+    if (!propValue) {
+      return false;
+    }
+
     // 19.4.3.5 Symbol.prototype[@@toStringTag] === 'Symbol'
     if (propValue['@@toStringTag'] === 'Symbol') {
       return true;
@@ -14021,6 +15097,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
   }
 
   ReactPropTypes.checkPropTypes = checkPropTypes;
+  ReactPropTypes.resetWarningCache = checkPropTypes.resetWarningCache;
   ReactPropTypes.PropTypes = ReactPropTypes;
 
   return ReactPropTypes;
@@ -14044,47 +15121,25 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
  */
 
 if (true) {
-  var REACT_ELEMENT_TYPE = (typeof Symbol === 'function' &&
-    Symbol.for &&
-    Symbol.for('react.element')) ||
-    0xeac7;
-
-  var isValidElement = function(object) {
-    return typeof object === 'object' &&
-      object !== null &&
-      object.$$typeof === REACT_ELEMENT_TYPE;
-  };
+  var ReactIs = __webpack_require__(/*! react-is */ "./node_modules/react-is/index.js");
 
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "./node_modules/prop-types/factoryWithTypeCheckers.js")(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(/*! ./factoryWithTypeCheckers */ "./node_modules/prop-types/factoryWithTypeCheckers.js")(ReactIs.isElement, throwOnDirectAccess);
 } else {}
 
 
 /***/ }),
 
 /***/ "./node_modules/prop-types/lib/ReactPropTypesSecret.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/prop-types/lib/ReactPropTypesSecret.js ***!
-  \*************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** delegated ./node_modules/prop-types/lib/ReactPropTypesSecret.js from dll-reference dll_e42e0f91c9ae4e3e094d ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-/**
- * Copyright (c) 2013-present, Facebook, Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- */
-
-
-
-var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
-
-module.exports = ReactPropTypesSecret;
-
+module.exports = (__webpack_require__(/*! dll-reference dll_e42e0f91c9ae4e3e094d */ "dll-reference dll_e42e0f91c9ae4e3e094d"))("./node_modules/prop-types/lib/ReactPropTypesSecret.js");
 
 /***/ }),
 
@@ -14293,6 +15348,3714 @@ var objectKeys = Object.keys || function (obj) {
 
 exports.decode = exports.parse = __webpack_require__(/*! ./decode */ "./node_modules/querystring-es3/decode.js");
 exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node_modules/querystring-es3/encode.js");
+
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/cjs/react-dom-server.browser.development.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/react-dom/cjs/react-dom-server.browser.development.js ***!
+  \****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/** @license React v16.8.4
+ * react-dom-server.browser.development.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+
+
+
+
+if (true) {
+  (function() {
+'use strict';
+
+var _assign = __webpack_require__(/*! object-assign */ "./node_modules/object-assign/index.js");
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+var checkPropTypes = __webpack_require__(/*! prop-types/checkPropTypes */ "./node_modules/prop-types/checkPropTypes.js");
+
+/**
+ * Use invariant() to assert state which your program assumes to be true.
+ *
+ * Provide sprintf-style format (only %s is supported) and arguments
+ * to provide information about what broke and what you were
+ * expecting.
+ *
+ * The invariant message will be stripped in production, but the invariant
+ * will remain to ensure logic does not differ in production.
+ */
+
+var validateFormat = function () {};
+
+{
+  validateFormat = function (format) {
+    if (format === undefined) {
+      throw new Error('invariant requires an error message argument');
+    }
+  };
+}
+
+function invariant(condition, format, a, b, c, d, e, f) {
+  validateFormat(format);
+
+  if (!condition) {
+    var error = void 0;
+    if (format === undefined) {
+      error = new Error('Minified exception occurred; use the non-minified dev environment ' + 'for the full error message and additional helpful warnings.');
+    } else {
+      var args = [a, b, c, d, e, f];
+      var argIndex = 0;
+      error = new Error(format.replace(/%s/g, function () {
+        return args[argIndex++];
+      }));
+      error.name = 'Invariant Violation';
+    }
+
+    error.framesToPop = 1; // we don't care about invariant's own frame
+    throw error;
+  }
+}
+
+// Relying on the `invariant()` implementation lets us
+// preserve the format and params in the www builds.
+
+// TODO: this is special because it gets imported during build.
+
+var ReactVersion = '16.8.4';
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var warningWithoutStack = function () {};
+
+{
+  warningWithoutStack = function (condition, format) {
+    for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+      args[_key - 2] = arguments[_key];
+    }
+
+    if (format === undefined) {
+      throw new Error('`warningWithoutStack(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+    if (args.length > 8) {
+      // Check before the condition to catch violations early.
+      throw new Error('warningWithoutStack() currently supports at most 8 arguments.');
+    }
+    if (condition) {
+      return;
+    }
+    if (typeof console !== 'undefined') {
+      var argsWithFormat = args.map(function (item) {
+        return '' + item;
+      });
+      argsWithFormat.unshift('Warning: ' + format);
+
+      // We intentionally don't use spread (or .apply) directly because it
+      // breaks IE9: https://github.com/facebook/react/issues/13610
+      Function.prototype.apply.call(console.error, console, argsWithFormat);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      var argIndex = 0;
+      var message = 'Warning: ' + format.replace(/%s/g, function () {
+        return args[argIndex++];
+      });
+      throw new Error(message);
+    } catch (x) {}
+  };
+}
+
+var warningWithoutStack$1 = warningWithoutStack;
+
+// The Symbol used to tag the ReactElement-like types. If there is no native Symbol
+// nor polyfill, then a plain number is used for performance.
+var hasSymbol = typeof Symbol === 'function' && Symbol.for;
+
+
+var REACT_PORTAL_TYPE = hasSymbol ? Symbol.for('react.portal') : 0xeaca;
+var REACT_FRAGMENT_TYPE = hasSymbol ? Symbol.for('react.fragment') : 0xeacb;
+var REACT_STRICT_MODE_TYPE = hasSymbol ? Symbol.for('react.strict_mode') : 0xeacc;
+var REACT_PROFILER_TYPE = hasSymbol ? Symbol.for('react.profiler') : 0xead2;
+var REACT_PROVIDER_TYPE = hasSymbol ? Symbol.for('react.provider') : 0xeacd;
+var REACT_CONTEXT_TYPE = hasSymbol ? Symbol.for('react.context') : 0xeace;
+
+var REACT_CONCURRENT_MODE_TYPE = hasSymbol ? Symbol.for('react.concurrent_mode') : 0xeacf;
+var REACT_FORWARD_REF_TYPE = hasSymbol ? Symbol.for('react.forward_ref') : 0xead0;
+var REACT_SUSPENSE_TYPE = hasSymbol ? Symbol.for('react.suspense') : 0xead1;
+var REACT_MEMO_TYPE = hasSymbol ? Symbol.for('react.memo') : 0xead3;
+var REACT_LAZY_TYPE = hasSymbol ? Symbol.for('react.lazy') : 0xead4;
+
+var Resolved = 1;
+
+
+function refineResolvedLazyComponent(lazyComponent) {
+  return lazyComponent._status === Resolved ? lazyComponent._result : null;
+}
+
+function getWrappedName(outerType, innerType, wrapperName) {
+  var functionName = innerType.displayName || innerType.name || '';
+  return outerType.displayName || (functionName !== '' ? wrapperName + '(' + functionName + ')' : wrapperName);
+}
+
+function getComponentName(type) {
+  if (type == null) {
+    // Host root, text node or just invalid type.
+    return null;
+  }
+  {
+    if (typeof type.tag === 'number') {
+      warningWithoutStack$1(false, 'Received an unexpected object in getComponentName(). ' + 'This is likely a bug in React. Please file an issue.');
+    }
+  }
+  if (typeof type === 'function') {
+    return type.displayName || type.name || null;
+  }
+  if (typeof type === 'string') {
+    return type;
+  }
+  switch (type) {
+    case REACT_CONCURRENT_MODE_TYPE:
+      return 'ConcurrentMode';
+    case REACT_FRAGMENT_TYPE:
+      return 'Fragment';
+    case REACT_PORTAL_TYPE:
+      return 'Portal';
+    case REACT_PROFILER_TYPE:
+      return 'Profiler';
+    case REACT_STRICT_MODE_TYPE:
+      return 'StrictMode';
+    case REACT_SUSPENSE_TYPE:
+      return 'Suspense';
+  }
+  if (typeof type === 'object') {
+    switch (type.$$typeof) {
+      case REACT_CONTEXT_TYPE:
+        return 'Context.Consumer';
+      case REACT_PROVIDER_TYPE:
+        return 'Context.Provider';
+      case REACT_FORWARD_REF_TYPE:
+        return getWrappedName(type, type.render, 'ForwardRef');
+      case REACT_MEMO_TYPE:
+        return getComponentName(type.type);
+      case REACT_LAZY_TYPE:
+        {
+          var thenable = type;
+          var resolvedThenable = refineResolvedLazyComponent(thenable);
+          if (resolvedThenable) {
+            return getComponentName(resolvedThenable);
+          }
+        }
+    }
+  }
+  return null;
+}
+
+/**
+ * Forked from fbjs/warning:
+ * https://github.com/facebook/fbjs/blob/e66ba20ad5be433eb54423f2b097d829324d9de6/packages/fbjs/src/__forks__/warning.js
+ *
+ * Only change is we use console.warn instead of console.error,
+ * and do nothing when 'console' is not supported.
+ * This really simplifies the code.
+ * ---
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var lowPriorityWarning = function () {};
+
+{
+  var printWarning = function (format) {
+    for (var _len = arguments.length, args = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+      args[_key - 1] = arguments[_key];
+    }
+
+    var argIndex = 0;
+    var message = 'Warning: ' + format.replace(/%s/g, function () {
+      return args[argIndex++];
+    });
+    if (typeof console !== 'undefined') {
+      console.warn(message);
+    }
+    try {
+      // --- Welcome to debugging React ---
+      // This error was thrown as a convenience so that you can use this stack
+      // to find the callsite that caused this warning to fire.
+      throw new Error(message);
+    } catch (x) {}
+  };
+
+  lowPriorityWarning = function (condition, format) {
+    if (format === undefined) {
+      throw new Error('`lowPriorityWarning(condition, format, ...args)` requires a warning ' + 'message argument');
+    }
+    if (!condition) {
+      for (var _len2 = arguments.length, args = Array(_len2 > 2 ? _len2 - 2 : 0), _key2 = 2; _key2 < _len2; _key2++) {
+        args[_key2 - 2] = arguments[_key2];
+      }
+
+      printWarning.apply(undefined, [format].concat(args));
+    }
+  };
+}
+
+var lowPriorityWarning$1 = lowPriorityWarning;
+
+var ReactSharedInternals = React.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+
+// Prevent newer renderers from RTE when used with older react package versions.
+// Current owner and dispatcher used to share the same ref,
+// but PR #14548 split them out to better support the react-debug-tools package.
+if (!ReactSharedInternals.hasOwnProperty('ReactCurrentDispatcher')) {
+  ReactSharedInternals.ReactCurrentDispatcher = {
+    current: null
+  };
+}
+
+/**
+ * Similar to invariant but only logs a warning if the condition is not met.
+ * This can be used to log issues in development environments in critical
+ * paths. Removing the logging code for production environments will keep the
+ * same logic and follow the same code paths.
+ */
+
+var warning = warningWithoutStack$1;
+
+{
+  warning = function (condition, format) {
+    if (condition) {
+      return;
+    }
+    var ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+    var stack = ReactDebugCurrentFrame.getStackAddendum();
+    // eslint-disable-next-line react-internal/warning-and-invariant-args
+
+    for (var _len = arguments.length, args = Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+      args[_key - 2] = arguments[_key];
+    }
+
+    warningWithoutStack$1.apply(undefined, [false, format + '%s'].concat(args, [stack]));
+  };
+}
+
+var warning$1 = warning;
+
+var BEFORE_SLASH_RE = /^(.*)[\\\/]/;
+
+var describeComponentFrame = function (name, source, ownerName) {
+  var sourceInfo = '';
+  if (source) {
+    var path = source.fileName;
+    var fileName = path.replace(BEFORE_SLASH_RE, '');
+    {
+      // In DEV, include code for a common special case:
+      // prefer "folder/index.js" instead of just "index.js".
+      if (/^index\./.test(fileName)) {
+        var match = path.match(BEFORE_SLASH_RE);
+        if (match) {
+          var pathBeforeSlash = match[1];
+          if (pathBeforeSlash) {
+            var folderName = pathBeforeSlash.replace(BEFORE_SLASH_RE, '');
+            fileName = folderName + '/' + fileName;
+          }
+        }
+      }
+    }
+    sourceInfo = ' (at ' + fileName + ':' + source.lineNumber + ')';
+  } else if (ownerName) {
+    sourceInfo = ' (created by ' + ownerName + ')';
+  }
+  return '\n    in ' + (name || 'Unknown') + sourceInfo;
+};
+
+// Helps identify side effects in begin-phase lifecycle hooks and setState reducers:
+
+
+// In some cases, StrictMode should also double-render lifecycles.
+// This can be confusing for tests though,
+// And it can be bad for performance in production.
+// This feature flag can be used to control the behavior:
+
+
+// To preserve the "Pause on caught exceptions" behavior of the debugger, we
+// replay the begin phase of a failed component inside invokeGuardedCallback.
+
+
+// Warn about deprecated, async-unsafe lifecycles; relates to RFC #6:
+var warnAboutDeprecatedLifecycles = false;
+
+// Gather advanced timing metrics for Profiler subtrees.
+
+
+// Trace which interactions trigger each commit.
+
+
+// Only used in www builds.
+var enableSuspenseServerRenderer = false; // TODO: true? Here it might just be false.
+
+// Only used in www builds.
+
+
+// Only used in www builds.
+
+
+// React Fire: prevent the value and checked attributes from syncing
+// with their related DOM properties
+
+
+// These APIs will no longer be "unstable" in the upcoming 16.7 release,
+// Control this behavior with a flag to support 16.6 minor releases in the meanwhile.
+
+var ReactDebugCurrentFrame$1 = void 0;
+{
+  ReactDebugCurrentFrame$1 = ReactSharedInternals.ReactDebugCurrentFrame;
+}
+
+var didWarnAboutInvalidateContextType = {};
+
+var emptyObject = {};
+{
+  Object.freeze(emptyObject);
+}
+
+function maskContext(type, context) {
+  var contextTypes = type.contextTypes;
+  if (!contextTypes) {
+    return emptyObject;
+  }
+  var maskedContext = {};
+  for (var contextName in contextTypes) {
+    maskedContext[contextName] = context[contextName];
+  }
+  return maskedContext;
+}
+
+function checkContextTypes(typeSpecs, values, location) {
+  {
+    checkPropTypes(typeSpecs, values, location, 'Component', ReactDebugCurrentFrame$1.getCurrentStack);
+  }
+}
+
+function validateContextBounds(context, threadID) {
+  // If we don't have enough slots in this context to store this threadID,
+  // fill it in without leaving any holes to ensure that the VM optimizes
+  // this as non-holey index properties.
+  // (Note: If `react` package is < 16.6, _threadCount is undefined.)
+  for (var i = context._threadCount | 0; i <= threadID; i++) {
+    // We assume that this is the same as the defaultValue which might not be
+    // true if we're rendering inside a secondary renderer but they are
+    // secondary because these use cases are very rare.
+    context[i] = context._currentValue2;
+    context._threadCount = i + 1;
+  }
+}
+
+function processContext(type, context, threadID) {
+  var contextType = type.contextType;
+  if (typeof contextType === 'object' && contextType !== null) {
+    {
+      if (contextType.$$typeof !== REACT_CONTEXT_TYPE) {
+        var name = getComponentName(type) || 'Component';
+        if (!didWarnAboutInvalidateContextType[name]) {
+          didWarnAboutInvalidateContextType[name] = true;
+          warningWithoutStack$1(false, '%s defines an invalid contextType. ' + 'contextType should point to the Context object returned by React.createContext(). ' + 'Did you accidentally pass the Context.Provider instead?', name);
+        }
+      }
+    }
+    validateContextBounds(contextType, threadID);
+    return contextType[threadID];
+  } else {
+    var maskedContext = maskContext(type, context);
+    {
+      if (type.contextTypes) {
+        checkContextTypes(type.contextTypes, maskedContext, 'context');
+      }
+    }
+    return maskedContext;
+  }
+}
+
+// Allocates a new index for each request. Tries to stay as compact as possible so that these
+// indices can be used to reference a tightly packaged array. As opposed to being used in a Map.
+// The first allocated index is 1.
+
+var nextAvailableThreadIDs = new Uint16Array(16);
+for (var i = 0; i < 15; i++) {
+  nextAvailableThreadIDs[i] = i + 1;
+}
+nextAvailableThreadIDs[15] = 0;
+
+function growThreadCountAndReturnNextAvailable() {
+  var oldArray = nextAvailableThreadIDs;
+  var oldSize = oldArray.length;
+  var newSize = oldSize * 2;
+  !(newSize <= 0x10000) ? invariant(false, 'Maximum number of concurrent React renderers exceeded. This can happen if you are not properly destroying the Readable provided by React. Ensure that you call .destroy() on it if you no longer want to read from it, and did not read to the end. If you use .pipe() this should be automatic.') : void 0;
+  var newArray = new Uint16Array(newSize);
+  newArray.set(oldArray);
+  nextAvailableThreadIDs = newArray;
+  nextAvailableThreadIDs[0] = oldSize + 1;
+  for (var _i = oldSize; _i < newSize - 1; _i++) {
+    nextAvailableThreadIDs[_i] = _i + 1;
+  }
+  nextAvailableThreadIDs[newSize - 1] = 0;
+  return oldSize;
+}
+
+function allocThreadID() {
+  var nextID = nextAvailableThreadIDs[0];
+  if (nextID === 0) {
+    return growThreadCountAndReturnNextAvailable();
+  }
+  nextAvailableThreadIDs[0] = nextAvailableThreadIDs[nextID];
+  return nextID;
+}
+
+function freeThreadID(id) {
+  nextAvailableThreadIDs[id] = nextAvailableThreadIDs[0];
+  nextAvailableThreadIDs[0] = id;
+}
+
+// A reserved attribute.
+// It is handled by React separately and shouldn't be written to the DOM.
+var RESERVED = 0;
+
+// A simple string attribute.
+// Attributes that aren't in the whitelist are presumed to have this type.
+var STRING = 1;
+
+// A string attribute that accepts booleans in React. In HTML, these are called
+// "enumerated" attributes with "true" and "false" as possible values.
+// When true, it should be set to a "true" string.
+// When false, it should be set to a "false" string.
+var BOOLEANISH_STRING = 2;
+
+// A real boolean attribute.
+// When true, it should be present (set either to an empty string or its name).
+// When false, it should be omitted.
+var BOOLEAN = 3;
+
+// An attribute that can be used as a flag as well as with a value.
+// When true, it should be present (set either to an empty string or its name).
+// When false, it should be omitted.
+// For any other value, should be present with that value.
+var OVERLOADED_BOOLEAN = 4;
+
+// An attribute that must be numeric or parse as a numeric.
+// When falsy, it should be removed.
+var NUMERIC = 5;
+
+// An attribute that must be positive numeric or parse as a positive numeric.
+// When falsy, it should be removed.
+var POSITIVE_NUMERIC = 6;
+
+/* eslint-disable max-len */
+var ATTRIBUTE_NAME_START_CHAR = ':A-Z_a-z\\u00C0-\\u00D6\\u00D8-\\u00F6\\u00F8-\\u02FF\\u0370-\\u037D\\u037F-\\u1FFF\\u200C-\\u200D\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD';
+/* eslint-enable max-len */
+var ATTRIBUTE_NAME_CHAR = ATTRIBUTE_NAME_START_CHAR + '\\-.0-9\\u00B7\\u0300-\\u036F\\u203F-\\u2040';
+
+
+var ROOT_ATTRIBUTE_NAME = 'data-reactroot';
+var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + ATTRIBUTE_NAME_START_CHAR + '][' + ATTRIBUTE_NAME_CHAR + ']*$');
+
+var hasOwnProperty$1 = Object.prototype.hasOwnProperty;
+var illegalAttributeNameCache = {};
+var validatedAttributeNameCache = {};
+
+function isAttributeNameSafe(attributeName) {
+  if (hasOwnProperty$1.call(validatedAttributeNameCache, attributeName)) {
+    return true;
+  }
+  if (hasOwnProperty$1.call(illegalAttributeNameCache, attributeName)) {
+    return false;
+  }
+  if (VALID_ATTRIBUTE_NAME_REGEX.test(attributeName)) {
+    validatedAttributeNameCache[attributeName] = true;
+    return true;
+  }
+  illegalAttributeNameCache[attributeName] = true;
+  {
+    warning$1(false, 'Invalid attribute name: `%s`', attributeName);
+  }
+  return false;
+}
+
+function shouldIgnoreAttribute(name, propertyInfo, isCustomComponentTag) {
+  if (propertyInfo !== null) {
+    return propertyInfo.type === RESERVED;
+  }
+  if (isCustomComponentTag) {
+    return false;
+  }
+  if (name.length > 2 && (name[0] === 'o' || name[0] === 'O') && (name[1] === 'n' || name[1] === 'N')) {
+    return true;
+  }
+  return false;
+}
+
+function shouldRemoveAttributeWithWarning(name, value, propertyInfo, isCustomComponentTag) {
+  if (propertyInfo !== null && propertyInfo.type === RESERVED) {
+    return false;
+  }
+  switch (typeof value) {
+    case 'function':
+    // $FlowIssue symbol is perfectly valid here
+    case 'symbol':
+      // eslint-disable-line
+      return true;
+    case 'boolean':
+      {
+        if (isCustomComponentTag) {
+          return false;
+        }
+        if (propertyInfo !== null) {
+          return !propertyInfo.acceptsBooleans;
+        } else {
+          var prefix = name.toLowerCase().slice(0, 5);
+          return prefix !== 'data-' && prefix !== 'aria-';
+        }
+      }
+    default:
+      return false;
+  }
+}
+
+function shouldRemoveAttribute(name, value, propertyInfo, isCustomComponentTag) {
+  if (value === null || typeof value === 'undefined') {
+    return true;
+  }
+  if (shouldRemoveAttributeWithWarning(name, value, propertyInfo, isCustomComponentTag)) {
+    return true;
+  }
+  if (isCustomComponentTag) {
+    return false;
+  }
+  if (propertyInfo !== null) {
+    switch (propertyInfo.type) {
+      case BOOLEAN:
+        return !value;
+      case OVERLOADED_BOOLEAN:
+        return value === false;
+      case NUMERIC:
+        return isNaN(value);
+      case POSITIVE_NUMERIC:
+        return isNaN(value) || value < 1;
+    }
+  }
+  return false;
+}
+
+function getPropertyInfo(name) {
+  return properties.hasOwnProperty(name) ? properties[name] : null;
+}
+
+function PropertyInfoRecord(name, type, mustUseProperty, attributeName, attributeNamespace) {
+  this.acceptsBooleans = type === BOOLEANISH_STRING || type === BOOLEAN || type === OVERLOADED_BOOLEAN;
+  this.attributeName = attributeName;
+  this.attributeNamespace = attributeNamespace;
+  this.mustUseProperty = mustUseProperty;
+  this.propertyName = name;
+  this.type = type;
+}
+
+// When adding attributes to this list, be sure to also add them to
+// the `possibleStandardNames` module to ensure casing and incorrect
+// name warnings.
+var properties = {};
+
+// These props are reserved by React. They shouldn't be written to the DOM.
+['children', 'dangerouslySetInnerHTML',
+// TODO: This prevents the assignment of defaultValue to regular
+// elements (not just inputs). Now that ReactDOMInput assigns to the
+// defaultValue property -- do we need this?
+'defaultValue', 'defaultChecked', 'innerHTML', 'suppressContentEditableWarning', 'suppressHydrationWarning', 'style'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, RESERVED, false, // mustUseProperty
+  name, // attributeName
+  null);
+} // attributeNamespace
+);
+
+// A few React string attributes have a different name.
+// This is a mapping from React prop names to the attribute names.
+[['acceptCharset', 'accept-charset'], ['className', 'class'], ['htmlFor', 'for'], ['httpEquiv', 'http-equiv']].forEach(function (_ref) {
+  var name = _ref[0],
+      attributeName = _ref[1];
+
+  properties[name] = new PropertyInfoRecord(name, STRING, false, // mustUseProperty
+  attributeName, // attributeName
+  null);
+} // attributeNamespace
+);
+
+// These are "enumerated" HTML attributes that accept "true" and "false".
+// In React, we let users pass `true` and `false` even though technically
+// these aren't boolean attributes (they are coerced to strings).
+['contentEditable', 'draggable', 'spellCheck', 'value'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, BOOLEANISH_STRING, false, // mustUseProperty
+  name.toLowerCase(), // attributeName
+  null);
+} // attributeNamespace
+);
+
+// These are "enumerated" SVG attributes that accept "true" and "false".
+// In React, we let users pass `true` and `false` even though technically
+// these aren't boolean attributes (they are coerced to strings).
+// Since these are SVG attributes, their attribute names are case-sensitive.
+['autoReverse', 'externalResourcesRequired', 'focusable', 'preserveAlpha'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, BOOLEANISH_STRING, false, // mustUseProperty
+  name, // attributeName
+  null);
+} // attributeNamespace
+);
+
+// These are HTML boolean attributes.
+['allowFullScreen', 'async',
+// Note: there is a special case that prevents it from being written to the DOM
+// on the client side because the browsers are inconsistent. Instead we call focus().
+'autoFocus', 'autoPlay', 'controls', 'default', 'defer', 'disabled', 'formNoValidate', 'hidden', 'loop', 'noModule', 'noValidate', 'open', 'playsInline', 'readOnly', 'required', 'reversed', 'scoped', 'seamless',
+// Microdata
+'itemScope'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, BOOLEAN, false, // mustUseProperty
+  name.toLowerCase(), // attributeName
+  null);
+} // attributeNamespace
+);
+
+// These are the few React props that we set as DOM properties
+// rather than attributes. These are all booleans.
+['checked',
+// Note: `option.selected` is not updated if `select.multiple` is
+// disabled with `removeAttribute`. We have special logic for handling this.
+'multiple', 'muted', 'selected'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, BOOLEAN, true, // mustUseProperty
+  name, // attributeName
+  null);
+} // attributeNamespace
+);
+
+// These are HTML attributes that are "overloaded booleans": they behave like
+// booleans, but can also accept a string value.
+['capture', 'download'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, OVERLOADED_BOOLEAN, false, // mustUseProperty
+  name, // attributeName
+  null);
+} // attributeNamespace
+);
+
+// These are HTML attributes that must be positive numbers.
+['cols', 'rows', 'size', 'span'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, POSITIVE_NUMERIC, false, // mustUseProperty
+  name, // attributeName
+  null);
+} // attributeNamespace
+);
+
+// These are HTML attributes that must be numbers.
+['rowSpan', 'start'].forEach(function (name) {
+  properties[name] = new PropertyInfoRecord(name, NUMERIC, false, // mustUseProperty
+  name.toLowerCase(), // attributeName
+  null);
+} // attributeNamespace
+);
+
+var CAMELIZE = /[\-\:]([a-z])/g;
+var capitalize = function (token) {
+  return token[1].toUpperCase();
+};
+
+// This is a list of all SVG attributes that need special casing, namespacing,
+// or boolean value assignment. Regular attributes that just accept strings
+// and have the same names are omitted, just like in the HTML whitelist.
+// Some of these attributes can be hard to find. This list was created by
+// scrapping the MDN documentation.
+['accent-height', 'alignment-baseline', 'arabic-form', 'baseline-shift', 'cap-height', 'clip-path', 'clip-rule', 'color-interpolation', 'color-interpolation-filters', 'color-profile', 'color-rendering', 'dominant-baseline', 'enable-background', 'fill-opacity', 'fill-rule', 'flood-color', 'flood-opacity', 'font-family', 'font-size', 'font-size-adjust', 'font-stretch', 'font-style', 'font-variant', 'font-weight', 'glyph-name', 'glyph-orientation-horizontal', 'glyph-orientation-vertical', 'horiz-adv-x', 'horiz-origin-x', 'image-rendering', 'letter-spacing', 'lighting-color', 'marker-end', 'marker-mid', 'marker-start', 'overline-position', 'overline-thickness', 'paint-order', 'panose-1', 'pointer-events', 'rendering-intent', 'shape-rendering', 'stop-color', 'stop-opacity', 'strikethrough-position', 'strikethrough-thickness', 'stroke-dasharray', 'stroke-dashoffset', 'stroke-linecap', 'stroke-linejoin', 'stroke-miterlimit', 'stroke-opacity', 'stroke-width', 'text-anchor', 'text-decoration', 'text-rendering', 'underline-position', 'underline-thickness', 'unicode-bidi', 'unicode-range', 'units-per-em', 'v-alphabetic', 'v-hanging', 'v-ideographic', 'v-mathematical', 'vector-effect', 'vert-adv-y', 'vert-origin-x', 'vert-origin-y', 'word-spacing', 'writing-mode', 'xmlns:xlink', 'x-height'].forEach(function (attributeName) {
+  var name = attributeName.replace(CAMELIZE, capitalize);
+  properties[name] = new PropertyInfoRecord(name, STRING, false, // mustUseProperty
+  attributeName, null);
+} // attributeNamespace
+);
+
+// String SVG attributes with the xlink namespace.
+['xlink:actuate', 'xlink:arcrole', 'xlink:href', 'xlink:role', 'xlink:show', 'xlink:title', 'xlink:type'].forEach(function (attributeName) {
+  var name = attributeName.replace(CAMELIZE, capitalize);
+  properties[name] = new PropertyInfoRecord(name, STRING, false, // mustUseProperty
+  attributeName, 'http://www.w3.org/1999/xlink');
+});
+
+// String SVG attributes with the xml namespace.
+['xml:base', 'xml:lang', 'xml:space'].forEach(function (attributeName) {
+  var name = attributeName.replace(CAMELIZE, capitalize);
+  properties[name] = new PropertyInfoRecord(name, STRING, false, // mustUseProperty
+  attributeName, 'http://www.w3.org/XML/1998/namespace');
+});
+
+// These attribute exists both in HTML and SVG.
+// The attribute name is case-sensitive in SVG so we can't just use
+// the React name like we do for attributes that exist only in HTML.
+['tabIndex', 'crossOrigin'].forEach(function (attributeName) {
+  properties[attributeName] = new PropertyInfoRecord(attributeName, STRING, false, // mustUseProperty
+  attributeName.toLowerCase(), // attributeName
+  null);
+} // attributeNamespace
+);
+
+// code copied and modified from escape-html
+/**
+ * Module variables.
+ * @private
+ */
+
+var matchHtmlRegExp = /["'&<>]/;
+
+/**
+ * Escapes special characters and HTML entities in a given html string.
+ *
+ * @param  {string} string HTML string to escape for later insertion
+ * @return {string}
+ * @public
+ */
+
+function escapeHtml(string) {
+  var str = '' + string;
+  var match = matchHtmlRegExp.exec(str);
+
+  if (!match) {
+    return str;
+  }
+
+  var escape = void 0;
+  var html = '';
+  var index = void 0;
+  var lastIndex = 0;
+
+  for (index = match.index; index < str.length; index++) {
+    switch (str.charCodeAt(index)) {
+      case 34:
+        // "
+        escape = '&quot;';
+        break;
+      case 38:
+        // &
+        escape = '&amp;';
+        break;
+      case 39:
+        // '
+        escape = '&#x27;'; // modified from escape-html; used to be '&#39'
+        break;
+      case 60:
+        // <
+        escape = '&lt;';
+        break;
+      case 62:
+        // >
+        escape = '&gt;';
+        break;
+      default:
+        continue;
+    }
+
+    if (lastIndex !== index) {
+      html += str.substring(lastIndex, index);
+    }
+
+    lastIndex = index + 1;
+    html += escape;
+  }
+
+  return lastIndex !== index ? html + str.substring(lastIndex, index) : html;
+}
+// end code copied and modified from escape-html
+
+/**
+ * Escapes text to prevent scripting attacks.
+ *
+ * @param {*} text Text value to escape.
+ * @return {string} An escaped string.
+ */
+function escapeTextForBrowser(text) {
+  if (typeof text === 'boolean' || typeof text === 'number') {
+    // this shortcircuit helps perf for types that we know will never have
+    // special characters, especially given that this function is used often
+    // for numeric dom ids.
+    return '' + text;
+  }
+  return escapeHtml(text);
+}
+
+/**
+ * Escapes attribute value to prevent scripting attacks.
+ *
+ * @param {*} value Value to escape.
+ * @return {string} An escaped string.
+ */
+function quoteAttributeValueForBrowser(value) {
+  return '"' + escapeTextForBrowser(value) + '"';
+}
+
+/**
+ * Operations for dealing with DOM properties.
+ */
+
+/**
+ * Creates markup for the ID property.
+ *
+ * @param {string} id Unescaped ID.
+ * @return {string} Markup string.
+ */
+
+
+function createMarkupForRoot() {
+  return ROOT_ATTRIBUTE_NAME + '=""';
+}
+
+/**
+ * Creates markup for a property.
+ *
+ * @param {string} name
+ * @param {*} value
+ * @return {?string} Markup string, or null if the property was invalid.
+ */
+function createMarkupForProperty(name, value) {
+  var propertyInfo = getPropertyInfo(name);
+  if (name !== 'style' && shouldIgnoreAttribute(name, propertyInfo, false)) {
+    return '';
+  }
+  if (shouldRemoveAttribute(name, value, propertyInfo, false)) {
+    return '';
+  }
+  if (propertyInfo !== null) {
+    var attributeName = propertyInfo.attributeName;
+    var type = propertyInfo.type;
+
+    if (type === BOOLEAN || type === OVERLOADED_BOOLEAN && value === true) {
+      return attributeName + '=""';
+    } else {
+      return attributeName + '=' + quoteAttributeValueForBrowser(value);
+    }
+  } else if (isAttributeNameSafe(name)) {
+    return name + '=' + quoteAttributeValueForBrowser(value);
+  }
+  return '';
+}
+
+/**
+ * Creates markup for a custom property.
+ *
+ * @param {string} name
+ * @param {*} value
+ * @return {string} Markup string, or empty string if the property was invalid.
+ */
+function createMarkupForCustomAttribute(name, value) {
+  if (!isAttributeNameSafe(name) || value == null) {
+    return '';
+  }
+  return name + '=' + quoteAttributeValueForBrowser(value);
+}
+
+/**
+ * inlined Object.is polyfill to avoid requiring consumers ship their own
+ * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/is
+ */
+function is(x, y) {
+  return x === y && (x !== 0 || 1 / x === 1 / y) || x !== x && y !== y // eslint-disable-line no-self-compare
+  ;
+}
+
+var currentlyRenderingComponent = null;
+var firstWorkInProgressHook = null;
+var workInProgressHook = null;
+// Whether the work-in-progress hook is a re-rendered hook
+var isReRender = false;
+// Whether an update was scheduled during the currently executing render pass.
+var didScheduleRenderPhaseUpdate = false;
+// Lazily created map of render-phase updates
+var renderPhaseUpdates = null;
+// Counter to prevent infinite loops.
+var numberOfReRenders = 0;
+var RE_RENDER_LIMIT = 25;
+
+var isInHookUserCodeInDev = false;
+
+// In DEV, this is the name of the currently executing primitive hook
+var currentHookNameInDev = void 0;
+
+function resolveCurrentlyRenderingComponent() {
+  !(currentlyRenderingComponent !== null) ? invariant(false, 'Hooks can only be called inside the body of a function component. (https://fb.me/react-invalid-hook-call)') : void 0;
+  {
+    !!isInHookUserCodeInDev ? warning$1(false, 'Do not call Hooks inside useEffect(...), useMemo(...), or other built-in Hooks. ' + 'You can only call Hooks at the top level of your React function. ' + 'For more information, see ' + 'https://fb.me/rules-of-hooks') : void 0;
+  }
+  return currentlyRenderingComponent;
+}
+
+function areHookInputsEqual(nextDeps, prevDeps) {
+  if (prevDeps === null) {
+    {
+      warning$1(false, '%s received a final argument during this render, but not during ' + 'the previous render. Even though the final argument is optional, ' + 'its type cannot change between renders.', currentHookNameInDev);
+    }
+    return false;
+  }
+
+  {
+    // Don't bother comparing lengths in prod because these arrays should be
+    // passed inline.
+    if (nextDeps.length !== prevDeps.length) {
+      warning$1(false, 'The final argument passed to %s changed size between renders. The ' + 'order and size of this array must remain constant.\n\n' + 'Previous: %s\n' + 'Incoming: %s', currentHookNameInDev, '[' + nextDeps.join(', ') + ']', '[' + prevDeps.join(', ') + ']');
+    }
+  }
+  for (var i = 0; i < prevDeps.length && i < nextDeps.length; i++) {
+    if (is(nextDeps[i], prevDeps[i])) {
+      continue;
+    }
+    return false;
+  }
+  return true;
+}
+
+function createHook() {
+  if (numberOfReRenders > 0) {
+    invariant(false, 'Rendered more hooks than during the previous render');
+  }
+  return {
+    memoizedState: null,
+    queue: null,
+    next: null
+  };
+}
+
+function createWorkInProgressHook() {
+  if (workInProgressHook === null) {
+    // This is the first hook in the list
+    if (firstWorkInProgressHook === null) {
+      isReRender = false;
+      firstWorkInProgressHook = workInProgressHook = createHook();
+    } else {
+      // There's already a work-in-progress. Reuse it.
+      isReRender = true;
+      workInProgressHook = firstWorkInProgressHook;
+    }
+  } else {
+    if (workInProgressHook.next === null) {
+      isReRender = false;
+      // Append to the end of the list
+      workInProgressHook = workInProgressHook.next = createHook();
+    } else {
+      // There's already a work-in-progress. Reuse it.
+      isReRender = true;
+      workInProgressHook = workInProgressHook.next;
+    }
+  }
+  return workInProgressHook;
+}
+
+function prepareToUseHooks(componentIdentity) {
+  currentlyRenderingComponent = componentIdentity;
+  {
+    isInHookUserCodeInDev = false;
+  }
+
+  // The following should have already been reset
+  // didScheduleRenderPhaseUpdate = false;
+  // firstWorkInProgressHook = null;
+  // numberOfReRenders = 0;
+  // renderPhaseUpdates = null;
+  // workInProgressHook = null;
+}
+
+function finishHooks(Component, props, children, refOrContext) {
+  // This must be called after every function component to prevent hooks from
+  // being used in classes.
+
+  while (didScheduleRenderPhaseUpdate) {
+    // Updates were scheduled during the render phase. They are stored in
+    // the `renderPhaseUpdates` map. Call the component again, reusing the
+    // work-in-progress hooks and applying the additional updates on top. Keep
+    // restarting until no more updates are scheduled.
+    didScheduleRenderPhaseUpdate = false;
+    numberOfReRenders += 1;
+
+    // Start over from the beginning of the list
+    workInProgressHook = null;
+
+    children = Component(props, refOrContext);
+  }
+  currentlyRenderingComponent = null;
+  firstWorkInProgressHook = null;
+  numberOfReRenders = 0;
+  renderPhaseUpdates = null;
+  workInProgressHook = null;
+  {
+    isInHookUserCodeInDev = false;
+  }
+
+  // These were reset above
+  // currentlyRenderingComponent = null;
+  // didScheduleRenderPhaseUpdate = false;
+  // firstWorkInProgressHook = null;
+  // numberOfReRenders = 0;
+  // renderPhaseUpdates = null;
+  // workInProgressHook = null;
+
+  return children;
+}
+
+function readContext(context, observedBits) {
+  var threadID = currentThreadID;
+  validateContextBounds(context, threadID);
+  {
+    !!isInHookUserCodeInDev ? warning$1(false, 'Context can only be read while React is rendering. ' + 'In classes, you can read it in the render method or getDerivedStateFromProps. ' + 'In function components, you can read it directly in the function body, but not ' + 'inside Hooks like useReducer() or useMemo().') : void 0;
+  }
+  return context[threadID];
+}
+
+function useContext(context, observedBits) {
+  {
+    currentHookNameInDev = 'useContext';
+  }
+  resolveCurrentlyRenderingComponent();
+  var threadID = currentThreadID;
+  validateContextBounds(context, threadID);
+  return context[threadID];
+}
+
+function basicStateReducer(state, action) {
+  return typeof action === 'function' ? action(state) : action;
+}
+
+function useState(initialState) {
+  {
+    currentHookNameInDev = 'useState';
+  }
+  return useReducer(basicStateReducer,
+  // useReducer has a special case to support lazy useState initializers
+  initialState);
+}
+
+function useReducer(reducer, initialArg, init) {
+  {
+    if (reducer !== basicStateReducer) {
+      currentHookNameInDev = 'useReducer';
+    }
+  }
+  currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
+  workInProgressHook = createWorkInProgressHook();
+  if (isReRender) {
+    // This is a re-render. Apply the new render phase updates to the previous
+    var _queue = workInProgressHook.queue;
+    var _dispatch = _queue.dispatch;
+    if (renderPhaseUpdates !== null) {
+      // Render phase updates are stored in a map of queue -> linked list
+      var firstRenderPhaseUpdate = renderPhaseUpdates.get(_queue);
+      if (firstRenderPhaseUpdate !== undefined) {
+        renderPhaseUpdates.delete(_queue);
+        var newState = workInProgressHook.memoizedState;
+        var update = firstRenderPhaseUpdate;
+        do {
+          // Process this render phase update. We don't have to check the
+          // priority because it will always be the same as the current
+          // render's.
+          var _action = update.action;
+          {
+            isInHookUserCodeInDev = true;
+          }
+          newState = reducer(newState, _action);
+          {
+            isInHookUserCodeInDev = false;
+          }
+          update = update.next;
+        } while (update !== null);
+
+        workInProgressHook.memoizedState = newState;
+
+        return [newState, _dispatch];
+      }
+    }
+    return [workInProgressHook.memoizedState, _dispatch];
+  } else {
+    {
+      isInHookUserCodeInDev = true;
+    }
+    var initialState = void 0;
+    if (reducer === basicStateReducer) {
+      // Special case for `useState`.
+      initialState = typeof initialArg === 'function' ? initialArg() : initialArg;
+    } else {
+      initialState = init !== undefined ? init(initialArg) : initialArg;
+    }
+    {
+      isInHookUserCodeInDev = false;
+    }
+    workInProgressHook.memoizedState = initialState;
+    var _queue2 = workInProgressHook.queue = {
+      last: null,
+      dispatch: null
+    };
+    var _dispatch2 = _queue2.dispatch = dispatchAction.bind(null, currentlyRenderingComponent, _queue2);
+    return [workInProgressHook.memoizedState, _dispatch2];
+  }
+}
+
+function useMemo(nextCreate, deps) {
+  currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
+  workInProgressHook = createWorkInProgressHook();
+
+  var nextDeps = deps === undefined ? null : deps;
+
+  if (workInProgressHook !== null) {
+    var prevState = workInProgressHook.memoizedState;
+    if (prevState !== null) {
+      if (nextDeps !== null) {
+        var prevDeps = prevState[1];
+        if (areHookInputsEqual(nextDeps, prevDeps)) {
+          return prevState[0];
+        }
+      }
+    }
+  }
+
+  {
+    isInHookUserCodeInDev = true;
+  }
+  var nextValue = nextCreate();
+  {
+    isInHookUserCodeInDev = false;
+  }
+  workInProgressHook.memoizedState = [nextValue, nextDeps];
+  return nextValue;
+}
+
+function useRef(initialValue) {
+  currentlyRenderingComponent = resolveCurrentlyRenderingComponent();
+  workInProgressHook = createWorkInProgressHook();
+  var previousRef = workInProgressHook.memoizedState;
+  if (previousRef === null) {
+    var ref = { current: initialValue };
+    {
+      Object.seal(ref);
+    }
+    workInProgressHook.memoizedState = ref;
+    return ref;
+  } else {
+    return previousRef;
+  }
+}
+
+function useLayoutEffect(create, inputs) {
+  {
+    currentHookNameInDev = 'useLayoutEffect';
+  }
+  warning$1(false, 'useLayoutEffect does nothing on the server, because its effect cannot ' + "be encoded into the server renderer's output format. This will lead " + 'to a mismatch between the initial, non-hydrated UI and the intended ' + 'UI. To avoid this, useLayoutEffect should only be used in ' + 'components that render exclusively on the client.');
+}
+
+function dispatchAction(componentIdentity, queue, action) {
+  !(numberOfReRenders < RE_RENDER_LIMIT) ? invariant(false, 'Too many re-renders. React limits the number of renders to prevent an infinite loop.') : void 0;
+
+  if (componentIdentity === currentlyRenderingComponent) {
+    // This is a render phase update. Stash it in a lazily-created map of
+    // queue -> linked list of updates. After this render pass, we'll restart
+    // and apply the stashed updates on top of the work-in-progress hook.
+    didScheduleRenderPhaseUpdate = true;
+    var update = {
+      action: action,
+      next: null
+    };
+    if (renderPhaseUpdates === null) {
+      renderPhaseUpdates = new Map();
+    }
+    var firstRenderPhaseUpdate = renderPhaseUpdates.get(queue);
+    if (firstRenderPhaseUpdate === undefined) {
+      renderPhaseUpdates.set(queue, update);
+    } else {
+      // Append the update to the end of the list.
+      var lastRenderPhaseUpdate = firstRenderPhaseUpdate;
+      while (lastRenderPhaseUpdate.next !== null) {
+        lastRenderPhaseUpdate = lastRenderPhaseUpdate.next;
+      }
+      lastRenderPhaseUpdate.next = update;
+    }
+  } else {
+    // This means an update has happened after the function component has
+    // returned. On the server this is a no-op. In React Fiber, the update
+    // would be scheduled for a future render.
+  }
+}
+
+function useCallback(callback, deps) {
+  // Callbacks are passed as they are in the server environment.
+  return callback;
+}
+
+function noop() {}
+
+var currentThreadID = 0;
+
+function setCurrentThreadID(threadID) {
+  currentThreadID = threadID;
+}
+
+var Dispatcher = {
+  readContext: readContext,
+  useContext: useContext,
+  useMemo: useMemo,
+  useReducer: useReducer,
+  useRef: useRef,
+  useState: useState,
+  useLayoutEffect: useLayoutEffect,
+  useCallback: useCallback,
+  // useImperativeHandle is not run in the server environment
+  useImperativeHandle: noop,
+  // Effects are not run in the server environment.
+  useEffect: noop,
+  // Debugging effect
+  useDebugValue: noop
+};
+
+var HTML_NAMESPACE = 'http://www.w3.org/1999/xhtml';
+var MATH_NAMESPACE = 'http://www.w3.org/1998/Math/MathML';
+var SVG_NAMESPACE = 'http://www.w3.org/2000/svg';
+
+var Namespaces = {
+  html: HTML_NAMESPACE,
+  mathml: MATH_NAMESPACE,
+  svg: SVG_NAMESPACE
+};
+
+// Assumes there is no parent namespace.
+function getIntrinsicNamespace(type) {
+  switch (type) {
+    case 'svg':
+      return SVG_NAMESPACE;
+    case 'math':
+      return MATH_NAMESPACE;
+    default:
+      return HTML_NAMESPACE;
+  }
+}
+
+function getChildNamespace(parentNamespace, type) {
+  if (parentNamespace == null || parentNamespace === HTML_NAMESPACE) {
+    // No (or default) parent namespace: potential entry point.
+    return getIntrinsicNamespace(type);
+  }
+  if (parentNamespace === SVG_NAMESPACE && type === 'foreignObject') {
+    // We're leaving SVG.
+    return HTML_NAMESPACE;
+  }
+  // By default, pass namespace below.
+  return parentNamespace;
+}
+
+var ReactDebugCurrentFrame$2 = null;
+
+var ReactControlledValuePropTypes = {
+  checkPropTypes: null
+};
+
+{
+  ReactDebugCurrentFrame$2 = ReactSharedInternals.ReactDebugCurrentFrame;
+
+  var hasReadOnlyValue = {
+    button: true,
+    checkbox: true,
+    image: true,
+    hidden: true,
+    radio: true,
+    reset: true,
+    submit: true
+  };
+
+  var propTypes = {
+    value: function (props, propName, componentName) {
+      if (hasReadOnlyValue[props.type] || props.onChange || props.readOnly || props.disabled || props[propName] == null) {
+        return null;
+      }
+      return new Error('You provided a `value` prop to a form field without an ' + '`onChange` handler. This will render a read-only field. If ' + 'the field should be mutable use `defaultValue`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
+    },
+    checked: function (props, propName, componentName) {
+      if (props.onChange || props.readOnly || props.disabled || props[propName] == null) {
+        return null;
+      }
+      return new Error('You provided a `checked` prop to a form field without an ' + '`onChange` handler. This will render a read-only field. If ' + 'the field should be mutable use `defaultChecked`. Otherwise, ' + 'set either `onChange` or `readOnly`.');
+    }
+  };
+
+  /**
+   * Provide a linked `value` attribute for controlled forms. You should not use
+   * this outside of the ReactDOM controlled form components.
+   */
+  ReactControlledValuePropTypes.checkPropTypes = function (tagName, props) {
+    checkPropTypes(propTypes, props, 'prop', tagName, ReactDebugCurrentFrame$2.getStackAddendum);
+  };
+}
+
+// For HTML, certain tags should omit their close tag. We keep a whitelist for
+// those special-case tags.
+
+var omittedCloseTags = {
+  area: true,
+  base: true,
+  br: true,
+  col: true,
+  embed: true,
+  hr: true,
+  img: true,
+  input: true,
+  keygen: true,
+  link: true,
+  meta: true,
+  param: true,
+  source: true,
+  track: true,
+  wbr: true
+  // NOTE: menuitem's close tag should be omitted, but that causes problems.
+};
+
+// For HTML, certain tags cannot have children. This has the same purpose as
+// `omittedCloseTags` except that `menuitem` should still have its closing tag.
+
+var voidElementTags = _assign({
+  menuitem: true
+}, omittedCloseTags);
+
+// TODO: We can remove this if we add invariantWithStack()
+// or add stack by default to invariants where possible.
+var HTML = '__html';
+
+var ReactDebugCurrentFrame$3 = null;
+{
+  ReactDebugCurrentFrame$3 = ReactSharedInternals.ReactDebugCurrentFrame;
+}
+
+function assertValidProps(tag, props) {
+  if (!props) {
+    return;
+  }
+  // Note the use of `==` which checks for null or undefined.
+  if (voidElementTags[tag]) {
+    !(props.children == null && props.dangerouslySetInnerHTML == null) ? invariant(false, '%s is a void element tag and must neither have `children` nor use `dangerouslySetInnerHTML`.%s', tag, ReactDebugCurrentFrame$3.getStackAddendum()) : void 0;
+  }
+  if (props.dangerouslySetInnerHTML != null) {
+    !(props.children == null) ? invariant(false, 'Can only set one of `children` or `props.dangerouslySetInnerHTML`.') : void 0;
+    !(typeof props.dangerouslySetInnerHTML === 'object' && HTML in props.dangerouslySetInnerHTML) ? invariant(false, '`props.dangerouslySetInnerHTML` must be in the form `{__html: ...}`. Please visit https://fb.me/react-invariant-dangerously-set-inner-html for more information.') : void 0;
+  }
+  {
+    !(props.suppressContentEditableWarning || !props.contentEditable || props.children == null) ? warning$1(false, 'A component is `contentEditable` and contains `children` managed by ' + 'React. It is now your responsibility to guarantee that none of ' + 'those nodes are unexpectedly modified or duplicated. This is ' + 'probably not intentional.') : void 0;
+  }
+  !(props.style == null || typeof props.style === 'object') ? invariant(false, 'The `style` prop expects a mapping from style properties to values, not a string. For example, style={{marginRight: spacing + \'em\'}} when using JSX.%s', ReactDebugCurrentFrame$3.getStackAddendum()) : void 0;
+}
+
+/**
+ * CSS properties which accept numbers but are not in units of "px".
+ */
+var isUnitlessNumber = {
+  animationIterationCount: true,
+  borderImageOutset: true,
+  borderImageSlice: true,
+  borderImageWidth: true,
+  boxFlex: true,
+  boxFlexGroup: true,
+  boxOrdinalGroup: true,
+  columnCount: true,
+  columns: true,
+  flex: true,
+  flexGrow: true,
+  flexPositive: true,
+  flexShrink: true,
+  flexNegative: true,
+  flexOrder: true,
+  gridArea: true,
+  gridRow: true,
+  gridRowEnd: true,
+  gridRowSpan: true,
+  gridRowStart: true,
+  gridColumn: true,
+  gridColumnEnd: true,
+  gridColumnSpan: true,
+  gridColumnStart: true,
+  fontWeight: true,
+  lineClamp: true,
+  lineHeight: true,
+  opacity: true,
+  order: true,
+  orphans: true,
+  tabSize: true,
+  widows: true,
+  zIndex: true,
+  zoom: true,
+
+  // SVG-related properties
+  fillOpacity: true,
+  floodOpacity: true,
+  stopOpacity: true,
+  strokeDasharray: true,
+  strokeDashoffset: true,
+  strokeMiterlimit: true,
+  strokeOpacity: true,
+  strokeWidth: true
+};
+
+/**
+ * @param {string} prefix vendor-specific prefix, eg: Webkit
+ * @param {string} key style name, eg: transitionDuration
+ * @return {string} style name prefixed with `prefix`, properly camelCased, eg:
+ * WebkitTransitionDuration
+ */
+function prefixKey(prefix, key) {
+  return prefix + key.charAt(0).toUpperCase() + key.substring(1);
+}
+
+/**
+ * Support style names that may come passed in prefixed by adding permutations
+ * of vendor prefixes.
+ */
+var prefixes = ['Webkit', 'ms', 'Moz', 'O'];
+
+// Using Object.keys here, or else the vanilla for-in loop makes IE8 go into an
+// infinite loop, because it iterates over the newly added props too.
+Object.keys(isUnitlessNumber).forEach(function (prop) {
+  prefixes.forEach(function (prefix) {
+    isUnitlessNumber[prefixKey(prefix, prop)] = isUnitlessNumber[prop];
+  });
+});
+
+/**
+ * Convert a value into the proper css writable value. The style name `name`
+ * should be logical (no hyphens), as specified
+ * in `CSSProperty.isUnitlessNumber`.
+ *
+ * @param {string} name CSS property name such as `topMargin`.
+ * @param {*} value CSS property value such as `10px`.
+ * @return {string} Normalized style value with dimensions applied.
+ */
+function dangerousStyleValue(name, value, isCustomProperty) {
+  // Note that we've removed escapeTextForBrowser() calls here since the
+  // whole string will be escaped when the attribute is injected into
+  // the markup. If you provide unsafe user data here they can inject
+  // arbitrary CSS which may be problematic (I couldn't repro this):
+  // https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
+  // http://www.thespanner.co.uk/2007/11/26/ultimate-xss-css-injection/
+  // This is not an XSS hole but instead a potential CSS injection issue
+  // which has lead to a greater discussion about how we're going to
+  // trust URLs moving forward. See #2115901
+
+  var isEmpty = value == null || typeof value === 'boolean' || value === '';
+  if (isEmpty) {
+    return '';
+  }
+
+  if (!isCustomProperty && typeof value === 'number' && value !== 0 && !(isUnitlessNumber.hasOwnProperty(name) && isUnitlessNumber[name])) {
+    return value + 'px'; // Presumes implicit 'px' suffix for unitless numbers
+  }
+
+  return ('' + value).trim();
+}
+
+var uppercasePattern = /([A-Z])/g;
+var msPattern = /^ms-/;
+
+/**
+ * Hyphenates a camelcased CSS property name, for example:
+ *
+ *   > hyphenateStyleName('backgroundColor')
+ *   < "background-color"
+ *   > hyphenateStyleName('MozTransition')
+ *   < "-moz-transition"
+ *   > hyphenateStyleName('msTransition')
+ *   < "-ms-transition"
+ *
+ * As Modernizr suggests (http://modernizr.com/docs/#prefixed), an `ms` prefix
+ * is converted to `-ms-`.
+ */
+function hyphenateStyleName(name) {
+  return name.replace(uppercasePattern, '-$1').toLowerCase().replace(msPattern, '-ms-');
+}
+
+function isCustomComponent(tagName, props) {
+  if (tagName.indexOf('-') === -1) {
+    return typeof props.is === 'string';
+  }
+  switch (tagName) {
+    // These are reserved SVG and MathML elements.
+    // We don't mind this whitelist too much because we expect it to never grow.
+    // The alternative is to track the namespace in a few places which is convoluted.
+    // https://w3c.github.io/webcomponents/spec/custom/#custom-elements-core-concepts
+    case 'annotation-xml':
+    case 'color-profile':
+    case 'font-face':
+    case 'font-face-src':
+    case 'font-face-uri':
+    case 'font-face-format':
+    case 'font-face-name':
+    case 'missing-glyph':
+      return false;
+    default:
+      return true;
+  }
+}
+
+var warnValidStyle = function () {};
+
+{
+  // 'msTransform' is correct, but the other prefixes should be capitalized
+  var badVendoredStyleNamePattern = /^(?:webkit|moz|o)[A-Z]/;
+  var msPattern$1 = /^-ms-/;
+  var hyphenPattern = /-(.)/g;
+
+  // style values shouldn't contain a semicolon
+  var badStyleValueWithSemicolonPattern = /;\s*$/;
+
+  var warnedStyleNames = {};
+  var warnedStyleValues = {};
+  var warnedForNaNValue = false;
+  var warnedForInfinityValue = false;
+
+  var camelize = function (string) {
+    return string.replace(hyphenPattern, function (_, character) {
+      return character.toUpperCase();
+    });
+  };
+
+  var warnHyphenatedStyleName = function (name) {
+    if (warnedStyleNames.hasOwnProperty(name) && warnedStyleNames[name]) {
+      return;
+    }
+
+    warnedStyleNames[name] = true;
+    warning$1(false, 'Unsupported style property %s. Did you mean %s?', name,
+    // As Andi Smith suggests
+    // (http://www.andismith.com/blog/2012/02/modernizr-prefixed/), an `-ms` prefix
+    // is converted to lowercase `ms`.
+    camelize(name.replace(msPattern$1, 'ms-')));
+  };
+
+  var warnBadVendoredStyleName = function (name) {
+    if (warnedStyleNames.hasOwnProperty(name) && warnedStyleNames[name]) {
+      return;
+    }
+
+    warnedStyleNames[name] = true;
+    warning$1(false, 'Unsupported vendor-prefixed style property %s. Did you mean %s?', name, name.charAt(0).toUpperCase() + name.slice(1));
+  };
+
+  var warnStyleValueWithSemicolon = function (name, value) {
+    if (warnedStyleValues.hasOwnProperty(value) && warnedStyleValues[value]) {
+      return;
+    }
+
+    warnedStyleValues[value] = true;
+    warning$1(false, "Style property values shouldn't contain a semicolon. " + 'Try "%s: %s" instead.', name, value.replace(badStyleValueWithSemicolonPattern, ''));
+  };
+
+  var warnStyleValueIsNaN = function (name, value) {
+    if (warnedForNaNValue) {
+      return;
+    }
+
+    warnedForNaNValue = true;
+    warning$1(false, '`NaN` is an invalid value for the `%s` css style property.', name);
+  };
+
+  var warnStyleValueIsInfinity = function (name, value) {
+    if (warnedForInfinityValue) {
+      return;
+    }
+
+    warnedForInfinityValue = true;
+    warning$1(false, '`Infinity` is an invalid value for the `%s` css style property.', name);
+  };
+
+  warnValidStyle = function (name, value) {
+    if (name.indexOf('-') > -1) {
+      warnHyphenatedStyleName(name);
+    } else if (badVendoredStyleNamePattern.test(name)) {
+      warnBadVendoredStyleName(name);
+    } else if (badStyleValueWithSemicolonPattern.test(value)) {
+      warnStyleValueWithSemicolon(name, value);
+    }
+
+    if (typeof value === 'number') {
+      if (isNaN(value)) {
+        warnStyleValueIsNaN(name, value);
+      } else if (!isFinite(value)) {
+        warnStyleValueIsInfinity(name, value);
+      }
+    }
+  };
+}
+
+var warnValidStyle$1 = warnValidStyle;
+
+var ariaProperties = {
+  'aria-current': 0, // state
+  'aria-details': 0,
+  'aria-disabled': 0, // state
+  'aria-hidden': 0, // state
+  'aria-invalid': 0, // state
+  'aria-keyshortcuts': 0,
+  'aria-label': 0,
+  'aria-roledescription': 0,
+  // Widget Attributes
+  'aria-autocomplete': 0,
+  'aria-checked': 0,
+  'aria-expanded': 0,
+  'aria-haspopup': 0,
+  'aria-level': 0,
+  'aria-modal': 0,
+  'aria-multiline': 0,
+  'aria-multiselectable': 0,
+  'aria-orientation': 0,
+  'aria-placeholder': 0,
+  'aria-pressed': 0,
+  'aria-readonly': 0,
+  'aria-required': 0,
+  'aria-selected': 0,
+  'aria-sort': 0,
+  'aria-valuemax': 0,
+  'aria-valuemin': 0,
+  'aria-valuenow': 0,
+  'aria-valuetext': 0,
+  // Live Region Attributes
+  'aria-atomic': 0,
+  'aria-busy': 0,
+  'aria-live': 0,
+  'aria-relevant': 0,
+  // Drag-and-Drop Attributes
+  'aria-dropeffect': 0,
+  'aria-grabbed': 0,
+  // Relationship Attributes
+  'aria-activedescendant': 0,
+  'aria-colcount': 0,
+  'aria-colindex': 0,
+  'aria-colspan': 0,
+  'aria-controls': 0,
+  'aria-describedby': 0,
+  'aria-errormessage': 0,
+  'aria-flowto': 0,
+  'aria-labelledby': 0,
+  'aria-owns': 0,
+  'aria-posinset': 0,
+  'aria-rowcount': 0,
+  'aria-rowindex': 0,
+  'aria-rowspan': 0,
+  'aria-setsize': 0
+};
+
+var warnedProperties = {};
+var rARIA = new RegExp('^(aria)-[' + ATTRIBUTE_NAME_CHAR + ']*$');
+var rARIACamel = new RegExp('^(aria)[A-Z][' + ATTRIBUTE_NAME_CHAR + ']*$');
+
+var hasOwnProperty$2 = Object.prototype.hasOwnProperty;
+
+function validateProperty(tagName, name) {
+  if (hasOwnProperty$2.call(warnedProperties, name) && warnedProperties[name]) {
+    return true;
+  }
+
+  if (rARIACamel.test(name)) {
+    var ariaName = 'aria-' + name.slice(4).toLowerCase();
+    var correctName = ariaProperties.hasOwnProperty(ariaName) ? ariaName : null;
+
+    // If this is an aria-* attribute, but is not listed in the known DOM
+    // DOM properties, then it is an invalid aria-* attribute.
+    if (correctName == null) {
+      warning$1(false, 'Invalid ARIA attribute `%s`. ARIA attributes follow the pattern aria-* and must be lowercase.', name);
+      warnedProperties[name] = true;
+      return true;
+    }
+    // aria-* attributes should be lowercase; suggest the lowercase version.
+    if (name !== correctName) {
+      warning$1(false, 'Invalid ARIA attribute `%s`. Did you mean `%s`?', name, correctName);
+      warnedProperties[name] = true;
+      return true;
+    }
+  }
+
+  if (rARIA.test(name)) {
+    var lowerCasedName = name.toLowerCase();
+    var standardName = ariaProperties.hasOwnProperty(lowerCasedName) ? lowerCasedName : null;
+
+    // If this is an aria-* attribute, but is not listed in the known DOM
+    // DOM properties, then it is an invalid aria-* attribute.
+    if (standardName == null) {
+      warnedProperties[name] = true;
+      return false;
+    }
+    // aria-* attributes should be lowercase; suggest the lowercase version.
+    if (name !== standardName) {
+      warning$1(false, 'Unknown ARIA attribute `%s`. Did you mean `%s`?', name, standardName);
+      warnedProperties[name] = true;
+      return true;
+    }
+  }
+
+  return true;
+}
+
+function warnInvalidARIAProps(type, props) {
+  var invalidProps = [];
+
+  for (var key in props) {
+    var isValid = validateProperty(type, key);
+    if (!isValid) {
+      invalidProps.push(key);
+    }
+  }
+
+  var unknownPropString = invalidProps.map(function (prop) {
+    return '`' + prop + '`';
+  }).join(', ');
+
+  if (invalidProps.length === 1) {
+    warning$1(false, 'Invalid aria prop %s on <%s> tag. ' + 'For details, see https://fb.me/invalid-aria-prop', unknownPropString, type);
+  } else if (invalidProps.length > 1) {
+    warning$1(false, 'Invalid aria props %s on <%s> tag. ' + 'For details, see https://fb.me/invalid-aria-prop', unknownPropString, type);
+  }
+}
+
+function validateProperties(type, props) {
+  if (isCustomComponent(type, props)) {
+    return;
+  }
+  warnInvalidARIAProps(type, props);
+}
+
+var didWarnValueNull = false;
+
+function validateProperties$1(type, props) {
+  if (type !== 'input' && type !== 'textarea' && type !== 'select') {
+    return;
+  }
+
+  if (props != null && props.value === null && !didWarnValueNull) {
+    didWarnValueNull = true;
+    if (type === 'select' && props.multiple) {
+      warning$1(false, '`value` prop on `%s` should not be null. ' + 'Consider using an empty array when `multiple` is set to `true` ' + 'to clear the component or `undefined` for uncontrolled components.', type);
+    } else {
+      warning$1(false, '`value` prop on `%s` should not be null. ' + 'Consider using an empty string to clear the component or `undefined` ' + 'for uncontrolled components.', type);
+    }
+  }
+}
+
+/**
+ * Registers plugins so that they can extract and dispatch events.
+ *
+ * @see {EventPluginHub}
+ */
+
+/**
+ * Ordered list of injected plugins.
+ */
+
+
+/**
+ * Mapping from event name to dispatch config
+ */
+
+
+/**
+ * Mapping from registration name to plugin module
+ */
+var registrationNameModules = {};
+
+/**
+ * Mapping from registration name to event name
+ */
+
+
+/**
+ * Mapping from lowercase registration names to the properly cased version,
+ * used to warn in the case of missing event handlers. Available
+ * only in true.
+ * @type {Object}
+ */
+var possibleRegistrationNames = {};
+// Trust the developer to only use possibleRegistrationNames in true
+
+/**
+ * Injects an ordering of plugins (by plugin name). This allows the ordering
+ * to be decoupled from injection of the actual plugins so that ordering is
+ * always deterministic regardless of packaging, on-the-fly injection, etc.
+ *
+ * @param {array} InjectedEventPluginOrder
+ * @internal
+ * @see {EventPluginHub.injection.injectEventPluginOrder}
+ */
+
+
+/**
+ * Injects plugins to be used by `EventPluginHub`. The plugin names must be
+ * in the ordering injected by `injectEventPluginOrder`.
+ *
+ * Plugins can be injected as part of page initialization or on-the-fly.
+ *
+ * @param {object} injectedNamesToPlugins Map from names to plugin modules.
+ * @internal
+ * @see {EventPluginHub.injection.injectEventPluginsByName}
+ */
+
+// When adding attributes to the HTML or SVG whitelist, be sure to
+// also add them to this module to ensure casing and incorrect name
+// warnings.
+var possibleStandardNames = {
+  // HTML
+  accept: 'accept',
+  acceptcharset: 'acceptCharset',
+  'accept-charset': 'acceptCharset',
+  accesskey: 'accessKey',
+  action: 'action',
+  allowfullscreen: 'allowFullScreen',
+  alt: 'alt',
+  as: 'as',
+  async: 'async',
+  autocapitalize: 'autoCapitalize',
+  autocomplete: 'autoComplete',
+  autocorrect: 'autoCorrect',
+  autofocus: 'autoFocus',
+  autoplay: 'autoPlay',
+  autosave: 'autoSave',
+  capture: 'capture',
+  cellpadding: 'cellPadding',
+  cellspacing: 'cellSpacing',
+  challenge: 'challenge',
+  charset: 'charSet',
+  checked: 'checked',
+  children: 'children',
+  cite: 'cite',
+  class: 'className',
+  classid: 'classID',
+  classname: 'className',
+  cols: 'cols',
+  colspan: 'colSpan',
+  content: 'content',
+  contenteditable: 'contentEditable',
+  contextmenu: 'contextMenu',
+  controls: 'controls',
+  controlslist: 'controlsList',
+  coords: 'coords',
+  crossorigin: 'crossOrigin',
+  dangerouslysetinnerhtml: 'dangerouslySetInnerHTML',
+  data: 'data',
+  datetime: 'dateTime',
+  default: 'default',
+  defaultchecked: 'defaultChecked',
+  defaultvalue: 'defaultValue',
+  defer: 'defer',
+  dir: 'dir',
+  disabled: 'disabled',
+  download: 'download',
+  draggable: 'draggable',
+  enctype: 'encType',
+  for: 'htmlFor',
+  form: 'form',
+  formmethod: 'formMethod',
+  formaction: 'formAction',
+  formenctype: 'formEncType',
+  formnovalidate: 'formNoValidate',
+  formtarget: 'formTarget',
+  frameborder: 'frameBorder',
+  headers: 'headers',
+  height: 'height',
+  hidden: 'hidden',
+  high: 'high',
+  href: 'href',
+  hreflang: 'hrefLang',
+  htmlfor: 'htmlFor',
+  httpequiv: 'httpEquiv',
+  'http-equiv': 'httpEquiv',
+  icon: 'icon',
+  id: 'id',
+  innerhtml: 'innerHTML',
+  inputmode: 'inputMode',
+  integrity: 'integrity',
+  is: 'is',
+  itemid: 'itemID',
+  itemprop: 'itemProp',
+  itemref: 'itemRef',
+  itemscope: 'itemScope',
+  itemtype: 'itemType',
+  keyparams: 'keyParams',
+  keytype: 'keyType',
+  kind: 'kind',
+  label: 'label',
+  lang: 'lang',
+  list: 'list',
+  loop: 'loop',
+  low: 'low',
+  manifest: 'manifest',
+  marginwidth: 'marginWidth',
+  marginheight: 'marginHeight',
+  max: 'max',
+  maxlength: 'maxLength',
+  media: 'media',
+  mediagroup: 'mediaGroup',
+  method: 'method',
+  min: 'min',
+  minlength: 'minLength',
+  multiple: 'multiple',
+  muted: 'muted',
+  name: 'name',
+  nomodule: 'noModule',
+  nonce: 'nonce',
+  novalidate: 'noValidate',
+  open: 'open',
+  optimum: 'optimum',
+  pattern: 'pattern',
+  placeholder: 'placeholder',
+  playsinline: 'playsInline',
+  poster: 'poster',
+  preload: 'preload',
+  profile: 'profile',
+  radiogroup: 'radioGroup',
+  readonly: 'readOnly',
+  referrerpolicy: 'referrerPolicy',
+  rel: 'rel',
+  required: 'required',
+  reversed: 'reversed',
+  role: 'role',
+  rows: 'rows',
+  rowspan: 'rowSpan',
+  sandbox: 'sandbox',
+  scope: 'scope',
+  scoped: 'scoped',
+  scrolling: 'scrolling',
+  seamless: 'seamless',
+  selected: 'selected',
+  shape: 'shape',
+  size: 'size',
+  sizes: 'sizes',
+  span: 'span',
+  spellcheck: 'spellCheck',
+  src: 'src',
+  srcdoc: 'srcDoc',
+  srclang: 'srcLang',
+  srcset: 'srcSet',
+  start: 'start',
+  step: 'step',
+  style: 'style',
+  summary: 'summary',
+  tabindex: 'tabIndex',
+  target: 'target',
+  title: 'title',
+  type: 'type',
+  usemap: 'useMap',
+  value: 'value',
+  width: 'width',
+  wmode: 'wmode',
+  wrap: 'wrap',
+
+  // SVG
+  about: 'about',
+  accentheight: 'accentHeight',
+  'accent-height': 'accentHeight',
+  accumulate: 'accumulate',
+  additive: 'additive',
+  alignmentbaseline: 'alignmentBaseline',
+  'alignment-baseline': 'alignmentBaseline',
+  allowreorder: 'allowReorder',
+  alphabetic: 'alphabetic',
+  amplitude: 'amplitude',
+  arabicform: 'arabicForm',
+  'arabic-form': 'arabicForm',
+  ascent: 'ascent',
+  attributename: 'attributeName',
+  attributetype: 'attributeType',
+  autoreverse: 'autoReverse',
+  azimuth: 'azimuth',
+  basefrequency: 'baseFrequency',
+  baselineshift: 'baselineShift',
+  'baseline-shift': 'baselineShift',
+  baseprofile: 'baseProfile',
+  bbox: 'bbox',
+  begin: 'begin',
+  bias: 'bias',
+  by: 'by',
+  calcmode: 'calcMode',
+  capheight: 'capHeight',
+  'cap-height': 'capHeight',
+  clip: 'clip',
+  clippath: 'clipPath',
+  'clip-path': 'clipPath',
+  clippathunits: 'clipPathUnits',
+  cliprule: 'clipRule',
+  'clip-rule': 'clipRule',
+  color: 'color',
+  colorinterpolation: 'colorInterpolation',
+  'color-interpolation': 'colorInterpolation',
+  colorinterpolationfilters: 'colorInterpolationFilters',
+  'color-interpolation-filters': 'colorInterpolationFilters',
+  colorprofile: 'colorProfile',
+  'color-profile': 'colorProfile',
+  colorrendering: 'colorRendering',
+  'color-rendering': 'colorRendering',
+  contentscripttype: 'contentScriptType',
+  contentstyletype: 'contentStyleType',
+  cursor: 'cursor',
+  cx: 'cx',
+  cy: 'cy',
+  d: 'd',
+  datatype: 'datatype',
+  decelerate: 'decelerate',
+  descent: 'descent',
+  diffuseconstant: 'diffuseConstant',
+  direction: 'direction',
+  display: 'display',
+  divisor: 'divisor',
+  dominantbaseline: 'dominantBaseline',
+  'dominant-baseline': 'dominantBaseline',
+  dur: 'dur',
+  dx: 'dx',
+  dy: 'dy',
+  edgemode: 'edgeMode',
+  elevation: 'elevation',
+  enablebackground: 'enableBackground',
+  'enable-background': 'enableBackground',
+  end: 'end',
+  exponent: 'exponent',
+  externalresourcesrequired: 'externalResourcesRequired',
+  fill: 'fill',
+  fillopacity: 'fillOpacity',
+  'fill-opacity': 'fillOpacity',
+  fillrule: 'fillRule',
+  'fill-rule': 'fillRule',
+  filter: 'filter',
+  filterres: 'filterRes',
+  filterunits: 'filterUnits',
+  floodopacity: 'floodOpacity',
+  'flood-opacity': 'floodOpacity',
+  floodcolor: 'floodColor',
+  'flood-color': 'floodColor',
+  focusable: 'focusable',
+  fontfamily: 'fontFamily',
+  'font-family': 'fontFamily',
+  fontsize: 'fontSize',
+  'font-size': 'fontSize',
+  fontsizeadjust: 'fontSizeAdjust',
+  'font-size-adjust': 'fontSizeAdjust',
+  fontstretch: 'fontStretch',
+  'font-stretch': 'fontStretch',
+  fontstyle: 'fontStyle',
+  'font-style': 'fontStyle',
+  fontvariant: 'fontVariant',
+  'font-variant': 'fontVariant',
+  fontweight: 'fontWeight',
+  'font-weight': 'fontWeight',
+  format: 'format',
+  from: 'from',
+  fx: 'fx',
+  fy: 'fy',
+  g1: 'g1',
+  g2: 'g2',
+  glyphname: 'glyphName',
+  'glyph-name': 'glyphName',
+  glyphorientationhorizontal: 'glyphOrientationHorizontal',
+  'glyph-orientation-horizontal': 'glyphOrientationHorizontal',
+  glyphorientationvertical: 'glyphOrientationVertical',
+  'glyph-orientation-vertical': 'glyphOrientationVertical',
+  glyphref: 'glyphRef',
+  gradienttransform: 'gradientTransform',
+  gradientunits: 'gradientUnits',
+  hanging: 'hanging',
+  horizadvx: 'horizAdvX',
+  'horiz-adv-x': 'horizAdvX',
+  horizoriginx: 'horizOriginX',
+  'horiz-origin-x': 'horizOriginX',
+  ideographic: 'ideographic',
+  imagerendering: 'imageRendering',
+  'image-rendering': 'imageRendering',
+  in2: 'in2',
+  in: 'in',
+  inlist: 'inlist',
+  intercept: 'intercept',
+  k1: 'k1',
+  k2: 'k2',
+  k3: 'k3',
+  k4: 'k4',
+  k: 'k',
+  kernelmatrix: 'kernelMatrix',
+  kernelunitlength: 'kernelUnitLength',
+  kerning: 'kerning',
+  keypoints: 'keyPoints',
+  keysplines: 'keySplines',
+  keytimes: 'keyTimes',
+  lengthadjust: 'lengthAdjust',
+  letterspacing: 'letterSpacing',
+  'letter-spacing': 'letterSpacing',
+  lightingcolor: 'lightingColor',
+  'lighting-color': 'lightingColor',
+  limitingconeangle: 'limitingConeAngle',
+  local: 'local',
+  markerend: 'markerEnd',
+  'marker-end': 'markerEnd',
+  markerheight: 'markerHeight',
+  markermid: 'markerMid',
+  'marker-mid': 'markerMid',
+  markerstart: 'markerStart',
+  'marker-start': 'markerStart',
+  markerunits: 'markerUnits',
+  markerwidth: 'markerWidth',
+  mask: 'mask',
+  maskcontentunits: 'maskContentUnits',
+  maskunits: 'maskUnits',
+  mathematical: 'mathematical',
+  mode: 'mode',
+  numoctaves: 'numOctaves',
+  offset: 'offset',
+  opacity: 'opacity',
+  operator: 'operator',
+  order: 'order',
+  orient: 'orient',
+  orientation: 'orientation',
+  origin: 'origin',
+  overflow: 'overflow',
+  overlineposition: 'overlinePosition',
+  'overline-position': 'overlinePosition',
+  overlinethickness: 'overlineThickness',
+  'overline-thickness': 'overlineThickness',
+  paintorder: 'paintOrder',
+  'paint-order': 'paintOrder',
+  panose1: 'panose1',
+  'panose-1': 'panose1',
+  pathlength: 'pathLength',
+  patterncontentunits: 'patternContentUnits',
+  patterntransform: 'patternTransform',
+  patternunits: 'patternUnits',
+  pointerevents: 'pointerEvents',
+  'pointer-events': 'pointerEvents',
+  points: 'points',
+  pointsatx: 'pointsAtX',
+  pointsaty: 'pointsAtY',
+  pointsatz: 'pointsAtZ',
+  prefix: 'prefix',
+  preservealpha: 'preserveAlpha',
+  preserveaspectratio: 'preserveAspectRatio',
+  primitiveunits: 'primitiveUnits',
+  property: 'property',
+  r: 'r',
+  radius: 'radius',
+  refx: 'refX',
+  refy: 'refY',
+  renderingintent: 'renderingIntent',
+  'rendering-intent': 'renderingIntent',
+  repeatcount: 'repeatCount',
+  repeatdur: 'repeatDur',
+  requiredextensions: 'requiredExtensions',
+  requiredfeatures: 'requiredFeatures',
+  resource: 'resource',
+  restart: 'restart',
+  result: 'result',
+  results: 'results',
+  rotate: 'rotate',
+  rx: 'rx',
+  ry: 'ry',
+  scale: 'scale',
+  security: 'security',
+  seed: 'seed',
+  shaperendering: 'shapeRendering',
+  'shape-rendering': 'shapeRendering',
+  slope: 'slope',
+  spacing: 'spacing',
+  specularconstant: 'specularConstant',
+  specularexponent: 'specularExponent',
+  speed: 'speed',
+  spreadmethod: 'spreadMethod',
+  startoffset: 'startOffset',
+  stddeviation: 'stdDeviation',
+  stemh: 'stemh',
+  stemv: 'stemv',
+  stitchtiles: 'stitchTiles',
+  stopcolor: 'stopColor',
+  'stop-color': 'stopColor',
+  stopopacity: 'stopOpacity',
+  'stop-opacity': 'stopOpacity',
+  strikethroughposition: 'strikethroughPosition',
+  'strikethrough-position': 'strikethroughPosition',
+  strikethroughthickness: 'strikethroughThickness',
+  'strikethrough-thickness': 'strikethroughThickness',
+  string: 'string',
+  stroke: 'stroke',
+  strokedasharray: 'strokeDasharray',
+  'stroke-dasharray': 'strokeDasharray',
+  strokedashoffset: 'strokeDashoffset',
+  'stroke-dashoffset': 'strokeDashoffset',
+  strokelinecap: 'strokeLinecap',
+  'stroke-linecap': 'strokeLinecap',
+  strokelinejoin: 'strokeLinejoin',
+  'stroke-linejoin': 'strokeLinejoin',
+  strokemiterlimit: 'strokeMiterlimit',
+  'stroke-miterlimit': 'strokeMiterlimit',
+  strokewidth: 'strokeWidth',
+  'stroke-width': 'strokeWidth',
+  strokeopacity: 'strokeOpacity',
+  'stroke-opacity': 'strokeOpacity',
+  suppresscontenteditablewarning: 'suppressContentEditableWarning',
+  suppresshydrationwarning: 'suppressHydrationWarning',
+  surfacescale: 'surfaceScale',
+  systemlanguage: 'systemLanguage',
+  tablevalues: 'tableValues',
+  targetx: 'targetX',
+  targety: 'targetY',
+  textanchor: 'textAnchor',
+  'text-anchor': 'textAnchor',
+  textdecoration: 'textDecoration',
+  'text-decoration': 'textDecoration',
+  textlength: 'textLength',
+  textrendering: 'textRendering',
+  'text-rendering': 'textRendering',
+  to: 'to',
+  transform: 'transform',
+  typeof: 'typeof',
+  u1: 'u1',
+  u2: 'u2',
+  underlineposition: 'underlinePosition',
+  'underline-position': 'underlinePosition',
+  underlinethickness: 'underlineThickness',
+  'underline-thickness': 'underlineThickness',
+  unicode: 'unicode',
+  unicodebidi: 'unicodeBidi',
+  'unicode-bidi': 'unicodeBidi',
+  unicoderange: 'unicodeRange',
+  'unicode-range': 'unicodeRange',
+  unitsperem: 'unitsPerEm',
+  'units-per-em': 'unitsPerEm',
+  unselectable: 'unselectable',
+  valphabetic: 'vAlphabetic',
+  'v-alphabetic': 'vAlphabetic',
+  values: 'values',
+  vectoreffect: 'vectorEffect',
+  'vector-effect': 'vectorEffect',
+  version: 'version',
+  vertadvy: 'vertAdvY',
+  'vert-adv-y': 'vertAdvY',
+  vertoriginx: 'vertOriginX',
+  'vert-origin-x': 'vertOriginX',
+  vertoriginy: 'vertOriginY',
+  'vert-origin-y': 'vertOriginY',
+  vhanging: 'vHanging',
+  'v-hanging': 'vHanging',
+  videographic: 'vIdeographic',
+  'v-ideographic': 'vIdeographic',
+  viewbox: 'viewBox',
+  viewtarget: 'viewTarget',
+  visibility: 'visibility',
+  vmathematical: 'vMathematical',
+  'v-mathematical': 'vMathematical',
+  vocab: 'vocab',
+  widths: 'widths',
+  wordspacing: 'wordSpacing',
+  'word-spacing': 'wordSpacing',
+  writingmode: 'writingMode',
+  'writing-mode': 'writingMode',
+  x1: 'x1',
+  x2: 'x2',
+  x: 'x',
+  xchannelselector: 'xChannelSelector',
+  xheight: 'xHeight',
+  'x-height': 'xHeight',
+  xlinkactuate: 'xlinkActuate',
+  'xlink:actuate': 'xlinkActuate',
+  xlinkarcrole: 'xlinkArcrole',
+  'xlink:arcrole': 'xlinkArcrole',
+  xlinkhref: 'xlinkHref',
+  'xlink:href': 'xlinkHref',
+  xlinkrole: 'xlinkRole',
+  'xlink:role': 'xlinkRole',
+  xlinkshow: 'xlinkShow',
+  'xlink:show': 'xlinkShow',
+  xlinktitle: 'xlinkTitle',
+  'xlink:title': 'xlinkTitle',
+  xlinktype: 'xlinkType',
+  'xlink:type': 'xlinkType',
+  xmlbase: 'xmlBase',
+  'xml:base': 'xmlBase',
+  xmllang: 'xmlLang',
+  'xml:lang': 'xmlLang',
+  xmlns: 'xmlns',
+  'xml:space': 'xmlSpace',
+  xmlnsxlink: 'xmlnsXlink',
+  'xmlns:xlink': 'xmlnsXlink',
+  xmlspace: 'xmlSpace',
+  y1: 'y1',
+  y2: 'y2',
+  y: 'y',
+  ychannelselector: 'yChannelSelector',
+  z: 'z',
+  zoomandpan: 'zoomAndPan'
+};
+
+var validateProperty$1 = function () {};
+
+{
+  var warnedProperties$1 = {};
+  var _hasOwnProperty = Object.prototype.hasOwnProperty;
+  var EVENT_NAME_REGEX = /^on./;
+  var INVALID_EVENT_NAME_REGEX = /^on[^A-Z]/;
+  var rARIA$1 = new RegExp('^(aria)-[' + ATTRIBUTE_NAME_CHAR + ']*$');
+  var rARIACamel$1 = new RegExp('^(aria)[A-Z][' + ATTRIBUTE_NAME_CHAR + ']*$');
+
+  validateProperty$1 = function (tagName, name, value, canUseEventSystem) {
+    if (_hasOwnProperty.call(warnedProperties$1, name) && warnedProperties$1[name]) {
+      return true;
+    }
+
+    var lowerCasedName = name.toLowerCase();
+    if (lowerCasedName === 'onfocusin' || lowerCasedName === 'onfocusout') {
+      warning$1(false, 'React uses onFocus and onBlur instead of onFocusIn and onFocusOut. ' + 'All React events are normalized to bubble, so onFocusIn and onFocusOut ' + 'are not needed/supported by React.');
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    // We can't rely on the event system being injected on the server.
+    if (canUseEventSystem) {
+      if (registrationNameModules.hasOwnProperty(name)) {
+        return true;
+      }
+      var registrationName = possibleRegistrationNames.hasOwnProperty(lowerCasedName) ? possibleRegistrationNames[lowerCasedName] : null;
+      if (registrationName != null) {
+        warning$1(false, 'Invalid event handler property `%s`. Did you mean `%s`?', name, registrationName);
+        warnedProperties$1[name] = true;
+        return true;
+      }
+      if (EVENT_NAME_REGEX.test(name)) {
+        warning$1(false, 'Unknown event handler property `%s`. It will be ignored.', name);
+        warnedProperties$1[name] = true;
+        return true;
+      }
+    } else if (EVENT_NAME_REGEX.test(name)) {
+      // If no event plugins have been injected, we are in a server environment.
+      // So we can't tell if the event name is correct for sure, but we can filter
+      // out known bad ones like `onclick`. We can't suggest a specific replacement though.
+      if (INVALID_EVENT_NAME_REGEX.test(name)) {
+        warning$1(false, 'Invalid event handler property `%s`. ' + 'React events use the camelCase naming convention, for example `onClick`.', name);
+      }
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    // Let the ARIA attribute hook validate ARIA attributes
+    if (rARIA$1.test(name) || rARIACamel$1.test(name)) {
+      return true;
+    }
+
+    if (lowerCasedName === 'innerhtml') {
+      warning$1(false, 'Directly setting property `innerHTML` is not permitted. ' + 'For more information, lookup documentation on `dangerouslySetInnerHTML`.');
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    if (lowerCasedName === 'aria') {
+      warning$1(false, 'The `aria` attribute is reserved for future use in React. ' + 'Pass individual `aria-` attributes instead.');
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    if (lowerCasedName === 'is' && value !== null && value !== undefined && typeof value !== 'string') {
+      warning$1(false, 'Received a `%s` for a string attribute `is`. If this is expected, cast ' + 'the value to a string.', typeof value);
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    if (typeof value === 'number' && isNaN(value)) {
+      warning$1(false, 'Received NaN for the `%s` attribute. If this is expected, cast ' + 'the value to a string.', name);
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    var propertyInfo = getPropertyInfo(name);
+    var isReserved = propertyInfo !== null && propertyInfo.type === RESERVED;
+
+    // Known attributes should match the casing specified in the property config.
+    if (possibleStandardNames.hasOwnProperty(lowerCasedName)) {
+      var standardName = possibleStandardNames[lowerCasedName];
+      if (standardName !== name) {
+        warning$1(false, 'Invalid DOM property `%s`. Did you mean `%s`?', name, standardName);
+        warnedProperties$1[name] = true;
+        return true;
+      }
+    } else if (!isReserved && name !== lowerCasedName) {
+      // Unknown attributes should have lowercase casing since that's how they
+      // will be cased anyway with server rendering.
+      warning$1(false, 'React does not recognize the `%s` prop on a DOM element. If you ' + 'intentionally want it to appear in the DOM as a custom ' + 'attribute, spell it as lowercase `%s` instead. ' + 'If you accidentally passed it from a parent component, remove ' + 'it from the DOM element.', name, lowerCasedName);
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    if (typeof value === 'boolean' && shouldRemoveAttributeWithWarning(name, value, propertyInfo, false)) {
+      if (value) {
+        warning$1(false, 'Received `%s` for a non-boolean attribute `%s`.\n\n' + 'If you want to write it to the DOM, pass a string instead: ' + '%s="%s" or %s={value.toString()}.', value, name, name, value, name);
+      } else {
+        warning$1(false, 'Received `%s` for a non-boolean attribute `%s`.\n\n' + 'If you want to write it to the DOM, pass a string instead: ' + '%s="%s" or %s={value.toString()}.\n\n' + 'If you used to conditionally omit it with %s={condition && value}, ' + 'pass %s={condition ? value : undefined} instead.', value, name, name, value, name, name, name);
+      }
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    // Now that we've validated casing, do not validate
+    // data types for reserved props
+    if (isReserved) {
+      return true;
+    }
+
+    // Warn when a known attribute is a bad type
+    if (shouldRemoveAttributeWithWarning(name, value, propertyInfo, false)) {
+      warnedProperties$1[name] = true;
+      return false;
+    }
+
+    // Warn when passing the strings 'false' or 'true' into a boolean prop
+    if ((value === 'false' || value === 'true') && propertyInfo !== null && propertyInfo.type === BOOLEAN) {
+      warning$1(false, 'Received the string `%s` for the boolean attribute `%s`. ' + '%s ' + 'Did you mean %s={%s}?', value, name, value === 'false' ? 'The browser will interpret it as a truthy value.' : 'Although this works, it will not work as expected if you pass the string "false".', name, value);
+      warnedProperties$1[name] = true;
+      return true;
+    }
+
+    return true;
+  };
+}
+
+var warnUnknownProperties = function (type, props, canUseEventSystem) {
+  var unknownProps = [];
+  for (var key in props) {
+    var isValid = validateProperty$1(type, key, props[key], canUseEventSystem);
+    if (!isValid) {
+      unknownProps.push(key);
+    }
+  }
+
+  var unknownPropString = unknownProps.map(function (prop) {
+    return '`' + prop + '`';
+  }).join(', ');
+  if (unknownProps.length === 1) {
+    warning$1(false, 'Invalid value for prop %s on <%s> tag. Either remove it from the element, ' + 'or pass a string or number value to keep it in the DOM. ' + 'For details, see https://fb.me/react-attribute-behavior', unknownPropString, type);
+  } else if (unknownProps.length > 1) {
+    warning$1(false, 'Invalid values for props %s on <%s> tag. Either remove them from the element, ' + 'or pass a string or number value to keep them in the DOM. ' + 'For details, see https://fb.me/react-attribute-behavior', unknownPropString, type);
+  }
+};
+
+function validateProperties$2(type, props, canUseEventSystem) {
+  if (isCustomComponent(type, props)) {
+    return;
+  }
+  warnUnknownProperties(type, props, canUseEventSystem);
+}
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+// Based on reading the React.Children implementation. TODO: type this somewhere?
+
+var toArray = React.Children.toArray;
+
+// This is only used in DEV.
+// Each entry is `this.stack` from a currently executing renderer instance.
+// (There may be more than one because ReactDOMServer is reentrant).
+// Each stack is an array of frames which may contain nested stacks of elements.
+var currentDebugStacks = [];
+
+var ReactCurrentDispatcher = ReactSharedInternals.ReactCurrentDispatcher;
+var ReactDebugCurrentFrame = void 0;
+var prevGetCurrentStackImpl = null;
+var getCurrentServerStackImpl = function () {
+  return '';
+};
+var describeStackFrame = function (element) {
+  return '';
+};
+
+var validatePropertiesInDevelopment = function (type, props) {};
+var pushCurrentDebugStack = function (stack) {};
+var pushElementToDebugStack = function (element) {};
+var popCurrentDebugStack = function () {};
+var hasWarnedAboutUsingContextAsConsumer = false;
+
+{
+  ReactDebugCurrentFrame = ReactSharedInternals.ReactDebugCurrentFrame;
+
+  validatePropertiesInDevelopment = function (type, props) {
+    validateProperties(type, props);
+    validateProperties$1(type, props);
+    validateProperties$2(type, props, /* canUseEventSystem */false);
+  };
+
+  describeStackFrame = function (element) {
+    var source = element._source;
+    var type = element.type;
+    var name = getComponentName(type);
+    var ownerName = null;
+    return describeComponentFrame(name, source, ownerName);
+  };
+
+  pushCurrentDebugStack = function (stack) {
+    currentDebugStacks.push(stack);
+
+    if (currentDebugStacks.length === 1) {
+      // We are entering a server renderer.
+      // Remember the previous (e.g. client) global stack implementation.
+      prevGetCurrentStackImpl = ReactDebugCurrentFrame.getCurrentStack;
+      ReactDebugCurrentFrame.getCurrentStack = getCurrentServerStackImpl;
+    }
+  };
+
+  pushElementToDebugStack = function (element) {
+    // For the innermost executing ReactDOMServer call,
+    var stack = currentDebugStacks[currentDebugStacks.length - 1];
+    // Take the innermost executing frame (e.g. <Foo>),
+    var frame = stack[stack.length - 1];
+    // and record that it has one more element associated with it.
+    frame.debugElementStack.push(element);
+    // We only need this because we tail-optimize single-element
+    // children and directly handle them in an inner loop instead of
+    // creating separate frames for them.
+  };
+
+  popCurrentDebugStack = function () {
+    currentDebugStacks.pop();
+
+    if (currentDebugStacks.length === 0) {
+      // We are exiting the server renderer.
+      // Restore the previous (e.g. client) global stack implementation.
+      ReactDebugCurrentFrame.getCurrentStack = prevGetCurrentStackImpl;
+      prevGetCurrentStackImpl = null;
+    }
+  };
+
+  getCurrentServerStackImpl = function () {
+    if (currentDebugStacks.length === 0) {
+      // Nothing is currently rendering.
+      return '';
+    }
+    // ReactDOMServer is reentrant so there may be multiple calls at the same time.
+    // Take the frames from the innermost call which is the last in the array.
+    var frames = currentDebugStacks[currentDebugStacks.length - 1];
+    var stack = '';
+    // Go through every frame in the stack from the innermost one.
+    for (var i = frames.length - 1; i >= 0; i--) {
+      var frame = frames[i];
+      // Every frame might have more than one debug element stack entry associated with it.
+      // This is because single-child nesting doesn't create materialized frames.
+      // Instead it would push them through `pushElementToDebugStack()`.
+      var _debugElementStack = frame.debugElementStack;
+      for (var ii = _debugElementStack.length - 1; ii >= 0; ii--) {
+        stack += describeStackFrame(_debugElementStack[ii]);
+      }
+    }
+    return stack;
+  };
+}
+
+var didWarnDefaultInputValue = false;
+var didWarnDefaultChecked = false;
+var didWarnDefaultSelectValue = false;
+var didWarnDefaultTextareaValue = false;
+var didWarnInvalidOptionChildren = false;
+var didWarnAboutNoopUpdateForComponent = {};
+var didWarnAboutBadClass = {};
+var didWarnAboutDeprecatedWillMount = {};
+var didWarnAboutUndefinedDerivedState = {};
+var didWarnAboutUninitializedState = {};
+var valuePropNames = ['value', 'defaultValue'];
+var newlineEatingTags = {
+  listing: true,
+  pre: true,
+  textarea: true
+};
+
+// We accept any tag to be rendered but since this gets injected into arbitrary
+// HTML, we want to make sure that it's a safe tag.
+// http://www.w3.org/TR/REC-xml/#NT-Name
+var VALID_TAG_REGEX = /^[a-zA-Z][a-zA-Z:_\.\-\d]*$/; // Simplified subset
+var validatedTagCache = {};
+function validateDangerousTag(tag) {
+  if (!validatedTagCache.hasOwnProperty(tag)) {
+    !VALID_TAG_REGEX.test(tag) ? invariant(false, 'Invalid tag: %s', tag) : void 0;
+    validatedTagCache[tag] = true;
+  }
+}
+
+var styleNameCache = {};
+var processStyleName = function (styleName) {
+  if (styleNameCache.hasOwnProperty(styleName)) {
+    return styleNameCache[styleName];
+  }
+  var result = hyphenateStyleName(styleName);
+  styleNameCache[styleName] = result;
+  return result;
+};
+
+function createMarkupForStyles(styles) {
+  var serialized = '';
+  var delimiter = '';
+  for (var styleName in styles) {
+    if (!styles.hasOwnProperty(styleName)) {
+      continue;
+    }
+    var isCustomProperty = styleName.indexOf('--') === 0;
+    var styleValue = styles[styleName];
+    {
+      if (!isCustomProperty) {
+        warnValidStyle$1(styleName, styleValue);
+      }
+    }
+    if (styleValue != null) {
+      serialized += delimiter + processStyleName(styleName) + ':';
+      serialized += dangerousStyleValue(styleName, styleValue, isCustomProperty);
+
+      delimiter = ';';
+    }
+  }
+  return serialized || null;
+}
+
+function warnNoop(publicInstance, callerName) {
+  {
+    var _constructor = publicInstance.constructor;
+    var componentName = _constructor && getComponentName(_constructor) || 'ReactClass';
+    var warningKey = componentName + '.' + callerName;
+    if (didWarnAboutNoopUpdateForComponent[warningKey]) {
+      return;
+    }
+
+    warningWithoutStack$1(false, '%s(...): Can only update a mounting component. ' + 'This usually means you called %s() outside componentWillMount() on the server. ' + 'This is a no-op.\n\nPlease check the code for the %s component.', callerName, callerName, componentName);
+    didWarnAboutNoopUpdateForComponent[warningKey] = true;
+  }
+}
+
+function shouldConstruct(Component) {
+  return Component.prototype && Component.prototype.isReactComponent;
+}
+
+function getNonChildrenInnerMarkup(props) {
+  var innerHTML = props.dangerouslySetInnerHTML;
+  if (innerHTML != null) {
+    if (innerHTML.__html != null) {
+      return innerHTML.__html;
+    }
+  } else {
+    var content = props.children;
+    if (typeof content === 'string' || typeof content === 'number') {
+      return escapeTextForBrowser(content);
+    }
+  }
+  return null;
+}
+
+function flattenTopLevelChildren(children) {
+  if (!React.isValidElement(children)) {
+    return toArray(children);
+  }
+  var element = children;
+  if (element.type !== REACT_FRAGMENT_TYPE) {
+    return [element];
+  }
+  var fragmentChildren = element.props.children;
+  if (!React.isValidElement(fragmentChildren)) {
+    return toArray(fragmentChildren);
+  }
+  var fragmentChildElement = fragmentChildren;
+  return [fragmentChildElement];
+}
+
+function flattenOptionChildren(children) {
+  if (children === undefined || children === null) {
+    return children;
+  }
+  var content = '';
+  // Flatten children and warn if they aren't strings or numbers;
+  // invalid types are ignored.
+  React.Children.forEach(children, function (child) {
+    if (child == null) {
+      return;
+    }
+    content += child;
+    {
+      if (!didWarnInvalidOptionChildren && typeof child !== 'string' && typeof child !== 'number') {
+        didWarnInvalidOptionChildren = true;
+        warning$1(false, 'Only strings and numbers are supported as <option> children.');
+      }
+    }
+  });
+  return content;
+}
+
+var hasOwnProperty = Object.prototype.hasOwnProperty;
+var STYLE = 'style';
+var RESERVED_PROPS = {
+  children: null,
+  dangerouslySetInnerHTML: null,
+  suppressContentEditableWarning: null,
+  suppressHydrationWarning: null
+};
+
+function createOpenTagMarkup(tagVerbatim, tagLowercase, props, namespace, makeStaticMarkup, isRootElement) {
+  var ret = '<' + tagVerbatim;
+
+  for (var propKey in props) {
+    if (!hasOwnProperty.call(props, propKey)) {
+      continue;
+    }
+    var propValue = props[propKey];
+    if (propValue == null) {
+      continue;
+    }
+    if (propKey === STYLE) {
+      propValue = createMarkupForStyles(propValue);
+    }
+    var markup = null;
+    if (isCustomComponent(tagLowercase, props)) {
+      if (!RESERVED_PROPS.hasOwnProperty(propKey)) {
+        markup = createMarkupForCustomAttribute(propKey, propValue);
+      }
+    } else {
+      markup = createMarkupForProperty(propKey, propValue);
+    }
+    if (markup) {
+      ret += ' ' + markup;
+    }
+  }
+
+  // For static pages, no need to put React ID and checksum. Saves lots of
+  // bytes.
+  if (makeStaticMarkup) {
+    return ret;
+  }
+
+  if (isRootElement) {
+    ret += ' ' + createMarkupForRoot();
+  }
+  return ret;
+}
+
+function validateRenderResult(child, type) {
+  if (child === undefined) {
+    invariant(false, '%s(...): Nothing was returned from render. This usually means a return statement is missing. Or, to render nothing, return null.', getComponentName(type) || 'Component');
+  }
+}
+
+function resolve(child, context, threadID) {
+  while (React.isValidElement(child)) {
+    // Safe because we just checked it's an element.
+    var element = child;
+    var Component = element.type;
+    {
+      pushElementToDebugStack(element);
+    }
+    if (typeof Component !== 'function') {
+      break;
+    }
+    processChild(element, Component);
+  }
+
+  // Extra closure so queue and replace can be captured properly
+  function processChild(element, Component) {
+    var publicContext = processContext(Component, context, threadID);
+
+    var queue = [];
+    var replace = false;
+    var updater = {
+      isMounted: function (publicInstance) {
+        return false;
+      },
+      enqueueForceUpdate: function (publicInstance) {
+        if (queue === null) {
+          warnNoop(publicInstance, 'forceUpdate');
+          return null;
+        }
+      },
+      enqueueReplaceState: function (publicInstance, completeState) {
+        replace = true;
+        queue = [completeState];
+      },
+      enqueueSetState: function (publicInstance, currentPartialState) {
+        if (queue === null) {
+          warnNoop(publicInstance, 'setState');
+          return null;
+        }
+        queue.push(currentPartialState);
+      }
+    };
+
+    var inst = void 0;
+    if (shouldConstruct(Component)) {
+      inst = new Component(element.props, publicContext, updater);
+
+      if (typeof Component.getDerivedStateFromProps === 'function') {
+        {
+          if (inst.state === null || inst.state === undefined) {
+            var componentName = getComponentName(Component) || 'Unknown';
+            if (!didWarnAboutUninitializedState[componentName]) {
+              warningWithoutStack$1(false, '`%s` uses `getDerivedStateFromProps` but its initial state is ' + '%s. This is not recommended. Instead, define the initial state by ' + 'assigning an object to `this.state` in the constructor of `%s`. ' + 'This ensures that `getDerivedStateFromProps` arguments have a consistent shape.', componentName, inst.state === null ? 'null' : 'undefined', componentName);
+              didWarnAboutUninitializedState[componentName] = true;
+            }
+          }
+        }
+
+        var partialState = Component.getDerivedStateFromProps.call(null, element.props, inst.state);
+
+        {
+          if (partialState === undefined) {
+            var _componentName = getComponentName(Component) || 'Unknown';
+            if (!didWarnAboutUndefinedDerivedState[_componentName]) {
+              warningWithoutStack$1(false, '%s.getDerivedStateFromProps(): A valid state object (or null) must be returned. ' + 'You have returned undefined.', _componentName);
+              didWarnAboutUndefinedDerivedState[_componentName] = true;
+            }
+          }
+        }
+
+        if (partialState != null) {
+          inst.state = _assign({}, inst.state, partialState);
+        }
+      }
+    } else {
+      {
+        if (Component.prototype && typeof Component.prototype.render === 'function') {
+          var _componentName2 = getComponentName(Component) || 'Unknown';
+
+          if (!didWarnAboutBadClass[_componentName2]) {
+            warningWithoutStack$1(false, "The <%s /> component appears to have a render method, but doesn't extend React.Component. " + 'This is likely to cause errors. Change %s to extend React.Component instead.', _componentName2, _componentName2);
+            didWarnAboutBadClass[_componentName2] = true;
+          }
+        }
+      }
+      var componentIdentity = {};
+      prepareToUseHooks(componentIdentity);
+      inst = Component(element.props, publicContext, updater);
+      inst = finishHooks(Component, element.props, inst, publicContext);
+
+      if (inst == null || inst.render == null) {
+        child = inst;
+        validateRenderResult(child, Component);
+        return;
+      }
+    }
+
+    inst.props = element.props;
+    inst.context = publicContext;
+    inst.updater = updater;
+
+    var initialState = inst.state;
+    if (initialState === undefined) {
+      inst.state = initialState = null;
+    }
+    if (typeof inst.UNSAFE_componentWillMount === 'function' || typeof inst.componentWillMount === 'function') {
+      if (typeof inst.componentWillMount === 'function') {
+        {
+          if (warnAboutDeprecatedLifecycles && inst.componentWillMount.__suppressDeprecationWarning !== true) {
+            var _componentName3 = getComponentName(Component) || 'Unknown';
+
+            if (!didWarnAboutDeprecatedWillMount[_componentName3]) {
+              lowPriorityWarning$1(false, '%s: componentWillMount() is deprecated and will be ' + 'removed in the next major version. Read about the motivations ' + 'behind this change: ' + 'https://fb.me/react-async-component-lifecycle-hooks' + '\n\n' + 'As a temporary workaround, you can rename to ' + 'UNSAFE_componentWillMount instead.', _componentName3);
+              didWarnAboutDeprecatedWillMount[_componentName3] = true;
+            }
+          }
+        }
+
+        // In order to support react-lifecycles-compat polyfilled components,
+        // Unsafe lifecycles should not be invoked for any component with the new gDSFP.
+        if (typeof Component.getDerivedStateFromProps !== 'function') {
+          inst.componentWillMount();
+        }
+      }
+      if (typeof inst.UNSAFE_componentWillMount === 'function' && typeof Component.getDerivedStateFromProps !== 'function') {
+        // In order to support react-lifecycles-compat polyfilled components,
+        // Unsafe lifecycles should not be invoked for any component with the new gDSFP.
+        inst.UNSAFE_componentWillMount();
+      }
+      if (queue.length) {
+        var oldQueue = queue;
+        var oldReplace = replace;
+        queue = null;
+        replace = false;
+
+        if (oldReplace && oldQueue.length === 1) {
+          inst.state = oldQueue[0];
+        } else {
+          var nextState = oldReplace ? oldQueue[0] : inst.state;
+          var dontMutate = true;
+          for (var i = oldReplace ? 1 : 0; i < oldQueue.length; i++) {
+            var partial = oldQueue[i];
+            var _partialState = typeof partial === 'function' ? partial.call(inst, nextState, element.props, publicContext) : partial;
+            if (_partialState != null) {
+              if (dontMutate) {
+                dontMutate = false;
+                nextState = _assign({}, nextState, _partialState);
+              } else {
+                _assign(nextState, _partialState);
+              }
+            }
+          }
+          inst.state = nextState;
+        }
+      } else {
+        queue = null;
+      }
+    }
+    child = inst.render();
+
+    {
+      if (child === undefined && inst.render._isMockFunction) {
+        // This is probably bad practice. Consider warning here and
+        // deprecating this convenience.
+        child = null;
+      }
+    }
+    validateRenderResult(child, Component);
+
+    var childContext = void 0;
+    if (typeof inst.getChildContext === 'function') {
+      var childContextTypes = Component.childContextTypes;
+      if (typeof childContextTypes === 'object') {
+        childContext = inst.getChildContext();
+        for (var contextKey in childContext) {
+          !(contextKey in childContextTypes) ? invariant(false, '%s.getChildContext(): key "%s" is not defined in childContextTypes.', getComponentName(Component) || 'Unknown', contextKey) : void 0;
+        }
+      } else {
+        warningWithoutStack$1(false, '%s.getChildContext(): childContextTypes must be defined in order to ' + 'use getChildContext().', getComponentName(Component) || 'Unknown');
+      }
+    }
+    if (childContext) {
+      context = _assign({}, context, childContext);
+    }
+  }
+  return { child: child, context: context };
+}
+
+var ReactDOMServerRenderer = function () {
+  // DEV-only
+
+  // TODO: type this more strictly:
+  function ReactDOMServerRenderer(children, makeStaticMarkup) {
+    _classCallCheck(this, ReactDOMServerRenderer);
+
+    var flatChildren = flattenTopLevelChildren(children);
+
+    var topFrame = {
+      type: null,
+      // Assume all trees start in the HTML namespace (not totally true, but
+      // this is what we did historically)
+      domNamespace: Namespaces.html,
+      children: flatChildren,
+      childIndex: 0,
+      context: emptyObject,
+      footer: ''
+    };
+    {
+      topFrame.debugElementStack = [];
+    }
+    this.threadID = allocThreadID();
+    this.stack = [topFrame];
+    this.exhausted = false;
+    this.currentSelectValue = null;
+    this.previousWasTextNode = false;
+    this.makeStaticMarkup = makeStaticMarkup;
+    this.suspenseDepth = 0;
+
+    // Context (new API)
+    this.contextIndex = -1;
+    this.contextStack = [];
+    this.contextValueStack = [];
+    {
+      this.contextProviderStack = [];
+    }
+  }
+
+  ReactDOMServerRenderer.prototype.destroy = function destroy() {
+    if (!this.exhausted) {
+      this.exhausted = true;
+      this.clearProviders();
+      freeThreadID(this.threadID);
+    }
+  };
+
+  /**
+   * Note: We use just two stacks regardless of how many context providers you have.
+   * Providers are always popped in the reverse order to how they were pushed
+   * so we always know on the way down which provider you'll encounter next on the way up.
+   * On the way down, we push the current provider, and its context value *before*
+   * we mutated it, onto the stacks. Therefore, on the way up, we always know which
+   * provider needs to be "restored" to which value.
+   * https://github.com/facebook/react/pull/12985#issuecomment-396301248
+   */
+
+  ReactDOMServerRenderer.prototype.pushProvider = function pushProvider(provider) {
+    var index = ++this.contextIndex;
+    var context = provider.type._context;
+    var threadID = this.threadID;
+    validateContextBounds(context, threadID);
+    var previousValue = context[threadID];
+
+    // Remember which value to restore this context to on our way up.
+    this.contextStack[index] = context;
+    this.contextValueStack[index] = previousValue;
+    {
+      // Only used for push/pop mismatch warnings.
+      this.contextProviderStack[index] = provider;
+    }
+
+    // Mutate the current value.
+    context[threadID] = provider.props.value;
+  };
+
+  ReactDOMServerRenderer.prototype.popProvider = function popProvider(provider) {
+    var index = this.contextIndex;
+    {
+      !(index > -1 && provider === this.contextProviderStack[index]) ? warningWithoutStack$1(false, 'Unexpected pop.') : void 0;
+    }
+
+    var context = this.contextStack[index];
+    var previousValue = this.contextValueStack[index];
+
+    // "Hide" these null assignments from Flow by using `any`
+    // because conceptually they are deletions--as long as we
+    // promise to never access values beyond `this.contextIndex`.
+    this.contextStack[index] = null;
+    this.contextValueStack[index] = null;
+    {
+      this.contextProviderStack[index] = null;
+    }
+    this.contextIndex--;
+
+    // Restore to the previous value we stored as we were walking down.
+    // We've already verified that this context has been expanded to accommodate
+    // this thread id, so we don't need to do it again.
+    context[this.threadID] = previousValue;
+  };
+
+  ReactDOMServerRenderer.prototype.clearProviders = function clearProviders() {
+    // Restore any remaining providers on the stack to previous values
+    for (var index = this.contextIndex; index >= 0; index--) {
+      var _context = this.contextStack[index];
+      var previousValue = this.contextValueStack[index];
+      _context[this.threadID] = previousValue;
+    }
+  };
+
+  ReactDOMServerRenderer.prototype.read = function read(bytes) {
+    if (this.exhausted) {
+      return null;
+    }
+
+    var prevThreadID = currentThreadID;
+    setCurrentThreadID(this.threadID);
+    var prevDispatcher = ReactCurrentDispatcher.current;
+    ReactCurrentDispatcher.current = Dispatcher;
+    try {
+      // Markup generated within <Suspense> ends up buffered until we know
+      // nothing in that boundary suspended
+      var out = [''];
+      var suspended = false;
+      while (out[0].length < bytes) {
+        if (this.stack.length === 0) {
+          this.exhausted = true;
+          freeThreadID(this.threadID);
+          break;
+        }
+        var frame = this.stack[this.stack.length - 1];
+        if (suspended || frame.childIndex >= frame.children.length) {
+          var _footer = frame.footer;
+          if (_footer !== '') {
+            this.previousWasTextNode = false;
+          }
+          this.stack.pop();
+          if (frame.type === 'select') {
+            this.currentSelectValue = null;
+          } else if (frame.type != null && frame.type.type != null && frame.type.type.$$typeof === REACT_PROVIDER_TYPE) {
+            var provider = frame.type;
+            this.popProvider(provider);
+          } else if (frame.type === REACT_SUSPENSE_TYPE) {
+            this.suspenseDepth--;
+            var buffered = out.pop();
+
+            if (suspended) {
+              suspended = false;
+              // If rendering was suspended at this boundary, render the fallbackFrame
+              var _fallbackFrame = frame.fallbackFrame;
+              !_fallbackFrame ? invariant(false, 'suspense fallback not found, something is broken') : void 0;
+              this.stack.push(_fallbackFrame);
+              // Skip flushing output since we're switching to the fallback
+              continue;
+            } else {
+              out[this.suspenseDepth] += buffered;
+            }
+          }
+
+          // Flush output
+          out[this.suspenseDepth] += _footer;
+          continue;
+        }
+        var child = frame.children[frame.childIndex++];
+
+        var outBuffer = '';
+        {
+          pushCurrentDebugStack(this.stack);
+          // We're starting work on this frame, so reset its inner stack.
+          frame.debugElementStack.length = 0;
+        }
+        try {
+          outBuffer += this.render(child, frame.context, frame.domNamespace);
+        } catch (err) {
+          if (enableSuspenseServerRenderer && typeof err.then === 'function') {
+            suspended = true;
+          } else {
+            throw err;
+          }
+        } finally {
+          {
+            popCurrentDebugStack();
+          }
+        }
+        if (out.length <= this.suspenseDepth) {
+          out.push('');
+        }
+        out[this.suspenseDepth] += outBuffer;
+      }
+      return out[0];
+    } finally {
+      ReactCurrentDispatcher.current = prevDispatcher;
+      setCurrentThreadID(prevThreadID);
+    }
+  };
+
+  ReactDOMServerRenderer.prototype.render = function render(child, context, parentNamespace) {
+    if (typeof child === 'string' || typeof child === 'number') {
+      var text = '' + child;
+      if (text === '') {
+        return '';
+      }
+      if (this.makeStaticMarkup) {
+        return escapeTextForBrowser(text);
+      }
+      if (this.previousWasTextNode) {
+        return '<!-- -->' + escapeTextForBrowser(text);
+      }
+      this.previousWasTextNode = true;
+      return escapeTextForBrowser(text);
+    } else {
+      var nextChild = void 0;
+
+      var _resolve = resolve(child, context, this.threadID);
+
+      nextChild = _resolve.child;
+      context = _resolve.context;
+
+      if (nextChild === null || nextChild === false) {
+        return '';
+      } else if (!React.isValidElement(nextChild)) {
+        if (nextChild != null && nextChild.$$typeof != null) {
+          // Catch unexpected special types early.
+          var $$typeof = nextChild.$$typeof;
+          !($$typeof !== REACT_PORTAL_TYPE) ? invariant(false, 'Portals are not currently supported by the server renderer. Render them conditionally so that they only appear on the client render.') : void 0;
+          // Catch-all to prevent an infinite loop if React.Children.toArray() supports some new type.
+          invariant(false, 'Unknown element-like object type: %s. This is likely a bug in React. Please file an issue.', $$typeof.toString());
+        }
+        var nextChildren = toArray(nextChild);
+        var frame = {
+          type: null,
+          domNamespace: parentNamespace,
+          children: nextChildren,
+          childIndex: 0,
+          context: context,
+          footer: ''
+        };
+        {
+          frame.debugElementStack = [];
+        }
+        this.stack.push(frame);
+        return '';
+      }
+      // Safe because we just checked it's an element.
+      var nextElement = nextChild;
+      var elementType = nextElement.type;
+
+      if (typeof elementType === 'string') {
+        return this.renderDOM(nextElement, context, parentNamespace);
+      }
+
+      switch (elementType) {
+        case REACT_STRICT_MODE_TYPE:
+        case REACT_CONCURRENT_MODE_TYPE:
+        case REACT_PROFILER_TYPE:
+        case REACT_FRAGMENT_TYPE:
+          {
+            var _nextChildren = toArray(nextChild.props.children);
+            var _frame = {
+              type: null,
+              domNamespace: parentNamespace,
+              children: _nextChildren,
+              childIndex: 0,
+              context: context,
+              footer: ''
+            };
+            {
+              _frame.debugElementStack = [];
+            }
+            this.stack.push(_frame);
+            return '';
+          }
+        case REACT_SUSPENSE_TYPE:
+          {
+            if (enableSuspenseServerRenderer) {
+              var fallback = nextChild.props.fallback;
+              if (fallback === undefined) {
+                // If there is no fallback, then this just behaves as a fragment.
+                var _nextChildren3 = toArray(nextChild.props.children);
+                var _frame3 = {
+                  type: null,
+                  domNamespace: parentNamespace,
+                  children: _nextChildren3,
+                  childIndex: 0,
+                  context: context,
+                  footer: ''
+                };
+                {
+                  _frame3.debugElementStack = [];
+                }
+                this.stack.push(_frame3);
+                return '';
+              }
+              var fallbackChildren = toArray(fallback);
+              var _nextChildren2 = toArray(nextChild.props.children);
+              var _fallbackFrame2 = {
+                type: null,
+                domNamespace: parentNamespace,
+                children: fallbackChildren,
+                childIndex: 0,
+                context: context,
+                footer: '',
+                out: ''
+              };
+              var _frame2 = {
+                fallbackFrame: _fallbackFrame2,
+                type: REACT_SUSPENSE_TYPE,
+                domNamespace: parentNamespace,
+                children: _nextChildren2,
+                childIndex: 0,
+                context: context,
+                footer: '<!--/$-->'
+              };
+              {
+                _frame2.debugElementStack = [];
+                _fallbackFrame2.debugElementStack = [];
+              }
+              this.stack.push(_frame2);
+              this.suspenseDepth++;
+              return '<!--$-->';
+            } else {
+              invariant(false, 'ReactDOMServer does not yet support Suspense.');
+            }
+          }
+        // eslint-disable-next-line-no-fallthrough
+        default:
+          break;
+      }
+      if (typeof elementType === 'object' && elementType !== null) {
+        switch (elementType.$$typeof) {
+          case REACT_FORWARD_REF_TYPE:
+            {
+              var element = nextChild;
+              var _nextChildren4 = void 0;
+              var componentIdentity = {};
+              prepareToUseHooks(componentIdentity);
+              _nextChildren4 = elementType.render(element.props, element.ref);
+              _nextChildren4 = finishHooks(elementType.render, element.props, _nextChildren4, element.ref);
+              _nextChildren4 = toArray(_nextChildren4);
+              var _frame4 = {
+                type: null,
+                domNamespace: parentNamespace,
+                children: _nextChildren4,
+                childIndex: 0,
+                context: context,
+                footer: ''
+              };
+              {
+                _frame4.debugElementStack = [];
+              }
+              this.stack.push(_frame4);
+              return '';
+            }
+          case REACT_MEMO_TYPE:
+            {
+              var _element = nextChild;
+              var _nextChildren5 = [React.createElement(elementType.type, _assign({ ref: _element.ref }, _element.props))];
+              var _frame5 = {
+                type: null,
+                domNamespace: parentNamespace,
+                children: _nextChildren5,
+                childIndex: 0,
+                context: context,
+                footer: ''
+              };
+              {
+                _frame5.debugElementStack = [];
+              }
+              this.stack.push(_frame5);
+              return '';
+            }
+          case REACT_PROVIDER_TYPE:
+            {
+              var provider = nextChild;
+              var nextProps = provider.props;
+              var _nextChildren6 = toArray(nextProps.children);
+              var _frame6 = {
+                type: provider,
+                domNamespace: parentNamespace,
+                children: _nextChildren6,
+                childIndex: 0,
+                context: context,
+                footer: ''
+              };
+              {
+                _frame6.debugElementStack = [];
+              }
+
+              this.pushProvider(provider);
+
+              this.stack.push(_frame6);
+              return '';
+            }
+          case REACT_CONTEXT_TYPE:
+            {
+              var reactContext = nextChild.type;
+              // The logic below for Context differs depending on PROD or DEV mode. In
+              // DEV mode, we create a separate object for Context.Consumer that acts
+              // like a proxy to Context. This proxy object adds unnecessary code in PROD
+              // so we use the old behaviour (Context.Consumer references Context) to
+              // reduce size and overhead. The separate object references context via
+              // a property called "_context", which also gives us the ability to check
+              // in DEV mode if this property exists or not and warn if it does not.
+              {
+                if (reactContext._context === undefined) {
+                  // This may be because it's a Context (rather than a Consumer).
+                  // Or it may be because it's older React where they're the same thing.
+                  // We only want to warn if we're sure it's a new React.
+                  if (reactContext !== reactContext.Consumer) {
+                    if (!hasWarnedAboutUsingContextAsConsumer) {
+                      hasWarnedAboutUsingContextAsConsumer = true;
+                      warning$1(false, 'Rendering <Context> directly is not supported and will be removed in ' + 'a future major release. Did you mean to render <Context.Consumer> instead?');
+                    }
+                  }
+                } else {
+                  reactContext = reactContext._context;
+                }
+              }
+              var _nextProps = nextChild.props;
+              var threadID = this.threadID;
+              validateContextBounds(reactContext, threadID);
+              var nextValue = reactContext[threadID];
+
+              var _nextChildren7 = toArray(_nextProps.children(nextValue));
+              var _frame7 = {
+                type: nextChild,
+                domNamespace: parentNamespace,
+                children: _nextChildren7,
+                childIndex: 0,
+                context: context,
+                footer: ''
+              };
+              {
+                _frame7.debugElementStack = [];
+              }
+              this.stack.push(_frame7);
+              return '';
+            }
+          case REACT_LAZY_TYPE:
+            invariant(false, 'ReactDOMServer does not yet support lazy-loaded components.');
+        }
+      }
+
+      var info = '';
+      {
+        var owner = nextElement._owner;
+        if (elementType === undefined || typeof elementType === 'object' && elementType !== null && Object.keys(elementType).length === 0) {
+          info += ' You likely forgot to export your component from the file ' + "it's defined in, or you might have mixed up default and " + 'named imports.';
+        }
+        var ownerName = owner ? getComponentName(owner) : null;
+        if (ownerName) {
+          info += '\n\nCheck the render method of `' + ownerName + '`.';
+        }
+      }
+      invariant(false, 'Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s', elementType == null ? elementType : typeof elementType, info);
+    }
+  };
+
+  ReactDOMServerRenderer.prototype.renderDOM = function renderDOM(element, context, parentNamespace) {
+    var tag = element.type.toLowerCase();
+
+    var namespace = parentNamespace;
+    if (parentNamespace === Namespaces.html) {
+      namespace = getIntrinsicNamespace(tag);
+    }
+
+    {
+      if (namespace === Namespaces.html) {
+        // Should this check be gated by parent namespace? Not sure we want to
+        // allow <SVG> or <mATH>.
+        !(tag === element.type) ? warning$1(false, '<%s /> is using incorrect casing. ' + 'Use PascalCase for React components, ' + 'or lowercase for HTML elements.', element.type) : void 0;
+      }
+    }
+
+    validateDangerousTag(tag);
+
+    var props = element.props;
+    if (tag === 'input') {
+      {
+        ReactControlledValuePropTypes.checkPropTypes('input', props);
+
+        if (props.checked !== undefined && props.defaultChecked !== undefined && !didWarnDefaultChecked) {
+          warning$1(false, '%s contains an input of type %s with both checked and defaultChecked props. ' + 'Input elements must be either controlled or uncontrolled ' + '(specify either the checked prop, or the defaultChecked prop, but not ' + 'both). Decide between using a controlled or uncontrolled input ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components', 'A component', props.type);
+          didWarnDefaultChecked = true;
+        }
+        if (props.value !== undefined && props.defaultValue !== undefined && !didWarnDefaultInputValue) {
+          warning$1(false, '%s contains an input of type %s with both value and defaultValue props. ' + 'Input elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled input ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components', 'A component', props.type);
+          didWarnDefaultInputValue = true;
+        }
+      }
+
+      props = _assign({
+        type: undefined
+      }, props, {
+        defaultChecked: undefined,
+        defaultValue: undefined,
+        value: props.value != null ? props.value : props.defaultValue,
+        checked: props.checked != null ? props.checked : props.defaultChecked
+      });
+    } else if (tag === 'textarea') {
+      {
+        ReactControlledValuePropTypes.checkPropTypes('textarea', props);
+        if (props.value !== undefined && props.defaultValue !== undefined && !didWarnDefaultTextareaValue) {
+          warning$1(false, 'Textarea elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled textarea ' + 'and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components');
+          didWarnDefaultTextareaValue = true;
+        }
+      }
+
+      var initialValue = props.value;
+      if (initialValue == null) {
+        var defaultValue = props.defaultValue;
+        // TODO (yungsters): Remove support for children content in <textarea>.
+        var textareaChildren = props.children;
+        if (textareaChildren != null) {
+          {
+            warning$1(false, 'Use the `defaultValue` or `value` props instead of setting ' + 'children on <textarea>.');
+          }
+          !(defaultValue == null) ? invariant(false, 'If you supply `defaultValue` on a <textarea>, do not pass children.') : void 0;
+          if (Array.isArray(textareaChildren)) {
+            !(textareaChildren.length <= 1) ? invariant(false, '<textarea> can only have at most one child.') : void 0;
+            textareaChildren = textareaChildren[0];
+          }
+
+          defaultValue = '' + textareaChildren;
+        }
+        if (defaultValue == null) {
+          defaultValue = '';
+        }
+        initialValue = defaultValue;
+      }
+
+      props = _assign({}, props, {
+        value: undefined,
+        children: '' + initialValue
+      });
+    } else if (tag === 'select') {
+      {
+        ReactControlledValuePropTypes.checkPropTypes('select', props);
+
+        for (var i = 0; i < valuePropNames.length; i++) {
+          var propName = valuePropNames[i];
+          if (props[propName] == null) {
+            continue;
+          }
+          var isArray = Array.isArray(props[propName]);
+          if (props.multiple && !isArray) {
+            warning$1(false, 'The `%s` prop supplied to <select> must be an array if ' + '`multiple` is true.', propName);
+          } else if (!props.multiple && isArray) {
+            warning$1(false, 'The `%s` prop supplied to <select> must be a scalar ' + 'value if `multiple` is false.', propName);
+          }
+        }
+
+        if (props.value !== undefined && props.defaultValue !== undefined && !didWarnDefaultSelectValue) {
+          warning$1(false, 'Select elements must be either controlled or uncontrolled ' + '(specify either the value prop, or the defaultValue prop, but not ' + 'both). Decide between using a controlled or uncontrolled select ' + 'element and remove one of these props. More info: ' + 'https://fb.me/react-controlled-components');
+          didWarnDefaultSelectValue = true;
+        }
+      }
+      this.currentSelectValue = props.value != null ? props.value : props.defaultValue;
+      props = _assign({}, props, {
+        value: undefined
+      });
+    } else if (tag === 'option') {
+      var selected = null;
+      var selectValue = this.currentSelectValue;
+      var optionChildren = flattenOptionChildren(props.children);
+      if (selectValue != null) {
+        var value = void 0;
+        if (props.value != null) {
+          value = props.value + '';
+        } else {
+          value = optionChildren;
+        }
+        selected = false;
+        if (Array.isArray(selectValue)) {
+          // multiple
+          for (var j = 0; j < selectValue.length; j++) {
+            if ('' + selectValue[j] === value) {
+              selected = true;
+              break;
+            }
+          }
+        } else {
+          selected = '' + selectValue === value;
+        }
+
+        props = _assign({
+          selected: undefined,
+          children: undefined
+        }, props, {
+          selected: selected,
+          children: optionChildren
+        });
+      }
+    }
+
+    {
+      validatePropertiesInDevelopment(tag, props);
+    }
+
+    assertValidProps(tag, props);
+
+    var out = createOpenTagMarkup(element.type, tag, props, namespace, this.makeStaticMarkup, this.stack.length === 1);
+    var footer = '';
+    if (omittedCloseTags.hasOwnProperty(tag)) {
+      out += '/>';
+    } else {
+      out += '>';
+      footer = '</' + element.type + '>';
+    }
+    var children = void 0;
+    var innerMarkup = getNonChildrenInnerMarkup(props);
+    if (innerMarkup != null) {
+      children = [];
+      if (newlineEatingTags[tag] && innerMarkup.charAt(0) === '\n') {
+        // text/html ignores the first character in these tags if it's a newline
+        // Prefer to break application/xml over text/html (for now) by adding
+        // a newline specifically to get eaten by the parser. (Alternately for
+        // textareas, replacing "^\n" with "\r\n" doesn't get eaten, and the first
+        // \r is normalized out by HTMLTextAreaElement#value.)
+        // See: <http://www.w3.org/TR/html-polyglot/#newlines-in-textarea-and-pre>
+        // See: <http://www.w3.org/TR/html5/syntax.html#element-restrictions>
+        // See: <http://www.w3.org/TR/html5/syntax.html#newlines>
+        // See: Parsing of "textarea" "listing" and "pre" elements
+        //  from <http://www.w3.org/TR/html5/syntax.html#parsing-main-inbody>
+        out += '\n';
+      }
+      out += innerMarkup;
+    } else {
+      children = toArray(props.children);
+    }
+    var frame = {
+      domNamespace: getChildNamespace(parentNamespace, element.type),
+      type: tag,
+      children: children,
+      childIndex: 0,
+      context: context,
+      footer: footer
+    };
+    {
+      frame.debugElementStack = [];
+    }
+    this.stack.push(frame);
+    this.previousWasTextNode = false;
+    return out;
+  };
+
+  return ReactDOMServerRenderer;
+}();
+
+/**
+ * Render a ReactElement to its initial HTML. This should only be used on the
+ * server.
+ * See https://reactjs.org/docs/react-dom-server.html#rendertostring
+ */
+function renderToString(element) {
+  var renderer = new ReactDOMServerRenderer(element, false);
+  try {
+    var markup = renderer.read(Infinity);
+    return markup;
+  } finally {
+    renderer.destroy();
+  }
+}
+
+/**
+ * Similar to renderToString, except this doesn't create extra DOM attributes
+ * such as data-react-id that React uses internally.
+ * See https://reactjs.org/docs/react-dom-server.html#rendertostaticmarkup
+ */
+function renderToStaticMarkup(element) {
+  var renderer = new ReactDOMServerRenderer(element, true);
+  try {
+    var markup = renderer.read(Infinity);
+    return markup;
+  } finally {
+    renderer.destroy();
+  }
+}
+
+function renderToNodeStream() {
+  invariant(false, 'ReactDOMServer.renderToNodeStream(): The streaming API is not available in the browser. Use ReactDOMServer.renderToString() instead.');
+}
+
+function renderToStaticNodeStream() {
+  invariant(false, 'ReactDOMServer.renderToStaticNodeStream(): The streaming API is not available in the browser. Use ReactDOMServer.renderToStaticMarkup() instead.');
+}
+
+// Note: when changing this, also consider https://github.com/facebook/react/issues/11526
+var ReactDOMServerBrowser = {
+  renderToString: renderToString,
+  renderToStaticMarkup: renderToStaticMarkup,
+  renderToNodeStream: renderToNodeStream,
+  renderToStaticNodeStream: renderToStaticNodeStream,
+  version: ReactVersion
+};
+
+var ReactDOMServerBrowser$1 = Object.freeze({
+	default: ReactDOMServerBrowser
+});
+
+var ReactDOMServer = ( ReactDOMServerBrowser$1 && ReactDOMServerBrowser ) || ReactDOMServerBrowser$1;
+
+// TODO: decide on the top-level export form.
+// This is hacky but makes it work with both Rollup and Jest
+var server_browser = ReactDOMServer.default || ReactDOMServer;
+
+module.exports = server_browser;
+  })();
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/react-dom/server.browser.js":
+/*!**************************************************!*\
+  !*** ./node_modules/react-dom/server.browser.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+if (false) {} else {
+  module.exports = __webpack_require__(/*! ./cjs/react-dom-server.browser.development.js */ "./node_modules/react-dom/cjs/react-dom-server.browser.development.js");
+}
 
 
 /***/ }),
@@ -15351,14 +20114,224 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/react-svg/es/react-svg.js":
+/*!************************************************!*\
+  !*** ./node_modules/react-svg/es/react-svg.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/extends */ "./node_modules/@babel/runtime/helpers/extends.js");
+/* harmony import */ var _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/inheritsLoose */ "./node_modules/@babel/runtime/helpers/inheritsLoose.js");
+/* harmony import */ var _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _tanem_svg_injector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @tanem/svg-injector */ "./node_modules/@tanem/svg-injector/dist/svg-injector.esm.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dom/server */ "./node_modules/react-dom/server.browser.js");
+/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_6__);
+
+
+
+
+
+
+
+
+// Hat-tip: https://github.com/developit/preact-compat/blob/master/src/index.js#L402.
+var shallowDiffers = function shallowDiffers(a, b) {
+  for (var i in a) {
+    if (!(i in b)) {
+      return true;
+    }
+  }
+
+  for (var _i in b) {
+    if (a[_i] !== b[_i]) {
+      return true;
+    }
+  }
+
+  return false;
+};
+
+var ReactSVG =
+/*#__PURE__*/
+function (_React$Component) {
+  _babel_runtime_helpers_inheritsLoose__WEBPACK_IMPORTED_MODULE_2___default()(ReactSVG, _React$Component);
+
+  function ReactSVG() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _React$Component.call.apply(_React$Component, [this].concat(args)) || this;
+    _this.initialState = {
+      hasError: false,
+      isLoading: true
+    };
+    _this.state = _this.initialState;
+    _this._isMounted = false;
+    _this.container = void 0;
+    _this.svgWrapper = void 0;
+
+    _this.refCallback = function (container) {
+      _this.container = container;
+    };
+
+    return _this;
+  }
+
+  var _proto = ReactSVG.prototype;
+
+  _proto.renderSVG = function renderSVG() {
+    var _this2 = this;
+
+    if (this.container instanceof Node) {
+      var _this$props = this.props,
+          _evalScripts = _this$props.evalScripts,
+          _renumerateIRIElements = _this$props.renumerateIRIElements,
+          _src = _this$props.src,
+          _svgClassName = _this$props.svgClassName,
+          _svgStyle = _this$props.svgStyle;
+      var _onInjected = this.props.onInjected;
+      var Wrapper = this.props.wrapper;
+
+      var _wrapper = document.createElement(Wrapper);
+
+      _wrapper.innerHTML = react_dom_server__WEBPACK_IMPORTED_MODULE_6___default.a.renderToStaticMarkup(Object(react__WEBPACK_IMPORTED_MODULE_5__["createElement"])(Wrapper, null, Object(react__WEBPACK_IMPORTED_MODULE_5__["createElement"])(Wrapper, {
+        className: _svgClassName,
+        "data-src": _src,
+        style: _svgStyle
+      })));
+      this.svgWrapper = this.container.appendChild(_wrapper.firstChild);
+
+      var each = function each(error, svg) {
+        if (error) {
+          _this2.removeSVG();
+        } // TODO: It'd be better to cleanly unsubscribe from SVGInjector
+        // callbacks instead of tracking a property like this.
+
+
+        if (_this2._isMounted) {
+          _this2.setState(function () {
+            return {
+              hasError: !!error,
+              isLoading: false
+            };
+          }, function () {
+            _onInjected(error, svg);
+          });
+        }
+      };
+
+      Object(_tanem_svg_injector__WEBPACK_IMPORTED_MODULE_3__["SVGInjector"])(this.svgWrapper.firstChild, {
+        each: each,
+        evalScripts: _evalScripts,
+        renumerateIRIElements: _renumerateIRIElements
+      });
+    }
+  };
+
+  _proto.removeSVG = function removeSVG() {
+    if (this.container instanceof Node && this.svgWrapper instanceof Node) {
+      this.container.removeChild(this.svgWrapper);
+      this.svgWrapper = null;
+    }
+  };
+
+  _proto.componentDidMount = function componentDidMount() {
+    this._isMounted = true;
+    this.renderSVG();
+  };
+
+  _proto.componentDidUpdate = function componentDidUpdate(prevProps) {
+    var _this3 = this;
+
+    if (shallowDiffers(prevProps, this.props)) {
+      this.setState(function () {
+        return _this3.initialState;
+      }, function () {
+        _this3.removeSVG();
+
+        _this3.renderSVG();
+      });
+    }
+  };
+
+  _proto.componentWillUnmount = function componentWillUnmount() {
+    this._isMounted = false;
+    this.removeSVG();
+  };
+
+  _proto.render = function render() {
+    var _this$props2 = this.props,
+        evalScripts = _this$props2.evalScripts,
+        Fallback = _this$props2.fallback,
+        Loading = _this$props2.loading,
+        onInjected = _this$props2.onInjected,
+        renumerateIRIElements = _this$props2.renumerateIRIElements,
+        src = _this$props2.src,
+        svgClassName = _this$props2.svgClassName,
+        svgStyle = _this$props2.svgStyle,
+        wrapper = _this$props2.wrapper,
+        rest = _babel_runtime_helpers_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1___default()(_this$props2, ["evalScripts", "fallback", "loading", "onInjected", "renumerateIRIElements", "src", "svgClassName", "svgStyle", "wrapper"]);
+
+    var Wrapper = wrapper;
+    return Object(react__WEBPACK_IMPORTED_MODULE_5__["createElement"])(Wrapper, _babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0___default()({}, rest, {
+      ref: this.refCallback
+    }), this.state.isLoading && Loading && Object(react__WEBPACK_IMPORTED_MODULE_5__["createElement"])(Loading, null), this.state.hasError && Fallback && Object(react__WEBPACK_IMPORTED_MODULE_5__["createElement"])(Fallback, null));
+  };
+
+  return ReactSVG;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+ReactSVG.defaultProps = {
+  evalScripts: 'never',
+  fallback: null,
+  loading: null,
+  onInjected: function onInjected() {
+    return undefined;
+  },
+  renumerateIRIElements: true,
+  svgClassName: null,
+  svgStyle: {},
+  wrapper: 'div'
+};
+ReactSVG.propTypes =  true ? {
+  evalScripts: Object(prop_types__WEBPACK_IMPORTED_MODULE_4__["oneOf"])(['always', 'once', 'never']),
+  fallback: Object(prop_types__WEBPACK_IMPORTED_MODULE_4__["oneOfType"])([prop_types__WEBPACK_IMPORTED_MODULE_4__["func"], prop_types__WEBPACK_IMPORTED_MODULE_4__["object"], prop_types__WEBPACK_IMPORTED_MODULE_4__["string"]]),
+  loading: Object(prop_types__WEBPACK_IMPORTED_MODULE_4__["oneOfType"])([prop_types__WEBPACK_IMPORTED_MODULE_4__["func"], prop_types__WEBPACK_IMPORTED_MODULE_4__["object"], prop_types__WEBPACK_IMPORTED_MODULE_4__["string"]]),
+  onInjected: prop_types__WEBPACK_IMPORTED_MODULE_4__["func"],
+  renumerateIRIElements: prop_types__WEBPACK_IMPORTED_MODULE_4__["bool"],
+  src: prop_types__WEBPACK_IMPORTED_MODULE_4__["string"].isRequired,
+  svgClassName: prop_types__WEBPACK_IMPORTED_MODULE_4__["string"],
+  svgStyle: prop_types__WEBPACK_IMPORTED_MODULE_4__["object"],
+  wrapper: Object(prop_types__WEBPACK_IMPORTED_MODULE_4__["oneOf"])(['div', 'span'])
+} : undefined;
+
+/* harmony default export */ __webpack_exports__["default"] = (ReactSVG);
+//# sourceMappingURL=react-svg.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_effd29c912beebc303a1 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_e42e0f91c9ae4e3e094d ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_effd29c912beebc303a1 */ "dll-reference dll_effd29c912beebc303a1"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e42e0f91c9ae4e3e094d */ "dll-reference dll_e42e0f91c9ae4e3e094d"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -17223,12 +22196,12 @@ module.exports = {
 
 /***/ "./node_modules/webpack/buildin/global.js":
 /*!******************************************************************************************************!*\
-  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_effd29c912beebc303a1 ***!
+  !*** delegated ./node_modules/webpack/buildin/global.js from dll-reference dll_e42e0f91c9ae4e3e094d ***!
   \******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_effd29c912beebc303a1 */ "dll-reference dll_effd29c912beebc303a1"))("./node_modules/webpack/buildin/global.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_e42e0f91c9ae4e3e094d */ "dll-reference dll_e42e0f91c9ae4e3e094d"))("./node_modules/webpack/buildin/global.js");
 
 /***/ }),
 
@@ -17371,40 +22344,46 @@ var index = function index(props) {
       lineNumber: 30
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    id: "home",
-    className: "home-banner-01",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    id: "home",
+    className: "home-banner-01",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row full-screen align-items-center",
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t",
+    className: "row full-screen align-items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "home-text-center p-50px-r md-p-0px-r stars",
+    className: "col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "home-text-center p-50px-r md-p-0px-r stars",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
@@ -17412,43 +22391,43 @@ var index = function index(props) {
     params: props.lang,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }, t('themost')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, "Get rid of email bounces and bad email addresses with our proven high-quality yet affordable", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 39
     },
     __self: this
   }, " email verification "), "and", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: this
   }, " email list cleaning"), " solutions that improve your data quality and email marketing ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, "Trusted and rated ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, "4.8"), "/5 based on ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -17456,7 +22435,7 @@ var index = function index(props) {
     href: "#reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 42
     },
     __self: this
   }, "200+ reviews"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -17464,7 +22443,7 @@ var index = function index(props) {
     className: "m-btn m-btn-theme2nd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }, "Try For Free"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -17473,21 +22452,21 @@ var index = function index(props) {
     "data-text": "Free Trial",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
   }, "Learn More"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12 col-lg-6 col-xl-6 home-right m-50px-t md-m-0px-t",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "home-right-inner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -17496,46 +22475,46 @@ var index = function index(props) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 49
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12 col-lg-12 col-xl-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "section-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }, "Trusted by 1,000's"), " of smart teams in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 54
     },
     __self: this
   }, "130+ countries")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -17546,14 +22525,14 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -17562,7 +22541,7 @@ var index = function index(props) {
     className: "active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 60
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -17570,7 +22549,7 @@ var index = function index(props) {
     "data-slide-to": "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 61
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -17578,301 +22557,301 @@ var index = function index(props) {
     "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 62
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container customer-slider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 64
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 65
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 66
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 68
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "say",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/asics.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 70
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/century.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 78
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 79
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 80
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 83
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 84
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 85
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 88
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 89
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 90
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 93
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 94
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-sage.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 95
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 100
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 101
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 102
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 102
+      lineNumber: 103
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-saleshandy.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 104
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 107
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 108
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-vindi.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 109
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 112
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 113
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 113
+      lineNumber: 114
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 117
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 117
+      lineNumber: 118
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-growbots.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 119
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 122
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 123
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 124
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 127
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 129
     },
     __self: this
   })))))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -17880,272 +22859,272 @@ var index = function index(props) {
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 141
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center m-45px-b md-m-25px-b",
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 142
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-10 col-lg-8 col-xl-7",
+    className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 143
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section-title",
+    className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 144
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "section-title",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 145
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 145
+      lineNumber: 146
     },
     __self: this
   }, "Why To Use Email Verification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 147
     },
     __self: this
   }, "Based on the last ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 147
     },
     __self: this
   }, "100 million emails"), " we verified in 2018, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 147
     },
     __self: this
   }, "23,51% would bounce"), ".", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 146
+      lineNumber: 147
     },
     __self: this
   }), "Have you used an email list cleaning service recently?")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 150
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-4 m-15px-tb",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 151
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+    className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 152
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 153
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-shield",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 154
+      lineNumber: 155
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 157
     },
     __self: this
   }, "Protect Sender Reputation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 158
     },
     __self: this
   }, "1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 160
+      lineNumber: 161
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 161
+      lineNumber: 162
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 162
+      lineNumber: 163
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-check",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 164
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 165
+      lineNumber: 166
     },
     __self: this
   }, "Avoid Blockages by ESPs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 167
     },
     __self: this
   }, "A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 170
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 171
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 171
+      lineNumber: 172
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-bar-chart",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 172
+      lineNumber: 173
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 175
     },
     __self: this
   }, "Increase Campaigns ROI"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 175
+      lineNumber: 176
     },
     __self: this
   }, "Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section section-effect right p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 181
+      lineNumber: 182
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 183
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 184
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 184
+      lineNumber: 185
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box-02",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 185
+      lineNumber: 186
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 187
     },
     __self: this
   }, "In-forms real-time email validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 187
+      lineNumber: 188
     },
     __self: this
   }, "Get rid of the bad emails before they enter your list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 188
+      lineNumber: 189
     },
     __self: this
   }, "Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 190
     },
     __self: this
   }, "Install to verify email address online ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 189
+      lineNumber: 190
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t real-email",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 193
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18154,35 +23133,35 @@ var index = function index(props) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 193
+      lineNumber: 194
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section section-effect left p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 198
+      lineNumber: 199
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 199
+      lineNumber: 200
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200
+      lineNumber: 201
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t order-last order-md-first",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 201
+      lineNumber: 202
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18191,137 +23170,137 @@ var index = function index(props) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 202
+      lineNumber: 203
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 204
+      lineNumber: 205
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box-02",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 205
+      lineNumber: 206
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 206
+      lineNumber: 207
     },
     __self: this
   }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 207
+      lineNumber: 208
     },
     __self: this
   }, "Connect with your favorite email marketing tool"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 208
+      lineNumber: 209
     },
     __self: this
   }, "TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 210
     },
     __self: this
   }, "Explore all integrations ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 209
+      lineNumber: 210
     },
     __self: this
   }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section section-effect right p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215
+      lineNumber: 216
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 216
+      lineNumber: 217
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 217
+      lineNumber: 218
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 219
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box-02",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
+      lineNumber: 220
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 221
     },
     __self: this
   }, "Bulk email list verification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 222
     },
     __self: this
   }, "Easily clean your current email lists and databases"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 223
     },
     __self: this
   }, "If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 224
     },
     __self: this
   }, "Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 225
     },
     __self: this
   }, "Verify email list now ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 225
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 227
+      lineNumber: 228
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18330,35 +23309,35 @@ var index = function index(props) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 228
+      lineNumber: 229
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "section section-effect left p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 234
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 234
+      lineNumber: 235
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 236
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t order-last order-md-first",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 236
+      lineNumber: 237
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18367,55 +23346,55 @@ var index = function index(props) {
     alt: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 237
+      lineNumber: 238
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 239
+      lineNumber: 240
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box-02",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 240
+      lineNumber: 241
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 241
+      lineNumber: 242
     },
     __self: this
   }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 242
+      lineNumber: 243
     },
     __self: this
   }, "Add an email validation tool to any website or app"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 243
+      lineNumber: 244
     },
     __self: this
   }, "Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 245
     },
     __self: this
   }, "See API docs ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 245
     },
     __self: this
   }))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -18423,82 +23402,82 @@ var index = function index(props) {
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 250
+      lineNumber: 251
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 251
+      lineNumber: 252
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center m-60px-b md-m-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 252
+      lineNumber: 253
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 253
+      lineNumber: 254
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "section-title text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 255
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 255
+      lineNumber: 256
     },
     __self: this
   }, "Testimonial"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 256
+      lineNumber: 257
     },
     __self: this
   }, "What Our Customers Say?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "title-border",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
+      lineNumber: 258
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
+      lineNumber: 259
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "md",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 259
+      lineNumber: 260
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 260
+      lineNumber: 261
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 262
+      lineNumber: 263
     },
     __self: this
   }, "World-class teams in 130+ countries choose TheChecker.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -18509,14 +23488,14 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267
+      lineNumber: 268
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 270
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -18525,7 +23504,7 @@ var index = function index(props) {
     className: "active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270
+      lineNumber: 271
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -18533,7 +23512,7 @@ var index = function index(props) {
     "data-slide-to": "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 271
+      lineNumber: 272
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -18541,76 +23520,76 @@ var index = function index(props) {
     "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272
+      lineNumber: 273
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 276
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item active text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 278
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 279
+      lineNumber: 280
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 281
+      lineNumber: 282
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 282
+      lineNumber: 283
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 283
+      lineNumber: 284
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/leadlovers.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 284
+      lineNumber: 285
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 285
+      lineNumber: 286
     },
     __self: this
   }, "Here at LeadLovers we\u2019re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 288
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 288
+      lineNumber: 289
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18619,74 +23598,74 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289
+      lineNumber: 290
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 292
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292
+      lineNumber: 293
     },
     __self: this
   }, "Fernando Milek"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 293
+      lineNumber: 294
     },
     __self: this
   }, "CTO")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 299
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 299
+      lineNumber: 300
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300
+      lineNumber: 301
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/actualsales.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 302
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 302
+      lineNumber: 303
     },
     __self: this
   }, "An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 304
+      lineNumber: 305
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 305
+      lineNumber: 306
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18695,88 +23674,88 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 307
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 309
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 310
     },
     __self: this
   }, "Arist\xF3teles de Oliveira"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 311
     },
     __self: this
   }, "Digital Marketing and Sales Manager")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 320
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 321
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 322
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 323
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323
+      lineNumber: 324
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/advertisepurple.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324
+      lineNumber: 325
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325
+      lineNumber: 326
     },
     __self: this
   }, "Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 327
+      lineNumber: 328
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 329
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18785,74 +23764,74 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 330
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 332
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 333
     },
     __self: this
   }, "Michael Lee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333
+      lineNumber: 334
     },
     __self: this
   }, "Inside Sales Representative")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 337
+      lineNumber: 338
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338
+      lineNumber: 339
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339
+      lineNumber: 340
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/inboxhero.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 341
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341
+      lineNumber: 342
     },
     __self: this
   }, "Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 343
+      lineNumber: 344
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344
+      lineNumber: 345
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18861,88 +23840,88 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 346
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 347
+      lineNumber: 348
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 349
     },
     __self: this
   }, "Jon Mae"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349
+      lineNumber: 350
     },
     __self: this
   }, "Email Marketing Expert")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 355
+      lineNumber: 356
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 356
+      lineNumber: 357
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 357
+      lineNumber: 358
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 358
+      lineNumber: 359
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 360
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/rockcontent.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360
+      lineNumber: 361
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361
+      lineNumber: 362
     },
     __self: this
   }, "I didn\u2019t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363
+      lineNumber: 364
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364
+      lineNumber: 365
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -18951,74 +23930,74 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365
+      lineNumber: 366
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367
+      lineNumber: 368
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 368
+      lineNumber: 369
     },
     __self: this
   }, "Ivan Nunes de Castro"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 369
+      lineNumber: 370
     },
     __self: this
   }, "Senior Sales Manager")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 373
+      lineNumber: 374
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 374
+      lineNumber: 375
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 375
+      lineNumber: 376
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/fi.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 376
+      lineNumber: 377
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 377
+      lineNumber: 378
     },
     __self: this
   }, "We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 379
+      lineNumber: 380
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380
+      lineNumber: 381
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -19027,88 +24006,88 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381
+      lineNumber: 382
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383
+      lineNumber: 384
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 384
+      lineNumber: 385
     },
     __self: this
   }, "Paul McGuire"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 385
+      lineNumber: 386
     },
     __self: this
   }, "Director")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 391
+      lineNumber: 392
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392
+      lineNumber: 393
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 393
+      lineNumber: 394
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 394
+      lineNumber: 395
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 395
+      lineNumber: 396
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/mediapost.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396
+      lineNumber: 397
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 397
+      lineNumber: 398
     },
     __self: this
   }, "In addition to the attention and commitment of TheChecker\u2019s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 399
+      lineNumber: 400
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400
+      lineNumber: 401
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -19117,74 +24096,74 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 401
+      lineNumber: 402
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 403
+      lineNumber: 404
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
+      lineNumber: 405
     },
     __self: this
   }, "Ademir Diniz"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 405
+      lineNumber: 406
     },
     __self: this
   }, "Product Manager")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 409
+      lineNumber: 410
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 410
+      lineNumber: 411
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 411
+      lineNumber: 412
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/testimonials/eivos.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 412
+      lineNumber: 413
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 413
+      lineNumber: 414
     },
     __self: this
   }, "The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 415
+      lineNumber: 416
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 416
+      lineNumber: 417
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -19193,33 +24172,33 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 417
+      lineNumber: 418
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 419
+      lineNumber: 420
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 420
+      lineNumber: 421
     },
     __self: this
   }, "Juli\xE1n P\xE9rez"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 421
+      lineNumber: 422
     },
     __self: this
   }, "Director"))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "owl-dots",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428
+      lineNumber: 429
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -19229,14 +24208,14 @@ var index = function index(props) {
     "data-slide": "prev",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 429
+      lineNumber: 430
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fa fa-chevron-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 429
+      lineNumber: 430
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -19246,14 +24225,14 @@ var index = function index(props) {
     "data-slide": "next",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 430
+      lineNumber: 431
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fa fa-chevron-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 430
+      lineNumber: 431
     },
     __self: this
   })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -19261,711 +24240,711 @@ var index = function index(props) {
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 435
+      lineNumber: 436
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 436
+      lineNumber: 437
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 437
+      lineNumber: 438
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 438
+      lineNumber: 439
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "section-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 439
+      lineNumber: 440
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 440
+      lineNumber: 441
     },
     __self: this
   }, "About Our Email Validation Service"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 441
+      lineNumber: 442
     },
     __self: this
   }, "Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 445
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 446
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 447
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 448
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 449
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-apple",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 449
+      lineNumber: 450
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 451
+      lineNumber: 452
     },
     __self: this
   }, "99%+ Accuracy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 452
+      lineNumber: 453
     },
     __self: this
   }, "Our emails marked as \"Valid\" are covered by our deliverability guarantee."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 455
+      lineNumber: 456
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 456
+      lineNumber: 457
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 457
+      lineNumber: 458
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-microsoft",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 458
+      lineNumber: 459
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 460
+      lineNumber: 461
     },
     __self: this
   }, "Fast Email Verification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 461
+      lineNumber: 462
     },
     __self: this
   }, "Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 464
+      lineNumber: 465
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 465
+      lineNumber: 466
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 466
+      lineNumber: 467
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-html5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 467
+      lineNumber: 468
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 469
+      lineNumber: 470
     },
     __self: this
   }, "Affordable Prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 470
+      lineNumber: 471
     },
     __self: this
   }, "We are (by far) the most cost-effective solution (accurate, fast and affordable)."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 473
+      lineNumber: 474
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 474
+      lineNumber: 475
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 475
+      lineNumber: 476
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-css3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 476
+      lineNumber: 477
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 478
+      lineNumber: 479
     },
     __self: this
   }, "Filetypes Compatibility"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 479
+      lineNumber: 480
     },
     __self: this
   }, "We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 482
+      lineNumber: 483
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 483
+      lineNumber: 484
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 484
+      lineNumber: 485
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-wordpress",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 485
+      lineNumber: 486
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 487
+      lineNumber: 488
     },
     __self: this
   }, "Email Bounce Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 488
+      lineNumber: 489
     },
     __self: this
   }, "Identifies and tells you which emails will bounce and thus are not safe to send."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 491
+      lineNumber: 492
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 492
+      lineNumber: 493
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 493
+      lineNumber: 494
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-wordpress",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 494
+      lineNumber: 495
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 496
+      lineNumber: 497
     },
     __self: this
   }, "Global Accuracy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 497
+      lineNumber: 498
     },
     __self: this
   }, "We validate emails of all types and all major providers from anywhere in the world."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 500
+      lineNumber: 501
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 501
+      lineNumber: 502
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 502
+      lineNumber: 503
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-wordpress",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 503
+      lineNumber: 504
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 505
+      lineNumber: 506
     },
     __self: this
   }, "Catch-all Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 506
+      lineNumber: 507
     },
     __self: this
   }, "Checks for domains that are catch-all, which return valid for all emails."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 509
+      lineNumber: 510
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 510
+      lineNumber: 511
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 511
+      lineNumber: 512
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-wordpress",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 512
+      lineNumber: 513
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 514
+      lineNumber: 515
     },
     __self: this
   }, "Email Typo Correction"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 515
+      lineNumber: 516
     },
     __self: this
   }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 518
+      lineNumber: 519
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 519
+      lineNumber: 520
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 520
+      lineNumber: 521
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-wordpress",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 521
+      lineNumber: 522
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 523
+      lineNumber: 524
     },
     __self: this
   }, "Syntax Validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 524
+      lineNumber: 525
     },
     __self: this
   }, "Fully cleans your email list from email addresses with syntax errors."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 527
+      lineNumber: 528
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 528
+      lineNumber: 529
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 529
+      lineNumber: 530
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-wordpress",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 530
+      lineNumber: 531
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 532
+      lineNumber: 533
     },
     __self: this
   }, "Domain Validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 533
+      lineNumber: 534
     },
     __self: this
   }, "Marks all the emails containing inactive or invalid domains."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 536
+      lineNumber: 537
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 537
+      lineNumber: 538
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 538
+      lineNumber: 539
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-wordpress",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 539
+      lineNumber: 540
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 541
+      lineNumber: 542
     },
     __self: this
   }, "Mailbox Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 542
+      lineNumber: 543
     },
     __self: this
   }, "Validates the existence of MX records for every email address."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 545
+      lineNumber: 546
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 546
+      lineNumber: 547
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 547
+      lineNumber: 548
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-stack-overflow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 548
+      lineNumber: 549
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 550
+      lineNumber: 551
     },
     __self: this
   }, "Risk Validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 551
+      lineNumber: 552
     },
     __self: this
   }, "Identifies and marks all the emails which domain accepts any email in their domain."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 554
+      lineNumber: 555
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 555
+      lineNumber: 556
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 556
+      lineNumber: 557
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-stack-overflow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 557
+      lineNumber: 558
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 559
+      lineNumber: 560
     },
     __self: this
   }, "Free De-duplication"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 560
+      lineNumber: 561
     },
     __self: this
   }, "TheCheckers email checker tool removes all records containing duplicate emails."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 563
+      lineNumber: 564
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 564
+      lineNumber: 565
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 565
+      lineNumber: 566
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-stack-overflow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 566
+      lineNumber: 567
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 568
+      lineNumber: 569
     },
     __self: this
   }, "Spam Trap Remover"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 569
+      lineNumber: 570
     },
     __self: this
   }, "Our email verifier tool removes all address identified as a spam trap."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 572
+      lineNumber: 573
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 573
+      lineNumber: 574
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 574
+      lineNumber: 575
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-stack-overflow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 575
+      lineNumber: 576
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 577
+      lineNumber: 578
     },
     __self: this
   }, "Disposables Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 578
+      lineNumber: 579
     },
     __self: this
   }, "Checks against our frequently updated temporary email database."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 581
+      lineNumber: 582
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 582
+      lineNumber: 583
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 583
+      lineNumber: 584
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-stack-overflow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 584
+      lineNumber: 585
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 586
+      lineNumber: 587
     },
     __self: this
   }, "Pay Only For Results"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 587
+      lineNumber: 588
     },
     __self: this
   }, "If we can't verify a certain email at any moment, we refund you the credits.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -19973,262 +24952,262 @@ var index = function index(props) {
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 593
+      lineNumber: 594
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 594
+      lineNumber: 595
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 595
+      lineNumber: 596
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 596
+      lineNumber: 597
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "section-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 597
+      lineNumber: 598
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 598
+      lineNumber: 599
     },
     __self: this
   }, "The Highest Rated Email Verifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599
+      lineNumber: 600
     },
     __self: this
   }, "TheChecker is the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599
+      lineNumber: 600
     },
     __self: this
   }, "#1 email verification software"), " based on independent reviews.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 603
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-md-6 col-lg-4 m-15px-tb",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 604
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-01",
+    className: "col-12 col-md-6 col-lg-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 605
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+    className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 606
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 607
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.g2crowd.com/products/thechecker-thechecker/reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 607
+      lineNumber: 608
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/thechecker-reviews-g2crowd.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 607
+      lineNumber: 608
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 609
+      lineNumber: 610
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 609
+      lineNumber: 610
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 609
+      lineNumber: 610
     },
     __self: this
   }, "4.7"), "/5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 610
+      lineNumber: 611
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 610
+      lineNumber: 611
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-12 col-md-6 col-lg-4 m-15px-tb",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 613
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 614
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+    className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 615
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 616
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.capterra.com/p/173432/TheChecker/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 616
+      lineNumber: 617
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/thechecker-reviews-capterra.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 616
+      lineNumber: 617
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 618
+      lineNumber: 619
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 618
+      lineNumber: 619
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 618
+      lineNumber: 619
     },
     __self: this
   }, "4.9"), "/5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 619
+      lineNumber: 620
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 619
+      lineNumber: 620
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-12 col-md-6 col-lg-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 622
+      lineNumber: 623
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 623
+      lineNumber: 624
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 624
+      lineNumber: 625
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "https://www.trustpilot.com/review/thechecker.co",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 625
+      lineNumber: 626
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/thechecker-reviews-trustpilot.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 625
+      lineNumber: 626
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 627
+      lineNumber: 628
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 627
+      lineNumber: 628
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 627
+      lineNumber: 628
     },
     __self: this
   }, "4.6"), "/5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 628
+      lineNumber: 629
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 628
+      lineNumber: 629
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E "))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
@@ -20236,97 +25215,97 @@ var index = function index(props) {
     className: "section gray-bg text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 634
+      lineNumber: 635
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 635
+      lineNumber: 636
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 636
+      lineNumber: 637
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 637
+      lineNumber: 638
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "section-title text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 638
+      lineNumber: 639
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 639
+      lineNumber: 640
     },
     __self: this
   }, "Join the Smartest"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "title-border",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 640
+      lineNumber: 641
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 640
+      lineNumber: 641
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "md",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 640
+      lineNumber: 641
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 640
+      lineNumber: 641
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 641
+      lineNumber: 642
     },
     __self: this
   }, "Try the best bulk email address checker for FREE and see the accurate results!")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row justify-content-center m-60px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 645
+      lineNumber: 646
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-12 col-md-12 col-lg-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 646
+      lineNumber: 647
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "cta",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 647
+      lineNumber: 648
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -20334,7 +25313,7 @@ var index = function index(props) {
     className: "m-btn m-btn-theme2nd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 648
+      lineNumber: 649
     },
     __self: this
   }, "Try For Free")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -20345,14 +25324,14 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 652
+      lineNumber: 653
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 653
+      lineNumber: 654
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -20361,7 +25340,7 @@ var index = function index(props) {
     className: "active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 654
+      lineNumber: 655
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -20369,7 +25348,7 @@ var index = function index(props) {
     "data-slide-to": "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 655
+      lineNumber: 656
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
@@ -20377,301 +25356,301 @@ var index = function index(props) {
     "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 656
+      lineNumber: 657
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container customer-slider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 658
+      lineNumber: 659
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 659
+      lineNumber: 660
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 660
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 661
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 662
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 663
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "say",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 664
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/asics.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 664
+      lineNumber: 665
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 667
+      lineNumber: 668
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 668
+      lineNumber: 669
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/century.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 669
+      lineNumber: 670
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 672
+      lineNumber: 673
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 673
+      lineNumber: 674
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 674
+      lineNumber: 675
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 677
+      lineNumber: 678
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 678
+      lineNumber: 679
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 679
+      lineNumber: 680
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 682
+      lineNumber: 683
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 683
+      lineNumber: 684
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 684
+      lineNumber: 685
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 687
+      lineNumber: 688
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 688
+      lineNumber: 689
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-sage.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 689
+      lineNumber: 690
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 694
+      lineNumber: 695
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 695
+      lineNumber: 696
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 696
+      lineNumber: 697
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 697
+      lineNumber: 698
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-saleshandy.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 698
+      lineNumber: 699
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 701
+      lineNumber: 702
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 702
+      lineNumber: 703
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-vindi.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 703
+      lineNumber: 704
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 706
+      lineNumber: 707
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 707
+      lineNumber: 708
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 708
+      lineNumber: 709
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 711
+      lineNumber: 712
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 712
+      lineNumber: 713
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-growbots.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 713
+      lineNumber: 714
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 716
+      lineNumber: 717
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 717
+      lineNumber: 718
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 718
+      lineNumber: 719
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 721
+      lineNumber: 722
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 722
+      lineNumber: 723
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 723
+      lineNumber: 724
     },
     __self: this
   }))))))))))));
@@ -20751,14 +25730,14 @@ module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absol
 
 /***/ }),
 
-/***/ "dll-reference dll_effd29c912beebc303a1":
+/***/ "dll-reference dll_e42e0f91c9ae4e3e094d":
 /*!*******************************************!*\
-  !*** external "dll_effd29c912beebc303a1" ***!
+  !*** external "dll_e42e0f91c9ae4e3e094d" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_effd29c912beebc303a1;
+module.exports = dll_e42e0f91c9ae4e3e094d;
 
 /***/ })
 
