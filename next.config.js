@@ -1,6 +1,6 @@
-module.exports = {
-  target: 'serverless'
-};
+// module.exports = {
+//   target: 'serverless'
+// };
 
 const withCSS = require('@zeit/next-css');
 
