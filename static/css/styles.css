@@ -146,11 +146,6 @@ img {
   color: #FFDA5F
 }
 
-.flag img {
-  width: 16px;
-  margin: 0px 5px 0 2px
-}
-
 .flag button {
   background: transparent;
   border: none;
@@ -1334,6 +1329,9 @@ a:not([href]):not([tabindex]) {
 @media(max-width: 768px) {
   .home-right-inner {
     width: 100vw !important
+  }
+  .flag svg {
+    padding: 2px 0 0 0;
   }
 }
 
