@@ -287,6 +287,10 @@ a:not([href]):not([tabindex]) {
   }
 }
 
+.carousel-indicators {
+  display: none
+}
+
 /*---------------------------------
 * 03. Section title
 -----------------------------------*/

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import { Icon } from '..';
 
 const Header = (props) => {
   return <header>
@@ -128,7 +127,6 @@ const Header = (props) => {
 
               <a className="nav-link" href="javascript:;">
 
-                <Icon name='global' size='20' fill='#36E8A0' />
                 {props.activelang}
 
               </a>
