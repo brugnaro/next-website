@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
+import { Icon } from '..';
 
 const Header = (props) => {
   return <header>
@@ -126,11 +127,11 @@ const Header = (props) => {
 
 
               <a className="nav-link" href="javascript:;">
-              
-              
-               {props.activelang}
-               
-               </a>
+
+                <Icon name='global' size='20' fill='#36E8A0' />
+                {props.activelang}
+
+              </a>
               <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
 
 

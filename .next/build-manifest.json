@@ -19,14 +19,6 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/integrations": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/pricing": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
     "/": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
