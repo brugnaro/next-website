@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Icon } from '..';
 import Link from 'next/link';
 
 const Header = (props) => {
@@ -126,7 +125,12 @@ const Header = (props) => {
 
 
 
-              <a className="nav-link" href="javascript:;"><Icon fill='#36E8A0' name='global' size='18' /> {props.activelang}</a>
+              <a className="nav-link" href="javascript:;">
+              
+              
+               {props.activelang}
+               
+               </a>
               <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
 
 
