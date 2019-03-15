@@ -18,7 +18,7 @@ const index = (props) => {
   const { t, i18n } = useTranslation();
 
   return <div>
-    <title>#1 Email Verification & List Cleaning Service | TheChecker Email Verifier</title>
+    <title>Email Verification & List Cleaning Service | TheChecker Email Verifier</title>
     <Header
       contactus={t('contactus')}
       en={() => i18n.changeLanguage('en')}
@@ -458,7 +458,7 @@ const index = (props) => {
                   <i className="ti-microsoft"></i>
                 </div>
                 <h3 className="font-alt">Fast Email Verification</h3>
-                <p>Verifying 10,000 emails takes, on average, only around 2-5 min. Get things done faster!</p>
+                <p>Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy.</p>
               </div>
             </div>
             <div className="col-md-6 col-lg-3 m-15px-tb">

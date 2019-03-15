@@ -123,16 +123,11 @@ const Header = (props) => {
             </li>
             <li className='flag'>
 
-
-
+              <img src='./../../static/img/global.png'/>
               <a className="nav-link" href="javascript:;">
-
                 {props.activelang}
-
               </a>
               <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
-
-
 
               <ul className="sub-menu">
                 <li>

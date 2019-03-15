@@ -1631,12 +1631,19 @@ var Header = function Header(props) {
       lineNumber: 124
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "./../../static/img/global.png",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 126
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
     href: "javascript:;",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 127
     },
     __self: this
   }, props.activelang), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1646,31 +1653,51 @@ var Header = function Header(props) {
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 130
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-angle-down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 130
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 137
+      lineNumber: 132
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 133
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: props.en,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 134
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "nav-link mega-menu-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 135
+    },
+    __self: this
+  }, "English"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 138
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: props.en,
+    onClick: props.pt,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 139
@@ -1681,26 +1708,6 @@ var Header = function Header(props) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 140
-    },
-    __self: this
-  }, "English"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 143
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: props.pt,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 144
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "nav-link mega-menu-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 145
     },
     __self: this
   }, "Portugu\xEAs"))))))))));
@@ -1934,6 +1941,15 @@ var Scripts = function Scripts() {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 12
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+    src: "//instant.page/1.2.1",
+    type: "module",
+    integrity: "sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
     },
     __self: this
   }));
@@ -4511,7 +4527,7 @@ var index = function index(props) {
       lineNumber: 21
     },
     __self: this
-  }, "#1 Email Verification & List Cleaning Service | TheChecker Email Verifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Header"], {
+  }, "Email Verification & List Cleaning Service | TheChecker Email Verifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Header"], {
     contactus: t('contactus'),
     en: function en() {
       return i18n.changeLanguage('en');
@@ -6556,7 +6572,7 @@ var index = function index(props) {
       lineNumber: 461
     },
     __self: this
-  }, "Verifying 10,000 emails takes, on average, only around 2-5 min. Get things done faster!"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,

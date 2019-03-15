@@ -219,6 +219,11 @@ a:not([href]):not([tabindex]) {
   padding: 0 0 0 0vw;
 }
 
+.flag img {
+  width: 18px;
+  margin: 0 5px 0 0
+}
+
 /*---------------------------------
 * 01. Loading
 -----------------------------------*/

@@ -10,6 +10,7 @@ const Scripts = () => <div>
   <script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
   <script src="static/plugin/magnific/jquery.magnific-popup.min.js"></script>
   <script src="static/js/custom.js"></script>
+  <script src="//instant.page/1.2.1" type="module" integrity="sha384-/IkE5iZAM/RxPto8B0nvKlMzIyCWtYocF01PbGGp1qElJuxv9J4whdWBRtzZltWn"></script>
 </div>
 
 export default Scripts;
