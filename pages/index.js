@@ -28,7 +28,6 @@ const index = (props) => {
       pricing={t('pricing')}
     />
     <main>
-      <Icon/>
       <section id="home" className="home-banner-01">
         <div className="container">
           <div className="row full-screen align-items-center">

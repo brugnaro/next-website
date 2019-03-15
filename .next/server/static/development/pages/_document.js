@@ -1643,7 +1643,7 @@ var Header = function Header(props) {
     href: "javascript:;",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 128
     },
     __self: this
   }, props.activelang), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
@@ -1653,61 +1653,61 @@ var Header = function Header(props) {
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-angle-down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 131
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 132
+      lineNumber: 133
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.en,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 135
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 136
     },
     __self: this
   }, "English"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 138
+      lineNumber: 139
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
     onClick: props.pt,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 139
+      lineNumber: 140
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 141
     },
     __self: this
   }, "Portugu\xEAs"))))))))));
@@ -1748,23 +1748,36 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_svg__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/home/marcos/Documentos/next-website/components/Icon/Icon.js";
 
-// import Global from '../../static/img/icons/global.svg'
-// import Accuracy from '../../static/img/icons/99-accuracy.svg'
 
 
-var Icon = function Icon() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    src: "../../static/img/icons/99-accuracy.svg",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }); // const icon = {
-  //   global: <Global style={{ fill: props.fill, width: props.size }} />,
-  //   accuracy: <Accuracy style={{ fill: props.fill, width: props.size }} />
-  // };
-  // return icon[props.name]
+var Icon = function Icon(props) {
+  var icon = {
+    global: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "../../static/img/icons/global.svg",
+      style: {
+        fill: props.color,
+        width: props.size
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }),
+    accuracy: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "../../static/img/icons/99-accuracy.svg",
+      style: {
+        color: props.color,
+        width: props.size
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    })
+  };
+  return icon[props.name];
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Icon);

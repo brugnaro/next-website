@@ -123,7 +123,8 @@ const Header = (props) => {
             </li>
             <li className='flag'>
 
-              <img src='./../../static/img/global.png'/>
+              <img src='./../../static/img/global.png' />
+
               <a className="nav-link" href="javascript:;">
                 {props.activelang}
               </a>

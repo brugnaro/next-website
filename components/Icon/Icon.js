@@ -1,17 +1,13 @@
-// import Global from '../../static/img/icons/global.svg'
-// import Accuracy from '../../static/img/icons/99-accuracy.svg'
 import ReactSVG from 'react-svg'
 
-const Icon = () => {
+const Icon = (props) => {
 
-  return <ReactSVG src='../../static/img/icons/99-accuracy.svg' />
+  const icon = {
+    global: <ReactSVG src='../../static/img/icons/global.svg' style={{ fill: props.color, width: props.size }} />,
+    accuracy: <ReactSVG src='../../static/img/icons/99-accuracy.svg' style={{ color: props.color, width: props.size }} />
+  };
 
-  // const icon = {
-  //   global: <Global style={{ fill: props.fill, width: props.size }} />,
-  //   accuracy: <Accuracy style={{ fill: props.fill, width: props.size }} />
-  // };
-
-  // return icon[props.name]
+  return icon[props.name]
 
 };
 
