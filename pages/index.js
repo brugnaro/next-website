@@ -48,60 +48,91 @@ const index = (props) => {
                 <img src="static/img/email-verification-service-thechecker-screen.png" title="" alt="" />
               </div>
             </div>
-            <div className="container">
-              <div className="section-title text-center">
+            <div className="col-md-12 col-lg-12 col-xl-12">
+              <div className="section-title">
                 <p><u>Trusted by 1,000's</u> of smart teams in <u>130+ countries</u></p>
               </div>
             </div>
-            <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
-              <ul className="carousel-indicators">
-                <li data-target="#carousel1" data-slide-to="0" className="active"></li>
-                <li data-target="#carousel1" data-slide-to="1"></li>
-                <li data-target="#carousel1" data-slide-to="2"></li>
-              </ul>
-              <div className="container customer-slider">
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
-                    <div className="row">
-                      <div className="testimonial col-12 col-md-4 customer-item">
-                        <div className="say">
-                          <img src="static/img/customers/asics.png" />
+            <div className="container text-center">
+              <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
+                <ul className="carousel-indicators">
+                  <li data-target="#carousel1" data-slide-to="0" className="active"></li>
+                  <li data-target="#carousel1" data-slide-to="1"></li>
+                  <li data-target="#carousel1" data-slide-to="2"></li>
+                </ul>
+                <div className="container customer-slider">
+                  <div className="carousel-inner">
+                    <div className="carousel-item active">
+                      <div className="row">
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/asics.png" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="testimonial col-12 col-md-4 customer-item">
-                        <div className="say">
-                          <img src="static/img/customers/century.png" />
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/century.png" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="testimonial col-12 col-md-4 customer-item">
-                        <div className="say">
-                          <img src="static/img/customers/email-verification-service-thechecker-customers-glint.png" />
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-glint.png" />
+                          </div>
+                        </div>
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-ebanx.png" />
+                          </div>
+                        </div>
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-wework.png" />
+                          </div>
+                        </div>
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-sage.png" />
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="carousel-item">
-                    <div className="row">
-                      <div className="testimonial col-12 col-md-4 customer-item">
-                        <div className="say">
-                          <img src="static/img/customers/email-verification-service-thechecker-customers-ebanx.png" />
+                    <div className="carousel-item">
+                      <div className="row">
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-saleshandy.png" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="testimonial col-12 col-md-4 customer-item">
-                        <div className="say">
-                          <img src="static/img/customers/email-verification-service-thechecker-customers-wework.png" />
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-vindi.png" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="testimonial col-12 col-md-4 customer-item">
-                        <div className="say">
-                          <img src="static/img/customers/email-verification-service-thechecker-customers-sage.png" />
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png" />
+                          </div>
+                        </div>
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-growbots.png" />
+                          </div>
+                        </div>
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png" />
+                          </div>
+                        </div>
+                        <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                          <div className="say">
+                            <img src="static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png" />
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -232,15 +263,15 @@ const index = (props) => {
               </div>
             </div>
           </div>
-          
+
           <div id="carousel2" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
-            
+
             <ul className="carousel-indicators">
               <li data-target="#carousel2" data-slide-to="0" className="active"></li>
               <li data-target="#carousel2" data-slide-to="1"></li>
               <li data-target="#carousel2" data-slide-to="2"></li>
             </ul>
-          
+
             <div className="carousel-inner">
 
               <div className="carousel-item active text-center">
@@ -321,10 +352,8 @@ const index = (props) => {
                   </div>
                 </div>
               </div>
-
               <div className="carousel-item">
                 <div className="row">
-
                   <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
@@ -361,7 +390,6 @@ const index = (props) => {
               </div>
               <div className="carousel-item">
                 <div className="row">
-
                   <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
@@ -396,14 +424,11 @@ const index = (props) => {
                   </div>
                 </div>
               </div>
-
             </div>
-            
             <div className="owl-dots">
               <a className="left slide-control" href="#carousel2" role="button" data-slide="prev"><i className="fa fa-chevron-left"></i></a>
               <a className="right slide-control" href="#carousel2" role="button" data-slide="next"><i className="fa fa-chevron-right"></i></a>
             </div>
-
           </div>
         </div>
       </section>
@@ -624,42 +649,89 @@ const index = (props) => {
               </div>
             </div>
           </div>
-          <div className="row">
-            <div className="col-4 col-md-4 col-lg-2">
-              <div className="customers">
-                <img src="static/img/customers/email-verification-service-thechecker-customers-saleshandy.png" />
-              </div>
-            </div>
-            <div className="col-4 col-md-4 col-lg-2">
-              <div className="customers">
-                <img src="static/img/customers/email-verification-service-thechecker-customers-vindi.png" />
-              </div>
-            </div>
-            <div className="col-4 col-md-4 col-lg-2">
-              <div className="customers">
-                <img src="static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png" />
-              </div>
-            </div>
-            <div className="col-4 col-md-4 col-lg-2">
-              <div className="customers">
-                <img src="static/img/customers/email-verification-service-thechecker-customers-growbots.png" />
-              </div>
-            </div>
-            <div className="col-4 col-md-4 col-lg-2">
-              <div className="customers">
-                <img src="static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png" />
-              </div>
-            </div>
-            <div className="col-4 col-md-4 col-lg-2">
-              <div className="customers">
-                <img src="static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png" />
+          <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
+            <ul className="carousel-indicators">
+              <li data-target="#carousel1" data-slide-to="0" className="active"></li>
+              <li data-target="#carousel1" data-slide-to="1"></li>
+              <li data-target="#carousel1" data-slide-to="2"></li>
+            </ul>
+            <div className="container customer-slider">
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <div className="row">
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/asics.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/century.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-glint.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-ebanx.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-wework.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-sage.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <div className="row">
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-saleshandy.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-vindi.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-growbots.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png" />
+                      </div>
+                    </div>
+                    <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
+                      <div className="say">
+                        <img src="static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-  </div >
+  </div>
 };
 
 export default index;
