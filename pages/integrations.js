@@ -1,18 +1,26 @@
 import { useTranslation } from 'react-i18next';
 import { Header } from '../components';
 import './i18n';
+import { Link, Router } from '../routes';
 
 const integrations = () => {
+
+  integrations.getInitialProps = (props) => {
+    return {}
+  }
+
+  console.log(Router)
+
   const { t, i18n } = useTranslation();
 
   return <div>
     <title>Integrations With Email Marketing Tools | TheChecker</title>
     <Header
       contactus={t('contactus')}
-      toggleLanguage={i18n.language === 'en' ? () => i18n.changeLanguage('pt') : () => i18n.changeLanguage('en') }
+      en={() => i18n.changeLanguage('en')}
+      pt={() => i18n.changeLanguage('pt')}
       integrations={t('integrations')}
       activelang={i18n.language === 'en' ? 'EN' : 'PT'}
-      lang={i18n.language === 'en' ? 'PT' : 'EN'}
       pricing={t('pricing')}
     />
     <main>

@@ -1,19 +1,10 @@
 import React, { Component } from 'react';
-import { useTranslation, getInitialProps } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Header } from '../components';
 import './i18n';
 import { Link } from '../routes';
 
-const index = (props) => {
-
-  index.getInitialProps = (props) => {
-    let lang = 'en';
-    let params = 'test'
-    return {
-      lang,
-      params
-    }
-  }
+export default () => {
 
   const { t, i18n } = useTranslation();
 
@@ -33,9 +24,9 @@ const index = (props) => {
           <div className="row full-screen align-items-center">
             <div className="col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t">
               <div className="home-text-center p-50px-r md-p-0px-r stars">
-                <h1 className="font-alt" params={props.lang}>{t('themost')}</h1>
+                <h1 className="font-alt">{t('themost')}</h1>
                 <p>
-                  <Link route={`integrations`}><a>Test</a></Link>Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>
+                  <Link route="integrations">Test</Link> Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>
                   and<b> email list cleaning</b> solutions that improve your data quality and email marketing ROI.
                 </p>
                 <p>Trusted and rated <span>✮✮✮✮✮ </span> <b>4.8</b>/5 based on <a href="#reviews">200+ reviews</a>.</p>
@@ -224,14 +215,16 @@ const index = (props) => {
             </ul>
             <div className="carousel-inner">
 
+
               <div className="carousel-item active text-center">
+
 
                 <div className="row">
 
                   <div className="testimonial-col">
                     <i className="ti-quote-left"></i>
                     <div className="say">
-                      <img src="static/img/testimonials/leadlovers.png" />
+                      <img src="static/img/customers/asics.png" />
                       <p>Here at LeadLovers we’re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.</p>
                     </div>
                     <div className="user">
@@ -248,7 +241,7 @@ const index = (props) => {
                   <div className="testimonial-col">
                     <i className="ti-quote-left"></i>
                     <div className="say">
-                      <img src="static/img/testimonials/actualsales.png" />
+                      <img src="static/img/customers/century.png" />
                       <p>An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.</p>
                     </div>
                     <div className="user">
@@ -262,7 +255,10 @@ const index = (props) => {
                     </div>
                   </div>
 
+
+
                 </div>
+
 
               </div>
 
@@ -641,6 +637,3 @@ const index = (props) => {
     </main>
   </div >
 };
-
-export default index;
-

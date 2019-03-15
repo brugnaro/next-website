@@ -141,7 +141,7 @@ Template Name   : AppWay
     });
   }
 
-  WAY.UpdateTitle = function(){
+  WAY.UpdateTitle = function () {
     var pathname = windows.location.pathname;
     var head = document.getElementsByTagName("head");
   }
@@ -216,7 +216,7 @@ Template Name   : AppWay
       WAY.Counter(),
       WAY.ProgressBar(),
       WAY.HeaderSticky();
-      WAY.UpdateTitle;
+    WAY.UpdateTitle;
   });
 
   $(window).on("scroll", function () {
