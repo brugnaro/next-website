@@ -38,7 +38,7 @@ const index = (props) => {
                   Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>
                   and<b> email list cleaning</b> solutions that improve your data quality and email marketing ROI.
                 </p>
-                <p>Trusted and rated <span>✮✮✮✮✮ </span> <b>4.8</b>/5 based on <a href="#reviews">200+ reviews</a>.</p>
+                <p>Trusted and rated <span>✮✮✮✮✮ </span> <b>4.8</b>/5 based on <a className="reviews" href="#reviews">200+ reviews</a>.</p>
                 <a href="#" className="m-btn m-btn-theme2nd">Try For Free</a>
                 <a href="#why" className="m-btn m-btn-white" data-text="Free Trial">Learn More</a>
               </div>
@@ -48,52 +48,60 @@ const index = (props) => {
                 <img src="static/img/email-verification-service-thechecker-screen.png" title="" alt="" />
               </div>
             </div>
+            <div className="container">
+              <div className="section-title text-center">
+                <p><u>Trusted by 1,000's</u> of smart teams in <u>130+ countries</u></p>
+              </div>
+            </div>
             <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
               <ul className="carousel-indicators">
                 <li data-target="#carousel1" data-slide-to="0" className="active"></li>
                 <li data-target="#carousel1" data-slide-to="1"></li>
                 <li data-target="#carousel1" data-slide-to="2"></li>
               </ul>
-              <div className="carousel-inner">
-                <div className="carousel-item active text-center">
-                  <div className="row">
-                    <div className="testimonial-col-md-auto customers-carousel">
-                      <div className="say">
-                        <img src="static/img/customers/asics.png" />
+              <div className="container customer-slider">
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <div className="row">
+                      <div className="testimonial col-12 col-md-4 customer-item">
+                        <div className="say">
+                          <img src="static/img/customers/asics.png" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="testimonial-col-md-auto customers-carousel">
-                      <div className="say">
-                        <img src="static/img/customers/century.png" />
+                      <div className="testimonial col-12 col-md-4 customer-item">
+                        <div className="say">
+                          <img src="static/img/customers/century.png" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="testimonial-col-md-auto customers-carousel">
-                      <div className="say">
-                        <img src="static/img/customers/email-verification-service-thechecker-customers-glint.png" />
+                      <div className="testimonial col-12 col-md-4 customer-item">
+                        <div className="say">
+                          <img src="static/img/customers/email-verification-service-thechecker-customers-glint.png" />
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="carousel-item">
-                  <div className="row text-center">
-                    <div className="testimonial-col-md-auto customers-carousel">
-                      <div className="say">
-                        <img src="static/img/customers/email-verification-service-thechecker-customers-ebanx.png" />
+                  <div className="carousel-item">
+                    <div className="row">
+                      <div className="testimonial col-12 col-md-4 customer-item">
+                        <div className="say">
+                          <img src="static/img/customers/email-verification-service-thechecker-customers-ebanx.png" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="testimonial-col-md-auto customers-carousel">
-                      <div className="say">
-                        <img src="static/img/customers/email-verification-service-thechecker-customers-wework.png" />
+                      <div className="testimonial col-12 col-md-4 customer-item">
+                        <div className="say">
+                          <img src="static/img/customers/email-verification-service-thechecker-customers-wework.png" />
+                        </div>
                       </div>
-                    </div>
-                    <div className="testimonial-col-md-auto customers-carousel">
-                      <div className="say">
-                        <img src="static/img/customers/email-verification-service-thechecker-customers-sage.png" />
+                      <div className="testimonial col-12 col-md-4 customer-item">
+                        <div className="say">
+                          <img src="static/img/customers/email-verification-service-thechecker-customers-sage.png" />
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -224,19 +232,22 @@ const index = (props) => {
               </div>
             </div>
           </div>
-          <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
+          
+          <div id="carousel2" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
+            
             <ul className="carousel-indicators">
-              <li data-target="#carousel1" data-slide-to="0" className="active"></li>
-              <li data-target="#carousel1" data-slide-to="1"></li>
-              <li data-target="#carousel1" data-slide-to="2"></li>
+              <li data-target="#carousel2" data-slide-to="0" className="active"></li>
+              <li data-target="#carousel2" data-slide-to="1"></li>
+              <li data-target="#carousel2" data-slide-to="2"></li>
             </ul>
+          
             <div className="carousel-inner">
 
               <div className="carousel-item active text-center">
 
                 <div className="row">
 
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/leadlovers.png" />
@@ -253,7 +264,7 @@ const index = (props) => {
                     </div>
                   </div>
 
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/actualsales.png" />
@@ -276,7 +287,7 @@ const index = (props) => {
 
               <div className="carousel-item">
                 <div className="row">
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/advertisepurple.png" />
@@ -292,7 +303,7 @@ const index = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/inboxhero.png" />
@@ -314,7 +325,7 @@ const index = (props) => {
               <div className="carousel-item">
                 <div className="row">
 
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/rockcontent.png" />
@@ -330,7 +341,7 @@ const index = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/fi.png" />
@@ -348,11 +359,10 @@ const index = (props) => {
                   </div>
                 </div>
               </div>
-
               <div className="carousel-item">
                 <div className="row">
 
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/mediapost.png" />
@@ -368,7 +378,7 @@ const index = (props) => {
                       </div>
                     </div>
                   </div>
-                  <div className="testimonial-col">
+                  <div className="testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5">
                     <i className="ti-quote-left"></i>
                     <div className="say">
                       <img src="static/img/testimonials/eivos.png" />
@@ -388,10 +398,12 @@ const index = (props) => {
               </div>
 
             </div>
+            
             <div className="owl-dots">
-              <a className="left slide-control" href="#carousel1" role="button" data-slide="prev"><i className="fa fa-chevron-left"></i></a>
-              <a className="right slide-control" href="#carousel1" role="button" data-slide="next"><i className="fa fa-chevron-right"></i></a>
+              <a className="left slide-control" href="#carousel2" role="button" data-slide="prev"><i className="fa fa-chevron-left"></i></a>
+              <a className="right slide-control" href="#carousel2" role="button" data-slide="next"><i className="fa fa-chevron-right"></i></a>
             </div>
+
           </div>
         </div>
       </section>

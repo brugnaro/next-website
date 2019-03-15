@@ -211,11 +211,17 @@ a:not([href]):not([tabindex]) {
   color: #7f7c9b
 }
 
-.customers-carousel {
-  padding: 0px !important;
-  width: 16vw !important;
-  /* border: none !important */
-  margin: 0 0 0 10vw !important;
+.customer-slider {
+  padding: 0 0 0 13vw
+}
+
+.customer-item {
+  width: 22vw
+}
+
+.reviews {
+  color: #7f7c97;
+  text-decoration: underline
 }
 
 /*---------------------------------
@@ -356,10 +362,6 @@ a:not([href]):not([tabindex]) {
   }
   .testimonial-col {
     width: 77vw;
-  }
-  .customers-carousel {
-    width: 87vw !important;
-    padding: 0 0 0 17px !important
   }
 }
 
@@ -1206,9 +1208,7 @@ a:not([href]):not([tabindex]) {
   margin-bottom: 20px;
   font-size: 30px;
   line-height: 80px;
-  color: #525274;
-  /*  background: #f2f3f8;
-  border: 1px solid #eee;*/
+  color: #525274
 }
 
 .feature-box-01 h4 {
@@ -1334,6 +1334,9 @@ a:not([href]):not([tabindex]) {
 @media(max-width: 768px) {
   .home-right-inner {
     width: 100vw !important
+  }
+  .customer-slider {
+    padding: 0 0 0 16vw;
   }
 }
 
@@ -8757,9 +8760,8 @@ a:not([href]):not([tabindex]) {
   .owl-dots a {
     padding: 0 11% 0 10%;
   }
-  .customers-carousel {
-    width: 14vw !important;
-    margin: 0px 0 0 31px !important;
+  .customer-slider {
+    padding: 0 0 0 9vw;
   }
 }
 
@@ -10004,5 +10006,17 @@ a:not([href]):not([tabindex]) {
   }
   .sm-p-25-half-b {
     padding-bottom: 25.5%;
+  }
+}
+
+@media (max-width: 425px) {
+  .customer-slider {
+    padding: 0 0 0 25vw;
+  }
+}
+
+@media (max-width: 320px) {
+  .customer-slider {
+    padding: 0 0 0 20vw;
   }
 }

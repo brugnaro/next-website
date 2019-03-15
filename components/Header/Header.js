@@ -128,12 +128,12 @@ const Header = (props) => {
               <ul className="sub-menu">
                 <li>
                   <button onClick={props.en}>
-                    <a>English</a>
+                    <span className='nav-link mega-menu-link'>English</span>
                   </button>
                 </li>
                 <li>
                   <button onClick={props.pt}>
-                    <a>Português</a>
+                    <span className='nav-link mega-menu-link'>Português</span>
                   </button>
                 </li>
               </ul>

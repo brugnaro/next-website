@@ -1683,7 +1683,8 @@ var Header = function Header(props) {
       lineNumber: 130
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 131
@@ -1702,7 +1703,8 @@ var Header = function Header(props) {
       lineNumber: 135
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 136
