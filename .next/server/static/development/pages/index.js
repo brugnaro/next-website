@@ -1753,11 +1753,11 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/components/Icon/Icon.js
 var Icon = function Icon(props) {
   var icon = {
     global: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      src: "../../static/img/icons/global.svg",
+      src: "static/img/icons/global.svg",
       style: {
-        fill: props.color,
-        width: props.size
+        fill: props.color
       },
+      className: props.class,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 6
@@ -1765,14 +1765,182 @@ var Icon = function Icon(props) {
       __self: this
     }),
     accuracy: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      src: "../../static/img/icons/99-accuracy.svg",
+      src: "static/img/icons/99-accuracy.svg",
       style: {
-        color: props.color,
-        width: props.size
+        fill: props.color
       },
+      className: props.class,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 7
+      },
+      __self: this
+    }),
+    protect: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/protect-sender reputation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }),
+    avoid: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/avoid-blockages-ESPs.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }),
+    increase: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/increase-campaigns-ROI.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }),
+    fast: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/fast-email-verification.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }),
+    affordable: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/affordable-prices.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }),
+    filetypes: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/filetypes-compatibility.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }),
+    bounce: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/email-bounce-checker.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }),
+    catch: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/catch-all-checker.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }),
+    emailtypo: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/email-typo-correction.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }),
+    sintax: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/syntax-validation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }),
+    domain: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/domain-validation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }),
+    mailbox: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/mailbox-checker.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }),
+    risk: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/risk-validation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }),
+    freede: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/free-deduplication.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
       },
       __self: this
     })
@@ -5165,8 +5333,10 @@ var index = function index(props) {
       lineNumber: 153
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-shield",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "protect",
+    fill: "#36E8A0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 154
@@ -5206,8 +5376,10 @@ var index = function index(props) {
       lineNumber: 162
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-check",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "avoid",
+    fill: "#36E8A0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 163
@@ -5247,8 +5419,10 @@ var index = function index(props) {
       lineNumber: 171
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-bar-chart",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "increase",
+    fill: "#36E8A0",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 172
@@ -6528,8 +6702,9 @@ var index = function index(props) {
       lineNumber: 448
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-apple",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "accuracy",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 449
@@ -6569,8 +6744,9 @@ var index = function index(props) {
       lineNumber: 457
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-microsoft",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "fast",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 458
@@ -6610,8 +6786,9 @@ var index = function index(props) {
       lineNumber: 466
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-html5",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "affordable",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 467
@@ -6651,8 +6828,9 @@ var index = function index(props) {
       lineNumber: 475
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-css3",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "filetypes",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 476
@@ -6692,8 +6870,9 @@ var index = function index(props) {
       lineNumber: 484
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-wordpress",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "bounce",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 485
@@ -6774,8 +6953,9 @@ var index = function index(props) {
       lineNumber: 502
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-wordpress",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "catch",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 503
@@ -6815,8 +6995,9 @@ var index = function index(props) {
       lineNumber: 511
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-wordpress",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "emailtypo",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 512
@@ -6856,8 +7037,9 @@ var index = function index(props) {
       lineNumber: 520
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-wordpress",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "sintax",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 521
@@ -6897,8 +7079,9 @@ var index = function index(props) {
       lineNumber: 529
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-wordpress",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "domain",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 530
@@ -6938,8 +7121,9 @@ var index = function index(props) {
       lineNumber: 538
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-wordpress",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "mailbox",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 539
@@ -6979,8 +7163,9 @@ var index = function index(props) {
       lineNumber: 547
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-stack-overflow",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "risk",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 548
@@ -7020,8 +7205,9 @@ var index = function index(props) {
       lineNumber: 556
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-stack-overflow",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "freede",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 557

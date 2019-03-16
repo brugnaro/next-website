@@ -151,7 +151,7 @@ const index = (props) => {
             <div className="col-md-4 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-shield"></i>
+                  <Icon class='.injected-svg' name='protect' fill='#36E8A0' />
                 </div>
                 <h3 className="font-alt">Protect Sender Reputation</h3>
                 <p>1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service.</p>
@@ -160,7 +160,7 @@ const index = (props) => {
             <div className="col-md-4 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-check"></i>
+                  <Icon class='.injected-svg' name='avoid' fill='#36E8A0' />
                 </div>
                 <h3 className="font-alt">Avoid Blockages by ESPs</h3>
                 <p>A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability.</p>
@@ -169,7 +169,7 @@ const index = (props) => {
             <div className="col-md-4 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-bar-chart"></i>
+                  <Icon class='.injected-svg' name='increase' fill='#36E8A0' />
                 </div>
                 <h3 className="font-alt">Increase Campaigns ROI</h3>
                 <p>Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI.</p>
@@ -446,7 +446,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-apple"></i>
+                  <Icon class='.injected-svg' name='accuracy' />
                 </div>
                 <h3 className="font-alt">99%+ Accuracy</h3>
                 <p>Our emails marked as "Valid" are covered by our deliverability guarantee.</p>
@@ -455,7 +455,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-microsoft"></i>
+                  <Icon class='.injected-svg' name='fast' />
                 </div>
                 <h3 className="font-alt">Fast Email Verification</h3>
                 <p>Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy.</p>
@@ -464,7 +464,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-html5"></i>
+                  <Icon class='.injected-svg' name='affordable' />
                 </div>
                 <h3 className="font-alt">Affordable Prices</h3>
                 <p>We are (by far) the most cost-effective solution (accurate, fast and affordable).</p>
@@ -473,7 +473,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-css3"></i>
+                  <Icon class='.injected-svg' name='filetypes' />
                 </div>
                 <h3 className="font-alt">Filetypes Compatibility</h3>
                 <p>We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files.</p>
@@ -482,7 +482,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-wordpress"></i>
+                  <Icon class='.injected-svg' name='bounce' />
                 </div>
                 <h3 className="font-alt">Email Bounce Checker</h3>
                 <p>Identifies and tells you which emails will bounce and thus are not safe to send.</p>
@@ -500,7 +500,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-wordpress"></i>
+                  <Icon class='.injected-svg' name='catch' />
                 </div>
                 <h3 className="font-alt">Catch-all Checker</h3>
                 <p>Checks for domains that are catch-all, which return valid for all emails.</p>
@@ -509,7 +509,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-wordpress"></i>
+                  <Icon class='.injected-svg' name='emailtypo' />
                 </div>
                 <h3 className="font-alt">Email Typo Correction</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
@@ -518,7 +518,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-wordpress"></i>
+                  <Icon class='.injected-svg' name='sintax' />
                 </div>
                 <h3 className="font-alt">Syntax Validation</h3>
                 <p>Fully cleans your email list from email addresses with syntax errors.</p>
@@ -527,7 +527,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-wordpress"></i>
+                  <Icon class='.injected-svg' name='domain' />
                 </div>
                 <h3 className="font-alt">Domain Validation</h3>
                 <p>Marks all the emails containing inactive or invalid domains.</p>
@@ -536,7 +536,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-wordpress"></i>
+                  <Icon class='.injected-svg' name='mailbox' />
                 </div>
                 <h3 className="font-alt">Mailbox Checker</h3>
                 <p>Validates the existence of MX records for every email address.</p>
@@ -545,7 +545,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-stack-overflow"></i>
+                  <Icon class='.injected-svg' name='risk' />
                 </div>
                 <h3 className="font-alt">Risk Validation</h3>
                 <p>Identifies and marks all the emails which domain accepts any email in their domain.</p>
@@ -554,7 +554,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-stack-overflow"></i>
+                  <Icon class='.injected-svg' name='freede' />
                 </div>
                 <h3 className="font-alt">Free De-duplication</h3>
                 <p>TheCheckers email checker tool removes all records containing duplicate emails.</p>

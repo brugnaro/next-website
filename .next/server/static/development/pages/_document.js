@@ -1753,11 +1753,11 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/components/Icon/Icon.js
 var Icon = function Icon(props) {
   var icon = {
     global: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      src: "../../static/img/icons/global.svg",
+      src: "static/img/icons/global.svg",
       style: {
-        fill: props.color,
-        width: props.size
+        fill: props.color
       },
+      className: props.class,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 6
@@ -1765,14 +1765,182 @@ var Icon = function Icon(props) {
       __self: this
     }),
     accuracy: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
-      src: "../../static/img/icons/99-accuracy.svg",
+      src: "static/img/icons/99-accuracy.svg",
       style: {
-        color: props.color,
-        width: props.size
+        fill: props.color
       },
+      className: props.class,
       __source: {
         fileName: _jsxFileName,
         lineNumber: 7
+      },
+      __self: this
+    }),
+    protect: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/protect-sender reputation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }),
+    avoid: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/avoid-blockages-ESPs.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }),
+    increase: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/increase-campaigns-ROI.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }),
+    fast: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/fast-email-verification.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }),
+    affordable: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/affordable-prices.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }),
+    filetypes: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/filetypes-compatibility.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }),
+    bounce: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/email-bounce-checker.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }),
+    catch: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/catch-all-checker.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }),
+    emailtypo: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/email-typo-correction.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 16
+      },
+      __self: this
+    }),
+    sintax: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/syntax-validation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }),
+    domain: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/domain-validation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }),
+    mailbox: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/mailbox-checker.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }),
+    risk: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/risk-validation.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }),
+    freede: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      src: "static/img/icons/free-deduplication.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
       },
       __self: this
     })

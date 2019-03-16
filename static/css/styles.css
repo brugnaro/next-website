@@ -224,6 +224,11 @@ a:not([href]):not([tabindex]) {
   margin: 0 5px 0 0
 }
 
+.injected-svg {
+  width: 106px;
+  padding: 25px;
+}
+
 /*---------------------------------
 * 01. Loading
 -----------------------------------*/
