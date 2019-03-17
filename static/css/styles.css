@@ -32,6 +32,7 @@ Table of contents
 * 02. Common
 -----------------------------------*/
 
+html,
 body {
   font-family: 'Averta', sans-serif;
   font-size: 14px;
@@ -40,6 +41,7 @@ body {
   font-smoothing: antialiased;
   font-weight: 300;
   overflow-x: hidden;
+  scroll-behavior: smooth
 }
 
 img {
@@ -227,6 +229,12 @@ a:not([href]):not([tabindex]) {
 .injected-svg {
   width: 106px;
   padding: 25px;
+}
+
+.title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #525274;
 }
 
 /*---------------------------------

@@ -842,24 +842,32 @@ function (_Component) {
           lineNumber: 9
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        href: "static/plugin/font-awesome/css/fontawesome-all.min.css",
-        rel: "stylesheet",
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
+        name: "msapplication-TileColor",
+        content: "#ffffff",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 10
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
+        name: "msapplication-TileImage",
+        content: "static/favicon/ms-icon-144x144.png",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        href: "static/plugin/themify-icons/themify-icons.css",
-        rel: "stylesheet",
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
+        name: "theme-color",
+        content: "#ffffff",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        href: "static/plugin/bootstrap/css/bootstrap.min.css",
+        href: "static/plugin/font-awesome/css/fontawesome-all.min.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -867,7 +875,7 @@ function (_Component) {
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
-        href: "static/plugin/owl-carousel/css/owl.carousel.min.css",
+        href: "static/plugin/themify-icons/themify-icons.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
@@ -875,11 +883,27 @@ function (_Component) {
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        href: "static/plugin/bootstrap/css/bootstrap.min.css",
+        rel: "stylesheet",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        href: "static/plugin/owl-carousel/css/owl.carousel.min.css",
+        rel: "stylesheet",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
         href: "static/plugin/magnific/magnific-popup.css",
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 19
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -887,7 +911,7 @@ function (_Component) {
         rel: "stylesheet",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 21
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -896,7 +920,15 @@ function (_Component) {
         id: "color_theme",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 22
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
+        rel: "stylesheet",
+        href: "https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -905,7 +937,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-57x57.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 26
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -914,7 +946,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-60x60.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 27
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -923,7 +955,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-72x72.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 28
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -932,7 +964,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-76x76.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 29
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -941,7 +973,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-114x114.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 30
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -950,7 +982,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-120x120.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 31
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -959,7 +991,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-144x144.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 32
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -968,7 +1000,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-152x152.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 33
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -977,7 +1009,7 @@ function (_Component) {
         href: "static/favicon/apple-icon-180x180.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -987,7 +1019,7 @@ function (_Component) {
         href: "static/favicon/android-icon-192x192.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 35
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -997,7 +1029,7 @@ function (_Component) {
         href: "static/favicon/favicon-32x32.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -1007,7 +1039,7 @@ function (_Component) {
         href: "static/favicon/favicon-96x96.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 37
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -1017,7 +1049,7 @@ function (_Component) {
         href: "static/favicon/favicon-16x16.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 38
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("link", {
@@ -1025,31 +1057,7 @@ function (_Component) {
         href: "static/favicon/manifest.json",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        name: "msapplication-TileColor",
-        content: "#ffffff",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        name: "msapplication-TileImage",
-        content: "static/favicon/ms-icon-144x144.png",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("meta", {
-        name: "theme-color",
-        content: "#ffffff",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 39
         },
         __self: this
       }));
