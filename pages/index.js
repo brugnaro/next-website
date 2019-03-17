@@ -491,10 +491,10 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-wordpress"></i>
+                  <Icon class='.injected-svg' name='antigrey' />
                 </div>
-                <h3 className="font-alt">Global Accuracy</h3>
-                <p>We validate emails of all types and all major providers from anywhere in the world.</p>
+                <h3 className="font-alt">Anti-Greylisting</h3>
+                <p>Our proprietary algorithm gives you the most accurate email validation results.</p>
               </div>
             </div>
             <div className="col-md-6 col-lg-3 m-15px-tb">
@@ -563,7 +563,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-stack-overflow"></i>
+                  <Icon class='.injected-svg' name='spantrap' />
                 </div>
                 <h3 className="font-alt">Spam Trap Remover</h3>
                 <p>Our email verifier tool removes all address identified as a spam trap.</p>
@@ -572,7 +572,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-stack-overflow"></i>
+                  <Icon class='.injected-svg' name='disposables' />
                 </div>
                 <h3 className="font-alt">Disposables Checker</h3>
                 <p>Checks against our frequently updated temporary email database.</p>
@@ -581,7 +581,7 @@ const index = (props) => {
             <div className="col-md-6 col-lg-3 m-15px-tb">
               <div className="feature-box">
                 <div className="icon">
-                  <i className="ti-stack-overflow"></i>
+                  <Icon class='.injected-svg' name='payonly' />
                 </div>
                 <h3 className="font-alt">Pay Only For Results</h3>
                 <p>If we can't verify a certain email at any moment, we refund you the credits.</p>

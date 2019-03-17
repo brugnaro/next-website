@@ -3,7 +3,7 @@ import ReactSVG from 'react-svg'
 const Icon = (props) => {
 
   const icon = {
-    global: <ReactSVG src='static/img/icons/global.svg' style={{ fill: props.color }} className={props.class} />,
+    global: <ReactSVG src='static/img/icons/global-lang.svg' style={{ fill: props.color }} className={props.class} />,
     accuracy: <ReactSVG src='static/img/icons/99-accuracy.svg' style={{ fill: props.color }} className={props.class} />,
     protect: <ReactSVG src='static/img/icons/protect-sender reputation.svg' style={{ fill: props.color }} className={props.class} />,
     avoid: <ReactSVG src='static/img/icons/avoid-blockages-ESPs.svg' style={{ fill: props.color }} className={props.class} />,
@@ -19,10 +19,13 @@ const Icon = (props) => {
     mailbox: <ReactSVG src='static/img/icons/mailbox-checker.svg' style={{ fill: props.color }} className={props.class} />,
     risk: <ReactSVG src='static/img/icons/risk-validation.svg' style={{ fill: props.color }} className={props.class} />,
     freede: <ReactSVG src='static/img/icons/free-deduplication.svg' style={{ fill: props.color }} className={props.class} />,
+    spantrap: <ReactSVG src='static/img/icons/spam-trap-remover.svg' style={{ fill: props.color }} className={props.class} />,
+    disposables: <ReactSVG src='static/img/icons/disposables-checker.svg' style={{ fill: props.color }} className={props.class} />,
+    payonly: <ReactSVG src='static/img/icons/pay-only-for-results.svg' style={{ fill: props.color }} className={props.class} />,
+    antigrey: <ReactSVG src='static/img/icons/anti-greylisting.svg' style={{ fill: props.color }} className={props.class} />
   };
 
   return icon[props.name]
-
 };
 
 export default Icon;

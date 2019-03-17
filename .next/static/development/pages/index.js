@@ -1659,7 +1659,7 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/components/Icon/Icon.js
 var Icon = function Icon(props) {
   var icon = {
     global: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      src: "static/img/icons/global.svg",
+      src: "static/img/icons/global-lang.svg",
       style: {
         fill: props.color
       },
@@ -1847,6 +1847,54 @@ var Icon = function Icon(props) {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 21
+      },
+      __self: this
+    }),
+    spantrap: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      src: "static/img/icons/spam-trap-remover.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }),
+    disposables: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      src: "static/img/icons/disposables-checker.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }),
+    payonly: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      src: "static/img/icons/pay-only-for-results.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }),
+    antigrey: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      src: "static/img/icons/anti-greylisting.svg",
+      style: {
+        fill: props.color
+      },
+      className: props.class,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
       },
       __self: this
     })
@@ -24703,8 +24751,9 @@ var index = function index(props) {
       lineNumber: 493
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-wordpress",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "antigrey",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 494
@@ -24717,13 +24766,13 @@ var index = function index(props) {
       lineNumber: 496
     },
     __self: this
-  }, "Global Accuracy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Anti-Greylisting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 497
     },
     __self: this
-  }, "We validate emails of all types and all major providers from anywhere in the world."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Our proprietary algorithm gives you the most accurate email validation results."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
@@ -25038,8 +25087,9 @@ var index = function index(props) {
       lineNumber: 565
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-stack-overflow",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "spantrap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 566
@@ -25079,8 +25129,9 @@ var index = function index(props) {
       lineNumber: 574
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-stack-overflow",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "disposables",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 575
@@ -25120,8 +25171,9 @@ var index = function index(props) {
       lineNumber: 583
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-stack-overflow",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+    class: ".injected-svg",
+    name: "payonly",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 584
