@@ -56,12 +56,15 @@ const index = props => {
                 </div>
               </div>
 
-              <div className="col-md-12 col-lg-12 col-xl-12">
-                <div className="section-title">
-                  <p><u>Trusted by 1,000's</u> of smart teams in <u>130+ countries</u></p>
-                </div>
-              </div>
+
               <div className="container text-center">
+                
+                <div className="col-md-12 col-lg-12 col-xl-12">
+                  <div className="section-title">
+                    <p><u>Trusted by 1,000's</u> of smart teams in <u>130+ countries</u></p>
+                  </div>
+                </div>
+
                 <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
                   <ul className="carousel-indicators">
                     <li data-target="#carousel1" data-slide-to="0" className="active"></li>
