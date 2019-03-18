@@ -1088,7 +1088,7 @@ a:not([href]):not([tabindex]) {
   max-width: 100%;
   font-weight: 400;
   font-size: 15px;
-  padding: 20px 0 25px;
+  padding: 0px;
   margin: 0;
   line-height: 28px;
 }
