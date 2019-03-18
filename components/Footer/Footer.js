@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Footer = () =>
   <footer className="footer-light">
     <section className="footer-section">
@@ -18,9 +20,9 @@ const Footer = () =>
           <div className="col-6 col-md-6 col-lg-2 sm-m-15px-tb">
             <h4 className="font-alt">Product</h4>
             <ul className="fot-link">
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Integrations</a></li>
-              <li><a href="#">Reviews</a></li>
+              <li><Link href="/#features"><a>Features</a></Link></li>
+              <li><Link href="/integrations"><a>Integrations</a></Link></li>
+              <li><Link href="/#reviews"><a>Reviews</a></Link></li>
               <li><a href="#">Affiliates</a></li>
               <li><a href="#">Server Status</a></li>
               <li><a href="#">API Docs</a></li>

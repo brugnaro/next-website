@@ -179,7 +179,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 var _jsxFileName = "/home/marcos/Documentos/next-website/components/Footer/Footer.js";
+
 
 
 var Footer = function Footer() {
@@ -187,68 +190,68 @@ var Footer = function Footer() {
     className: "footer-light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 2
+      lineNumber: 4
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 3
+      lineNumber: 5
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 7
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12 col-lg-4 sm-m-15px-tb md-m-30px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 8
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 9
     },
     __self: this
   }, "About Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "footer-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 10
     },
     __self: this
   }, "TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: this
   }), "+1 (888) 964-2250", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "social-icons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -257,20 +260,20 @@ var Footer = function Footer() {
     href: "https://www.facebook.com/thecheckerco/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-facebook-f",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -279,20 +282,20 @@ var Footer = function Footer() {
     href: "https://twitter.com/thecheckerco",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-twitter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -301,20 +304,20 @@ var Footer = function Footer() {
     href: "https://www.linkedin.com/company/thechecker.co/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-linkedin-in",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 16
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -323,424 +326,442 @@ var Footer = function Footer() {
     href: "https://github.com/thecheckerco",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-github",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 21
     },
     __self: this
   }, "Product"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 22
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 23
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, "Features")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Integrations")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/#features",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 23
     },
     __self: this
-  }, "Reviews")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, "Features"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/integrations",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
+    },
+    __self: this
+  }, "Integrations"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/#reviews",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Reviews"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
     },
     __self: this
   }, "Affiliates")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 27
     },
     __self: this
   }, "Server Status")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 28
     },
     __self: this
   }, "API Docs")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 32
     },
     __self: this
   }, "Legal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 33
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 34
     },
     __self: this
   }, "Privacy / GDPR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 35
     },
     __self: this
   }, "Terms of Use")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 36
     },
     __self: this
   }, "Data Protection")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 37
     },
     __self: this
   }, "Anti-Spam Policy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: this
   }, "Cookie Policy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: this
   }, "TC Guarantee")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 43
     },
     __self: this
   }, "Solutions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 44
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 45
     },
     __self: this
   }, "Enterprise")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 46
     },
     __self: this
   }, "Sales Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: this
   }, "Digital Agencies")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: this
   }, "E-commerces")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: this
   }, "SaaS Platforms")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 53
     },
     __self: this
   }, "Compare"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 54
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: this
   }, "TC vs. Neverbounce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: this
   }, "TC vs. BriteVerify")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     },
     __self: this
   }, "TC vs. ZeroBounce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: this
   }, "TC vs. Kickbox")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
   }, "TC vs. Bounceless.io")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 60
     },
     __self: this
   }, "TC vs. EmailListVerify"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-copy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 64
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 65
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 66
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 67
     },
     __self: this
   }, "1395 Brickell Ave. Suite 800, Miami, FL 33131")))))));
