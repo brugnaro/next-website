@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
 
-const Header = (props) => {
-  return <header>
+const Header = props =>
+  <header>
     <nav className="navbar header-nav fixed-top navbar-expand-lg header-nav-light">
       <div className="container">
         <Link href='/'>
@@ -147,7 +147,6 @@ const Header = (props) => {
         </div>
       </div>
     </nav>
-  </header>
-}
+  </header>;
 
 export default Header;

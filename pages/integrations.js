@@ -9,8 +9,6 @@ const integrations = () => {
     return {}
   }
 
-  console.log(Router)
-
   const { t, i18n } = useTranslation();
 
   return <div>

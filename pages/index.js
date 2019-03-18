@@ -7,7 +7,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 
 const index = props => {
 
-  index.getInitialProps = (props) => {
+  index.getInitialProps = props => {
     let lang = 'en';
     let params = 'test'
     return {
@@ -30,14 +30,15 @@ const index = props => {
     />
     <main>
 
-      <section id="home" className="home-banner-01">
-        <div className="container">
-          <div className="row full-screen align-items-center">
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+        <section id="home" className="home-banner-01">
+          <div className="container">
+            <div className="row full-screen align-items-center">
 
-            <div className="col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t">
-              <ScrollAnimation animateIn="fadeIn">
-                <div className="home-text-center p-50px-r md-p-0px-r stars title">
-                  <h2 className="font-alt" params={props.lang}>{t('themost')}</h2>
+              <div className="col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t">
+
+                <div className="home-text-center p-50px-r md-p-0px-r stars">
+                  <h1 className="font-alt" params={props.lang}>{t('themost')}</h1>
                   <p>
                     Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>
                     and<b> email list cleaning</b> solutions that improve your data quality and email marketing ROI.
@@ -46,19 +47,15 @@ const index = props => {
                   <a href="#" className="m-btn m-btn-theme2nd">Try For Free</a>
                   <a href="#why" className="m-btn m-btn-white" data-text="Free Trial">Learn More</a>
                 </div>
-              </ScrollAnimation>
-            </div>
 
-            <div className="col-md-12 col-lg-6 col-xl-6 home-right m-50px-t md-m-0px-t">
-              <ScrollAnimation animateIn="fadeIn">
+              </div>
+
+              <div className="col-md-12 col-lg-6 col-xl-6 home-right m-50px-t md-m-0px-t">
                 <div className="home-right-inner">
                   <img src="static/img/email-verification-service-thechecker-screen.png" title="" alt="" />
                 </div>
-              </ScrollAnimation>
-            </div>
+              </div>
 
-
-            <ScrollAnimation animateIn="fadeIn">
               <div className="col-md-12 col-lg-12 col-xl-12">
                 <div className="section-title">
                   <p><u>Trusted by 1,000's</u> of smart teams in <u>130+ countries</u></p>
@@ -145,24 +142,27 @@ const index = props => {
                   </div>
                 </div>
               </div>
-            </ScrollAnimation>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
+      </ScrollAnimation>
 
       <section id="why" className="section">
         <div className="container">
-          <div className="row justify-content-center m-45px-b md-m-25px-b">
-            <div className="col-md-10 col-lg-8 col-xl-7">
-              <div className="section-title">
-                <h2 className="theme-after-bg">Why To Use Email Verification</h2>
-                <p>Based on the last <u>100 million emails</u> we verified in 2018, <u>23,51% would bounce</u>.<br />Have you used an email list cleaning service recently?</p>
+
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+            <div className="row justify-content-center m-45px-b md-m-25px-b">
+              <div className="col-md-10 col-lg-8 col-xl-7">
+                <div className="section-title">
+                  <h2 className="theme-after-bg">Why To Use Email Verification</h2>
+                  <p>Based on the last <u>100 million emails</u> we verified in 2018, <u>23,51% would bounce</u>.<br />Have you used an email list cleaning service recently?</p>
+                </div>
               </div>
             </div>
-          </div>
+          </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row">
               <div className="col-md-4 m-15px-tb">
                 <div className="feature-box">
@@ -197,7 +197,7 @@ const index = props => {
         </div>
       </section>
 
-      <ScrollAnimation animateIn="fadeIn">
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <section className="section section-effect right p-40px-b">
           <div className="container">
             <div className="row align-items-center">
@@ -217,7 +217,7 @@ const index = props => {
         </section>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn="fadeIn">
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <section className="section section-effect left p-40px-b">
           <div className="container">
             <div className="row align-items-center">
@@ -240,7 +240,7 @@ const index = props => {
       </ScrollAnimation>
 
 
-      <ScrollAnimation animateIn="fadeIn">
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <section className="section section-effect right p-40px-b">
           <div className="container">
             <div className="row align-items-center">
@@ -261,7 +261,7 @@ const index = props => {
         </section>
       </ScrollAnimation>
 
-      <ScrollAnimation animateIn="fadeIn">
+      <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
         <section className="section section-effect left p-40px-b">
           <div className="container">
             <div className="row align-items-center">
@@ -285,7 +285,7 @@ const index = props => {
       <section id="carousel" className="section">
         <div className="container">
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row justify-content-center m-60px-b md-m-40px-b">
               <div className="col-md-10 col-lg-8 col-xl-7">
                 <div className="section-title text-center">
@@ -310,7 +310,7 @@ const index = props => {
               <li data-target="#carousel2" data-slide-to="2"></li>
             </ul>
 
-            <ScrollAnimation animateIn="fadeIn">
+            <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
               <div className="carousel-inner">
 
                 <div className="carousel-item active text-center">
@@ -478,7 +478,7 @@ const index = props => {
       <section id="features" className="section">
         <div className="container">
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row justify-content-center m-45px-b md-m-25px-b">
               <div className="col-md-10 col-lg-8 col-xl-7">
                 <div className="section-title">
@@ -489,7 +489,7 @@ const index = props => {
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row">
               <div className="col-md-6 col-lg-3 m-15px-tb">
                 <div className="feature-box">
@@ -643,7 +643,7 @@ const index = props => {
 
       <section id="reviews" className="section">
         <div className="container">
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row justify-content-center m-45px-b md-m-25px-b">
               <div className="col-md-10 col-lg-8 col-xl-7">
                 <div className="section-title">
@@ -654,7 +654,7 @@ const index = props => {
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row">
               <div className="col-12 col-md-6 col-lg-4 m-15px-tb">
                 <div className="feature-box-01">
@@ -691,7 +691,7 @@ const index = props => {
       <section id="cta" className="section gray-bg text-center">
         <div className="container">
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row justify-content-center m-45px-b md-m-25px-b">
               <div className="col-md-10 col-lg-8 col-xl-7">
                 <div className="section-title text-center">
@@ -703,7 +703,7 @@ const index = props => {
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div className="row justify-content-center m-60px-b md-m-25px-b">
               <div className="col-12 col-md-12 col-lg-12">
                 <div className="cta">
@@ -713,7 +713,7 @@ const index = props => {
             </div>
           </ScrollAnimation>
 
-          <ScrollAnimation animateIn="fadeIn">
+          <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
             <div id="carousel1" className="carousel slide" data-ride="carousel" data-interval="3500" data-pause="hover">
               <ul className="carousel-indicators">
                 <li data-target="#carousel1" data-slide-to="0" className="active"></li>
