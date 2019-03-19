@@ -1093,7 +1093,7 @@ a:not([href]):not([tabindex]) {
   line-height: 28px;
 }
 
-.carousel-title p{
+.carousel-title p {
   padding: 0px 0 3vh !important
 }
 
@@ -8770,13 +8770,16 @@ a:not([href]):not([tabindex]) {
 
 @media(min-width: 2560px) {
   .home-right-inner {
-    width: 25vw !important;
+    width: 24vw !important;
   }
   .testimonial-col {
     width: 19vw;
   }
   .owl-dots a {
     padding: 0 11% 0 10%;
+  }
+  .m-50px-t {
+    margin-top: 10vh;
   }
 }
 
@@ -10021,5 +10024,11 @@ a:not([href]):not([tabindex]) {
   }
   .sm-p-25-half-b {
     padding-bottom: 25.5%;
+  }
+}
+
+@media(min-width: 2880px) {
+  .home-right-inner {
+    width: 22vw !important;
   }
 }
