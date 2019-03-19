@@ -317,7 +317,6 @@ a:not([href]):not([tabindex]) {
 .section-title {
   position: relative;
   text-align: center;
-  padding: 50px 0 5px 0
 }
 
 .section-title label {
@@ -895,7 +894,7 @@ a:not([href]):not([tabindex]) {
 -----------------------------------*/
 
 .full-screen {
-  min-height: 604px;
+  min-height: 100vh;
 }
 
 .bg-effect {
@@ -1052,8 +1051,7 @@ a:not([href]):not([tabindex]) {
 .home-banner-01 {
   overflow: hidden;
   position: relative;
-  background: url(../../static/img/email-verification-service-bg-home.png) no-repeat scroll top right / cover;
-  background-size: 104vw 650px
+  background: url(../../static/img/email-verification-service-bg-home.png) no-repeat scroll top right / cover
 }
 
 .font-alt span {
@@ -1081,7 +1079,7 @@ a:not([href]):not([tabindex]) {
 .home-banner-01 h1 {
   font-size: 36px;
   font-weight: 600;
-  margin: 26px 0 20px;
+  margin: 0 0 15px;
   letter-spacing: 1.4px;
   color: #525274;
 }
@@ -1090,8 +1088,13 @@ a:not([href]):not([tabindex]) {
   max-width: 100%;
   font-weight: 400;
   font-size: 15px;
+  padding: 0px 0 6vh;
+  margin: 0;
   line-height: 28px;
-  margin: 0 0 25px 0
+}
+
+.carousel-title p{
+  padding: 0px 0 3vh !important
 }
 
 .home-banner-01 .subscribe-box .form-control {
@@ -1154,7 +1157,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .home-right-inner {
-  width: 45vw !important;
+  width: 47vw !important;
 }
 
 @media(max-width: 767px) {
@@ -1348,8 +1351,7 @@ a:not([href]):not([tabindex]) {
 
 @media(max-width: 768px) {
   .home-right-inner {
-    width: 100vw !important;
-    margin: 0 0 0 15px
+    width: 100vw !important
   }
   .flag svg {
     padding: 2px 0 0 0;
@@ -2844,7 +2846,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .m-50px-t {
-  margin: 86px 0 0 -15px
+  margin-top: 6vh
 }
 
 .m-55px-t {
@@ -4908,8 +4910,8 @@ a:not([href]):not([tabindex]) {
 }
 
 .p-80px-tb {
-  padding: 13px 0 0 12px;
-  margin: 80px 0 0 0px
+  padding-top: 5vh;
+  padding-bottom: 0vh
 }
 
 .p-85px-tb {
@@ -5233,7 +5235,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .p-50px-r {
-  padding-right: 50px
+  padding: 0px
 }
 
 .p-55px-r {
@@ -8768,19 +8770,13 @@ a:not([href]):not([tabindex]) {
 
 @media(min-width: 2560px) {
   .home-right-inner {
-    width: 27vw !important;
+    width: 25vw !important;
   }
   .testimonial-col {
     width: 19vw;
   }
   .owl-dots a {
     padding: 0 11% 0 10%;
-  }
-  .home-banner-01 {
-    background-size: 110vw 747px;
-  }
-  .full-screen {
-    min-height: 833px;
   }
 }
 
@@ -10027,22 +10023,3 @@ a:not([href]):not([tabindex]) {
     padding-bottom: 25.5%;
   }
 }
-
-@media(max-width: 1280px) {
-  .full-screen {
-    min-height: 833px;
-  }
-}
-
-@media(max-width: 1440px) {
-  .full-screen {
-    min-height: 833px;
-  }
-}
-
-@media(max-height: 300px) {
-  .full-screen {
-    min-height: 633px;
-  }
-}
-
