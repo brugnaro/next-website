@@ -1162,6 +1162,7 @@ var Header = function Header(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "static/img/email-verification-service-logo-thechecker.png",
+    alt: "TheChecker",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 10
@@ -2554,6 +2555,36 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
+/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
 }
 
 /***/ }),
@@ -4748,16 +4779,18 @@ i18next__WEBPACK_IMPORTED_MODULE_0___default.a.use(react_i18next__WEBPACK_IMPORT
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/commonjs/index.js");
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_i18next__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components */ "./components/index.js");
-/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./i18n */ "./pages/i18n.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../routes */ "./routes.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-animate-on-scroll */ "react-animate-on-scroll");
-/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/commonjs/index.js");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_i18next__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components */ "./components/index.js");
+/* harmony import */ var _i18n__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./i18n */ "./pages/i18n.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../routes */ "./routes.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-animate-on-scroll */ "react-animate-on-scroll");
+/* harmony import */ var react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6__);
+
 var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
 
 
@@ -4767,6 +4800,8 @@ var _jsxFileName = "/home/marcos/Documentos/next-website/pages/index.js";
 
 
 var index = function index(props) {
+  var _React$createElement, _React$createElement2, _React$createElement3;
+
   index.getInitialProps = function (props) {
     var lang = 'en';
     var params = 'test';
@@ -4776,23 +4811,23 @@ var index = function index(props) {
     };
   };
 
-  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_1__["useTranslation"])(),
+  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_2__["useTranslation"])(),
       t = _useTranslation.t,
       i18n = _useTranslation.i18n;
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 21
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
     },
     __self: this
-  }, "Email Verification & List Cleaning Service | TheChecker Email Verifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Header"], {
+  }, "Email Verification & List Cleaning Service | TheChecker Email Verifier"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Header"], {
     contactus: t('contactus'),
     en: function en() {
       return i18n.changeLanguage('en');
@@ -4808,13 +4843,13 @@ var index = function index(props) {
       lineNumber: 23
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("main", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
@@ -4822,7 +4857,7 @@ var index = function index(props) {
       lineNumber: 33
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     id: "home",
     className: "home-banner-01",
     __source: {
@@ -4830,35 +4865,35 @@ var index = function index(props) {
       lineNumber: 34
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row full-screen align-items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 38
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "home-text-center p-50px-r md-p-0px-r stars",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
     className: "font-alt",
     params: props.lang,
     __source: {
@@ -4866,43 +4901,43 @@ var index = function index(props) {
       lineNumber: 41
     },
     __self: this
-  }, t('themost')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, t('themost')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 42
     },
     __self: this
-  }, "Get rid of email bounces and bad email addresses with our proven high-quality yet affordable", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+  }, "Get rid of email bounces and bad email addresses with our proven high-quality yet affordable", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 43
     },
     __self: this
-  }, " email verification "), "and", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+  }, " email verification "), "and", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 44
     },
     __self: this
-  }, " email list cleaning"), " solutions that improve your data quality and email marketing ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, " email list cleaning"), " solutions that improve your data quality and email marketing ROI."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
     },
     __self: this
-  }, "Trusted and rated ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Trusted and rated ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
     },
     __self: this
-  }, "\u272E\u272E\u272E\u272E\u272E "), " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+  }, "\u272E\u272E\u272E\u272E\u272E "), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 46
     },
     __self: this
-  }, "4.8"), "/5 based on ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "4.8"), "/5 based on ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "reviews",
     href: "#reviews",
     __source: {
@@ -4910,7 +4945,7 @@ var index = function index(props) {
       lineNumber: 46
     },
     __self: this
-  }, "200+ reviews"), "."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "200+ reviews"), "."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     className: "m-btn m-btn-theme2nd",
     __source: {
@@ -4918,7 +4953,7 @@ var index = function index(props) {
       lineNumber: 47
     },
     __self: this
-  }, "Try For Free"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, "Try For Free"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#why",
     className: "m-btn m-btn-white",
     "data-text": "Free Trial",
@@ -4927,69 +4962,69 @@ var index = function index(props) {
       lineNumber: 48
     },
     __self: this
-  }, "Learn More"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Learn More"))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-12 col-lg-6 col-xl-6 home-right m-50px-t md-m-0px-t",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 53
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "home-right-inner",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: "static/img/email-verification-service-thechecker-screen.png",
     title: "",
-    alt: "",
+    alt: "Email-Verification",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 59
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-12 col-lg-12 col-xl-12",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "section-title carousel-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section-title carousel-title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 63
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 63
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
+  }, "Trusted by 1,000's"), " of smart teams in ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 63
     },
     __self: this
-  }, "Trusted by 1,000's"), " of smart teams in ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 64
-    },
-    __self: this
-  }, "130+ countries")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "130+ countries")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: "carousel1",
     className: "carousel slide",
     "data-ride": "carousel",
@@ -4997,1023 +5032,1035 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 67
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 69
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     "data-target": "#carousel1",
     "data-slide-to": "0",
     className: "active",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    "data-target": "#carousel1",
+    "data-slide-to": "1",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 71
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     "data-target": "#carousel1",
-    "data-slide-to": "1",
+    "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 72
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    "data-target": "#carousel1",
-    "data-slide-to": "2",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container customer-slider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container customer-slider",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-inner",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-item active",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-item active",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 77
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 79
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/asics.png",
+    alt: "Asics",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 80
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/asics.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 83
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 84
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/century.png",
+    alt: "Century",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 85
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/century.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 89
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
+    alt: "Email-verification-service",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 90
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 93
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 94
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
+    alt: "Email-verification-service-thechecker-customers-ebanx",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 95
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 98
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 99
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
+    alt: "Email-verification-service-thechecker-customers-wework",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 100
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 103
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 104
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-sage.png",
+    alt: "Email-verification-service-thechecker-customers-sage",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 105
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-sage.png",
+  }))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 106
+      lineNumber: 110
     },
     __self: this
-  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 111
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 112
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 113
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-saleshandy.png",
+    alt: "Email verification service thechecker customers-saleshandy",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 114
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-saleshandy.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 117
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 118
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-vindi.png",
+    alt: "Email verification service thechecker customers vindi",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 119
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-vindi.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 122
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 123
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png",
+    alt: "Email verification service thechecker customers wyssinstitute",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 124
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 125
+      lineNumber: 127
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 128
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-growbots.png",
+    alt: "Email verification service thechecker customers growbots",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 129
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-growbots.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 130
+      lineNumber: 132
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 133
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png",
+    alt: "Email verification service thechecker customers university of toronto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 134
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 137
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 138
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png",
+    alt: "Email verification service thechecker customers leadcrunch",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 139
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 140
-    },
-    __self: this
-  }))))))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }))))))))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     id: "why",
     className: "section",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 154
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 155
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 156
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 157
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 158
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center m-45px-b md-m-25px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 159
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-10 col-lg-8 col-xl-7",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "section-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 160
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section-title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 161
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "theme-after-bg",
+  }, "Why To Use Email Verification"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 162
     },
     __self: this
-  }, "Why To Use Email Verification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Based on the last ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 162
     },
     __self: this
-  }, "Based on the last ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
+  }, "100 million emails"), " we verified in 2018, ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 162
     },
     __self: this
-  }, "100 million emails"), " we verified in 2018, ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
+  }, "23,51% would bounce"), ".", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 163
+      lineNumber: 162
     },
     __self: this
-  }, "23,51% would bounce"), ".", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 163
-    },
-    __self: this
-  }), "Have you used an email list cleaning service recently?"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }), "Have you used an email list cleaning service recently?"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 169
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 170
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-4 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 171
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 172
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 173
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
     class: ".injected-svg",
     name: "protect",
     fill: "#36E8A0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 174
+      lineNumber: 173
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175
+    },
+    __self: this
+  }, "Protect Sender Reputation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 176
     },
     __self: this
-  }, "Protect Sender Reputation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 177
+      lineNumber: 179
     },
     __self: this
-  }, "1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-4 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 180
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 181
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 182
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
     class: ".injected-svg",
     name: "avoid",
     fill: "#36E8A0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 183
+      lineNumber: 182
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 184
+    },
+    __self: this
+  }, "Avoid Blockages by ESPs"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 185
     },
     __self: this
-  }, "Avoid Blockages by ESPs"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 186
+      lineNumber: 188
     },
     __self: this
-  }, "A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-4 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 189
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 190
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 191
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
     class: ".injected-svg",
     name: "increase",
     fill: "#36E8A0",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 192
+      lineNumber: 191
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 193
+    },
+    __self: this
+  }, "Increase Campaigns ROI"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 194
     },
     __self: this
-  }, "Increase Campaigns ROI"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 195
-    },
-    __self: this
-  }, "Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI."))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI."))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 203
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    className: "section section-effect right p-40px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 204
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "section section-effect right p-40px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 205
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 206
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row align-items-center",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 207
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box-02 title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 208
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-02 title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+    className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 209
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "theme2nd-color",
+  }, "In-forms real-time email validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 210
     },
     __self: this
-  }, "In-forms real-time email validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "m-20px-b font-alt",
+  }, "Get rid of the bad emails before they enter your list"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 211
     },
     __self: this
-  }, "Get rid of the bad emails before they enter your list"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 212
     },
     __self: this
-  }, "Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 213
-    },
-    __self: this
-  }, "Install to verify email address online ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, "Install to verify email address online ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 213
+      lineNumber: 212
     },
     __self: this
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t real-email",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 215
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/features/template.png",
+    title: "",
+    alt: "Template",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 216
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/features/template.png",
-    title: "",
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 217
-    },
-    __self: this
-  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  })))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 223
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    className: "section section-effect left p-40px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 224
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "section section-effect left p-40px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 225
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 226
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row align-items-center",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 sm-m-30px-t order-last order-md-first",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 227
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 sm-m-30px-t order-last order-md-first",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/features/email-verification-service-feature-2.png",
+    title: "",
+    alt: "Email verification service feature-2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 228
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/features/email-verification-service-feature-2.png",
-    title: "",
-    alt: "",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 229
+      lineNumber: 230
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box-02 title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 231
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-02 title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+    className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 232
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "theme2nd-color",
+  }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 233
+      lineNumber: 234
     },
     __self: this
-  }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+  }, "Connect with your favorite email marketing tool"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 236
     },
     __self: this
-  }, "Connect with your favorite email marketing tool"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 237
     },
     __self: this
-  }, "TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 238
-    },
-    __self: this
-  }, "Explore all integrations ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, "Explore all integrations ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 238
+      lineNumber: 237
     },
     __self: this
-  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  })))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 246
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    className: "section section-effect right p-40px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 247
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "section section-effect right p-40px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 248
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 249
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row align-items-center",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 250
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box-02 title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 251
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-02 title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+    className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 252
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "theme2nd-color",
+  }, "Bulk email list verification"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 253
     },
     __self: this
-  }, "Bulk email list verification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "m-20px-b font-alt",
+  }, "Easily clean your current email lists and databases"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 254
     },
     __self: this
-  }, "Easily clean your current email lists and databases"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 255
     },
     __self: this
-  }, "If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 256
     },
     __self: this
-  }, "Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 257
-    },
-    __self: this
-  }, "Verify email list now ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, "Verify email list now ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
+      lineNumber: 256
     },
     __self: this
-  })))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 259
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/features/email-verification-service-feature-3.png",
+    title: "",
+    alt: "Email verification service feature 3",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 260
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/features/email-verification-service-feature-3.png",
-    title: "",
-    alt: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 261
-    },
-    __self: this
-  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  })))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 267
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+    className: "section section-effect left p-40px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 268
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-    className: "section section-effect left p-40px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 269
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 270
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row align-items-center",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 sm-m-30px-t order-last order-md-first",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 271
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 sm-m-30px-t order-last order-md-first",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/features/email-verification-service-feature-4.png",
+    title: "",
+    alt: "email verification service feature 4",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 272
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/features/email-verification-service-feature-4.png",
-    title: "",
-    alt: "",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273
+      lineNumber: 274
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box-02 title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 275
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-02 title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+    className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 276
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    className: "theme2nd-color",
+  }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 277
     },
     __self: this
-  }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "m-20px-b font-alt",
+  }, "Add an email validation tool to any website or app"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 278
     },
     __self: this
-  }, "Add an email validation tool to any website or app"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 279
     },
     __self: this
-  }, "Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 280
-    },
-    __self: this
-  }, "See API docs ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, "See API docs ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 280
+      lineNumber: 279
     },
     __self: this
-  })))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  })))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     id: "carousel",
     className: "section",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 288
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 289
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 290
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 291
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row justify-content-center m-60px-b md-m-40px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 292
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center m-60px-b md-m-40px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 293
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-10 col-lg-8 col-xl-7",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "section-title text-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 294
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section-title text-center",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 295
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "Testimonial"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 296
     },
     __self: this
-  }, "Testimonial"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "theme-after-bg",
+  }, "What Our Customers Say?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "title-border",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 297
     },
     __self: this
-  }, "What Our Customers Say?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-border",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "lg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 298
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "lg",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "md",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 299
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "md",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+    className: "sm",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 300
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "sm",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 301
+      lineNumber: 302
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 303
-    },
-    __self: this
-  }, "World-class teams in 130+ countries choose TheChecker."))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "World-class teams in 130+ countries choose TheChecker."))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: "carousel2",
     className: "carousel slide",
     "data-ride": "carousel",
@@ -6021,1915 +6068,1916 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 308
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311
+      lineNumber: 310
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     "data-target": "#carousel2",
     "data-slide-to": "0",
     className: "active",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 311
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    "data-target": "#carousel2",
+    "data-slide-to": "1",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 312
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     "data-target": "#carousel2",
-    "data-slide-to": "1",
+    "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 313
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    "data-target": "#carousel2",
-    "data-slide-to": "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 314
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 316
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 317
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-inner",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 318
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-item active text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 320
+      lineNumber: 319
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 321
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 323
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 324
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 325
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/leadlovers.png",
+    alt: "Leadlovers",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 326
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/leadlovers.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 327
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Here at LeadLovers we\u2019re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 329
     },
     __self: this
-  }, "Here at LeadLovers we\u2019re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 330
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "https://f6s-public.s3.amazonaws.com/profiles/1860904_original.jpg",
+    alt: "Original",
+    title: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 331
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://f6s-public.s3.amazonaws.com/profiles/1860904_original.jpg",
-    alt: "",
-    title: "",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 333
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 334
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Fernando Milek"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 335
     },
     __self: this
-  }, "Fernando Milek"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "CTO")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 336
+      lineNumber: 340
     },
     __self: this
-  }, "CTO")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 341
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 342
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/actualsales.png",
+    alt: "Actualsales",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 343
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/actualsales.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 344
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 346
     },
     __self: this
-  }, "An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 347
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "https://cdn0.capterra-static.com/profile-images/linkedin/cef5f5eabca48a40d1ff45a6bacc9dfc.jpeg",
+    alt: "Linkedin",
+    title: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 348
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://cdn0.capterra-static.com/profile-images/linkedin/cef5f5eabca48a40d1ff45a6bacc9dfc.jpeg",
-    alt: "",
-    title: "",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349
+      lineNumber: 350
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 351
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Arist\xF3teles de Oliveira"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 352
     },
     __self: this
-  }, "Arist\xF3teles de Oliveira"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "Digital Marketing and Sales Manager")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 353
+      lineNumber: 361
     },
     __self: this
-  }, "Digital Marketing and Sales Manager")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 362
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 363
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 364
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 365
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/advertisepurple.png",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 366
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/advertisepurple.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 367
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 368
+      lineNumber: 369
     },
     __self: this
-  }, "Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 370
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "https://media.licdn.com/dms/image/C5603AQFBRCGJZ0nBCA/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=nUoisc8_XcXYRLB_NPTi5haqMhLMYGEtQU1MeKv46g0",
+    alt: "dms",
+    title: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 371
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://media.licdn.com/dms/image/C5603AQFBRCGJZ0nBCA/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=nUoisc8_XcXYRLB_NPTi5haqMhLMYGEtQU1MeKv46g0",
-    alt: "",
-    title: "",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 372
+      lineNumber: 373
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 374
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Michael Lee"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 375
     },
     __self: this
-  }, "Michael Lee"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "Inside Sales Representative")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 376
+      lineNumber: 379
     },
     __self: this
-  }, "Inside Sales Representative")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 380
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 381
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/inboxhero.png",
+    alt: "Inboxhero",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 382
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/inboxhero.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 383
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 384
+      lineNumber: 385
     },
     __self: this
-  }, "Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 386
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "https://inboxhero.co.uk/wp-content/uploads/2018/10/ProfilePic-e1540224793147.jpg",
+    alt: "Profile",
+    title: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 387
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://inboxhero.co.uk/wp-content/uploads/2018/10/ProfilePic-e1540224793147.jpg",
-    alt: "",
-    title: "",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388
+      lineNumber: 389
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 390
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Jon Mae"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 391
     },
     __self: this
-  }, "Jon Mae"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "Email Marketing Expert")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 392
+      lineNumber: 397
     },
     __self: this
-  }, "Email Marketing Expert")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 398
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 399
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 400
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 401
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/rockcontent.png",
+    alt: "Rockcontent",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 402
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/rockcontent.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 403
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "I didn\u2019t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
+      lineNumber: 405
     },
     __self: this
-  }, "I didn\u2019t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 406
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 407
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "data:image/jpeg;base64,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",
-    alt: "",
-    title: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 408
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", (_React$createElement = {
+    alt: "user",
+    src: "data:image/jpeg;base64,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"
+  }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "alt", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "title", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "__source", {
+    fileName: _jsxFileName,
+    lineNumber: 407
+  }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "__self", this), _React$createElement))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 409
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 410
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Ivan Nunes de Castro"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 411
     },
     __self: this
-  }, "Ivan Nunes de Castro"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "Senior Sales Manager")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 412
+      lineNumber: 415
     },
     __self: this
-  }, "Senior Sales Manager")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 416
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 417
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/fi.png",
+    alt: "Say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 418
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/fi.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 419
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 420
+      lineNumber: 421
     },
     __self: this
-  }, "We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 422
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/paul.png",
+    alt: "Paul",
+    title: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 423
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/paul.png",
-    alt: "",
-    title: "",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 424
+      lineNumber: 425
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "name",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 426
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Paul McGuire"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 427
     },
     __self: this
-  }, "Paul McGuire"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "Director")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 428
+      lineNumber: 433
     },
     __self: this
-  }, "Director")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 434
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 435
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 436
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 437
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/mediapost.png",
+    alt: "Say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 438
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/mediapost.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 439
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "In addition to the attention and commitment of TheChecker\u2019s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 440
+      lineNumber: 441
     },
     __self: this
-  }, "In addition to the attention and commitment of TheChecker\u2019s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 442
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 443
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://media.licdn.com/dms/image/C4D03AQHDUX4HSQifLw/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=7fTOFnJbj5BIe2jaItQxI_L3VKee22zCq9FzSARxdpI",
-    alt: "",
-    title: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 444
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", (_React$createElement2 = {
+    alt: "user",
+    src: "https://media.licdn.com/dms/image/C4D03AQHDUX4HSQifLw/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=7fTOFnJbj5BIe2jaItQxI_L3VKee22zCq9FzSARxdpI"
+  }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "alt", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "title", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "__source", {
+    fileName: _jsxFileName,
+    lineNumber: 443
+  }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "__self", this), _React$createElement2))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 445
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 446
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Ademir Diniz"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 447
     },
     __self: this
-  }, "Ademir Diniz"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+  }, "Product Manager")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 448
+      lineNumber: 451
     },
     __self: this
-  }, "Product Manager")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+    className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 452
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-    className: "ti-quote-left",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 453
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/testimonials/eivos.png",
+    alt: "eivos",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 454
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/testimonials/eivos.png",
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 455
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 456
+      lineNumber: 457
     },
     __self: this
-  }, "The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "user",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "img",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 458
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "img",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 459
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://media.licdn.com/dms/image/C4D03AQGsLEE38cNysQ/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=ixSYs4ZI5HAXv0QDZ-nWIBtjgtOZRGPnA1-yeRMxB7Y",
-    alt: "",
-    title: "",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 460
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", (_React$createElement3 = {
+    alt: "user",
+    src: "https://media.licdn.com/dms/image/C4D03AQGsLEE38cNysQ/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=ixSYs4ZI5HAXv0QDZ-nWIBtjgtOZRGPnA1-yeRMxB7Y"
+  }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "alt", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "title", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "__source", {
+    fileName: _jsxFileName,
+    lineNumber: 459
+  }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "__self", this), _React$createElement3))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 461
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 462
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, "Juli\xE1n P\xE9rez"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 463
     },
     __self: this
-  }, "Juli\xE1n P\xE9rez"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 464
-    },
-    __self: this
-  }, "Director")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "Director")))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "owl-dots",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 473
+      lineNumber: 472
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "left slide-control",
     href: "#carousel2",
     role: "button",
     "data-slide": "prev",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 474
+      lineNumber: 473
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "fa fa-chevron-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 474
+      lineNumber: 473
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "right slide-control",
     href: "#carousel2",
     role: "button",
     "data-slide": "next",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 475
+      lineNumber: 474
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "fa fa-chevron-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 475
+      lineNumber: 474
     },
     __self: this
-  })))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  })))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     id: "features",
     className: "section",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 481
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 482
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 483
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 484
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 485
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center m-45px-b md-m-25px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 486
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-10 col-lg-8 col-xl-7",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "section-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 487
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section-title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 488
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "theme-after-bg",
+  }, "About Our Email Validation Service"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 489
     },
     __self: this
-  }, "About Our Email Validation Service"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 490
-    },
-    __self: this
-  }, "Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker."))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker."))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 495
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 496
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 497
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 498
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 499
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "accuracy",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 500
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "accuracy",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 501
+      lineNumber: 502
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "99%+ Accuracy"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 503
     },
     __self: this
-  }, "99%+ Accuracy"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Our emails marked as \"Valid\" are covered by our deliverability guarantee."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 504
+      lineNumber: 506
     },
     __self: this
-  }, "Our emails marked as \"Valid\" are covered by our deliverability guarantee."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 507
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 508
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "fast",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 509
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "fast",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 510
+      lineNumber: 511
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Fast Email Verification"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 512
     },
     __self: this
-  }, "Fast Email Verification"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 513
+      lineNumber: 515
     },
     __self: this
-  }, "Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 516
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 517
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "affordable",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 518
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "affordable",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 519
+      lineNumber: 520
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Affordable Prices"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 521
     },
     __self: this
-  }, "Affordable Prices"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "We are (by far) the most cost-effective solution (accurate, fast and affordable)."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 522
+      lineNumber: 524
     },
     __self: this
-  }, "We are (by far) the most cost-effective solution (accurate, fast and affordable)."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 525
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 526
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "filetypes",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 527
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "filetypes",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 528
+      lineNumber: 529
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Filetypes Compatibility"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 530
     },
     __self: this
-  }, "Filetypes Compatibility"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 531
+      lineNumber: 533
     },
     __self: this
-  }, "We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 534
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 535
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "bounce",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 536
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "bounce",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 537
+      lineNumber: 538
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Email Bounce Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 539
     },
     __self: this
-  }, "Email Bounce Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Identifies and tells you which emails will bounce and thus are not safe to send."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 540
+      lineNumber: 542
     },
     __self: this
-  }, "Identifies and tells you which emails will bounce and thus are not safe to send."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 543
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 544
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "antigrey",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 545
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "antigrey",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 546
+      lineNumber: 547
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Anti-Greylisting"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 548
     },
     __self: this
-  }, "Anti-Greylisting"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Our proprietary algorithm gives you the most accurate email validation results."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 549
+      lineNumber: 551
     },
     __self: this
-  }, "Our proprietary algorithm gives you the most accurate email validation results."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 552
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 553
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "catch",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 554
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "catch",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 555
+      lineNumber: 556
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Catch-all Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 557
     },
     __self: this
-  }, "Catch-all Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Checks for domains that are catch-all, which return valid for all emails."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 558
+      lineNumber: 560
     },
     __self: this
-  }, "Checks for domains that are catch-all, which return valid for all emails."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 561
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 562
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "emailtypo",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 563
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "emailtypo",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 564
+      lineNumber: 565
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Email Typo Correction"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 566
     },
     __self: this
-  }, "Email Typo Correction"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 567
+      lineNumber: 569
     },
     __self: this
-  }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 570
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 571
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "sintax",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 572
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "sintax",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 573
+      lineNumber: 574
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Syntax Validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 575
     },
     __self: this
-  }, "Syntax Validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Fully cleans your email list from email addresses with syntax errors."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 576
+      lineNumber: 578
     },
     __self: this
-  }, "Fully cleans your email list from email addresses with syntax errors."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 579
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 580
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "domain",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 581
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "domain",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 582
+      lineNumber: 583
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Domain Validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 584
     },
     __self: this
-  }, "Domain Validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Marks all the emails containing inactive or invalid domains."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 585
+      lineNumber: 587
     },
     __self: this
-  }, "Marks all the emails containing inactive or invalid domains."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 588
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 589
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "mailbox",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 590
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "mailbox",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 591
+      lineNumber: 592
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Mailbox Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 593
     },
     __self: this
-  }, "Mailbox Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Validates the existence of MX records for every email address."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 594
+      lineNumber: 596
     },
     __self: this
-  }, "Validates the existence of MX records for every email address."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 597
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 598
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "risk",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 599
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "risk",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 600
+      lineNumber: 601
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Risk Validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 602
     },
     __self: this
-  }, "Risk Validation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Identifies and marks all the emails which domain accepts any email in their domain."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 603
+      lineNumber: 605
     },
     __self: this
-  }, "Identifies and marks all the emails which domain accepts any email in their domain."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 606
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 607
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "freede",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 608
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "freede",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 609
+      lineNumber: 610
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Free De-duplication"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 611
     },
     __self: this
-  }, "Free De-duplication"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "TheCheckers email checker tool removes all records containing duplicate emails."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 612
+      lineNumber: 614
     },
     __self: this
-  }, "TheCheckers email checker tool removes all records containing duplicate emails."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 615
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 616
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "spantrap",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 617
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "spantrap",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 618
+      lineNumber: 619
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Spam Trap Remover"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 620
     },
     __self: this
-  }, "Spam Trap Remover"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Our email verifier tool removes all address identified as a spam trap."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 621
+      lineNumber: 623
     },
     __self: this
-  }, "Our email verifier tool removes all address identified as a spam trap."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 624
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 625
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "disposables",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 626
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "disposables",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 627
+      lineNumber: 628
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Disposables Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 629
     },
     __self: this
-  }, "Disposables Checker"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "Checks against our frequently updated temporary email database."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 630
+      lineNumber: 632
     },
     __self: this
-  }, "Checks against our frequently updated temporary email database."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-6 col-lg-3 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 633
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 634
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_3__["Icon"], {
+    class: ".injected-svg",
+    name: "payonly",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 635
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
-    class: ".injected-svg",
-    name: "payonly",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+    className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 636
+      lineNumber: 637
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
-    className: "font-alt",
+  }, "Pay Only For Results"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 638
     },
     __self: this
-  }, "Pay Only For Results"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 639
-    },
-    __self: this
-  }, "If we can't verify a certain email at any moment, we refund you the credits."))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }, "If we can't verify a certain email at any moment, we refund you the credits."))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     id: "reviews",
     className: "section",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 647
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 648
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    animateIn: "fadeIn",
+    animateOnce: true,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 649
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
-    animateIn: "fadeIn",
-    animateOnce: true,
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 650
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center m-45px-b md-m-25px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 651
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-10 col-lg-8 col-xl-7",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "section-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 652
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section-title",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 653
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "theme-after-bg",
+  }, "The Highest Rated Email Verifier"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 654
     },
     __self: this
-  }, "The Highest Rated Email Verifier"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "TheChecker is the ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 655
+      lineNumber: 654
     },
     __self: this
-  }, "TheChecker is the ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 655
-    },
-    __self: this
-  }, "#1 email verification software"), " based on independent reviews."))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "#1 email verification software"), " based on independent reviews."))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 660
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 661
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-12 col-md-6 col-lg-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 662
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-md-6 col-lg-4 m-15px-tb",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 663
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-01",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 664
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "https://www.g2crowd.com/products/thechecker-thechecker/reviews",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 665
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.g2crowd.com/products/thechecker-thechecker/reviews",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 666
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: "static/img/thechecker-reviews-g2crowd.png",
+    alt: "Crowd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 666
+      lineNumber: 665
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 668
+      lineNumber: 667
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 668
+      lineNumber: 667
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 668
+      lineNumber: 667
     },
     __self: this
-  }, "4.7"), "/5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "4.7"), "/5")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 669
+      lineNumber: 668
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 669
+      lineNumber: 668
     },
     __self: this
-  }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-12 col-md-6 col-lg-4 m-15px-tb",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 671
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 672
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-01",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 673
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "https://www.capterra.com/p/173432/TheChecker/",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 674
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.capterra.com/p/173432/TheChecker/",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 675
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: "static/img/thechecker-reviews-capterra.png",
+    alt: "Capterra",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 675
+      lineNumber: 674
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 677
+      lineNumber: 676
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 677
+      lineNumber: 676
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 677
+      lineNumber: 676
     },
     __self: this
-  }, "4.9"), "/5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "4.9"), "/5")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 678
+      lineNumber: 677
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 678
+      lineNumber: 677
     },
     __self: this
-  }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-12 col-md-6 col-lg-4 m-15px-tb",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 680
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 681
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "feature-box-01",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "icon",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 682
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "icon",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "https://www.trustpilot.com/review/thechecker.co",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 683
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "https://www.trustpilot.com/review/thechecker.co",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 684
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: "static/img/thechecker-reviews-trustpilot.png",
+    alt: "Trustpilot",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 684
+      lineNumber: 683
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 686
+      lineNumber: 685
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 686
+      lineNumber: 685
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 686
+      lineNumber: 685
     },
     __self: this
-  }, "4.6"), "/5")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, "4.6"), "/5")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 687
+      lineNumber: 686
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 687
+      lineNumber: 686
     },
     __self: this
-  }, "\u272E\u272E\u272E\u272E\u272E ")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+  }, "\u272E\u272E\u272E\u272E\u272E ")))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     id: "cta",
     className: "section gray-bg text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 694
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 695
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 696
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 697
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 698
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center m-45px-b md-m-25px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 699
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-md-10 col-lg-8 col-xl-7",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "section-title text-center",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 700
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "section-title text-center",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 701
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-    className: "theme-after-bg",
+  }, "Join the Smartest"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "title-border",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 702
     },
     __self: this
-  }, "Join the Smartest"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "title-border",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 703
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 703
+      lineNumber: 702
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "md",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 703
+      lineNumber: 702
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "sm",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 702
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 703
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 704
-    },
-    __self: this
-  }, "Try the best bulk email address checker for FREE and see the accurate results!"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "Try the best bulk email address checker for FREE and see the accurate results!"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 709
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row justify-content-center m-60px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 710
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row justify-content-center m-60px-b md-m-25px-b",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "col-12 col-md-12 col-lg-12",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 711
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-12 col-md-12 col-lg-12",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "cta",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 712
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "cta",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "#",
+    className: "m-btn m-btn-theme2nd",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 713
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    className: "m-btn m-btn-theme2nd",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 714
-    },
-    __self: this
-  }, "Try For Free"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, "Try For Free"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_6___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 720
+      lineNumber: 719
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: "carousel1",
     className: "carousel slide",
     "data-ride": "carousel",
@@ -7937,333 +7985,345 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 721
+      lineNumber: 720
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 722
+      lineNumber: 721
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     "data-target": "#carousel1",
     "data-slide-to": "0",
     className: "active",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 722
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+    "data-target": "#carousel1",
+    "data-slide-to": "1",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 723
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
     "data-target": "#carousel1",
-    "data-slide-to": "1",
+    "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 724
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    "data-target": "#carousel1",
-    "data-slide-to": "2",
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "container customer-slider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 725
+      lineNumber: 726
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "container customer-slider",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 727
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-inner",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-item active",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 728
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-item active",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 729
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 730
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 731
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/asics.png",
+    alt: "Asics",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 732
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/asics.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 733
+      lineNumber: 735
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 736
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/century.png",
+    alt: "Century",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 737
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/century.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 738
+      lineNumber: 740
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 741
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
+    alt: "Email-verification",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 742
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-glint.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 743
+      lineNumber: 745
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 746
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
+    alt: "email verification service thechecker customers ebanx",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 747
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-ebanx.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 748
+      lineNumber: 750
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 751
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
+    alt: "Email verification service thechecker customers wework",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 752
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-wework.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 753
+      lineNumber: 755
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 756
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-sage.png",
+    alt: "Email verification service thechecker customers sage",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 757
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-sage.png",
+  }))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 758
+      lineNumber: 762
     },
     __self: this
-  }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "carousel-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "row",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 763
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "row",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 764
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 765
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-saleshandy.png",
+    alt: "Email verification service thechecker customers saleshandy",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 766
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-saleshandy.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 767
+      lineNumber: 769
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 770
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-vindi.png",
+    alt: "Email verification service thechecker customers vindi",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 771
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-vindi.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 772
+      lineNumber: 774
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 775
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png",
+    alt: "Email verification service thechecker customers wyssinstitute",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 776
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-wyssinstitute.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 777
+      lineNumber: 779
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 780
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-growbots.png",
+    alt: "Email verification service thechecker customers growbots",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 781
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-growbots.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 782
+      lineNumber: 784
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 785
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png",
+    alt: "Email verification service thechecker customers university of toronto",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 786
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-university-of-toronto.png",
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 787
+      lineNumber: 789
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "say",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 790
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "say",
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+    src: "static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png",
+    alt: "Email verification service thechecker customers leadcrunch",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 791
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "static/img/customers/email-verification-service-thechecker-customers-leadcrunch.png",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 792
     },
     __self: this
   })))))))))))));

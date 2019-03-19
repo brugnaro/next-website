@@ -237,6 +237,26 @@ a:not([href]):not([tabindex]) {
   color: #525274;
 }
 
+.neverbounce-table {
+  max-width: 750px;
+  margin: 0px auto;
+  border: 1px solid #dee2e6;
+  margin-top: 60px
+}
+
+.neverbounce-th {
+  width: 40%
+}
+
+.neverbounce-td {
+  font-size: 11px
+}
+
+.table td,
+.table th {
+  vertical-align: middle
+}
+
 /*---------------------------------
 * 01. Loading
 -----------------------------------*/

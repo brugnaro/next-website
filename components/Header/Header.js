@@ -7,7 +7,7 @@ const Header = props =>
       <div className="container">
         <Link href='/'>
           <a className="navbar-brand">
-            <img src="static/img/email-verification-service-logo-thechecker.png" />
+            <img src="static/img/email-verification-service-logo-thechecker.png" alt="TheChecker" />
           </a>
         </Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
