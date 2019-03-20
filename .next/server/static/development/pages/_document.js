@@ -1119,45 +1119,54 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/commonjs/index.js");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_i18next__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _pages_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../pages/i18n */ "./pages/i18n.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/home/marcos/Documentos/next-website/components/Header/Header.js";
 
 
 
-var Header = function Header(props) {
+
+
+var Header = function Header() {
+  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_1__["useTranslation"])(),
+      t = _useTranslation.t,
+      i18n = _useTranslation.i18n;
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 8
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar header-nav fixed-top navbar-expand-lg header-nav-light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 10
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "navbar-brand",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -1165,7 +1174,7 @@ var Header = function Header(props) {
     alt: "TheChecker",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 13
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -1178,25 +1187,25 @@ var Header = function Header(props) {
     "aria-label": "Toggle navigation",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 17
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 18
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 19
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1204,122 +1213,121 @@ var Header = function Header(props) {
     id: "navbar",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "navbar-nav ml-auto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 22
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/#why",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, "Why TheChecker"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, t("headerWhyTheChecker")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/#features",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, "Features"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, t('headerFeatures')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/integrations",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, props.integrations))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, t('headerIntegrations')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/#reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, "Reviews"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, t('headerReviews')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/pricing",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 44
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
-    href: "pricing.html",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, props.pricing))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "nav-item dropdown",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 45
+    },
+    __self: this
+  }, t('headerPricing')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item dropdown",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1332,24 +1340,24 @@ var Header = function Header(props) {
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 49
     },
     __self: this
-  }, "Resources"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, t('headerResources')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sub-menu-toggle",
     "data-toggle": "dropdown",
     "aria-haspopup": "true",
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-angle-down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 50
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -1357,64 +1365,51 @@ var Header = function Header(props) {
     "aria-labelledby": "navbarDropdown",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 54
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav flex-column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 55
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "mega-menu-title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 54
-    },
-    __self: this
-  }, "Solutions")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "nav-link mega-menu-link",
+    className: "mega-menu-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 57
     },
     __self: this
-  }, "Digital Agency")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('headerSolutions'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 59
@@ -1427,7 +1422,7 @@ var Header = function Header(props) {
       lineNumber: 60
     },
     __self: this
-  }, "E-commerce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('headerDigitalAgency'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 62
@@ -1440,7 +1435,7 @@ var Header = function Header(props) {
       lineNumber: 63
     },
     __self: this
-  }, "Sales Resp.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('headerEcommerce'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 65
@@ -1453,74 +1448,73 @@ var Header = function Header(props) {
       lineNumber: 66
     },
     __self: this
-  }, "SaaS Platform")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, t('headerSalesResp'), ".")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "nav-link mega-menu-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, t('headerSaaSPlatform'))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 73
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav flex-column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 74
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 72
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "mega-menu-title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 73
-    },
-    __self: this
-  }, "About")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 75
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "nav-link mega-menu-link",
+    className: "mega-menu-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    href: "/faqs",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, t('headerAbout'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 78
-    },
-    __self: this
-  }, "FAQ")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 82
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 79
     },
     __self: this
-  }, "Affiliates")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    className: "mega-menu-link",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    href: "/faqs",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  }, t('headerFaq'))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 85
@@ -1533,11 +1527,25 @@ var Header = function Header(props) {
       lineNumber: 86
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, t('headerAffiliates'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "mega-menu-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 88
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "nav-link mega-menu-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 89
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "https://blog.thechecker.co",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1545,50 +1553,37 @@ var Header = function Header(props) {
     target: "blank",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 91
     },
     __self: this
-  }, "Blog")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, t('headerBlog'))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 97
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "nav flex-column",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 96
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "mega-menu-title",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, "Developers")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 99
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    className: "nav-link mega-menu-link",
+    className: "mega-menu-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 100
     },
     __self: this
-  }, "API")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('headerDevelopers'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 102
@@ -1601,7 +1596,7 @@ var Header = function Header(props) {
       lineNumber: 103
     },
     __self: this
-  }, "Widget")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('headerApi'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 105
@@ -1614,58 +1609,71 @@ var Header = function Header(props) {
       lineNumber: 106
     },
     __self: this
-  }, "Server status")))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('headerWidget'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 108
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "nav-link mega-menu-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  }, t('headerServerStatus'))))))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 118
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
-    },
-    __self: this
-  }, "Login"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 119
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, t('headerLogin')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 122
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 123
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-btn nav-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 121
+      lineNumber: 124
     },
     __self: this
-  }, "Try For Free"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('headerTryForFree')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "flag",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 127
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "./../../static/img/global.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 126
+      lineNumber: 129
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -1673,74 +1681,78 @@ var Header = function Header(props) {
     href: "javascript:;",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 128
+      lineNumber: 131
     },
     __self: this
-  }, props.activelang), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+  }, i18n.language === 'en' ? 'EN' : 'PT'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "sub-menu-toggle",
     "data-toggle": "dropdown",
     "aria-haspopup": "true",
     "aria-expanded": "false",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 134
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "ti-angle-down",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 131
+      lineNumber: 134
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "sub-menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 136
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 134
+      lineNumber: 137
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: props.en,
+    onClick: function onClick() {
+      return i18n.changeLanguage('en');
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 135
+      lineNumber: 138
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 136
-    },
-    __self: this
-  }, "English"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 139
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    onClick: props.pt,
+  }, t('headerEnglish')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 140
+      lineNumber: 142
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    onClick: function onClick() {
+      return i18n.changeLanguage('pt');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 143
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "nav-link mega-menu-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 141
+      lineNumber: 144
     },
     __self: this
-  }, "Portugu\xEAs"))))))))));
+  }, t('headerPortugues')))))))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -2856,6 +2868,334 @@ function _typeof(obj) {
   } else {
     module.exports = _typeof = function _typeof(obj) {
       return obj && typeof _Symbol === "function" && obj.constructor === _Symbol && obj !== _Symbol.prototype ? "symbol" : _typeof2(obj);
+    };
+  }
+
+  return _typeof(obj);
+}
+
+module.exports = _typeof;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+module.exports = _arrayWithHoles;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/classCallCheck.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/classCallCheck.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _classCallCheck(instance, Constructor) {
+  if (!(instance instanceof Constructor)) {
+    throw new TypeError("Cannot call a class as a function");
+  }
+}
+
+module.exports = _classCallCheck;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/createClass.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/createClass.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _defineProperties(target, props) {
+  for (var i = 0; i < props.length; i++) {
+    var descriptor = props[i];
+    descriptor.enumerable = descriptor.enumerable || false;
+    descriptor.configurable = true;
+    if ("value" in descriptor) descriptor.writable = true;
+    Object.defineProperty(target, descriptor.key, descriptor);
+  }
+}
+
+function _createClass(Constructor, protoProps, staticProps) {
+  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+  if (staticProps) _defineProperties(Constructor, staticProps);
+  return Constructor;
+}
+
+module.exports = _createClass;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/defineProperty.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/defineProperty.js ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
+module.exports = _defineProperty;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
+  \**********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    default: obj
+  };
+}
+
+module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/interopRequireWildcard.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _interopRequireWildcard(obj) {
+  if (obj && obj.__esModule) {
+    return obj;
+  } else {
+    var newObj = {};
+
+    if (obj != null) {
+      for (var key in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, key)) {
+          var desc = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : {};
+
+          if (desc.get || desc.set) {
+            Object.defineProperty(newObj, key, desc);
+          } else {
+            newObj[key] = obj[key];
+          }
+        }
+      }
+    }
+
+    newObj.default = obj;
+    return newObj;
+  }
+}
+
+module.exports = _interopRequireWildcard;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _iterableToArrayLimit(arr, i) {
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+module.exports = _iterableToArrayLimit;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/nonIterableRest.js":
+/*!****************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/nonIterableRest.js ***!
+  \****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+
+module.exports = _nonIterableRest;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/objectSpread.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectSpread.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var defineProperty = __webpack_require__(/*! ./defineProperty */ "./node_modules/@babel/runtime/helpers/defineProperty.js");
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+    var ownKeys = Object.keys(source);
+
+    if (typeof Object.getOwnPropertySymbols === 'function') {
+      ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+        return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      defineProperty(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
+
+module.exports = _objectSpread;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutProperties.js ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var objectWithoutPropertiesLoose = __webpack_require__(/*! ./objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js");
+
+function _objectWithoutProperties(source, excluded) {
+  if (source == null) return {};
+  var target = objectWithoutPropertiesLoose(source, excluded);
+  var key, i;
+
+  if (Object.getOwnPropertySymbols) {
+    var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
+
+    for (i = 0; i < sourceSymbolKeys.length; i++) {
+      key = sourceSymbolKeys[i];
+      if (excluded.indexOf(key) >= 0) continue;
+      if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue;
+      target[key] = source[key];
+    }
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutProperties;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js":
+/*!*****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/objectWithoutPropertiesLoose.js ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+module.exports = _objectWithoutPropertiesLoose;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/slicedToArray.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/slicedToArray.js ***!
+  \**************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithHoles = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js");
+
+var iterableToArrayLimit = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime/helpers/iterableToArrayLimit.js");
+
+var nonIterableRest = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime/helpers/nonIterableRest.js");
+
+function _slicedToArray(arr, i) {
+  return arrayWithHoles(arr) || iterableToArrayLimit(arr, i) || nonIterableRest();
+}
+
+module.exports = _slicedToArray;
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/typeof.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/typeof.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+function _typeof2(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof2 = function _typeof2(obj) { return typeof obj; }; } else { _typeof2 = function _typeof2(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof2(obj); }
+
+function _typeof(obj) {
+  if (typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol") {
+    module.exports = _typeof = function _typeof(obj) {
+      return _typeof2(obj);
+    };
+  } else {
+    module.exports = _typeof = function _typeof(obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : _typeof2(obj);
     };
   }
 
@@ -4045,6 +4385,914 @@ module.exports = __webpack_require__(/*! ./dist/client/router */ "./node_modules
 
 /***/ }),
 
+/***/ "./node_modules/react-i18next/dist/commonjs/I18nextProvider.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/I18nextProvider.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.I18nextProvider = I18nextProvider;
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
+
+function I18nextProvider(_ref) {
+  var i18n = _ref.i18n,
+      children = _ref.children;
+  (0, _context.usedI18nextProvider)(true);
+  return _react.default.createElement(_context.I18nContext.Provider, {
+    value: {
+      i18n: i18n
+    }
+  }, children);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/Trans.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/Trans.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireWildcard = __webpack_require__(/*! @babel/runtime/helpers/interopRequireWildcard */ "./node_modules/@babel/runtime/helpers/interopRequireWildcard.js");
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.nodesToString = nodesToString;
+exports.Trans = Trans;
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
+
+var _typeof2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/typeof */ "./node_modules/@babel/runtime/helpers/typeof.js"));
+
+var _react = _interopRequireWildcard(__webpack_require__(/*! react */ "react"));
+
+var _htmlParseStringify = _interopRequireDefault(__webpack_require__(/*! html-parse-stringify2 */ "html-parse-stringify2"));
+
+var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-i18next/dist/commonjs/utils.js");
+
+function hasChildren(node) {
+  return node && (node.children || node.props && node.props.children);
+}
+
+function getChildren(node) {
+  return node && node.children ? node.children : node.props && node.props.children;
+}
+
+function nodesToString(mem, children, index, i18nOptions) {
+  if (!children) return '';
+  if (Object.prototype.toString.call(children) !== '[object Array]') children = [children];
+  var keepArray = i18nOptions.transKeepBasicHtmlNodesFor && i18nOptions.transKeepBasicHtmlNodesFor || [];
+  children.forEach(function (child, i) {
+    // const isElement = React.isValidElement(child);
+    // const elementKey = `${index !== 0 ? index + '-' : ''}${i}:${typeof child.type === 'function' ? child.type.name : child.type || 'var'}`;
+    var elementKey = "".concat(i);
+
+    if (typeof child === 'string') {
+      mem = "".concat(mem).concat(child);
+    } else if (hasChildren(child)) {
+      var elementTag = keepArray.indexOf(child.type) > -1 && Object.keys(child.props).length === 1 && typeof hasChildren(child) === 'string' ? child.type : elementKey;
+      mem = "".concat(mem, "<").concat(elementTag, ">").concat(nodesToString('', getChildren(child), i + 1, i18nOptions), "</").concat(elementTag, ">");
+    } else if (_react.default.isValidElement(child)) {
+      if (keepArray.indexOf(child.type) > -1 && Object.keys(child.props).length === 0) {
+        mem = "".concat(mem, "<").concat(child.type, "/>");
+      } else {
+        mem = "".concat(mem, "<").concat(elementKey, "></").concat(elementKey, ">");
+      }
+    } else if ((0, _typeof2.default)(child) === 'object') {
+      var clone = (0, _objectSpread2.default)({}, child);
+      var format = clone.format;
+      delete clone.format;
+      var keys = Object.keys(clone);
+
+      if (format && keys.length === 1) {
+        mem = "".concat(mem, "{{").concat(keys[0], ", ").concat(format, "}}");
+      } else if (keys.length === 1) {
+        mem = "".concat(mem, "{{").concat(keys[0], "}}");
+      } else {
+        // not a valid interpolation object (can only contain one value plus format)
+        (0, _utils.warn)("react-i18next: the passed in object contained more than one variable - the object should look like {{ value, format }} where format is optional.", child);
+      }
+    } else {
+      (0, _utils.warn)("Trans: the passed in value is invalid - seems you passed in a variable like {number} - please pass in variables for interpolation as full objects like {{number}}.", child);
+    }
+  });
+  return mem;
+}
+
+function renderNodes(children, targetString, i18n, i18nOptions) {
+  if (targetString === '') return [];
+  if (!children) return [targetString]; // v2 -> interpolates upfront no need for "some <0>{{var}}</0>"" -> will be just "some {{var}}" in translation file
+
+  var data = {};
+
+  function getData(childs) {
+    if (Object.prototype.toString.call(childs) !== '[object Array]') childs = [childs];
+    childs.forEach(function (child) {
+      if (typeof child === 'string') return;
+      if (hasChildren(child)) getData(getChildren(child));else if ((0, _typeof2.default)(child) === 'object' && !_react.default.isValidElement(child)) Object.assign(data, child);
+    });
+  }
+
+  getData(children);
+  targetString = i18n.services.interpolator.interpolate(targetString, data, i18n.language); // parse ast from string with additional wrapper tag
+  // -> avoids issues in parser removing prepending text nodes
+
+  var ast = _htmlParseStringify.default.parse("<0>".concat(targetString, "</0>"));
+
+  function mapAST(reactNodes, astNodes) {
+    if (Object.prototype.toString.call(reactNodes) !== '[object Array]') reactNodes = [reactNodes];
+    if (Object.prototype.toString.call(astNodes) !== '[object Array]') astNodes = [astNodes];
+    return astNodes.reduce(function (mem, node, i) {
+      if (node.type === 'tag') {
+        var child = reactNodes[parseInt(node.name, 10)] || {};
+
+        var isElement = _react.default.isValidElement(child);
+
+        if (typeof child === 'string') {
+          mem.push(child);
+        } else if (hasChildren(child)) {
+          var inner = mapAST(getChildren(child), node.children);
+          if (child.dummy) child.children = inner; // needed on preact!
+
+          mem.push(_react.default.cloneElement(child, (0, _objectSpread2.default)({}, child.props, {
+            key: i
+          }), inner));
+        } else if (isNaN(node.name) && i18nOptions.transSupportBasicHtmlNodes) {
+          if (node.voidElement) {
+            mem.push(_react.default.createElement(node.name, {
+              key: "".concat(node.name, "-").concat(i)
+            }));
+          } else {
+            var _inner = mapAST(reactNodes
+            /* wrong but we need something */
+            , node.children);
+
+            mem.push(_react.default.createElement(node.name, {
+              key: "".concat(node.name, "-").concat(i)
+            }, _inner));
+          }
+        } else if ((0, _typeof2.default)(child) === 'object' && !isElement) {
+          var content = node.children[0] ? node.children[0].content : null; // v1
+          // as interpolation was done already we just have a regular content node
+          // in the translation AST while having an object in reactNodes
+          // -> push the content no need to interpolate again
+
+          if (content) mem.push(content);
+        } else {
+          mem.push(child);
+        }
+      } else if (node.type === 'text') {
+        mem.push(node.content);
+      }
+
+      return mem;
+    }, []);
+  } // call mapAST with having react nodes nested into additional node like
+  // we did for the string ast from translation
+  // return the children of that extra node to get expected result
+
+
+  var result = mapAST([{
+    dummy: true,
+    children: children
+  }], ast);
+  return getChildren(result[0]);
+}
+
+function Trans(_ref) {
+  var children = _ref.children,
+      count = _ref.count,
+      parent = _ref.parent,
+      i18nKey = _ref.i18nKey,
+      tOptions = _ref.tOptions,
+      values = _ref.values,
+      defaults = _ref.defaults,
+      components = _ref.components,
+      ns = _ref.ns,
+      i18nFromProps = _ref.i18n,
+      tFromProps = _ref.t,
+      additionalProps = (0, _objectWithoutProperties2.default)(_ref, ["children", "count", "parent", "i18nKey", "tOptions", "values", "defaults", "components", "ns", "i18n", "t"]);
+
+  var _ref2 = (0, _context.getHasUsedI18nextProvider)() ? (0, _react.useContext)(_context.I18nContext) : {},
+      i18nFromContext = _ref2.i18n;
+
+  var i18n = i18nFromProps || i18nFromContext || (0, _context.getI18n)();
+
+  if (!i18n) {
+    (0, _utils.warnOnce)('You will need pass in an i18next instance by using i18nextReactModule');
+    return children;
+  }
+
+  var t = tFromProps || i18n.t.bind(i18n);
+  var reactI18nextOptions = i18n.options && i18n.options.react || {};
+  var useAsParent = parent !== undefined ? parent : reactI18nextOptions.defaultTransParent;
+  var defaultValue = defaults || nodesToString('', children, 0, reactI18nextOptions) || reactI18nextOptions.transEmptyNodeValue;
+  var hashTransKey = reactI18nextOptions.hashTransKey;
+  var key = i18nKey || (hashTransKey ? hashTransKey(defaultValue) : defaultValue);
+  var interpolationOverride = values ? {} : {
+    interpolation: {
+      prefix: '#$?',
+      suffix: '?$#'
+    }
+  };
+  var translation = key ? t(key, (0, _objectSpread2.default)({}, tOptions, values, interpolationOverride, {
+    defaultValue: defaultValue,
+    count: count,
+    ns: ns
+  })) : defaultValue;
+  if (!useAsParent) return renderNodes(components || children, translation, i18n, reactI18nextOptions);
+  return _react.default.createElement(useAsParent, additionalProps, renderNodes(components || children, translation, i18n, reactI18nextOptions));
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/Translation.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/Translation.js ***!
+  \*****************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Translation = Translation;
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _useTranslation3 = __webpack_require__(/*! ./useTranslation */ "./node_modules/react-i18next/dist/commonjs/useTranslation.js");
+
+function Translation(props) {
+  var ns = props.ns,
+      children = props.children,
+      options = (0, _objectWithoutProperties2.default)(props, ["ns", "children"]);
+
+  var _useTranslation = (0, _useTranslation3.useTranslation)(ns, options),
+      _useTranslation2 = (0, _slicedToArray2.default)(_useTranslation, 3),
+      t = _useTranslation2[0],
+      i18n = _useTranslation2[1],
+      ready = _useTranslation2[2];
+
+  return children(t, {
+    i18n: i18n,
+    lng: i18n.language
+  }, ready);
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/context.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/context.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.usedI18nextProvider = usedI18nextProvider;
+exports.getHasUsedI18nextProvider = getHasUsedI18nextProvider;
+exports.setDefaults = setDefaults;
+exports.getDefaults = getDefaults;
+exports.setI18n = setI18n;
+exports.getI18n = getI18n;
+exports.composeInitialProps = composeInitialProps;
+exports.getInitialProps = getInitialProps;
+exports.initReactI18next = exports.ReportNamespaces = exports.I18nContext = void 0;
+
+var _classCallCheck2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/classCallCheck */ "./node_modules/@babel/runtime/helpers/classCallCheck.js"));
+
+var _createClass2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/createClass */ "./node_modules/@babel/runtime/helpers/createClass.js"));
+
+var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var defaultOptions = {
+  bindI18n: 'languageChanged',
+  bindI18nStore: '',
+  transEmptyNodeValue: '',
+  transSupportBasicHtmlNodes: true,
+  transKeepBasicHtmlNodesFor: ['br', 'strong', 'i', 'p'],
+  useSuspense: true
+};
+var i18nInstance;
+var hasUsedI18nextProvider;
+
+var I18nContext = _react.default.createContext();
+
+exports.I18nContext = I18nContext;
+
+function usedI18nextProvider(used) {
+  hasUsedI18nextProvider = used;
+}
+
+function getHasUsedI18nextProvider() {
+  return hasUsedI18nextProvider;
+}
+
+function setDefaults() {
+  var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  defaultOptions = (0, _objectSpread2.default)({}, defaultOptions, options);
+}
+
+function getDefaults() {
+  return defaultOptions;
+}
+
+var ReportNamespaces =
+/*#__PURE__*/
+function () {
+  function ReportNamespaces() {
+    (0, _classCallCheck2.default)(this, ReportNamespaces);
+    this.usedNamespaces = {};
+  }
+
+  (0, _createClass2.default)(ReportNamespaces, [{
+    key: "addUsedNamespaces",
+    value: function addUsedNamespaces(namespaces) {
+      var _this = this;
+
+      namespaces.forEach(function (ns) {
+        if (!_this.usedNamespaces[ns]) _this.usedNamespaces[ns] = true;
+      });
+    }
+  }, {
+    key: "getUsedNamespaces",
+    value: function getUsedNamespaces() {
+      return Object.keys(this.usedNamespaces);
+    }
+  }]);
+  return ReportNamespaces;
+}();
+
+exports.ReportNamespaces = ReportNamespaces;
+
+function setI18n(instance) {
+  i18nInstance = instance;
+}
+
+function getI18n() {
+  return i18nInstance;
+}
+
+var initReactI18next = {
+  type: '3rdParty',
+  init: function init(instance) {
+    setDefaults(instance.options.react);
+    setI18n(instance);
+  }
+};
+exports.initReactI18next = initReactI18next;
+
+function composeInitialProps(ForComponent) {
+  return function (ctx) {
+    return new Promise(function (resolve) {
+      var i18nInitialProps = getInitialProps();
+
+      if (ForComponent.getInitialProps) {
+        ForComponent.getInitialProps(ctx).then(function (componentsInitialProps) {
+          resolve((0, _objectSpread2.default)({}, componentsInitialProps, i18nInitialProps));
+        });
+      } else {
+        resolve(i18nInitialProps);
+      }
+    });
+  }; // Avoid async for now - so we do not need to pull in regenerator
+  // return async ctx => {
+  //   const componentsInitialProps = ForComponent.getInitialProps
+  //     ? await ForComponent.getInitialProps(ctx)
+  //     : {};
+  //   const i18nInitialProps = getInitialProps();
+  //   return {
+  //     ...componentsInitialProps,
+  //     ...i18nInitialProps,
+  //   };
+  // };
+}
+
+function getInitialProps() {
+  var i18n = getI18n();
+  var namespaces = i18n.reportNamespaces ? i18n.reportNamespaces.getUsedNamespaces() : [];
+  var ret = {};
+  var initialI18nStore = {};
+  i18n.languages.forEach(function (l) {
+    initialI18nStore[l] = {};
+    namespaces.forEach(function (ns) {
+      initialI18nStore[l][ns] = i18n.getResourceBundle(l, ns) || {};
+    });
+  });
+  ret.initialI18nStore = initialI18nStore;
+  ret.initialLanguage = i18n.language;
+  return ret;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/index.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/index.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Trans", {
+  enumerable: true,
+  get: function get() {
+    return _Trans.Trans;
+  }
+});
+Object.defineProperty(exports, "useTranslation", {
+  enumerable: true,
+  get: function get() {
+    return _useTranslation.useTranslation;
+  }
+});
+Object.defineProperty(exports, "withTranslation", {
+  enumerable: true,
+  get: function get() {
+    return _withTranslation.withTranslation;
+  }
+});
+Object.defineProperty(exports, "Translation", {
+  enumerable: true,
+  get: function get() {
+    return _Translation.Translation;
+  }
+});
+Object.defineProperty(exports, "I18nextProvider", {
+  enumerable: true,
+  get: function get() {
+    return _I18nextProvider.I18nextProvider;
+  }
+});
+Object.defineProperty(exports, "withSSR", {
+  enumerable: true,
+  get: function get() {
+    return _withSSR.withSSR;
+  }
+});
+Object.defineProperty(exports, "useSSR", {
+  enumerable: true,
+  get: function get() {
+    return _useSSR.useSSR;
+  }
+});
+Object.defineProperty(exports, "initReactI18next", {
+  enumerable: true,
+  get: function get() {
+    return _context.initReactI18next;
+  }
+});
+Object.defineProperty(exports, "setDefaults", {
+  enumerable: true,
+  get: function get() {
+    return _context.setDefaults;
+  }
+});
+Object.defineProperty(exports, "getDefaults", {
+  enumerable: true,
+  get: function get() {
+    return _context.getDefaults;
+  }
+});
+Object.defineProperty(exports, "setI18n", {
+  enumerable: true,
+  get: function get() {
+    return _context.setI18n;
+  }
+});
+Object.defineProperty(exports, "getI18n", {
+  enumerable: true,
+  get: function get() {
+    return _context.getI18n;
+  }
+});
+Object.defineProperty(exports, "composeInitialProps", {
+  enumerable: true,
+  get: function get() {
+    return _context.composeInitialProps;
+  }
+});
+Object.defineProperty(exports, "getInitialProps", {
+  enumerable: true,
+  get: function get() {
+    return _context.getInitialProps;
+  }
+});
+
+var _Trans = __webpack_require__(/*! ./Trans */ "./node_modules/react-i18next/dist/commonjs/Trans.js");
+
+var _useTranslation = __webpack_require__(/*! ./useTranslation */ "./node_modules/react-i18next/dist/commonjs/useTranslation.js");
+
+var _withTranslation = __webpack_require__(/*! ./withTranslation */ "./node_modules/react-i18next/dist/commonjs/withTranslation.js");
+
+var _Translation = __webpack_require__(/*! ./Translation */ "./node_modules/react-i18next/dist/commonjs/Translation.js");
+
+var _I18nextProvider = __webpack_require__(/*! ./I18nextProvider */ "./node_modules/react-i18next/dist/commonjs/I18nextProvider.js");
+
+var _withSSR = __webpack_require__(/*! ./withSSR */ "./node_modules/react-i18next/dist/commonjs/withSSR.js");
+
+var _useSSR = __webpack_require__(/*! ./useSSR */ "./node_modules/react-i18next/dist/commonjs/useSSR.js");
+
+var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/useSSR.js":
+/*!************************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/useSSR.js ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useSSR = useSSR;
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
+
+function useSSR(initialI18nStore, initialLanguage) {
+  var props = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
+  var i18nFromProps = props.i18n;
+
+  var _ref = (0, _context.getHasUsedI18nextProvider)() ? (0, _react.useContext)(_context.I18nContext) : {},
+      i18nFromContext = _ref.i18n;
+
+  var i18n = i18nFromProps || i18nFromContext || (0, _context.getI18n)(); // nextjs / SSR: getting data from next.js or other ssr stack
+
+  if (initialI18nStore && !i18n.initializedStoreOnce) {
+    i18n.services.resourceStore.data = initialI18nStore;
+    i18n.initializedStoreOnce = true;
+  }
+
+  if (initialLanguage && !i18n.initializedLanguageOnce) {
+    i18n.changeLanguage(initialLanguage);
+    i18n.initializedLanguageOnce = true;
+  }
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/useTranslation.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/useTranslation.js ***!
+  \********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.useTranslation = useTranslation;
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
+
+var _react = __webpack_require__(/*! react */ "react");
+
+var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
+
+var _utils = __webpack_require__(/*! ./utils */ "./node_modules/react-i18next/dist/commonjs/utils.js");
+
+function useTranslation(ns) {
+  var props = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
+  // assert we have the needed i18nInstance
+  var i18nFromProps = props.i18n;
+
+  var _ref = (0, _context.getHasUsedI18nextProvider)() ? (0, _react.useContext)(_context.I18nContext) : {},
+      i18nFromContext = _ref.i18n;
+
+  var i18n = i18nFromProps || i18nFromContext || (0, _context.getI18n)();
+  if (i18n && !i18n.reportNamespaces) i18n.reportNamespaces = new _context.ReportNamespaces();
+
+  if (!i18n) {
+    (0, _utils.warnOnce)('You will need pass in an i18next instance by using i18nextReactModule');
+    var retNotReady = [function (k) {
+      return k;
+    }, {}, true];
+
+    retNotReady.t = function (k) {
+      return k;
+    };
+
+    retNotReady.i18n = {};
+    retNotReady.ready = true;
+    return retNotReady;
+  }
+
+  var i18nOptions = (0, _objectSpread2.default)({}, (0, _context.getDefaults)(), i18n.options.react); // prepare having a namespace
+
+  var namespaces = ns || i18n.options && i18n.options.defaultNS;
+  namespaces = typeof namespaces === 'string' ? [namespaces] : namespaces || ['translation']; // report namespaces as used
+
+  if (i18n.reportNamespaces.addUsedNamespaces) i18n.reportNamespaces.addUsedNamespaces(namespaces); // are we ready? yes if all namespaces in first language are loaded already (either with data or empty objedt on failed load)
+
+  var ready = (i18n.isInitialized || i18n.initializedStoreOnce) && namespaces.every(function (n) {
+    return (0, _utils.hasLoadedNamespace)(n, i18n);
+  }); // set states
+
+  var _useState = (0, _react.useState)({
+    t: i18n.getFixedT(null, namespaces[0])
+  }),
+      _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+      t = _useState2[0],
+      setT = _useState2[1]; // seems we can't have functions as value -> wrap it in obj
+
+
+  function resetT() {
+    setT({
+      t: i18n.getFixedT(null, namespaces[0])
+    });
+  }
+
+  (0, _react.useEffect)(function () {
+    var bindI18n = i18nOptions.bindI18n,
+        bindI18nStore = i18nOptions.bindI18nStore; // bind events to trigger change, like languageChanged
+
+    if (bindI18n && i18n) i18n.on(bindI18n, resetT);
+    if (bindI18nStore && i18n) i18n.store.on(bindI18nStore, resetT); // unbinding
+
+    return function () {
+      if (bindI18n && i18n) bindI18n.split(' ').forEach(function (e) {
+        return i18n.off(e, resetT);
+      });
+      if (bindI18nStore && i18n) bindI18nStore.split(' ').forEach(function (e) {
+        return i18n.store.off(e, resetT);
+      });
+    };
+  });
+  var ret = [t.t, i18n, ready];
+  ret.t = t.t;
+  ret.i18n = i18n;
+  ret.ready = ready; // return hook stuff if ready
+
+  if (ready) return ret; // not yet loaded namespaces -> load them -> and return if useSuspense option set false
+
+  var _props$useSuspense = props.useSuspense,
+      useSuspense = _props$useSuspense === void 0 ? i18nOptions.useSuspense : _props$useSuspense;
+
+  if (!ready && !useSuspense) {
+    (0, _utils.loadNamespaces)(i18n, namespaces, function () {
+      resetT();
+    });
+    return ret;
+  } // not yet loaded namespaces -> load them -> and trigger suspense
+
+
+  throw new Promise(function (resolve) {
+    (0, _utils.loadNamespaces)(i18n, namespaces, function () {
+      resetT();
+      resolve();
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/utils.js":
+/*!***********************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/utils.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.warn = warn;
+exports.warnOnce = warnOnce;
+exports.loadNamespaces = loadNamespaces;
+exports.hasLoadedNamespace = hasLoadedNamespace;
+
+function warn() {
+  if (console && console.warn) {
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    if (typeof args[0] === 'string') args[0] = "react-i18next:: ".concat(args[0]);
+    console.warn.apply(console, args);
+  }
+}
+
+var alreadyWarned = {};
+
+function warnOnce() {
+  for (var _len2 = arguments.length, args = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+    args[_key2] = arguments[_key2];
+  }
+
+  if (typeof args[0] === 'string' && alreadyWarned[args[0]]) return;
+  if (typeof args[0] === 'string') alreadyWarned[args[0]] = new Date();
+  warn.apply(void 0, args);
+} // not needed right now
+//
+// export function deprecated(...args) {
+//   if (process && process.env && (!process.env.NODE_ENV || process.env.NODE_ENV === 'development')) {
+//     if (typeof args[0] === 'string') args[0] = `deprecation warning -> ${args[0]}`;
+//     warnOnce(...args);
+//   }
+// }
+
+
+function loadNamespaces(i18n, ns, cb) {
+  i18n.loadNamespaces(ns, function () {
+    // delay ready if not yet initialized i18n instance
+    if (i18n.isInitialized) {
+      cb();
+    } else {
+      var initialized = function initialized() {
+        // due to emitter removing issue in i18next we need to delay remove
+        setImmediate(function () {
+          i18n.off('initialized', initialized);
+        });
+        cb();
+      };
+
+      i18n.on('initialized', initialized);
+    }
+  });
+}
+
+function hasLoadedNamespace(ns, i18n) {
+  if (!i18n.languages || !i18n.languages.length) {
+    warnOnce('i18n.languages were undefined or empty', i18n.languages);
+    return true;
+  }
+
+  var lng = i18n.languages[0];
+  var fallbackLng = i18n.options ? i18n.options.fallbackLng : false;
+  var lastLng = i18n.languages[i18n.languages.length - 1]; // we're in cimode so this shall pass
+
+  if (lng.toLowerCase() === 'cimode') return true;
+
+  var loadNotPending = function loadNotPending(l, n) {
+    var loadState = i18n.services.backendConnector.state["".concat(l, "|").concat(n)];
+    return loadState === -1 || loadState === 2;
+  }; // loaded -> SUCCESS
+
+
+  if (i18n.hasResourceBundle(lng, ns)) return true; // were not loading at all -> SEMI SUCCESS
+
+  if (!i18n.services.backendConnector.backend) return true; // failed loading ns - but at least fallback is not pending -> SEMI SUCCESS
+
+  if (loadNotPending(lng, ns) && (!fallbackLng || loadNotPending(lastLng, ns))) return true;
+  return false;
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/withSSR.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/withSSR.js ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withSSR = withSSR;
+
+var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
+
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/objectWithoutProperties.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _useSSR = __webpack_require__(/*! ./useSSR */ "./node_modules/react-i18next/dist/commonjs/useSSR.js");
+
+var _context = __webpack_require__(/*! ./context */ "./node_modules/react-i18next/dist/commonjs/context.js");
+
+function withSSR() {
+  return function Extend(WrappedComponent) {
+    function I18nextWithSSR(_ref) {
+      var initialI18nStore = _ref.initialI18nStore,
+          initialLanguage = _ref.initialLanguage,
+          rest = (0, _objectWithoutProperties2.default)(_ref, ["initialI18nStore", "initialLanguage"]);
+      (0, _useSSR.useSSR)(initialI18nStore, initialLanguage);
+      return _react.default.createElement(WrappedComponent, (0, _objectSpread2.default)({}, rest));
+    }
+
+    I18nextWithSSR.getInitialProps = (0, _context.composeInitialProps)(WrappedComponent);
+    return I18nextWithSSR;
+  };
+}
+
+/***/ }),
+
+/***/ "./node_modules/react-i18next/dist/commonjs/withTranslation.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/react-i18next/dist/commonjs/withTranslation.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withTranslation = withTranslation;
+
+var _objectSpread2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/objectSpread */ "./node_modules/@babel/runtime/helpers/objectSpread.js"));
+
+var _slicedToArray2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/slicedToArray.js"));
+
+var _react = _interopRequireDefault(__webpack_require__(/*! react */ "react"));
+
+var _useTranslation3 = __webpack_require__(/*! ./useTranslation */ "./node_modules/react-i18next/dist/commonjs/useTranslation.js");
+
+function withTranslation(ns) {
+  return function Extend(WrappedComponent) {
+    function I18nextWithTranslation(props) {
+      var _useTranslation = (0, _useTranslation3.useTranslation)(ns, props),
+          _useTranslation2 = (0, _slicedToArray2.default)(_useTranslation, 3),
+          t = _useTranslation2[0],
+          i18n = _useTranslation2[1],
+          ready = _useTranslation2[2];
+
+      return _react.default.createElement(WrappedComponent, (0, _objectSpread2.default)({}, props, {
+        t: t,
+        i18n: i18n,
+        tReady: ready
+      }));
+    }
+
+    return I18nextWithTranslation;
+  };
+}
+
+/***/ }),
+
 /***/ "./node_modules/string-hash/index.js":
 /*!*******************************************!*\
   !*** ./node_modules/string-hash/index.js ***!
@@ -4947,6 +6195,85 @@ function (_Document) {
 
 /***/ }),
 
+/***/ "./pages/i18n.js":
+/*!***********************!*\
+  !*** ./pages/i18n.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var i18next__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! i18next */ "i18next");
+/* harmony import */ var i18next__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(i18next__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/commonjs/index.js");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_i18next__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _languages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages */ "./pages/languages/index.js");
+
+
+
+var resources = {
+  en: {
+    translation: _languages__WEBPACK_IMPORTED_MODULE_2__["en"]
+  },
+  pt: {
+    translation: _languages__WEBPACK_IMPORTED_MODULE_2__["pt"]
+  }
+};
+i18next__WEBPACK_IMPORTED_MODULE_0___default.a.use(react_i18next__WEBPACK_IMPORTED_MODULE_1__["initReactI18next"]).init({
+  resources: resources,
+  lng: 'en',
+  keySeparator: false,
+  interpolation: {
+    escapeValue: false
+  }
+});
+/* harmony default export */ __webpack_exports__["default"] = (i18next__WEBPACK_IMPORTED_MODULE_0___default.a);
+
+/***/ }),
+
+/***/ "./pages/languages/en.json":
+/*!*********************************!*\
+  !*** ./pages/languages/en.json ***!
+  \*********************************/
+/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, indexGetRid, indexEmailVerification, indexAnd, indexEmailList, indexSolutionsThatImprove, indexTrustedAndRated, index48, indexBasedOn, index200reviews, indexTryForFree, indexLearnMore, indexTrustedBy, ofSmart, index130countries, default */
+/***/ (function(module) {
+
+module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"The most cost-effective email verification service","indexGetRid":"Get rid of email bounces and bad email addresses with our proven high-quality yet affordable","indexEmailVerification":"email verification","indexAnd":"and","indexEmailList":"email list cleaning","indexSolutionsThatImprove":"solutions that improve your data quality and email marketing ROI.","indexTrustedAndRated":"Trusted and rated","index48":"4.8","indexBasedOn":"/5 based on","index200reviews":"200+ reviews.","indexTryForFree":"Try For Free","indexLearnMore":"Learn More","indexTrustedBy":"Trusted by 1,000's","ofSmart":"of smart teams in","index130countries":"130+ countries"};
+
+/***/ }),
+
+/***/ "./pages/languages/index.js":
+/*!**********************************!*\
+  !*** ./pages/languages/index.js ***!
+  \**********************************/
+/*! exports provided: en, pt */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _en_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en.json */ "./pages/languages/en.json");
+var _en_json__WEBPACK_IMPORTED_MODULE_0___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./en.json */ "./pages/languages/en.json", 1);
+/* harmony reexport (default from named exports) */ __webpack_require__.d(__webpack_exports__, "en", function() { return _en_json__WEBPACK_IMPORTED_MODULE_0__; });
+/* harmony import */ var _pt_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pt.json */ "./pages/languages/pt.json");
+var _pt_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./pt.json */ "./pages/languages/pt.json", 1);
+/* harmony reexport (default from named exports) */ __webpack_require__.d(__webpack_exports__, "pt", function() { return _pt_json__WEBPACK_IMPORTED_MODULE_1__; });
+
+
+
+/***/ }),
+
+/***/ "./pages/languages/pt.json":
+/*!*********************************!*\
+  !*** ./pages/languages/pt.json ***!
+  \*********************************/
+/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, default */
+/***/ (function(module) {
+
+module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"O serviço de verificação de e-mail mais econômico"};
+
+/***/ }),
+
 /***/ 0:
 /*!*********************************************!*\
   !*** multi private-next-pages/_document.js ***!
@@ -5077,6 +6404,28 @@ module.exports = require("core-js/library/fn/symbol");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/symbol/iterator");
+
+/***/ }),
+
+/***/ "html-parse-stringify2":
+/*!****************************************!*\
+  !*** external "html-parse-stringify2" ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("html-parse-stringify2");
+
+/***/ }),
+
+/***/ "i18next":
+/*!**************************!*\
+  !*** external "i18next" ***!
+  \**************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("i18next");
 
 /***/ }),
 

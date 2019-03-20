@@ -13,14 +13,9 @@ const integrations = () => {
 
   return <div>
     <title>Integrations With Email Marketing Tools | TheChecker</title>
-    <Header
-      contactus={t('contactus')}
-      en={() => i18n.changeLanguage('en')}
-      pt={() => i18n.changeLanguage('pt')}
-      integrations={t('integrations')}
-      activelang={i18n.language === 'en' ? 'EN' : 'PT'}
-      pricing={t('pricing')}
-    />
+    
+    <Header />
+
     <main>
       <section id="integrations" className="section">
         <div className="container p-60px-t">

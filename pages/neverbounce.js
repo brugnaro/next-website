@@ -10,14 +10,7 @@ const neverbounce = () => {
 
     <title>NeverBounce | TheChecker Email Verifier</title>
 
-    <Header
-      contactus={t('contactus')}
-      en={() => i18n.changeLanguage('en')}
-      pt={() => i18n.changeLanguage('pt')}
-      integrations={t('integrations')}
-      activelang={i18n.language === 'en' ? 'EN' : 'PT'}
-      pricing={t('pricing')}
-    />
+    <Header />
 
     <main>
 

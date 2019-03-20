@@ -1,7 +1,28 @@
 {
-  "contactus": "Contato",
-  "lang": "PT",
-  "themost": "O serviço de verificação de e-mail mais econômico",
-  "integrations": "Integrações",
-  "pricing": "Preços"
+  "headerWhyTheChecker": "Why TheChecker",
+  "headerFeatures": "Features",
+  "headerIntegrations": "Integrations",
+  "headerReviews": "Reviews",
+  "headerPricing": "Pricing",
+  "headerResources": "Resources",
+  "headerSolutions": "Solutions",
+  "headerDigitalAgency": "Digital Agency",
+  "headerEcommerce": "E-commerce",
+  "headerSalesResp": "Sales Resp.",
+  "headerSaaSPlatform": "SaaS Platform",
+  "headerAbout": "About",
+  "headerFaq": "FAQ",
+  "headerAffiliates": "Affiliates",
+  "headerBlog": "Blog",
+  "headerDevelopers": "Developers",
+  "headerApi": "API",
+  "headerWidget": "Widget",
+  "headerServerStatus": "Server status",
+  "headerLogin": "Login",
+  "headerTryForFree": "Try For Free",
+  "headerEnglish": "English",
+  "headerPortugues": "Português",
+  
+  "indexTitle": "Email Verification & List Cleaning Service | TheChecker Email Verifier",
+  "indexThemost": "O serviço de verificação de e-mail mais econômico"
 }

@@ -7,14 +7,9 @@ const pricing = () => {
 
   return <div>
     <title>Pricing | TheChecker</title>
-    <Header
-      contactus={t('contactus')}
-      toggleLanguage={i18n.language === 'en' ? () => i18n.changeLanguage('pt') : () => i18n.changeLanguage('en')}
-      integrations={t('integrations')}
-      activelang={i18n.language === 'en' ? 'EN' : 'PT'}
-      lang={i18n.language === 'en' ? 'PT' : 'EN'}
-      pricing={t('pricing')}
-    />
+    
+    <Header />
+
     <main>
       <section id="integrations" className="section">
         <div className="container p-60px-t">

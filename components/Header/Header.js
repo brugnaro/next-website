@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import { useTranslation, getInitialProps } from 'react-i18next';
+import '../../pages/i18n';
 import Link from 'next/link';
 
-const Header = props =>
-  <header>
+const Header = () => {
+  const { t, i18n } = useTranslation();
+
+  return <header>
     <nav className="navbar header-nav fixed-top navbar-expand-lg header-nav-light">
       <div className="container">
         <Link href='/'>
@@ -19,31 +22,31 @@ const Header = props =>
           <ul className="navbar-nav ml-auto">
             <li>
               <Link href='/#why'>
-                <a className="nav-link">Why TheChecker</a>
+                <a className="nav-link">{t("headerWhyTheChecker")}</a>
               </Link>
             </li>
             <li>
               <Link href='/#features'>
-                <a className="nav-link">Features</a>
+                <a className="nav-link">{t('headerFeatures')}</a>
               </Link>
             </li>
             <li>
               <Link href='/integrations'>
-                <a className="nav-link">{props.integrations}</a>
+                <a className="nav-link">{t('headerIntegrations')}</a>
               </Link>
             </li>
             <li>
               <Link href='/#reviews'>
-                <a className="nav-link">Reviews</a>
+                <a className="nav-link">{t('headerReviews')}</a>
               </Link>
             </li>
             <li>
               <Link href='/pricing'>
-                <a className="nav-link" href="pricing.html">{props.pricing}</a>
+                <a className="nav-link">{t('headerPricing')}</a>
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <a className="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+              <a className="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{t('headerResources')}</a>
               <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
               <div className="sub-menu mega-menu" aria-labelledby="navbarDropdown">
                 <div className="container">
@@ -51,41 +54,41 @@ const Header = props =>
                     <div className="col-md-4">
                       <ul className="nav flex-column">
                         <li>
-                          <span className="mega-menu-title">Solutions</span>
+                          <span className="mega-menu-title">{t('headerSolutions')}</span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">Digital Agency</span>
+                          <span className="nav-link mega-menu-link">{t('headerDigitalAgency')}</span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">E-commerce</span>
+                          <span className="nav-link mega-menu-link">{t('headerEcommerce')}</span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">Sales Resp.</span>
+                          <span className="nav-link mega-menu-link">{t('headerSalesResp')}.</span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">SaaS Platform</span>
+                          <span className="nav-link mega-menu-link">{t('headerSaaSPlatform')}</span>
                         </li>
                       </ul>
                     </div>
                     <div className="col-md-4">
                       <ul className="nav flex-column">
                         <li>
-                          <span className="mega-menu-title">About</span>
+                          <span className="mega-menu-title">{t('headerAbout')}</span>
                         </li>
                         <li>
                           <span className="nav-link mega-menu-link">
                             <Link href="/faqs">
-                              <a>FAQ</a>
+                              <a>{t('headerFaq')}</a>
                             </Link>
                           </span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">Affiliates</span>
+                          <span className="nav-link mega-menu-link">{t('headerAffiliates')}</span>
                         </li>
                         <li className="mega-menu-link">
                           <span className="nav-link mega-menu-link">
                             <Link href="https://blog.thechecker.co">
-                              <a className="nav-link" target="blank">Blog</a>
+                              <a className="nav-link" target="blank">{t('headerBlog')}</a>
                             </Link>
                           </span>
                         </li>
@@ -94,16 +97,16 @@ const Header = props =>
                     <div className="col-md-4">
                       <ul className="nav flex-column">
                         <li>
-                          <span className="mega-menu-title">Developers</span>
+                          <span className="mega-menu-title">{t('headerDevelopers')}</span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">API</span>
+                          <span className="nav-link mega-menu-link">{t('headerApi')}</span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">Widget</span>
+                          <span className="nav-link mega-menu-link">{t('headerWidget')}</span>
                         </li>
                         <li>
-                          <span className="nav-link mega-menu-link">Server status</span>
+                          <span className="nav-link mega-menu-link">{t('headerServerStatus')}</span>
                         </li>
                       </ul>
                     </div>
@@ -113,12 +116,12 @@ const Header = props =>
             </li>
             <li>
               <Link href='/'>
-                <a className="nav-link">Login</a>
+                <a className="nav-link">{t('headerLogin')}</a>
               </Link>
             </li>
             <li>
               <Link href='/'>
-                <a className="nav-btn nav-link">Try For Free</a>
+                <a className="nav-btn nav-link">{t('headerTryForFree')}</a>
               </Link>
             </li>
             <li className='flag'>
@@ -126,19 +129,19 @@ const Header = props =>
               <img src='./../../static/img/global.png' />
 
               <a className="nav-link" href="javascript:;">
-                {props.activelang}
+                {i18n.language === 'en' ? 'EN' : 'PT'}
               </a>
               <span className="sub-menu-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="ti-angle-down"></i></span>
 
               <ul className="sub-menu">
                 <li>
-                  <button onClick={props.en}>
-                    <span className='nav-link mega-menu-link'>English</span>
+                  <button onClick={() => i18n.changeLanguage('en')}>
+                    <span className='nav-link mega-menu-link'>{t('headerEnglish')}</span>
                   </button>
                 </li>
                 <li>
-                  <button onClick={props.pt}>
-                    <span className='nav-link mega-menu-link'>Português</span>
+                  <button onClick={() => i18n.changeLanguage('pt')}>
+                    <span className='nav-link mega-menu-link'>{t('headerPortugues')}</span>
                   </button>
                 </li>
               </ul>
@@ -147,6 +150,7 @@ const Header = props =>
         </div>
       </div>
     </nav>
-  </header>;
+  </header>
+};
 
 export default Header;

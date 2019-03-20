@@ -8,14 +8,7 @@ const faqs = () => {
 
   return <div>
     <title>Faq | TheChecker</title>
-    <Header
-      contactus={t('contactus')}
-      toggleLanguage={i18n.language === 'en' ? () => i18n.changeLanguage('pt') : () => i18n.changeLanguage('en')}
-      integrations={t('integrations')}
-      activelang={i18n.language === 'en' ? 'EN' : 'PT'}
-      lang={i18n.language === 'en' ? 'PT' : 'EN'}
-      pricing={t('pricing')}
-    />
+    <Header />
     <main>
       <section className="section page-title-section theme-after bg-fixed bg-center-center bg-cover contact-section">
         <div className="container">

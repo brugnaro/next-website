@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { useTranslation, getInitialProps } from 'react-i18next';
 import { Header, Icon } from '../components';
+import { useTranslation, getInitialProps } from 'react-i18next';
 import './i18n';
-import { Link } from '../routes';
 import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from '../routes';
 
 const index = props => {
 
@@ -19,35 +19,30 @@ const index = props => {
   const { t, i18n } = useTranslation();
 
   return <div>
-    <title>Email Verification & List Cleaning Service | TheChecker Email Verifier</title>
-    <Header
-      contactus={t('contactus')}
-      en={() => i18n.changeLanguage('en')}
-      pt={() => i18n.changeLanguage('pt')}
-      integrations={t('integrations')}
-      activelang={i18n.language === 'en' ? 'EN' : 'PT'}
-      pricing={t('pricing')}
-    />
+
+    <title>{t('indexTitle')}</title>
+
+    <Header />
+
     <main>
 
       <ScrollAnimation animateIn="fadeIn" animateOnce={true}>
+
         <section id="home" className="home-banner-01">
           <div className="container">
             <div className="row full-screen align-items-center">
 
               <div className="col col-md-12 col-lg-6 col-xl-6 p-80px-tb md-p-30px-b sm-p-60px-t m-100px-t">
-
                 <div className="home-text-center p-50px-r md-p-0px-r stars">
-                  <h1 className="font-alt" params={props.lang}>{t('themost')}</h1>
+                  <h1 className="font-alt" params={props.lang}>{t('indexThemost')}</h1>
                   <p>
-                    Get rid of email bounces and bad email addresses with our proven high-quality yet affordable<b> email verification </b>
-                    and<b> email list cleaning</b> solutions that improve your data quality and email marketing ROI.
-                </p>
-                  <p>Trusted and rated <span>✮✮✮✮✮ </span> <b>4.8</b>/5 based on <a className="reviews" href="#reviews">200+ reviews</a>.</p>
-                  <a href="#" className="m-btn m-btn-theme2nd">Try For Free</a>
-                  <a href="#why" className="m-btn m-btn-white" data-text="Free Trial">Learn More</a>
+                    {t('indexGetRid')}<b> {t('indexEmailVerification')} </b>
+                    {t('indexAnd')}<b> {t('indexEmailList')}</b> {t('indexSolutionsThatImprove')}
+                  </p>
+                  <p>{t('indexTrustedAndRated')} <span>✮✮✮✮✮ </span> <b>{t('index48')}</b>{t('indexBasedOn')} <a className="reviews" href="#reviews">{t('index200reviews')}</a></p>
+                  <a href="#" className="m-btn m-btn-theme2nd">{t('indexTryForFree')}</a>
+                  <a href="#why" className="m-btn m-btn-white" data-text="Free Trial">{t('indexLearnMore')}</a>
                 </div>
-
               </div>
 
               <div className="col-md-12 col-lg-6 col-xl-6 home-right m-50px-t md-m-0px-t">
@@ -60,7 +55,7 @@ const index = props => {
 
                 <div className="col-md-12 col-lg-12 col-xl-12">
                   <div className="section-title carousel-title">
-                    <p><u>Trusted by 1,000's</u> of smart teams in <u>130+ countries</u></p>
+                    <p><u>{t('indexTrustedBy')}</u> {t('ofSmart')} <u>{t('index130countries')}</u></p>
                   </div>
                 </div>
 
@@ -71,6 +66,7 @@ const index = props => {
                     <li data-target="#carousel1" data-slide-to="1"></li>
                     <li data-target="#carousel1" data-slide-to="2"></li>
                   </ul>
+
                   <div className="container customer-slider">
                     <div className="carousel-inner">
                       <div className="carousel-item active">
@@ -107,6 +103,7 @@ const index = props => {
                           </div>
                         </div>
                       </div>
+
                       <div className="carousel-item">
                         <div className="row">
                           <div className="testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item">
@@ -140,6 +137,7 @@ const index = props => {
                             </div>
                           </div>
                         </div>
+                        
                       </div>
                     </div>
                   </div>
@@ -662,7 +660,7 @@ const index = props => {
               <div className="col-12 col-md-6 col-lg-4 m-15px-tb">
                 <div className="feature-box-01">
                   <div className="icon">
-                    <a href="https://www.g2crowd.com/products/thechecker-thechecker/reviews"><img src="static/img/thechecker-reviews-g2crowd.png" alt="Crowd"/></a>
+                    <a href="https://www.g2crowd.com/products/thechecker-thechecker/reviews"><img src="static/img/thechecker-reviews-g2crowd.png" alt="Crowd" /></a>
                   </div>
                   <h4><a href="#"><b>4.7</b>/5</a></h4>
                   <p className="large"><span>✮✮✮✮✮ </span></p>
