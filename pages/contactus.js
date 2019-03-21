@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Header } from '../components';
+import { Footer, Header } from '../components';
 import Link from 'next/link';
 import './i18n';
 
@@ -127,6 +127,7 @@ const contactus = () => {
         </div>
       </section>
     </main>
+    <Footer />
   </div>
 };
 

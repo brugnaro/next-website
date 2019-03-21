@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Header } from '../components';
+import { Footer, Header } from '../components';
 import './i18n';
 import { Link, Router } from '../routes';
 
@@ -13,7 +13,7 @@ const integrations = () => {
 
   return <div>
     <title>Integrations With Email Marketing Tools | TheChecker</title>
-    
+
     <Header />
 
     <main>
@@ -258,6 +258,7 @@ const integrations = () => {
         </div>
       </section>
     </main>
+    <Footer />
   </div>
 };
 

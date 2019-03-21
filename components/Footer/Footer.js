@@ -1,16 +1,20 @@
+import { useTranslation, getInitialProps } from 'react-i18next';
+import '../../pages/i18n';
 import Link from 'next/link';
 
-const Footer = () =>
-  <footer className="footer-light">
+const Footer = () => {
+  const { t, i18n } = useTranslation();
+
+  return <footer className="footer-light">
     <section className="footer-section">
       <div className="container">
         <div className="row">
           <div className="col-md-12 col-lg-4 sm-m-15px-tb md-m-30px-b">
-            <h4 className="font-alt">About Us</h4>
+            <h4 className="font-alt">{t('footerAboutUs')}</h4>
             <p className="footer-text">
-              TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI.
-                </p><br />+1 (888) 964-2250
-              <ul className="social-icons">
+              {t('footerTheCheckerIsAnAccurate')}
+            </p><br />{t('footerPhoneNumber')}
+            <ul className="social-icons">
               <li><a className="facebook" target='blank' href="https://www.facebook.com/thecheckerco/"><i className="fab fa-facebook-f"></i></a></li>
               <li><a className="twitter" target='blank' href="https://twitter.com/thecheckerco"><i className="fab fa-twitter"></i></a></li>
               <li><a className="linkedin" target='blank' href="https://www.linkedin.com/company/thechecker.co/"><i className="fab fa-linkedin-in"></i></a></li>
@@ -18,29 +22,29 @@ const Footer = () =>
             </ul>
           </div>
           <div className="col-6 col-md-6 col-lg-2 sm-m-15px-tb">
-            <h4 className="font-alt">Product</h4>
+            <h4 className="font-alt">{t('footerProduct')}</h4>
             <ul className="fot-link">
-              <li><Link href="/#features"><a>Features</a></Link></li>
-              <li><Link href="/integrations"><a>Integrations</a></Link></li>
-              <li><Link href="/#reviews"><a>Reviews</a></Link></li>
-              <li><a href="#">Affiliates</a></li>
-              <li><a href="#">Server Status</a></li>
-              <li><a href="#">API Docs</a></li>
+              <li><Link href="/#features"><a>{t('footerFeatures')}</a></Link></li>
+              <li><Link href="/integrations"><a>{t('footerIntegrations')}</a></Link></li>
+              <li><Link href="/#reviews"><a>{t('footerReviews')}</a></Link></li>
+              <li><a href="#">{t('footerAffiliates')}</a></li>
+              <li><a href="#">{t('footerServerStatus')}</a></li>
+              <li><a href="#">{t('footerAPIDocs')}</a></li>
             </ul>
           </div>
           <div className="col-6 col-md-6 col-lg-2 sm-m-15px-tb">
-            <h4 className="font-alt">Legal</h4>
+            <h4 className="font-alt">{t('footerLegal')}</h4>
             <ul className="fot-link">
-              <li><a href="#">Privacy / GDPR</a></li>
-              <li><a href="#">Terms of Use</a></li>
-              <li><a href="#">Data Protection</a></li>
-              <li><a href="#">Anti-Spam Policy</a></li>
-              <li><a href="#">Cookie Policy</a></li>
-              <li><a href="#">TC Guarantee</a></li>
+              <li><a href="#">{t('footerPrivacyGDPR')}</a></li>
+              <li><a href="#">{t('footerTermsOfUse')}</a></li>
+              <li><a href="#">{t('footerDataProtection')}</a></li>
+              <li><a href="#">{t('footerAntiSpam')}</a></li>
+              <li><a href="#">{t('footerCookiePolicy')}</a></li>
+              <li><a href="#">{t('footerTCGuarantee')}</a></li>
             </ul>
           </div>
           <div className="col-6 col-md-6 col-lg-2 sm-m-15px-tb">
-            <h4 className="font-alt">Solutions</h4>
+            <h4 className="font-alt">{t('footerSolutions')}</h4>
             <ul className="fot-link">
               <li><a href="#">Enterprise</a></li>
               <li><a href="#">Sales Teams</a></li>
@@ -70,6 +74,7 @@ const Footer = () =>
         </div>
       </div>
     </section>
-  </footer>;
+  </footer>
+};
 
 export default Footer;

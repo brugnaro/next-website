@@ -86,79 +86,87 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/es/index.js");
+/* harmony import */ var _pages_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../pages/i18n */ "./pages/i18n.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/home/marcos/Documentos/next-website/components/Footer/Footer.js";
 
 
 
+
+
 var Footer = function Footer() {
+  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_1__["useTranslation"])(),
+      t = _useTranslation.t,
+      i18n = _useTranslation.i18n;
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     className: "footer-light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 8
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12 col-lg-4 sm-m-15px-tb md-m-30px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 13
     },
     __self: this
-  }, "About Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, t('footerAboutUs')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "footer-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 14
     },
     __self: this
-  }, "TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+  }, t('footerTheCheckerIsAnAccurate')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 16
     },
     __self: this
-  }), "+1 (888) 964-2250", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }), t('footerPhoneNumber'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "social-icons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -167,20 +175,20 @@ var Footer = function Footer() {
     href: "https://www.facebook.com/thecheckerco/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-facebook-f",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 18
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -189,20 +197,20 @@ var Footer = function Footer() {
     href: "https://twitter.com/thecheckerco",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-twitter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -211,20 +219,20 @@ var Footer = function Footer() {
     href: "https://www.linkedin.com/company/thechecker.co/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-linkedin-in",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 20
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -233,442 +241,442 @@ var Footer = function Footer() {
     href: "https://github.com/thecheckerco",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-github",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
-  }, "Product"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, t('footerProduct')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/#features",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
-  }, "Features"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('footerFeatures')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/integrations",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
-  }, "Integrations"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('footerIntegrations')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/#reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
-  }, "Reviews"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('footerReviews')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, "Affiliates")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 30
     },
     __self: this
-  }, "Server Status")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "API Docs")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
+  }, t('footerAffiliates'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-    className: "font-alt",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, t('footerServerStatus'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
-  }, "Legal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "fot-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 32
     },
     __self: this
-  }, "Privacy / GDPR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "Terms of Use")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Data Protection")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, "Anti-Spam Policy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, "Cookie Policy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, "TC Guarantee")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, t('footerAPIDocs'))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 36
     },
     __self: this
-  }, "Solutions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, t('footerLegal')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 38
+    },
+    __self: this
+  }, t('footerPrivacyGDPR'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, t('footerTermsOfUse'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, t('footerDataProtection'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, t('footerAntiSpam'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, t('footerCookiePolicy'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, t('footerTCGuarantee'))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "font-alt",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, t('footerSolutions')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "fot-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
     },
     __self: this
   }, "Enterprise")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   }, "Sales Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }, "Digital Agencies")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 52
     },
     __self: this
   }, "E-commerces")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, "SaaS Platforms")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 57
     },
     __self: this
   }, "Compare"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: this
   }, "TC vs. Neverbounce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }, "TC vs. BriteVerify")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }, "TC vs. ZeroBounce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }, "TC vs. Kickbox")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, "TC vs. Bounceless.io")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 64
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 64
     },
     __self: this
   }, "TC vs. EmailListVerify"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-copy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 68
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 69
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 70
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 71
     },
     __self: this
   }, "1395 Brickell Ave. Suite 800, Miami, FL 33131")))))));
@@ -23564,7 +23572,7 @@ var index = function index(props) {
       lineNumber: 58
     },
     __self: this
-  }, t('indexTrustedBy')), " ", t('ofSmart'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
+  }, t('indexTrustedBy')), " ", t('indexOfSmart'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 58
@@ -23970,31 +23978,31 @@ var index = function index(props) {
       lineNumber: 159
     },
     __self: this
-  }, "Why To Use Email Verification"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexWhyToUseEmail')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 160
     },
     __self: this
-  }, "Based on the last ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
+  }, t('indexBasedon'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 160
     },
     __self: this
-  }, "100 million emails"), " we verified in 2018, ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
+  }, t('index100million')), " ", t('indexWeVerified'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 160
     },
     __self: this
-  }, "23,51% would bounce"), ".", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
+  }, t('indexWouldBounce')), ".", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 160
     },
     __self: this
-  }), "Have you used an email list cleaning service recently?"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }), t('indexHaveYouUsed')))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
@@ -24046,13 +24054,13 @@ var index = function index(props) {
       lineNumber: 173
     },
     __self: this
-  }, "Protect Sender Reputation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexProtectSender')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 174
     },
     __self: this
-  }, "1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexEmailsIsNotDelivered')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
@@ -24089,13 +24097,13 @@ var index = function index(props) {
       lineNumber: 182
     },
     __self: this
-  }, "Avoid Blockages by ESPs"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexAvoidBlockages')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 183
     },
     __self: this
-  }, "A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexATiny')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
@@ -24132,13 +24140,13 @@ var index = function index(props) {
       lineNumber: 191
     },
     __self: this
-  }, "Increase Campaigns ROI"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexIncrease')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 192
     },
     __self: this
-  }, "Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI."))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, t('EmailsValidated')))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
@@ -24188,27 +24196,27 @@ var index = function index(props) {
       lineNumber: 207
     },
     __self: this
-  }, "In-forms real-time email validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+  }, t('indexInForms')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 208
     },
     __self: this
-  }, "Get rid of the bad emails before they enter your list"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexGetRidOf')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 209
     },
     __self: this
-  }, "Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, t('indexDontLet')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 210
     },
     __self: this
-  }, "Install to verify email address online ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+  }, t('indexInstallTo'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
@@ -24297,30 +24305,30 @@ var index = function index(props) {
       lineNumber: 230
     },
     __self: this
-  }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+  }, t('indexSeamless')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 231
+    },
+    __self: this
+  }, t('indexConnectWith')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 232
     },
     __self: this
-  }, "Connect with your favorite email marketing tool"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 234
-    },
-    __self: this
-  }, "TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, t('indexTheCheckerEmail')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 233
     },
     __self: this
-  }, "Explore all integrations ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+  }, t('indexExploreAll'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 235
+      lineNumber: 233
     },
     __self: this
   })))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -24328,89 +24336,89 @@ var index = function index(props) {
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 244
+      lineNumber: 241
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     className: "section section-effect right p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 245
+      lineNumber: 242
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 246
+      lineNumber: 243
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 247
+      lineNumber: 244
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 248
+      lineNumber: 245
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box-02 title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 249
+      lineNumber: 246
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 247
+    },
+    __self: this
+  }, t('indexBulkemail')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+    className: "m-20px-b font-alt",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 248
+    },
+    __self: this
+  }, t('indexEasilyClean')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 249
+    },
+    __self: this
+  }, t('indexIfOnly')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 250
     },
     __self: this
-  }, "Bulk email list verification"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
-    className: "m-20px-b font-alt",
+  }, t('indexUseOurOnline')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+    href: "#",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 251
     },
     __self: this
-  }, "Easily clean your current email lists and databases"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 252
-    },
-    __self: this
-  }, "If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 253
-    },
-    __self: this
-  }, "Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 254
-    },
-    __self: this
-  }, "Verify email list now ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+  }, t('indexVerify'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 254
+      lineNumber: 251
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 257
+      lineNumber: 254
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24419,7 +24427,7 @@ var index = function index(props) {
     alt: "Email verification service feature 3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 258
+      lineNumber: 255
     },
     __self: this
   })))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -24427,35 +24435,35 @@ var index = function index(props) {
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 265
+      lineNumber: 262
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     className: "section section-effect left p-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 266
+      lineNumber: 263
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 267
+      lineNumber: 264
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row align-items-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 268
+      lineNumber: 265
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 sm-m-30px-t order-last order-md-first",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 269
+      lineNumber: 266
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24464,55 +24472,55 @@ var index = function index(props) {
     alt: "email verification service feature 4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 270
+      lineNumber: 267
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 272
+      lineNumber: 269
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box-02 title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 273
+      lineNumber: 270
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     className: "theme2nd-color",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 274
+      lineNumber: 271
     },
     __self: this
-  }, "Seamless integrations"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+  }, t('indexSeamlessIntegrations')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "m-20px-b font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 275
+      lineNumber: 272
     },
     __self: this
-  }, "Add an email validation tool to any website or app"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexAddAnEmail')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 276
+      lineNumber: 273
     },
     __self: this
-  }, "Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+  }, t('indexUseOurAPI')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 274
     },
     __self: this
-  }, "See API docs ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+  }, t('indexSeeAPI'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-arrow-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 277
+      lineNumber: 274
     },
     __self: this
   })))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
@@ -24520,14 +24528,14 @@ var index = function index(props) {
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 286
+      lineNumber: 283
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 287
+      lineNumber: 284
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -24535,78 +24543,78 @@ var index = function index(props) {
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 289
+      lineNumber: 286
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row justify-content-center m-60px-b md-m-40px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 290
+      lineNumber: 287
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 291
+      lineNumber: 288
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "section-title text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 292
+      lineNumber: 289
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 293
+      lineNumber: 290
     },
     __self: this
-  }, "Testimonial"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+  }, t('indexTestimonial')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 294
+      lineNumber: 291
     },
     __self: this
-  }, "What Our Customers Say?"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexWhatOurCustomersSay')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "title-border",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 295
+      lineNumber: 292
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 296
+      lineNumber: 293
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "md",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 297
+      lineNumber: 294
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 298
+      lineNumber: 295
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 300
+      lineNumber: 297
     },
     __self: this
-  }, "World-class teams in 130+ countries choose TheChecker."))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexWorldClassTeams')))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     id: "carousel2",
     className: "carousel slide",
     "data-ride": "carousel",
@@ -24614,14 +24622,14 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 306
+      lineNumber: 303
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 308
+      lineNumber: 305
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -24630,7 +24638,7 @@ var index = function index(props) {
     className: "active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 309
+      lineNumber: 306
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -24638,7 +24646,7 @@ var index = function index(props) {
     "data-slide-to": "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 310
+      lineNumber: 307
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -24646,7 +24654,7 @@ var index = function index(props) {
     "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 311
+      lineNumber: 308
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -24654,49 +24662,49 @@ var index = function index(props) {
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 314
+      lineNumber: 311
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 315
+      lineNumber: 312
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-item active text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 317
+      lineNumber: 314
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 319
+      lineNumber: 316
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 321
+      lineNumber: 318
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 322
+      lineNumber: 319
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 323
+      lineNumber: 320
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24704,27 +24712,27 @@ var index = function index(props) {
     alt: "Leadlovers",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 324
+      lineNumber: 321
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 325
+      lineNumber: 322
     },
     __self: this
-  }, "Here at LeadLovers we\u2019re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexHereAtLeadLovers'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 327
+      lineNumber: 324
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 328
+      lineNumber: 325
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24733,47 +24741,47 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 329
+      lineNumber: 326
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 331
+      lineNumber: 328
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 332
+      lineNumber: 329
     },
     __self: this
-  }, "Fernando Milek"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexFernandoMilek')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 333
+      lineNumber: 330
     },
     __self: this
-  }, "CTO")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexCto'))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 338
+      lineNumber: 335
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 339
+      lineNumber: 336
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 340
+      lineNumber: 337
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24781,27 +24789,27 @@ var index = function index(props) {
     alt: "Actualsales",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 341
+      lineNumber: 338
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 342
+      lineNumber: 339
     },
     __self: this
-  }, "An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexAnExcellentEmail'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 344
+      lineNumber: 341
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 345
+      lineNumber: 342
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24810,88 +24818,88 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 346
+      lineNumber: 343
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 348
+      lineNumber: 345
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 349
+      lineNumber: 346
     },
     __self: this
-  }, "Arist\xF3teles de Oliveira"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexAristotelesDeOliveira')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 350
+      lineNumber: 347
     },
     __self: this
-  }, "Digital Marketing and Sales Manager")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexDigitalMarketing'))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 359
+      lineNumber: 356
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 360
+      lineNumber: 357
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 361
+      lineNumber: 358
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 362
+      lineNumber: 359
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 363
+      lineNumber: 360
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: "static/img/testimonials/advertisepurple.png",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 364
+      lineNumber: 361
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 365
+      lineNumber: 362
     },
     __self: this
-  }, "Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexUsingTheChecker'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 367
+      lineNumber: 364
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 368
+      lineNumber: 365
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24900,47 +24908,47 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 369
+      lineNumber: 366
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 371
+      lineNumber: 368
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 372
+      lineNumber: 369
     },
     __self: this
-  }, "Michael Lee"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexMichaelLee')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 373
+      lineNumber: 370
     },
     __self: this
-  }, "Inside Sales Representative")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexInsideSales'))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 377
+      lineNumber: 374
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 378
+      lineNumber: 375
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 379
+      lineNumber: 376
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24948,27 +24956,27 @@ var index = function index(props) {
     alt: "Inboxhero",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 380
+      lineNumber: 377
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 381
+      lineNumber: 378
     },
     __self: this
-  }, "Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexGoodAndPractical'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 383
+      lineNumber: 380
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 384
+      lineNumber: 381
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -24977,61 +24985,61 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 385
+      lineNumber: 382
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 387
+      lineNumber: 384
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 388
+      lineNumber: 385
     },
     __self: this
-  }, "Jon Mae"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexJonMae')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 389
+      lineNumber: 386
     },
     __self: this
-  }, "Email Marketing Expert")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexEmailMarketingExpert'))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 395
+      lineNumber: 392
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 396
+      lineNumber: 393
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 397
+      lineNumber: 394
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 398
+      lineNumber: 395
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 399
+      lineNumber: 396
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -25039,27 +25047,27 @@ var index = function index(props) {
     alt: "Rockcontent",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 400
+      lineNumber: 397
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 401
+      lineNumber: 398
     },
     __self: this
-  }, "I didn\u2019t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexIDidntKnow'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 403
+      lineNumber: 400
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 404
+      lineNumber: 401
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", (_React$createElement = {
@@ -25067,45 +25075,45 @@ var index = function index(props) {
     src: "data:image/jpeg;base64,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"
   }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "alt", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "title", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "__source", {
     fileName: _jsxFileName,
-    lineNumber: 405
+    lineNumber: 402
   }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement, "__self", this), _React$createElement))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 407
+      lineNumber: 404
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 408
+      lineNumber: 405
     },
     __self: this
-  }, "Ivan Nunes de Castro"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexIvanNunes')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 409
+      lineNumber: 406
     },
     __self: this
-  }, "Senior Sales Manager")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexSeniorSalesManager'))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 413
+      lineNumber: 410
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 414
+      lineNumber: 411
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 415
+      lineNumber: 412
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -25113,27 +25121,27 @@ var index = function index(props) {
     alt: "Say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 416
+      lineNumber: 413
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 417
+      lineNumber: 414
     },
     __self: this
-  }, "We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexWeMadeTheSwitch'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 419
+      lineNumber: 416
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 420
+      lineNumber: 417
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -25142,61 +25150,61 @@ var index = function index(props) {
     title: "",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 421
+      lineNumber: 418
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 423
+      lineNumber: 420
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 424
+      lineNumber: 421
     },
     __self: this
-  }, "Paul McGuire"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexPaulMcGuire')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 425
+      lineNumber: 422
     },
     __self: this
-  }, "Director")))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexDirector'))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 431
+      lineNumber: 428
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 432
+      lineNumber: 429
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 433
+      lineNumber: 430
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 434
+      lineNumber: 431
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 435
+      lineNumber: 432
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -25204,27 +25212,27 @@ var index = function index(props) {
     alt: "Say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 436
+      lineNumber: 433
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 437
+      lineNumber: 434
     },
     __self: this
-  }, "In addition to the attention and commitment of TheChecker\u2019s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexInAddition'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 439
+      lineNumber: 436
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 440
+      lineNumber: 437
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", (_React$createElement2 = {
@@ -25232,45 +25240,45 @@ var index = function index(props) {
     src: "https://media.licdn.com/dms/image/C4D03AQHDUX4HSQifLw/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=7fTOFnJbj5BIe2jaItQxI_L3VKee22zCq9FzSARxdpI"
   }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "alt", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "title", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "__source", {
     fileName: _jsxFileName,
-    lineNumber: 441
+    lineNumber: 438
   }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement2, "__self", this), _React$createElement2))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 443
+      lineNumber: 440
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 444
+      lineNumber: 441
     },
     __self: this
-  }, "Ademir Diniz"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexAdemirDiniz')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 445
+      lineNumber: 442
     },
     __self: this
-  }, "Product Manager")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexProductManager'))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial-col col-sm-12 col-md-5 col-lg-5 col-xl-5",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 449
+      lineNumber: 446
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "ti-quote-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 450
+      lineNumber: 447
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 451
+      lineNumber: 448
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -25278,27 +25286,27 @@ var index = function index(props) {
     alt: "eivos",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 452
+      lineNumber: 449
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 453
+      lineNumber: 450
     },
     __self: this
-  }, "The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexTheBest'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "user",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 455
+      lineNumber: 452
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "img",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 456
+      lineNumber: 453
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", (_React$createElement3 = {
@@ -25306,31 +25314,31 @@ var index = function index(props) {
     src: "https://media.licdn.com/dms/image/C4D03AQGsLEE38cNysQ/profile-displayphoto-shrink_800_800/0?e=1556755200&v=beta&t=ixSYs4ZI5HAXv0QDZ-nWIBtjgtOZRGPnA1-yeRMxB7Y"
   }, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "alt", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "title", ""), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "__source", {
     fileName: _jsxFileName,
-    lineNumber: 457
+    lineNumber: 454
   }), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$createElement3, "__self", this), _React$createElement3))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "name",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 459
+      lineNumber: 456
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 460
+      lineNumber: 457
     },
     __self: this
-  }, "Juli\xE1n P\xE9rez"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
+  }, t('indexJulianPerez')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("label", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 461
+      lineNumber: 458
     },
     __self: this
-  }, "Director")))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexDirector'))))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "owl-dots",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 470
+      lineNumber: 467
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -25340,14 +25348,14 @@ var index = function index(props) {
     "data-slide": "prev",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 471
+      lineNumber: 468
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "fa fa-chevron-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 471
+      lineNumber: 468
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -25357,14 +25365,14 @@ var index = function index(props) {
     "data-slide": "next",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 472
+      lineNumber: 469
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
     className: "fa fa-chevron-right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 472
+      lineNumber: 469
     },
     __self: this
   })))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
@@ -25372,14 +25380,14 @@ var index = function index(props) {
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 479
+      lineNumber: 476
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 480
+      lineNumber: 477
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -25387,77 +25395,77 @@ var index = function index(props) {
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 482
+      lineNumber: 479
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 483
+      lineNumber: 480
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 484
+      lineNumber: 481
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "section-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 485
+      lineNumber: 482
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 486
+      lineNumber: 483
     },
     __self: this
-  }, "About Our Email Validation Service"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexAboutOurEmail')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 487
+      lineNumber: 484
     },
     __self: this
-  }, "Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker."))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, t('indexEmailMarketingDatabases')))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 493
+      lineNumber: 490
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 494
+      lineNumber: 491
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 495
+      lineNumber: 492
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 496
+      lineNumber: 493
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 497
+      lineNumber: 494
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25465,41 +25473,41 @@ var index = function index(props) {
     name: "accuracy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 498
+      lineNumber: 495
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 500
+      lineNumber: 497
     },
     __self: this
-  }, "99%+ Accuracy"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('index99Accuracy')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 501
+      lineNumber: 498
     },
     __self: this
-  }, "Our emails marked as \"Valid\" are covered by our deliverability guarantee."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexOurEmailsMarked')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 504
+      lineNumber: 501
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 505
+      lineNumber: 502
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 506
+      lineNumber: 503
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25507,41 +25515,41 @@ var index = function index(props) {
     name: "fast",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 507
+      lineNumber: 504
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 509
+      lineNumber: 506
     },
     __self: this
-  }, "Fast Email Verification"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexFastEmailVerification')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 510
+      lineNumber: 507
     },
     __self: this
-  }, "Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexCleanUpMassive')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 513
+      lineNumber: 510
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 514
+      lineNumber: 511
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 515
+      lineNumber: 512
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25549,41 +25557,41 @@ var index = function index(props) {
     name: "affordable",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 516
+      lineNumber: 513
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 518
+      lineNumber: 515
     },
     __self: this
-  }, "Affordable Prices"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexAffordablePrices')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 519
+      lineNumber: 516
     },
     __self: this
-  }, "We are (by far) the most cost-effective solution (accurate, fast and affordable)."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexWeAreByFar')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 522
+      lineNumber: 519
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 523
+      lineNumber: 520
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 524
+      lineNumber: 521
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25591,41 +25599,41 @@ var index = function index(props) {
     name: "filetypes",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 525
+      lineNumber: 522
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 527
+      lineNumber: 524
     },
     __self: this
-  }, "Filetypes Compatibility"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexFiletypesCompatibility')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 528
+      lineNumber: 525
     },
     __self: this
-  }, "We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexWeofferAWide')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 531
+      lineNumber: 528
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 532
+      lineNumber: 529
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 533
+      lineNumber: 530
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25633,41 +25641,41 @@ var index = function index(props) {
     name: "bounce",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 534
+      lineNumber: 531
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 536
+      lineNumber: 533
     },
     __self: this
-  }, "Email Bounce Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexEmailBounce')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 537
+      lineNumber: 534
     },
     __self: this
-  }, "Identifies and tells you which emails will bounce and thus are not safe to send."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexIdentifiesAndTells')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 540
+      lineNumber: 537
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 541
+      lineNumber: 538
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 542
+      lineNumber: 539
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25675,41 +25683,41 @@ var index = function index(props) {
     name: "antigrey",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 543
+      lineNumber: 540
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 545
+      lineNumber: 542
     },
     __self: this
-  }, "Anti-Greylisting"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexAntiGreylisting')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 546
+      lineNumber: 543
     },
     __self: this
-  }, "Our proprietary algorithm gives you the most accurate email validation results."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexOurProprietaryAlgorithm')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 549
+      lineNumber: 546
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 550
+      lineNumber: 547
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 551
+      lineNumber: 548
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25717,41 +25725,41 @@ var index = function index(props) {
     name: "catch",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 552
+      lineNumber: 549
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 554
+      lineNumber: 551
     },
     __self: this
-  }, "Catch-all Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexCatchAllChecker')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 555
+      lineNumber: 552
     },
     __self: this
-  }, "Checks for domains that are catch-all, which return valid for all emails."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexChecksForDomains')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 558
+      lineNumber: 555
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 559
+      lineNumber: 556
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 560
+      lineNumber: 557
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25759,41 +25767,41 @@ var index = function index(props) {
     name: "emailtypo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 561
+      lineNumber: 558
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 563
+      lineNumber: 560
     },
     __self: this
-  }, "Email Typo Correction"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexEmailTypoCorrection')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 564
+      lineNumber: 561
     },
     __self: this
-  }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexEmailTypoDescription')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 567
+      lineNumber: 564
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 568
+      lineNumber: 565
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 569
+      lineNumber: 566
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25801,41 +25809,41 @@ var index = function index(props) {
     name: "sintax",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 570
+      lineNumber: 567
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 572
+      lineNumber: 569
     },
     __self: this
-  }, "Syntax Validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexSyntaxValidation')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 573
+      lineNumber: 570
     },
     __self: this
-  }, "Fully cleans your email list from email addresses with syntax errors."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexFullyCleans')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 576
+      lineNumber: 573
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 577
+      lineNumber: 574
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 578
+      lineNumber: 575
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25843,41 +25851,41 @@ var index = function index(props) {
     name: "domain",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 579
+      lineNumber: 576
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 581
+      lineNumber: 578
     },
     __self: this
-  }, "Domain Validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexDomainValidation')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 582
+      lineNumber: 579
     },
     __self: this
-  }, "Marks all the emails containing inactive or invalid domains."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexMarksAllTheEmails')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 585
+      lineNumber: 582
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 586
+      lineNumber: 583
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 587
+      lineNumber: 584
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25885,41 +25893,41 @@ var index = function index(props) {
     name: "mailbox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 588
+      lineNumber: 585
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 590
+      lineNumber: 587
     },
     __self: this
-  }, "Mailbox Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexMailboxChecker')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 591
+      lineNumber: 588
     },
     __self: this
-  }, "Validates the existence of MX records for every email address."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexValidatesTheExistence')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 594
+      lineNumber: 591
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 595
+      lineNumber: 592
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 596
+      lineNumber: 593
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25927,41 +25935,41 @@ var index = function index(props) {
     name: "risk",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 597
+      lineNumber: 594
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 599
+      lineNumber: 596
     },
     __self: this
-  }, "Risk Validation"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexRiskValidation')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 600
+      lineNumber: 597
     },
     __self: this
-  }, "Identifies and marks all the emails which domain accepts any email in their domain."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexIdentifiesAndMarks')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 603
+      lineNumber: 600
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 604
+      lineNumber: 601
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 605
+      lineNumber: 602
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -25969,41 +25977,41 @@ var index = function index(props) {
     name: "freede",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 606
+      lineNumber: 603
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 608
+      lineNumber: 605
     },
     __self: this
-  }, "Free De-duplication"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexFreeDeDuplication')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 609
+      lineNumber: 606
     },
     __self: this
-  }, "TheCheckers email checker tool removes all records containing duplicate emails."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexTheCheckersEmail')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 612
+      lineNumber: 609
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 613
+      lineNumber: 610
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 614
+      lineNumber: 611
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -26011,41 +26019,41 @@ var index = function index(props) {
     name: "spantrap",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 615
+      lineNumber: 612
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 617
+      lineNumber: 614
     },
     __self: this
-  }, "Spam Trap Remover"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexSpamTrapRemover')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 618
+      lineNumber: 615
     },
     __self: this
-  }, "Our email verifier tool removes all address identified as a spam trap."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexOurEmailVerifier')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 621
+      lineNumber: 618
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 622
+      lineNumber: 619
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 623
+      lineNumber: 620
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -26053,41 +26061,41 @@ var index = function index(props) {
     name: "disposables",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 624
+      lineNumber: 621
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 626
+      lineNumber: 623
     },
     __self: this
-  }, "Disposables Checker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexDisposablesChecker')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 627
+      lineNumber: 624
     },
     __self: this
-  }, "Checks against our frequently updated temporary email database."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexChecksAgainst')))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-6 col-lg-3 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 630
+      lineNumber: 627
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 631
+      lineNumber: 628
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 632
+      lineNumber: 629
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Icon"], {
@@ -26095,35 +26103,35 @@ var index = function index(props) {
     name: "payonly",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 633
+      lineNumber: 630
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 635
+      lineNumber: 632
     },
     __self: this
-  }, "Pay Only For Results"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexPayOnly')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 636
+      lineNumber: 633
     },
     __self: this
-  }, "If we can't verify a certain email at any moment, we refund you the credits."))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
+  }, t('indexIfWeCantVerify')))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
     id: "reviews",
     className: "section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 645
+      lineNumber: 642
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 646
+      lineNumber: 643
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -26131,90 +26139,90 @@ var index = function index(props) {
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 647
+      lineNumber: 644
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 648
+      lineNumber: 645
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 649
+      lineNumber: 646
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "section-title",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 650
+      lineNumber: 647
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 651
+      lineNumber: 648
     },
     __self: this
-  }, "The Highest Rated Email Verifier"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexTheHighestRated')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 652
+      lineNumber: 649
     },
     __self: this
-  }, "TheChecker is the ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
+  }, t('indexTheCheckerIsThe'), " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 652
+      lineNumber: 649
     },
     __self: this
-  }, "#1 email verification software"), " based on independent reviews."))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, t('index1EmailVerification')), " ", t('indexBasedOnIndependent')))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 658
+      lineNumber: 655
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 659
+      lineNumber: 656
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-12 col-md-6 col-lg-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 660
+      lineNumber: 657
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 661
+      lineNumber: 658
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 662
+      lineNumber: 659
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "https://www.g2crowd.com/products/thechecker-thechecker/reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 663
+      lineNumber: 660
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26222,67 +26230,67 @@ var index = function index(props) {
     alt: "Crowd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 663
+      lineNumber: 660
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 665
+      lineNumber: 662
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 665
+      lineNumber: 662
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 665
+      lineNumber: 662
     },
     __self: this
-  }, "4.7"), "/5")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexCrowdFirstNote')), t('indexCrowdSecondNote'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 666
+      lineNumber: 663
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 666
+      lineNumber: 663
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-12 col-md-6 col-lg-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 669
+      lineNumber: 666
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 670
+      lineNumber: 667
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 671
+      lineNumber: 668
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "https://www.capterra.com/p/173432/TheChecker/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 672
+      lineNumber: 669
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26290,67 +26298,67 @@ var index = function index(props) {
     alt: "Capterra",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 672
+      lineNumber: 669
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 674
+      lineNumber: 671
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 674
+      lineNumber: 671
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 674
+      lineNumber: 671
     },
     __self: this
-  }, "4.9"), "/5")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexCapterraFirstNote')), t('indexCapterraSecondNote'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 675
+      lineNumber: 672
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 675
+      lineNumber: 672
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E ")))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-12 col-md-6 col-lg-4 m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 678
+      lineNumber: 675
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "feature-box-01",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 679
+      lineNumber: 676
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "icon",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 680
+      lineNumber: 677
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "https://www.trustpilot.com/review/thechecker.co",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 681
+      lineNumber: 678
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26358,39 +26366,39 @@ var index = function index(props) {
     alt: "Trustpilot",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 681
+      lineNumber: 678
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 683
+      lineNumber: 680
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 683
+      lineNumber: 680
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 683
+      lineNumber: 680
     },
     __self: this
-  }, "4.6"), "/5")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+  }, t('indexTrustpilotFirstNote')), t('indexTrustpilotSecondNote'))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     className: "large",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 684
+      lineNumber: 681
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 684
+      lineNumber: 681
     },
     __self: this
   }, "\u272E\u272E\u272E\u272E\u272E ")))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("section", {
@@ -26398,14 +26406,14 @@ var index = function index(props) {
     className: "section gray-bg text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 692
+      lineNumber: 689
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 693
+      lineNumber: 690
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
@@ -26413,98 +26421,98 @@ var index = function index(props) {
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 695
+      lineNumber: 692
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row justify-content-center m-45px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 696
+      lineNumber: 693
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-md-10 col-lg-8 col-xl-7",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 697
+      lineNumber: 694
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "section-title text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 698
+      lineNumber: 695
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     className: "theme-after-bg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 699
+      lineNumber: 696
     },
     __self: this
-  }, "Join the Smartest"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+  }, t('indexJoinTheSmartest')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "title-border",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 700
+      lineNumber: 697
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 700
+      lineNumber: 697
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "md",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 700
+      lineNumber: 697
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
     className: "sm",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 700
+      lineNumber: 697
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 701
+      lineNumber: 698
     },
     __self: this
-  }, "Try the best bulk email address checker for FREE and see the accurate results!"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, t('indexTryTheBestBulk')))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 707
+      lineNumber: 704
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row justify-content-center m-60px-b md-m-25px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 708
+      lineNumber: 705
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "col-12 col-md-12 col-lg-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 709
+      lineNumber: 706
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "cta",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 710
+      lineNumber: 707
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
@@ -26512,15 +26520,15 @@ var index = function index(props) {
     className: "m-btn m-btn-theme2nd",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 711
+      lineNumber: 708
     },
     __self: this
-  }, "Try For Free"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
+  }, t('indexTryForFree')))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_animate_on_scroll__WEBPACK_IMPORTED_MODULE_5___default.a, {
     animateIn: "fadeIn",
     animateOnce: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 717
+      lineNumber: 714
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -26531,14 +26539,14 @@ var index = function index(props) {
     "data-pause": "hover",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 718
+      lineNumber: 715
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
     className: "carousel-indicators",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 719
+      lineNumber: 716
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -26547,7 +26555,7 @@ var index = function index(props) {
     className: "active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 720
+      lineNumber: 717
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -26555,7 +26563,7 @@ var index = function index(props) {
     "data-slide-to": "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 721
+      lineNumber: 718
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
@@ -26563,49 +26571,49 @@ var index = function index(props) {
     "data-slide-to": "2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 722
+      lineNumber: 719
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "container customer-slider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 724
+      lineNumber: 721
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-inner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 725
+      lineNumber: 722
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-item active",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 726
+      lineNumber: 723
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 727
+      lineNumber: 724
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 728
+      lineNumber: 725
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 729
+      lineNumber: 726
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26613,21 +26621,21 @@ var index = function index(props) {
     alt: "Asics",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 730
+      lineNumber: 727
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 733
+      lineNumber: 730
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 734
+      lineNumber: 731
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26635,21 +26643,21 @@ var index = function index(props) {
     alt: "Century",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 735
+      lineNumber: 732
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 738
+      lineNumber: 735
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 739
+      lineNumber: 736
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26657,21 +26665,21 @@ var index = function index(props) {
     alt: "Email-verification",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 740
+      lineNumber: 737
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 743
+      lineNumber: 740
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 744
+      lineNumber: 741
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26679,21 +26687,21 @@ var index = function index(props) {
     alt: "email verification service thechecker customers ebanx",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 745
+      lineNumber: 742
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 748
+      lineNumber: 745
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 749
+      lineNumber: 746
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26701,21 +26709,21 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers wework",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 750
+      lineNumber: 747
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 753
+      lineNumber: 750
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 754
+      lineNumber: 751
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26723,35 +26731,35 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers sage",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 755
+      lineNumber: 752
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "carousel-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 760
+      lineNumber: 757
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 761
+      lineNumber: 758
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 762
+      lineNumber: 759
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 763
+      lineNumber: 760
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26759,21 +26767,21 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers saleshandy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 764
+      lineNumber: 761
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 767
+      lineNumber: 764
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 768
+      lineNumber: 765
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26781,21 +26789,21 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers vindi",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 769
+      lineNumber: 766
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 772
+      lineNumber: 769
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 773
+      lineNumber: 770
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26803,21 +26811,21 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers wyssinstitute",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 774
+      lineNumber: 771
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 777
+      lineNumber: 774
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 778
+      lineNumber: 775
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26825,21 +26833,21 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers growbots",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 779
+      lineNumber: 776
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 782
+      lineNumber: 779
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 783
+      lineNumber: 780
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26847,21 +26855,21 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers university of toronto",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 784
+      lineNumber: 781
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "testimonial col-12 col-sm-2 col-md-2 col-lg-2 col-xl-2 customer-item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 787
+      lineNumber: 784
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
     className: "say",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 788
+      lineNumber: 785
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
@@ -26869,10 +26877,16 @@ var index = function index(props) {
     alt: "Email verification service thechecker customers leadcrunch",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 789
+      lineNumber: 786
     },
     __self: this
-  })))))))))))));
+  })))))))))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_2__["Footer"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 800
+    },
+    __self: this
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (index);
@@ -26883,10 +26897,10 @@ var index = function index(props) {
 /*!*********************************!*\
   !*** ./pages/languages/en.json ***!
   \*********************************/
-/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, indexGetRid, indexEmailVerification, indexAnd, indexEmailList, indexSolutionsThatImprove, indexTrustedAndRated, index48, indexBasedOn, index200reviews, indexTryForFree, indexLearnMore, indexTrustedBy, ofSmart, index130countries, default */
+/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, indexGetRid, indexEmailVerification, indexAnd, indexEmailList, indexSolutionsThatImprove, indexTrustedAndRated, index48, indexBasedOn, index200reviews, indexTryForFree, indexLearnMore, indexTrustedBy, indexOfSmart, index130countries, indexWhyToUseEmail, indexBasedon, index100million, indexWeVerified, indexWouldBounce, indexHaveYouUsed, indexProtectSender, indexEmailsIsNotDelivered, indexAvoidBlockages, indexATiny, indexIncrease, EmailsValidated, indexInForms, indexGetRidOf, indexDontLet, indexInstallTo, indexSeamless, indexConnectWith, indexTheCheckerEmail, indexExploreAll, indexBulkemail, indexEasilyClean, indexIfOnly, indexUseOurOnline, indexVerify, indexSeamlessIntegrations, indexAddAnEmail, indexUseOurAPI, indexSeeAPI, indexTestimonial, indexWhatOurCustomersSay, indexWorldClassTeams, indexHereAtLeadLovers, indexFernandoMilek, indexCto, indexAnExcellentEmail, indexAristotelesDeOliveira, indexDigitalMarketing, indexUsingTheChecker, indexMichaelLee, indexInsideSales, indexGoodAndPractical, indexJonMae, indexEmailMarketingExpert, indexIDidntKnow, indexIvanNunes, indexSeniorSalesManager, indexWeMadeTheSwitch, indexPaulMcGuire, indexDirector, indexInAddition, indexAdemirDiniz, indexProductManager, indexTheBest, indexJulianPerez, indexAboutOurEmail, indexEmailMarketingDatabases, index99Accuracy, indexOurEmailsMarked, indexFastEmailVerification, indexCleanUpMassive, indexAffordablePrices, indexWeAreByFar, indexFiletypesCompatibility, indexWeofferAWide, indexEmailBounce, indexIdentifiesAndTells, indexAntiGreylisting, indexOurProprietaryAlgorithm, indexCatchAllChecker, indexChecksForDomains, indexEmailTypoCorrection, indexEmailTypoDescription, indexSyntaxValidation, indexFullyCleans, indexDomainValidation, indexMarksAllTheEmails, indexMailboxChecker, indexValidatesTheExistence, indexRiskValidation, indexIdentifiesAndMarks, indexFreeDeDuplication, indexTheCheckersEmail, indexSpamTrapRemover, indexOurEmailVerifier, indexDisposablesChecker, indexChecksAgainst, indexPayOnly, indexIfWeCantVerify, indexTheHighestRated, indexTheCheckerIsThe, index1EmailVerification, indexBasedOnIndependent, indexCrowdFirstNote, indexCrowdSecondNote, indexCapterraFirstNote, indexCapterraSecondNote, indexTrustpilotFirstNote, indexTrustpilotSecondNote, indexJoinTheSmartest, indexTryTheBestBulk, footerAboutUs, footerTheCheckerIsAnAccurate, footerPhoneNumber, footerProduct, footerFeatures, footerIntegrations, footerReviews, footerAffiliates, footerServerStatus, footerAPIDocs, footerLegal, footerPrivacyGDPR, footerTermsOfUse, footerDataProtection, footerAntiSpam, footerCookiePolicy, footerTCGuarantee, footerSolutions, default */
 /***/ (function(module) {
 
-module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"The most cost-effective email verification service","indexGetRid":"Get rid of email bounces and bad email addresses with our proven high-quality yet affordable","indexEmailVerification":"email verification","indexAnd":"and","indexEmailList":"email list cleaning","indexSolutionsThatImprove":"solutions that improve your data quality and email marketing ROI.","indexTrustedAndRated":"Trusted and rated","index48":"4.8","indexBasedOn":"/5 based on","index200reviews":"200+ reviews.","indexTryForFree":"Try For Free","indexLearnMore":"Learn More","indexTrustedBy":"Trusted by 1,000's","ofSmart":"of smart teams in","index130countries":"130+ countries"};
+module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"The most cost-effective email verification service","indexGetRid":"Get rid of email bounces and bad email addresses with our proven high-quality yet affordable","indexEmailVerification":"email verification","indexAnd":"and","indexEmailList":"email list cleaning","indexSolutionsThatImprove":"solutions that improve your data quality and email marketing ROI.","indexTrustedAndRated":"Trusted and rated","index48":"4.8","indexBasedOn":"/5 based on","index200reviews":"200+ reviews.","indexTryForFree":"Try For Free","indexLearnMore":"Learn More","indexTrustedBy":"Trusted by 1,000's","indexOfSmart":"of smart teams in","index130countries":"130+ countries","indexWhyToUseEmail":"Why To Use Email Verification","indexBasedon":"Based on the last","index100million":"100 million emails","indexWeVerified":"we verified in 2018,","indexWouldBounce":"23,51% would bounce","indexHaveYouUsed":"Have you used an email list cleaning service recently?","indexProtectSender":"Protect Sender Reputation","indexEmailsIsNotDelivered":"1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service.","indexAvoidBlockages":"Avoid Blockages by ESPs","indexATiny":"A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability.","indexIncrease":"Increase Campaigns ROI","EmailsValidated":"Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI.","indexInForms":"In-forms real-time email validation","indexGetRidOf":"Get rid of the bad emails before they enter your list","indexDontLet":"Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills.","indexInstallTo":"Install to verify email address online","indexSeamless":"Seamless integrations","indexConnectWith":"Connect with your favorite email marketing tool","indexTheCheckerEmail":"TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean.","indexExploreAll":"Explore all integrations","indexBulkemail":"Bulk email list verification","indexEasilyClean":"Easily clean your current email lists and databases","indexIfOnly":"If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI.","indexUseOurOnline":"Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!","indexVerify":"Verify email list now","indexSeamlessIntegrations":"Seamless integrations","indexAddAnEmail":"Add an email validation tool to any website or app","indexUseOurAPI":"Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app.","indexSeeAPI":"See API docs","indexTestimonial":"Testimonial","indexWhatOurCustomersSay":"What Our Customers Say?","indexWorldClassTeams":"World-class teams in 130+ countries choose TheChecker.","indexHereAtLeadLovers":"Here at LeadLovers we’re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.","indexFernandoMilek":"Fernando Milek","indexCto":"CTO","indexAnExcellentEmail":"An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.","indexAristotelesDeOliveira":"Aristóteles de Oliveira","indexDigitalMarketing":"Digital Marketing and Sales Manager","indexUsingTheChecker":"Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!","indexMichaelLee":"Michael Lee","indexInsideSales":"Inside Sales Representative","indexGoodAndPractical":"Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!","indexJonMae":"Jon Mae","indexEmailMarketingExpert":"Email Marketing Expert","indexIDidntKnow":"I didn’t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!","indexIvanNunes":"Ivan Nunes de Castro","indexSeniorSalesManager":"Senior Sales Manager","indexWeMadeTheSwitch":"We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.","indexPaulMcGuire":"Paul McGuire","indexDirector":"Director","indexInAddition":"In addition to the attention and commitment of TheChecker’s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!","indexAdemirDiniz":"Ademir Diniz","indexProductManager":"Product Manager","indexTheBest":"The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.","indexJulianPerez":"Julián Pérez","indexAboutOurEmail":"About Our Email Validation Service","indexEmailMarketingDatabases":"Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker.","index99Accuracy":"99%+ Accuracy","indexOurEmailsMarked":"Our emails marked as 'Valid' are covered by our deliverability guarantee.","indexFastEmailVerification":"Fast Email Verification","indexCleanUpMassive":"Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy.","indexAffordablePrices":"Affordable Prices","indexWeAreByFar":"We are (by far) the most cost-effective solution (accurate, fast and affordable).","indexFiletypesCompatibility":"Filetypes Compatibility","indexWeofferAWide":"We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files.","indexEmailBounce":"Email Bounce Checker","indexIdentifiesAndTells":"Identifies and tells you which emails will bounce and thus are not safe to send.","indexAntiGreylisting":"Anti-Greylisting","indexOurProprietaryAlgorithm":"Our proprietary algorithm gives you the most accurate email validation results.","indexCatchAllChecker":"Catch-all Checker","indexChecksForDomains":"Checks for domains that are catch-all, which return valid for all emails.","indexEmailTypoCorrection":"Email Typo Correction","indexEmailTypoDescription":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.","indexSyntaxValidation":"Syntax Validation","indexFullyCleans":"Fully cleans your email list from email addresses with syntax errors.","indexDomainValidation":"Domain Validation","indexMarksAllTheEmails":"Marks all the emails containing inactive or invalid domains.","indexMailboxChecker":"Mailbox Checker","indexValidatesTheExistence":"Validates the existence of MX records for every email address.","indexRiskValidation":"Risk Validation","indexIdentifiesAndMarks":"Identifies and marks all the emails which domain accepts any email in their domain.","indexFreeDeDuplication":"Free De-duplication","indexTheCheckersEmail":"TheCheckers email checker tool removes all records containing duplicate emails.","indexSpamTrapRemover":"Spam Trap Remover","indexOurEmailVerifier":"Our email verifier tool removes all address identified as a spam trap.","indexDisposablesChecker":"Disposables Checker","indexChecksAgainst":"Checks against our frequently updated temporary email database.","indexPayOnly":"Pay Only For Results","indexIfWeCantVerify":"If we can't verify a certain email at any moment, we refund you the credits.","indexTheHighestRated":"The Highest Rated Email Verifier","indexTheCheckerIsThe":"TheChecker is the","index1EmailVerification":"#1 email verification software","indexBasedOnIndependent":"based on independent reviews.","indexCrowdFirstNote":"4.7","indexCrowdSecondNote":"/5","indexCapterraFirstNote":"4.9","indexCapterraSecondNote":"/5","indexTrustpilotFirstNote":"4.6","indexTrustpilotSecondNote":"/5","indexJoinTheSmartest":"Join the Smartest","indexTryTheBestBulk":"Try the best bulk email address checker for FREE and see the accurate results!","footerAboutUs":"About Us","footerTheCheckerIsAnAccurate":"TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI.","footerPhoneNumber":"+1 (888) 964-2250","footerProduct":"Product","footerFeatures":"Features","footerIntegrations":"Integrations","footerReviews":"Reviews","footerAffiliates":"Affiliates","footerServerStatus":"Server Status","footerAPIDocs":"API Docs","footerLegal":"Legal","footerPrivacyGDPR":"Privacy / GDPR","footerTermsOfUse":"Terms of Use","footerDataProtection":"Data Protection","footerAntiSpam":"Anti-Spam Policy","footerCookiePolicy":"Cookie Policy","footerTCGuarantee":"TC Guarantee","footerSolutions":"Solutions"};
 
 /***/ }),
 
@@ -26914,10 +26928,10 @@ var _pt_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_req
 /*!*********************************!*\
   !*** ./pages/languages/pt.json ***!
   \*********************************/
-/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, default */
+/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, indexGetRid, indexEmailVerification, indexAnd, indexEmailList, indexSolutionsThatImprove, indexTrustedAndRated, index48, indexBasedOn, index200reviews, indexTryForFree, indexLearnMore, indexTrustedBy, indexOfSmart, index130countries, indexWhyToUseEmail, indexBasedon, index100million, indexWeVerified, indexWouldBounce, indexHaveYouUsed, indexProtectSender, indexEmailsIsNotDelivered, indexAvoidBlockages, indexATiny, indexIncrease, EmailsValidated, indexInForms, indexGetRidOf, indexDontLet, indexInstallTo, indexSeamless, indexConnectWith, indexTheCheckerEmail, indexExploreAll, indexBulkemail, indexEasilyClean, indexIfOnly, indexUseOurOnline, indexVerify, indexSeamlessIntegrations, indexAddAnEmail, indexUseOurAPI, indexSeeAPI, indexTestimonial, indexWhatOurCustomersSay, indexWorldClassTeams, indexHereAtLeadLovers, indexFernandoMilek, indexCto, indexAnExcellentEmail, indexAristotelesDeOliveira, indexDigitalMarketing, indexUsingTheChecker, indexMichaelLee, indexInsideSales, indexGoodAndPractical, indexJonMae, indexEmailMarketingExpert, indexIDidntKnow, indexIvanNunes, indexSeniorSalesManager, indexWeMadeTheSwitch, indexPaulMcGuire, indexDirector, indexInAddition, indexAdemirDiniz, indexProductManager, indexTheBest, indexJulianPerez, indexAboutOurEmail, indexEmailMarketingDatabases, index99Accuracy, indexOurEmailsMarked, indexFastEmailVerification, indexCleanUpMassive, indexAffordablePrices, indexWeAreByFar, indexFiletypesCompatibility, indexWeofferAWide, indexEmailBounce, indexIdentifiesAndTells, indexAntiGreylisting, indexOurProprietaryAlgorithm, indexCatchAllChecker, indexChecksForDomains, indexEmailTypoCorrection, indexEmailTypoDescription, indexSyntaxValidation, indexFullyCleans, indexDomainValidation, indexMarksAllTheEmails, indexMailboxChecker, indexValidatesTheExistence, indexRiskValidation, indexIdentifiesAndMarks, indexFreeDeDuplication, indexTheCheckersEmail, indexSpamTrapRemover, indexOurEmailVerifier, indexDisposablesChecker, indexChecksAgainst, indexPayOnly, indexIfWeCantVerify, indexTheHighestRated, indexTheCheckerIsThe, index1EmailVerification, indexBasedOnIndependent, indexCrowdFirstNote, indexCrowdSecondNote, indexCapterraFirstNote, indexCapterraSecondNote, indexTrustpilotFirstNote, indexTrustpilotSecondNote, indexJoinTheSmartest, indexTryTheBestBulk, footerAboutUs, footerTheCheckerIsAnAccurate, footerPhoneNumber, footerProduct, footerFeatures, footerIntegrations, footerReviews, footerAffiliates, footerServerStatus, footerAPIDocs, footerLegal, footerPrivacyGDPR, footerTermsOfUse, footerDataProtection, footerAntiSpam, footerCookiePolicy, footerTCGuarantee, footerSolutions, default */
 /***/ (function(module) {
 
-module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"O serviço de verificação de e-mail mais econômico"};
+module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"The most cost-effective email verification service","indexGetRid":"Get rid of email bounces and bad email addresses with our proven high-quality yet affordable","indexEmailVerification":"email verification","indexAnd":"and","indexEmailList":"email list cleaning","indexSolutionsThatImprove":"solutions that improve your data quality and email marketing ROI.","indexTrustedAndRated":"Trusted and rated","index48":"4.8","indexBasedOn":"/5 based on","index200reviews":"200+ reviews.","indexTryForFree":"Try For Free","indexLearnMore":"Learn More","indexTrustedBy":"Trusted by 1,000's","indexOfSmart":"of smart teams in","index130countries":"130+ countries","indexWhyToUseEmail":"Why To Use Email Verification","indexBasedon":"Based on the last","index100million":"100 million emails","indexWeVerified":"we verified in 2018,","indexWouldBounce":"23,51% would bounce","indexHaveYouUsed":"Have you used an email list cleaning service recently?","indexProtectSender":"Protect Sender Reputation","indexEmailsIsNotDelivered":"1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service.","indexAvoidBlockages":"Avoid Blockages by ESPs","indexATiny":"A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability.","indexIncrease":"Increase Campaigns ROI","EmailsValidated":"Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI.","indexInForms":"In-forms real-time email validation","indexGetRidOf":"Get rid of the bad emails before they enter your list","indexDontLet":"Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills.","indexInstallTo":"Install to verify email address online","indexSeamless":"Seamless integrations","indexConnectWith":"Connect with your favorite email marketing tool","indexTheCheckerEmail":"TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean.","indexExploreAll":"Explore all integrations","indexBulkemail":"Bulk email list verification","indexEasilyClean":"Easily clean your current email lists and databases","indexIfOnly":"If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI.","indexUseOurOnline":"Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!","indexVerify":"Verify email list now","indexSeamlessIntegrations":"Seamless integrations","indexAddAnEmail":"Add an email validation tool to any website or app","indexUseOurAPI":"Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app.","indexSeeAPI":"See API docs","indexTestimonial":"Testimonial","indexWhatOurCustomersSay":"What Our Customers Say?","indexWorldClassTeams":"World-class teams in 130+ countries choose TheChecker.","indexHereAtLeadLovers":"Here at LeadLovers we’re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.","indexFernandoMilek":"Fernando Milek","indexCto":"CTO","indexAnExcellentEmail":"An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.","indexAristotelesDeOliveira":"Aristóteles de Oliveira","indexDigitalMarketing":"Digital Marketing and Sales Manager","indexUsingTheChecker":"Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!","indexMichaelLee":"Michael Lee","indexInsideSales":"Inside Sales Representative","indexGoodAndPractical":"Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!","indexJonMae":"Jon Mae","indexEmailMarketingExpert":"Email Marketing Expert","indexIDidntKnow":"I didn’t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!","indexIvanNunes":"Ivan Nunes de Castro","indexSeniorSalesManager":"Senior Sales Manager","indexWeMadeTheSwitch":"We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.","indexPaulMcGuire":"Paul McGuire","indexDirector":"Director","indexInAddition":"In addition to the attention and commitment of TheChecker’s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!","indexAdemirDiniz":"Ademir Diniz","indexProductManager":"Product Manager","indexTheBest":"The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.","indexJulianPerez":"Julián Pérez","indexAboutOurEmail":"About Our Email Validation Service","indexEmailMarketingDatabases":"Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker.","index99Accuracy":"99%+ Accuracy","indexOurEmailsMarked":"Our emails marked as 'Valid' are covered by our deliverability guarantee.","indexFastEmailVerification":"Fast Email Verification","indexCleanUpMassive":"Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy.","indexAffordablePrices":"Affordable Prices","indexWeAreByFar":"We are (by far) the most cost-effective solution (accurate, fast and affordable).","indexFiletypesCompatibility":"Filetypes Compatibility","indexWeofferAWide":"We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files.","indexEmailBounce":"Email Bounce Checker","indexIdentifiesAndTells":"Identifies and tells you which emails will bounce and thus are not safe to send.","indexAntiGreylisting":"Anti-Greylisting","indexOurProprietaryAlgorithm":"Our proprietary algorithm gives you the most accurate email validation results.","indexCatchAllChecker":"Catch-all Checker","indexChecksForDomains":"Checks for domains that are catch-all, which return valid for all emails.","indexEmailTypoCorrection":"Email Typo Correction","indexEmailTypoDescription":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.","indexSyntaxValidation":"Syntax Validation","indexFullyCleans":"Fully cleans your email list from email addresses with syntax errors.","indexDomainValidation":"Domain Validation","indexMarksAllTheEmails":"Marks all the emails containing inactive or invalid domains.","indexMailboxChecker":"Mailbox Checker","indexValidatesTheExistence":"Validates the existence of MX records for every email address.","indexRiskValidation":"Risk Validation","indexIdentifiesAndMarks":"Identifies and marks all the emails which domain accepts any email in their domain.","indexFreeDeDuplication":"Free De-duplication","indexTheCheckersEmail":"TheCheckers email checker tool removes all records containing duplicate emails.","indexSpamTrapRemover":"Spam Trap Remover","indexOurEmailVerifier":"Our email verifier tool removes all address identified as a spam trap.","indexDisposablesChecker":"Disposables Checker","indexChecksAgainst":"Checks against our frequently updated temporary email database.","indexPayOnly":"Pay Only For Results","indexIfWeCantVerify":"If we can't verify a certain email at any moment, we refund you the credits.","indexTheHighestRated":"The Highest Rated Email Verifier","indexTheCheckerIsThe":"TheChecker is the","index1EmailVerification":"#1 email verification software","indexBasedOnIndependent":"based on independent reviews.","indexCrowdFirstNote":"4.7","indexCrowdSecondNote":"/5","indexCapterraFirstNote":"4.9","indexCapterraSecondNote":"/5","indexTrustpilotFirstNote":"4.6","indexTrustpilotSecondNote":"/5","indexJoinTheSmartest":"Join the Smartest","indexTryTheBestBulk":"Try the best bulk email address checker for FREE and see the accurate results!","footerAboutUs":"About Us","footerTheCheckerIsAnAccurate":"TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI.","footerPhoneNumber":"+1 (888) 964-2250","footerProduct":"Product","footerFeatures":"Features","footerIntegrations":"Integrations","footerReviews":"Reviews","footerAffiliates":"Affiliates","footerServerStatus":"Server Status","footerAPIDocs":"API Docs","footerLegal":"Legal","footerPrivacyGDPR":"Privacy / GDPR","footerTermsOfUse":"Terms of Use","footerDataProtection":"Data Protection","footerAntiSpam":"Anti-Spam Policy","footerCookiePolicy":"Cookie Policy","footerTCGuarantee":"TC Guarantee","footerSolutions":"Solutions"};
 
 /***/ }),
 

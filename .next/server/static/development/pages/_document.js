@@ -179,79 +179,88 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "./node_modules/react-i18next/dist/commonjs/index.js");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_i18next__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _pages_i18n__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../pages/i18n */ "./pages/i18n.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/home/marcos/Documentos/next-website/components/Footer/Footer.js";
 
 
 
+
+
 var Footer = function Footer() {
+  var _useTranslation = Object(react_i18next__WEBPACK_IMPORTED_MODULE_1__["useTranslation"])(),
+      t = _useTranslation.t,
+      i18n = _useTranslation.i18n;
+
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
     className: "footer-light",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 8
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "footer-section",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 9
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-md-12 col-lg-4 sm-m-15px-tb md-m-30px-b",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 13
     },
     __self: this
-  }, "About Us"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, t('footerAboutUs')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "footer-text",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 14
     },
     __self: this
-  }, "TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
+  }, t('footerTheCheckerIsAnAccurate')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 16
     },
     __self: this
-  }), "+1 (888) 964-2250", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }), t('footerPhoneNumber'), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "social-icons",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -260,20 +269,20 @@ var Footer = function Footer() {
     href: "https://www.facebook.com/thecheckerco/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-facebook-f",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 18
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -282,20 +291,20 @@ var Footer = function Footer() {
     href: "https://twitter.com/thecheckerco",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-twitter",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 19
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -304,20 +313,20 @@ var Footer = function Footer() {
     href: "https://www.linkedin.com/company/thechecker.co/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-linkedin-in",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 20
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -326,442 +335,442 @@ var Footer = function Footer() {
     href: "https://github.com/thecheckerco",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
     className: "fab fa-github",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 24
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 25
     },
     __self: this
-  }, "Product"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, t('footerProduct')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 26
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/#features",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 27
     },
     __self: this
-  }, "Features"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('footerFeatures')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/integrations",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 28
     },
     __self: this
-  }, "Integrations"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('footerIntegrations')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/#reviews",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 29
     },
     __self: this
-  }, "Reviews"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, t('footerReviews')))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26
-    },
-    __self: this
-  }, "Affiliates")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 30
     },
     __self: this
-  }, "Server Status")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, "API Docs")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
+  }, t('footerAffiliates'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
-    className: "font-alt",
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, t('footerServerStatus'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
-  }, "Legal"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "fot-link",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 33
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 32
     },
     __self: this
-  }, "Privacy / GDPR")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "Terms of Use")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, "Data Protection")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, "Anti-Spam Policy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 38
-    },
-    __self: this
-  }, "Cookie Policy")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    href: "#",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, "TC Guarantee")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, t('footerAPIDocs'))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 36
     },
     __self: this
-  }, "Solutions"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, t('footerLegal')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 38
+    },
+    __self: this
+  }, t('footerPrivacyGDPR'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, t('footerTermsOfUse'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, t('footerDataProtection'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41
+    },
+    __self: this
+  }, t('footerAntiSpam'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, t('footerCookiePolicy'))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, t('footerTCGuarantee'))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "font-alt",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, t('footerSolutions')), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "fot-link",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "#",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 49
     },
     __self: this
   }, "Enterprise")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 50
     },
     __self: this
   }, "Sales Teams")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 51
     },
     __self: this
   }, "Digital Agencies")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 52
     },
     __self: this
   }, "E-commerces")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 53
     },
     __self: this
   }, "SaaS Platforms")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-6 col-md-6 col-lg-2 sm-m-15px-tb",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
     className: "font-alt",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 57
     },
     __self: this
   }, "Compare"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "fot-link",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 59
     },
     __self: this
   }, "TC vs. Neverbounce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 60
     },
     __self: this
   }, "TC vs. BriteVerify")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 61
     },
     __self: this
   }, "TC vs. ZeroBounce")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 62
     },
     __self: this
   }, "TC vs. Kickbox")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 63
     },
     __self: this
   }, "TC vs. Bounceless.io")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 64
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     href: "#",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 64
     },
     __self: this
   }, "TC vs. EmailListVerify"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "footer-copy",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 68
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 69
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-12",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 70
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 71
     },
     __self: this
   }, "1395 Brickell Ave. Suite 800, Miami, FL 33131")))))));
@@ -6165,22 +6174,16 @@ function (_Document) {
           lineNumber: 10
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_7__["Footer"], {
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_6__["NextScript"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_7__["Scripts"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 12
         },
         __self: this
       })));
@@ -6236,10 +6239,10 @@ i18next__WEBPACK_IMPORTED_MODULE_0___default.a.use(react_i18next__WEBPACK_IMPORT
 /*!*********************************!*\
   !*** ./pages/languages/en.json ***!
   \*********************************/
-/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, indexGetRid, indexEmailVerification, indexAnd, indexEmailList, indexSolutionsThatImprove, indexTrustedAndRated, index48, indexBasedOn, index200reviews, indexTryForFree, indexLearnMore, indexTrustedBy, ofSmart, index130countries, default */
+/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, indexGetRid, indexEmailVerification, indexAnd, indexEmailList, indexSolutionsThatImprove, indexTrustedAndRated, index48, indexBasedOn, index200reviews, indexTryForFree, indexLearnMore, indexTrustedBy, indexOfSmart, index130countries, indexWhyToUseEmail, indexBasedon, index100million, indexWeVerified, indexWouldBounce, indexHaveYouUsed, indexProtectSender, indexEmailsIsNotDelivered, indexAvoidBlockages, indexATiny, indexIncrease, EmailsValidated, indexInForms, indexGetRidOf, indexDontLet, indexInstallTo, indexSeamless, indexConnectWith, indexTheCheckerEmail, indexExploreAll, indexBulkemail, indexEasilyClean, indexIfOnly, indexUseOurOnline, indexVerify, indexSeamlessIntegrations, indexAddAnEmail, indexUseOurAPI, indexSeeAPI, indexTestimonial, indexWhatOurCustomersSay, indexWorldClassTeams, indexHereAtLeadLovers, indexFernandoMilek, indexCto, indexAnExcellentEmail, indexAristotelesDeOliveira, indexDigitalMarketing, indexUsingTheChecker, indexMichaelLee, indexInsideSales, indexGoodAndPractical, indexJonMae, indexEmailMarketingExpert, indexIDidntKnow, indexIvanNunes, indexSeniorSalesManager, indexWeMadeTheSwitch, indexPaulMcGuire, indexDirector, indexInAddition, indexAdemirDiniz, indexProductManager, indexTheBest, indexJulianPerez, indexAboutOurEmail, indexEmailMarketingDatabases, index99Accuracy, indexOurEmailsMarked, indexFastEmailVerification, indexCleanUpMassive, indexAffordablePrices, indexWeAreByFar, indexFiletypesCompatibility, indexWeofferAWide, indexEmailBounce, indexIdentifiesAndTells, indexAntiGreylisting, indexOurProprietaryAlgorithm, indexCatchAllChecker, indexChecksForDomains, indexEmailTypoCorrection, indexEmailTypoDescription, indexSyntaxValidation, indexFullyCleans, indexDomainValidation, indexMarksAllTheEmails, indexMailboxChecker, indexValidatesTheExistence, indexRiskValidation, indexIdentifiesAndMarks, indexFreeDeDuplication, indexTheCheckersEmail, indexSpamTrapRemover, indexOurEmailVerifier, indexDisposablesChecker, indexChecksAgainst, indexPayOnly, indexIfWeCantVerify, indexTheHighestRated, indexTheCheckerIsThe, index1EmailVerification, indexBasedOnIndependent, indexCrowdFirstNote, indexCrowdSecondNote, indexCapterraFirstNote, indexCapterraSecondNote, indexTrustpilotFirstNote, indexTrustpilotSecondNote, indexJoinTheSmartest, indexTryTheBestBulk, footerAboutUs, footerTheCheckerIsAnAccurate, footerPhoneNumber, footerProduct, footerFeatures, footerIntegrations, footerReviews, footerAffiliates, footerServerStatus, footerAPIDocs, footerLegal, footerPrivacyGDPR, footerTermsOfUse, footerDataProtection, footerAntiSpam, footerCookiePolicy, footerTCGuarantee, footerSolutions, default */
 /***/ (function(module) {
 
-module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"The most cost-effective email verification service","indexGetRid":"Get rid of email bounces and bad email addresses with our proven high-quality yet affordable","indexEmailVerification":"email verification","indexAnd":"and","indexEmailList":"email list cleaning","indexSolutionsThatImprove":"solutions that improve your data quality and email marketing ROI.","indexTrustedAndRated":"Trusted and rated","index48":"4.8","indexBasedOn":"/5 based on","index200reviews":"200+ reviews.","indexTryForFree":"Try For Free","indexLearnMore":"Learn More","indexTrustedBy":"Trusted by 1,000's","ofSmart":"of smart teams in","index130countries":"130+ countries"};
+module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"The most cost-effective email verification service","indexGetRid":"Get rid of email bounces and bad email addresses with our proven high-quality yet affordable","indexEmailVerification":"email verification","indexAnd":"and","indexEmailList":"email list cleaning","indexSolutionsThatImprove":"solutions that improve your data quality and email marketing ROI.","indexTrustedAndRated":"Trusted and rated","index48":"4.8","indexBasedOn":"/5 based on","index200reviews":"200+ reviews.","indexTryForFree":"Try For Free","indexLearnMore":"Learn More","indexTrustedBy":"Trusted by 1,000's","indexOfSmart":"of smart teams in","index130countries":"130+ countries","indexWhyToUseEmail":"Why To Use Email Verification","indexBasedon":"Based on the last","index100million":"100 million emails","indexWeVerified":"we verified in 2018,","indexWouldBounce":"23,51% would bounce","indexHaveYouUsed":"Have you used an email list cleaning service recently?","indexProtectSender":"Protect Sender Reputation","indexEmailsIsNotDelivered":"1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service.","indexAvoidBlockages":"Avoid Blockages by ESPs","indexATiny":"A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability.","indexIncrease":"Increase Campaigns ROI","EmailsValidated":"Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI.","indexInForms":"In-forms real-time email validation","indexGetRidOf":"Get rid of the bad emails before they enter your list","indexDontLet":"Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills.","indexInstallTo":"Install to verify email address online","indexSeamless":"Seamless integrations","indexConnectWith":"Connect with your favorite email marketing tool","indexTheCheckerEmail":"TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean.","indexExploreAll":"Explore all integrations","indexBulkemail":"Bulk email list verification","indexEasilyClean":"Easily clean your current email lists and databases","indexIfOnly":"If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI.","indexUseOurOnline":"Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!","indexVerify":"Verify email list now","indexSeamlessIntegrations":"Seamless integrations","indexAddAnEmail":"Add an email validation tool to any website or app","indexUseOurAPI":"Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app.","indexSeeAPI":"See API docs","indexTestimonial":"Testimonial","indexWhatOurCustomersSay":"What Our Customers Say?","indexWorldClassTeams":"World-class teams in 130+ countries choose TheChecker.","indexHereAtLeadLovers":"Here at LeadLovers we’re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.","indexFernandoMilek":"Fernando Milek","indexCto":"CTO","indexAnExcellentEmail":"An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.","indexAristotelesDeOliveira":"Aristóteles de Oliveira","indexDigitalMarketing":"Digital Marketing and Sales Manager","indexUsingTheChecker":"Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!","indexMichaelLee":"Michael Lee","indexInsideSales":"Inside Sales Representative","indexGoodAndPractical":"Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!","indexJonMae":"Jon Mae","indexEmailMarketingExpert":"Email Marketing Expert","indexIDidntKnow":"I didn’t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!","indexIvanNunes":"Ivan Nunes de Castro","indexSeniorSalesManager":"Senior Sales Manager","indexWeMadeTheSwitch":"We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.","indexPaulMcGuire":"Paul McGuire","indexDirector":"Director","indexInAddition":"In addition to the attention and commitment of TheChecker’s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!","indexAdemirDiniz":"Ademir Diniz","indexProductManager":"Product Manager","indexTheBest":"The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.","indexJulianPerez":"Julián Pérez","indexAboutOurEmail":"About Our Email Validation Service","indexEmailMarketingDatabases":"Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker.","index99Accuracy":"99%+ Accuracy","indexOurEmailsMarked":"Our emails marked as 'Valid' are covered by our deliverability guarantee.","indexFastEmailVerification":"Fast Email Verification","indexCleanUpMassive":"Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy.","indexAffordablePrices":"Affordable Prices","indexWeAreByFar":"We are (by far) the most cost-effective solution (accurate, fast and affordable).","indexFiletypesCompatibility":"Filetypes Compatibility","indexWeofferAWide":"We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files.","indexEmailBounce":"Email Bounce Checker","indexIdentifiesAndTells":"Identifies and tells you which emails will bounce and thus are not safe to send.","indexAntiGreylisting":"Anti-Greylisting","indexOurProprietaryAlgorithm":"Our proprietary algorithm gives you the most accurate email validation results.","indexCatchAllChecker":"Catch-all Checker","indexChecksForDomains":"Checks for domains that are catch-all, which return valid for all emails.","indexEmailTypoCorrection":"Email Typo Correction","indexEmailTypoDescription":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.","indexSyntaxValidation":"Syntax Validation","indexFullyCleans":"Fully cleans your email list from email addresses with syntax errors.","indexDomainValidation":"Domain Validation","indexMarksAllTheEmails":"Marks all the emails containing inactive or invalid domains.","indexMailboxChecker":"Mailbox Checker","indexValidatesTheExistence":"Validates the existence of MX records for every email address.","indexRiskValidation":"Risk Validation","indexIdentifiesAndMarks":"Identifies and marks all the emails which domain accepts any email in their domain.","indexFreeDeDuplication":"Free De-duplication","indexTheCheckersEmail":"TheCheckers email checker tool removes all records containing duplicate emails.","indexSpamTrapRemover":"Spam Trap Remover","indexOurEmailVerifier":"Our email verifier tool removes all address identified as a spam trap.","indexDisposablesChecker":"Disposables Checker","indexChecksAgainst":"Checks against our frequently updated temporary email database.","indexPayOnly":"Pay Only For Results","indexIfWeCantVerify":"If we can't verify a certain email at any moment, we refund you the credits.","indexTheHighestRated":"The Highest Rated Email Verifier","indexTheCheckerIsThe":"TheChecker is the","index1EmailVerification":"#1 email verification software","indexBasedOnIndependent":"based on independent reviews.","indexCrowdFirstNote":"4.7","indexCrowdSecondNote":"/5","indexCapterraFirstNote":"4.9","indexCapterraSecondNote":"/5","indexTrustpilotFirstNote":"4.6","indexTrustpilotSecondNote":"/5","indexJoinTheSmartest":"Join the Smartest","indexTryTheBestBulk":"Try the best bulk email address checker for FREE and see the accurate results!","footerAboutUs":"About Us","footerTheCheckerIsAnAccurate":"TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI.","footerPhoneNumber":"+1 (888) 964-2250","footerProduct":"Product","footerFeatures":"Features","footerIntegrations":"Integrations","footerReviews":"Reviews","footerAffiliates":"Affiliates","footerServerStatus":"Server Status","footerAPIDocs":"API Docs","footerLegal":"Legal","footerPrivacyGDPR":"Privacy / GDPR","footerTermsOfUse":"Terms of Use","footerDataProtection":"Data Protection","footerAntiSpam":"Anti-Spam Policy","footerCookiePolicy":"Cookie Policy","footerTCGuarantee":"TC Guarantee","footerSolutions":"Solutions"};
 
 /***/ }),
 
@@ -6267,10 +6270,10 @@ var _pt_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_req
 /*!*********************************!*\
   !*** ./pages/languages/pt.json ***!
   \*********************************/
-/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, default */
+/*! exports provided: headerWhyTheChecker, headerFeatures, headerIntegrations, headerReviews, headerPricing, headerResources, headerSolutions, headerDigitalAgency, headerEcommerce, headerSalesResp, headerSaaSPlatform, headerAbout, headerFaq, headerAffiliates, headerBlog, headerDevelopers, headerApi, headerWidget, headerServerStatus, headerLogin, headerTryForFree, headerEnglish, headerPortugues, indexTitle, indexThemost, indexGetRid, indexEmailVerification, indexAnd, indexEmailList, indexSolutionsThatImprove, indexTrustedAndRated, index48, indexBasedOn, index200reviews, indexTryForFree, indexLearnMore, indexTrustedBy, indexOfSmart, index130countries, indexWhyToUseEmail, indexBasedon, index100million, indexWeVerified, indexWouldBounce, indexHaveYouUsed, indexProtectSender, indexEmailsIsNotDelivered, indexAvoidBlockages, indexATiny, indexIncrease, EmailsValidated, indexInForms, indexGetRidOf, indexDontLet, indexInstallTo, indexSeamless, indexConnectWith, indexTheCheckerEmail, indexExploreAll, indexBulkemail, indexEasilyClean, indexIfOnly, indexUseOurOnline, indexVerify, indexSeamlessIntegrations, indexAddAnEmail, indexUseOurAPI, indexSeeAPI, indexTestimonial, indexWhatOurCustomersSay, indexWorldClassTeams, indexHereAtLeadLovers, indexFernandoMilek, indexCto, indexAnExcellentEmail, indexAristotelesDeOliveira, indexDigitalMarketing, indexUsingTheChecker, indexMichaelLee, indexInsideSales, indexGoodAndPractical, indexJonMae, indexEmailMarketingExpert, indexIDidntKnow, indexIvanNunes, indexSeniorSalesManager, indexWeMadeTheSwitch, indexPaulMcGuire, indexDirector, indexInAddition, indexAdemirDiniz, indexProductManager, indexTheBest, indexJulianPerez, indexAboutOurEmail, indexEmailMarketingDatabases, index99Accuracy, indexOurEmailsMarked, indexFastEmailVerification, indexCleanUpMassive, indexAffordablePrices, indexWeAreByFar, indexFiletypesCompatibility, indexWeofferAWide, indexEmailBounce, indexIdentifiesAndTells, indexAntiGreylisting, indexOurProprietaryAlgorithm, indexCatchAllChecker, indexChecksForDomains, indexEmailTypoCorrection, indexEmailTypoDescription, indexSyntaxValidation, indexFullyCleans, indexDomainValidation, indexMarksAllTheEmails, indexMailboxChecker, indexValidatesTheExistence, indexRiskValidation, indexIdentifiesAndMarks, indexFreeDeDuplication, indexTheCheckersEmail, indexSpamTrapRemover, indexOurEmailVerifier, indexDisposablesChecker, indexChecksAgainst, indexPayOnly, indexIfWeCantVerify, indexTheHighestRated, indexTheCheckerIsThe, index1EmailVerification, indexBasedOnIndependent, indexCrowdFirstNote, indexCrowdSecondNote, indexCapterraFirstNote, indexCapterraSecondNote, indexTrustpilotFirstNote, indexTrustpilotSecondNote, indexJoinTheSmartest, indexTryTheBestBulk, footerAboutUs, footerTheCheckerIsAnAccurate, footerPhoneNumber, footerProduct, footerFeatures, footerIntegrations, footerReviews, footerAffiliates, footerServerStatus, footerAPIDocs, footerLegal, footerPrivacyGDPR, footerTermsOfUse, footerDataProtection, footerAntiSpam, footerCookiePolicy, footerTCGuarantee, footerSolutions, default */
 /***/ (function(module) {
 
-module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"O serviço de verificação de e-mail mais econômico"};
+module.exports = {"headerWhyTheChecker":"Why TheChecker","headerFeatures":"Features","headerIntegrations":"Integrations","headerReviews":"Reviews","headerPricing":"Pricing","headerResources":"Resources","headerSolutions":"Solutions","headerDigitalAgency":"Digital Agency","headerEcommerce":"E-commerce","headerSalesResp":"Sales Resp.","headerSaaSPlatform":"SaaS Platform","headerAbout":"About","headerFaq":"FAQ","headerAffiliates":"Affiliates","headerBlog":"Blog","headerDevelopers":"Developers","headerApi":"API","headerWidget":"Widget","headerServerStatus":"Server status","headerLogin":"Login","headerTryForFree":"Try For Free","headerEnglish":"English","headerPortugues":"Português","indexTitle":"Email Verification & List Cleaning Service | TheChecker Email Verifier","indexThemost":"The most cost-effective email verification service","indexGetRid":"Get rid of email bounces and bad email addresses with our proven high-quality yet affordable","indexEmailVerification":"email verification","indexAnd":"and","indexEmailList":"email list cleaning","indexSolutionsThatImprove":"solutions that improve your data quality and email marketing ROI.","indexTrustedAndRated":"Trusted and rated","index48":"4.8","indexBasedOn":"/5 based on","index200reviews":"200+ reviews.","indexTryForFree":"Try For Free","indexLearnMore":"Learn More","indexTrustedBy":"Trusted by 1,000's","indexOfSmart":"of smart teams in","index130countries":"130+ countries","indexWhyToUseEmail":"Why To Use Email Verification","indexBasedon":"Based on the last","index100million":"100 million emails","indexWeVerified":"we verified in 2018,","indexWouldBounce":"23,51% would bounce","indexHaveYouUsed":"Have you used an email list cleaning service recently?","indexProtectSender":"Protect Sender Reputation","indexEmailsIsNotDelivered":"1 out of 5 emails is not delivered due to reputation problems related to IP and domains. Get protected by using the best email list cleaning service.","indexAvoidBlockages":"Avoid Blockages by ESPs","indexATiny":"A tiny ~5% bounce rate can get you blocked by the ESPs. Our single and bulk email list cleaning tool gets you protected to improve inbox deliverability.","indexIncrease":"Increase Campaigns ROI","EmailsValidated":"Emails validated through TheChecker`s email address checker promote superior deliverability to the inbox, convert more sales, and increase your campaigns ROI.","indexInForms":"In-forms real-time email validation","indexGetRidOf":"Get rid of the bad emails before they enter your list","indexDontLet":"Don't let misspelled and bad email addresses ruin your list quality and your sender reputation. Add our real-time email verification tool to any form on your website by just copying and pasting one line of code. It takes only a few seconds and requires no technical skills.","indexInstallTo":"Install to verify email address online","indexSeamless":"Seamless integrations","indexConnectWith":"Connect with your favorite email marketing tool","indexTheCheckerEmail":"TheChecker's email verification tool comes with powerful integrations that fit into your existing workflow. Import and export your lists with ease and consistently keep them clean.","indexExploreAll":"Explore all integrations","indexBulkemail":"Bulk email list verification","indexEasilyClean":"Easily clean your current email lists and databases","indexIfOnly":"If only 10% of the emails are bad, less than 44% will be delivered. Don't let bad emails ruin your inbox deliverability and your campaigns ROI.","indexUseOurOnline":"Use our online bulk email verifier to verify your current email lists by simply uploading a TXT, CSV, XLS, or XLSX file. It's quick and easy!","indexVerify":"Verify email list now","indexSeamlessIntegrations":"Seamless integrations","indexAddAnEmail":"Add an email validation tool to any website or app","indexUseOurAPI":"Use our API to run bulk or single email verification straight on your web and mobile application or develop a white-label version of our email verification web app.","indexSeeAPI":"See API docs","indexTestimonial":"Testimonial","indexWhatOurCustomersSay":"What Our Customers Say?","indexWorldClassTeams":"World-class teams in 130+ countries choose TheChecker.","indexHereAtLeadLovers":"Here at LeadLovers we’re always looking for smart tools that help us to improve our email deliverability even more. By integrating TheChecker in the lead acquisition flow we got amazing results in the prevention of sending reputation issues.","indexFernandoMilek":"Fernando Milek","indexCto":"CTO","indexAnExcellentEmail":"An excellent e-mail checker. The accuracy of the e-mail checking, it's very reliable. It has been a pretty good experience using it.","indexAristotelesDeOliveira":"Aristóteles de Oliveira","indexDigitalMarketing":"Digital Marketing and Sales Manager","indexUsingTheChecker":"Using TheChecker has been the most efficient and user-friendly email checker for our company to validate or go on email marketing campaigns. There has been no need to use any other site since!","indexMichaelLee":"Michael Lee","indexInsideSales":"Inside Sales Representative","indexGoodAndPractical":"Good and practical tool. Easy to use API, great web form widget and simple user interface make this tool a great find - and it's really well priced too!","indexJonMae":"Jon Mae","indexEmailMarketingExpert":"Email Marketing Expert","indexIDidntKnow":"I didn’t know how many leads I missed due to bad email lists and sending reputation problems. TheChecker has made it very quick and easy to dramatically improve the quality of the campaigns and to generate new sales opportunities through email. I strongly recommend it!","indexIvanNunes":"Ivan Nunes de Castro","indexSeniorSalesManager":"Senior Sales Manager","indexWeMadeTheSwitch":"We made the switch to TheChecker in 2017 - we needed to ensure our clients marketing campaigns achieved the highest deliverability rates. Having used many services with varying results, we have found TheChecker to be the best - fast, accurate and easy to use.","indexPaulMcGuire":"Paul McGuire","indexDirector":"Director","indexInAddition":"In addition to the attention and commitment of TheChecker’s team to help us in the beginning of our partnership, the tool is much easier to use than the one we used previously (BriteVerify) and the results are excellent. It will certainly be a very long lasting partnership!","indexAdemirDiniz":"Ademir Diniz","indexProductManager":"Product Manager","indexTheBest":"The best! It's easy to use, the results are great. All works perfect. We reduce all our email marketing complaints and fake registers.","indexJulianPerez":"Julián Pérez","indexAboutOurEmail":"About Our Email Validation Service","indexEmailMarketingDatabases":"Email marketing databases naturally degrade by about 22.5% every year. A 5% bounce rate can get you blocked. You don't have to worry when using TheChecker.","index99Accuracy":"99%+ Accuracy","indexOurEmailsMarked":"Our emails marked as 'Valid' are covered by our deliverability guarantee.","indexFastEmailVerification":"Fast Email Verification","indexCleanUpMassive":"Clean up massive, outdated contact lists in a fairly short amount of time with complete accuracy.","indexAffordablePrices":"Affordable Prices","indexWeAreByFar":"We are (by far) the most cost-effective solution (accurate, fast and affordable).","indexFiletypesCompatibility":"Filetypes Compatibility","indexWeofferAWide":"We offer a wide file type compatibility. Upload CSV, TXT, XLS or XLSX files.","indexEmailBounce":"Email Bounce Checker","indexIdentifiesAndTells":"Identifies and tells you which emails will bounce and thus are not safe to send.","indexAntiGreylisting":"Anti-Greylisting","indexOurProprietaryAlgorithm":"Our proprietary algorithm gives you the most accurate email validation results.","indexCatchAllChecker":"Catch-all Checker","indexChecksForDomains":"Checks for domains that are catch-all, which return valid for all emails.","indexEmailTypoCorrection":"Email Typo Correction","indexEmailTypoDescription":"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.","indexSyntaxValidation":"Syntax Validation","indexFullyCleans":"Fully cleans your email list from email addresses with syntax errors.","indexDomainValidation":"Domain Validation","indexMarksAllTheEmails":"Marks all the emails containing inactive or invalid domains.","indexMailboxChecker":"Mailbox Checker","indexValidatesTheExistence":"Validates the existence of MX records for every email address.","indexRiskValidation":"Risk Validation","indexIdentifiesAndMarks":"Identifies and marks all the emails which domain accepts any email in their domain.","indexFreeDeDuplication":"Free De-duplication","indexTheCheckersEmail":"TheCheckers email checker tool removes all records containing duplicate emails.","indexSpamTrapRemover":"Spam Trap Remover","indexOurEmailVerifier":"Our email verifier tool removes all address identified as a spam trap.","indexDisposablesChecker":"Disposables Checker","indexChecksAgainst":"Checks against our frequently updated temporary email database.","indexPayOnly":"Pay Only For Results","indexIfWeCantVerify":"If we can't verify a certain email at any moment, we refund you the credits.","indexTheHighestRated":"The Highest Rated Email Verifier","indexTheCheckerIsThe":"TheChecker is the","index1EmailVerification":"#1 email verification software","indexBasedOnIndependent":"based on independent reviews.","indexCrowdFirstNote":"4.7","indexCrowdSecondNote":"/5","indexCapterraFirstNote":"4.9","indexCapterraSecondNote":"/5","indexTrustpilotFirstNote":"4.6","indexTrustpilotSecondNote":"/5","indexJoinTheSmartest":"Join the Smartest","indexTryTheBestBulk":"Try the best bulk email address checker for FREE and see the accurate results!","footerAboutUs":"About Us","footerTheCheckerIsAnAccurate":"TheChecker is an accurate, fast and affordable email verification service that helps you to get rid of email bounces and increase your email marketing campaigns ROI.","footerPhoneNumber":"+1 (888) 964-2250","footerProduct":"Product","footerFeatures":"Features","footerIntegrations":"Integrations","footerReviews":"Reviews","footerAffiliates":"Affiliates","footerServerStatus":"Server Status","footerAPIDocs":"API Docs","footerLegal":"Legal","footerPrivacyGDPR":"Privacy / GDPR","footerTermsOfUse":"Terms of Use","footerDataProtection":"Data Protection","footerAntiSpam":"Anti-Spam Policy","footerCookiePolicy":"Cookie Policy","footerTCGuarantee":"TC Guarantee","footerSolutions":"Solutions"};
 
 /***/ }),
 

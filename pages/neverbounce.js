@@ -1,4 +1,4 @@
-import { Header, Icon } from '../components';
+import { Footer, Header, Icon } from '../components';
 import { useTranslation, getInitialProps } from 'react-i18next';
 import './i18n';
 import ScrollAnimation from 'react-animate-on-scroll';
@@ -300,6 +300,9 @@ const neverbounce = () => {
       </section>
 
     </main>
+
+    <Footer />
+    
   </div>
 
 }

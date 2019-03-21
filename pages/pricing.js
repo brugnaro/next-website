@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { Header } from '../components';
+import { Footer, Header } from '../components';
 import './i18n';
 
 const pricing = () => {
@@ -82,6 +82,9 @@ const pricing = () => {
         </div>
       </section>
     </main>
+
+    <Footer />
+
   </div>
 };
 
